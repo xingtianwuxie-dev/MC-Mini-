@@ -1,0 +1,213 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_focus_HJM_MC_start_shine"
+		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_MC_start.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_MC_start.dds"
+			animationtexturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_HJM_underground_riot_shine"
+		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_underground_riot.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_underground_riot.dds"
+			animationtexturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_F099F7AC57E87FA5D11604599A9E7846_shine"
+		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationtexturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_HJM_troubles_are_coming_shine"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_troubles are coming.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_troubles are coming.dds"
+			animationtexturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_HJM_suspicious_shine"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_suspicious.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_suspicious.dds"
+			animationtexturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_HJM_come_again_shine"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_come_again.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_come_again.dds"
+			animationtexturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_HJM_redstone_research_shine"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_redstone_research.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_redstone_research.dds"
+			animationtexturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationrotation = -90
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = {
+				x = 0
+				y = 0
+			}
+			animationtexturescale = {
+				x = 1
+				y = 1
+			}
+		}
+			legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_HJM_chaunyuezhexieyue_shine"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_chaunyuezhexieyue.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_chaunyuezhexieyue.dds"
+			animationtexturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationrotation = -90
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = {
+				x = 0
+				y = 0
+			}
+			animationtexturescale = {
+				x = 1
+				y = 1
+			}
+		}
+			legacy_lazy_load = no
+	}
+
+
+
+	SpriteType = { 
+		name = "GFX_focus_HJM_brother_returns_shine" 
+		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
+	SpriteType = { 
+		name = "GFX_HJM_Strengthen_village_defenses_shine" 
+		texturefile = "gfx/editor/interface/focusIcon/HJM_Strengthen_village_defenses.dds" }
+	SpriteType = { 
+		name = "GFX_focus_HJM_village_defense_shine" 
+		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
+	SpriteType = { 
+		name = "GFX_focus_HJM_iron_golem_shine" 
+		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
+	SpriteType = { 
+		name = "GFX_focus_HJM_redstone_research_shine" 
+		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
+	SpriteType = { 
+		name = "GFX_focus_HJM_redstone_cannon_shine" 
+		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
+	SpriteType = { 
+		name = "GFX_focus_HJM_outsider_contact_shine" 
+		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
+	SpriteType = { 
+		name = "GFX_focus_HJM_player_pact_shine" 
+		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
+	SpriteType = { 
+		name = "GFX_focus_HJM_liberate_village_shine" 
+		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
+	SpriteType = { 
+		name = "GFX_focus_HJM_player_general_shine" 
+		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
+	SpriteType = { 
+		name = "GFX_focus_HJM_nether_strike_shine" 
+		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
+	SpriteType = { 
+		name = "GFX_focus_HJM_notch_vanished_shine" 
+		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
+	SpriteType = { 
+		name = "GFX_focus_HJM_dignity_blade_shine" 
+		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
+	SpriteType = { 
+		name = "GFX_focus_HJM_total_war_shine" 
+		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
+	SpriteType = { 
+		name = "GFX_focus_HJM_liberate_nether_shine" 
+		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
+}

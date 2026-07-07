@@ -1,0 +1,7 @@
+spriteTypes = {
+      spriteType = {
+          name = "GFX_mc_radio_album"                                          #  自定义名称
+          texturefile = "gfx/interface/topbar/musicplayer/mc_radio.dds"  #  dds地址
+          noOfFrames = 2                                                     #  2帧：未选中/选中
+      }
+  }

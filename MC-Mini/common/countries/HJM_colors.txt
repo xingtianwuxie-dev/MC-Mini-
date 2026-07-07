@@ -1,0 +1,20 @@
+#reload countrycolors
+HJM = {
+	color = rgb { 0 99 58 }
+	color_ui = rgb { 0 99 58 }	
+}
+
+HIM = {
+	color = rgb { 60 0 0 }
+	color_ui = rgb { 120 0 0 }
+}
+
+MDG = {
+	color = rgb { 60 0 0 }
+	color_ui = rgb { 80 0 0 }
+}
+
+MYR = {
+	color = rgb { 45 0 75 }
+	color_ui = rgb { 80 0 130 }
+}

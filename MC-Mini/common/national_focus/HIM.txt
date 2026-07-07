@@ -1,0 +1,241 @@
+focus_tree = {
+	id = HIM_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HIM
+		}
+	}
+	initial_show_position = {
+		x = 0
+	}
+
+	focus = {
+		id = HIM_demon_host
+		x = 11
+		y = 0
+		cost = 5
+		icon = GFX_goal_generic_political_pressure
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		available = {
+			is_puppet = no
+			is_in_faction = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				NOT = {
+					is_in_faction = yes
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_war_support = 0.05
+			country_event = {
+				id = HIM.1
+			}
+			
+		}
+	}
+
+	focus = {
+		id = HIM_evil_resurgence
+		x = 11
+		y = 1
+		cost = 5
+		icon = GFX_goal_generic_propaganda
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HIM_demon_host
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_manpower = 50000
+			add_named_threat = {
+				threat = 1
+				name = HIM_evil_resurgence_threat
+			}
+			country_event = {
+				id = HIM.2
+			}
+		}
+	}
+	focus = {
+		id = HIM_nether_mobilization
+		x = 11
+		y = 2
+		cost = 5
+		icon = GFX_goal_generic_construct_mil_factory
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HIM_evil_resurgence
+		}
+		completion_reward = {
+			army_experience = 15
+			add_tech_bonus = {
+				name = HIM_nether_mobilization_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			country_event = {
+				id = HIM.3
+			}
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = "HIM_faction"
+			XWY = { country_event = HIM.10 } #这玩意是邀请事件
+			ZLG = { country_event = HIM.10 }
+			GWG = { country_event = HIM.10 }
+			LLL = { country_event = HIM.10 }
+		}
+	}
+	
+	focus = {
+		id = HIM_illager_defectors
+		x = 11
+		y = 3
+		cost = 5
+		icon = GFX_goal_generic_alliance
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HIM_nether_mobilization
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.03
+			add_war_support = 0.08
+			army_experience = 10
+			country_event = {
+				id = HIM.4
+			}
+		}
+	}
+	focus = {
+		id = HIM_open_the_gate
+		x = 11
+		y = 4
+		cost = 5
+		icon = GFX_goal_generic_secret_weapon
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HIM_illager_defectors
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = HIM_end_portal_bonus
+				bonus = 0.75
+				uses = 1
+				category = electronics
+			}
+			add_political_power = 50
+			add_named_threat = {
+				threat = 1
+				name = HIM_open_the_gate_threat
+			}
+			country_event = {
+				id = HIM.5
+			}
+		}
+	}
+	focus = {
+		id = HIM_overworld_dominion
+		x = 11
+		y = 5
+		cost = 5
+		icon = GFX_goal_generic_demand_territory
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HIM_open_the_gate
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = 0.03
+			create_wargoal = {
+				type = annex_everything
+				target = HJM
+			}
+			country_event = {
+				id = HIM.6
+			}
+		}
+	}
+	focus = {
+		id = HIM_zombie_siege
+		x = 11
+		y = 6
+		cost = 5
+		icon = GFX_goal_generic_attack_allies
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HIM_overworld_dominion
+		}
+		completion_reward = {
+			add_manpower = 100000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = HIM
+			}
+			add_named_threat = {
+				threat = 2
+				name = HIM_zombie_siege_threat
+			}
+			country_event = {
+				id = HIM.7
+			}
+		}
+	}
+	focus = {
+		id = HIM_sky_is_not_the_limit
+		x = 11
+		y = 7
+		cost = 5
+		icon = GFX_goal_generic_construct_mil_factory
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HIM_zombie_siege
+		}
+		completion_reward = {
+			air_experience = 25
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = HIM_sky_is_not_the_limit_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_equipment
+			}
+			capital_scope = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			country_event = {
+				id = HIM.8
+			}
+		}
+	}
+}

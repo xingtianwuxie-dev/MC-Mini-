@@ -1,0 +1,12 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			HJM = {
+				country_event = {
+					id = HJM.1
+					days = 1
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+division_template = {
+	name = "猪灵民兵"
+	priority = 0
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "猪灵步兵"
+	priority = 0
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "猪灵蛮兵"
+	priority = 0
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+}
+
+units = {
+        # === 拉合尔（首都） ===
+        division = {
+                name = "拉合尔猪灵步兵第1团"
+                location = 10772 # Lahore
+                division_template = "猪灵步兵"
+                start_experience_factor = 0.35
+                start_equipment_factor = 0.85
+        }
+        division = {
+                name = "拉合尔猪灵蛮兵第1团"
+                location = 10772 # Lahore
+                division_template = "猪灵蛮兵"
+                start_experience_factor = 0.3
+                start_equipment_factor = 0.75
+        }
+        # === 卡拉奇（南部港口） ===
+        division = {
+                name = "卡拉奇猪灵民兵第1团"
+                location = 3456 # Karachi
+                division_template = "猪灵民兵"
+                start_experience_factor = 0.25
+                start_equipment_factor = 0.8
+        }
+        # === 白沙瓦（北方边境） ===
+        division = {
+                name = "白沙瓦猪灵民兵第2团"
+                location = 12763 # Peshawar
+                division_template = "猪灵民兵"
+                start_experience_factor = 0.2
+                start_equipment_factor = 0.75
+        }
+  }

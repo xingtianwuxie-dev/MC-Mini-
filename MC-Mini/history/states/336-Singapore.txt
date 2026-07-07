@@ -1,0 +1,46 @@
+state = {
+	id = 336
+	name = "STATE_336"
+	manpower = 556200
+	
+	state_category = town
+	
+	resources = {
+		rubber = 100 # was: 848
+		tungsten = 40 # was: 308, then 189
+		aluminium = 1
+		steel = 2
+	}
+
+	history = {
+
+		owner = GWG
+		add_core_of = GWG
+		victory_points = {
+			10297 1 # Kuala Lumpur
+		}
+
+		victory_points = {
+			4412 1 # Seremban 
+		}
+
+		buildings = {
+
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 1
+
+			10297 = {
+				naval_base = 5
+			}
+
+		}
+		
+	}
+
+	provinces = {
+		4412 10297 13409    
+	}
+
+	local_supplies = 0.0 
+}

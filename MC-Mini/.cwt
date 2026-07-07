@@ -1,0 +1,33 @@
+## CWTools 配置 — MC-Mini MOD
+## 放在 MC-Mini/ 根目录下
+
+## 声明 MOD 类型和游戏路径
+cwtools HOI4
+
+## 声明 MOD 额外文件目录（CWTools 会扫描这些目录里的自定义内容）
+## 这样就不会把自定义 idea/event/focus 标红
+config = {
+    common/ideas/**
+    common/bop/**
+    common/countries/**
+    common/characters/**
+    common/decisions/**
+    common/decisions/categories/**
+    common/ideologies/**
+    common/names/**
+    common/national_focus/**
+    common/country_tags/**
+    common/equipment/**
+    common/country_leader/**
+    events/**
+    history/**
+    history/countries/**
+    history/states/**
+    history/units/**
+    localisation/**
+    localisation/simp_chinese/**
+    music/**
+    interface/**
+    gfx/**
+    map/**
+}

@@ -1,0 +1,521 @@
+HJM_record_13_category = {
+	HJM_record_13_war_countdown = {
+		icon = GFX_decision_ignite_civil_war
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		available = {
+			has_country_flag = HJM_record_13_played
+			has_active_mission = HJM_record_13_war_countdown
+			NOT = { has_country_flag = HJM_record_13_war_started }
+		}
+
+		visible = {
+			has_country_flag = HJM_record_13_played
+			has_active_mission = HJM_record_13_war_countdown
+			NOT = { has_country_flag = HJM_record_13_war_started }
+		}
+
+		is_good = no
+		selectable_mission = yes
+		days_mission_timeout = 180
+
+		cancel_trigger = {
+			OR = {
+				has_war_with = HIM
+				NOT = { HIM = { exists = yes } }
+			}
+		}
+
+		timeout_effect = {
+			set_country_flag = HJM_record_13_war_started
+			if = {
+				limit = {
+					HIM = { exists = yes }
+					NOT = { has_war_with = HIM }
+				}
+				declare_war_on = {
+					target = HIM
+					type = annex_everything
+				}
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = HJM_record_13_war_countdown_tt
+			set_country_flag = HJM_record_13_war_started
+			if = {
+				limit = {
+					HIM = { exists = yes }
+					NOT = { has_war_with = HIM }
+				}
+				declare_war_on = {
+					target = HIM
+					type = annex_everything
+				}
+			}
+		}
+	}
+
+	HJM_delay_record_13_war = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 30
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_active_mission = HJM_record_13_war_countdown
+		}
+
+		available = {
+			has_active_mission = HJM_record_13_war_countdown
+		}
+
+		complete_effect = {
+			add_days_mission_timeout = {
+				mission = HJM_record_13_war_countdown
+				days = 30
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+HJM_war_preparation_category = {
+	HJM_suppress_illager_cells = {
+		icon = GFX_decision_generic_political_pressure
+		cost = 35
+		fire_only_once = no
+		days_re_enable = 45
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_completed_focus = HJM_underground_riot
+		}
+
+		available = {
+			has_completed_focus = HJM_underground_riot
+			has_war = no
+		}
+
+		complete_effect = {
+			add_stability = 0.02
+			add_war_support = 0.01
+			army_experience = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_build_northern_railway = {
+		icon = GFX_decision_generic_construct_infrastructure
+		cost = 50
+		days_remove = 45
+		fire_only_once = yes
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_completed_focus = HJM_underground_riot
+		}
+
+		available = {
+			has_completed_focus = HJM_underground_riot
+			has_war = no
+		}
+
+		complete_effect = {
+			build_railway = {
+				level = 1
+				path = { 10612 1776 12485 1693 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_build_western_railway = {
+		icon = GFX_decision_generic_construct_infrastructure
+		cost = 50
+		days_remove = 45
+		fire_only_once = yes
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_completed_focus = HJM_underground_riot
+		}
+
+		available = {
+			has_completed_focus = HJM_underground_riot
+			has_war = no
+		}
+
+		complete_effect = {
+			build_railway = {
+				level = 1
+				path = { 7158 4783 4709 4823 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_expand_factory_output = {
+		icon = GFX_decision_generic_industry
+		cost = 75
+		fire_only_once = no
+		days_re_enable = 120
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_completed_focus = HJM_underground_riot
+		}
+
+		available = {
+			has_completed_focus = HJM_underground_riot
+			NOT = { has_idea = HJM_emergency_factory_output }
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = HJM_emergency_factory_output
+				days = 90
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_wartime_propaganda = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 40
+		fire_only_once = no
+		days_re_enable = 60
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_completed_focus = HJM_underground_riot
+		}
+
+		available = {
+			has_completed_focus = HJM_underground_riot
+			has_stability > 0.15
+		}
+
+		complete_effect = {
+			add_war_support = 0.08
+			add_stability = -0.03
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_recommission_old_rifles = {
+		icon = GFX_decision_generic_army
+		cost = 35
+		fire_only_once = yes
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_completed_focus = HJM_underground_riot
+		}
+
+		available = {
+			has_completed_focus = HJM_underground_riot
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 2500
+				producer = HJM
+			}
+			add_stability = -0.01
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+HJM_illager_activity_category = {
+	HJM_illager_activity_escalation = {
+		icon = GFX_decision_generic_political_pressure
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 60
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_illager_activity_unlocked
+			has_active_mission = HJM_illager_activity_escalation
+			OR = {
+				has_idea = HJM_illager_activity_low
+				has_idea = HJM_illager_activity_medium
+			}
+		}
+
+		available = {
+			has_country_flag = HJM_illager_activity_unlocked
+			has_active_mission = HJM_illager_activity_escalation
+			OR = {
+				has_idea = HJM_illager_activity_low
+				has_idea = HJM_illager_activity_medium
+			}
+		}
+
+		cancel_trigger = {
+			OR = {
+				has_idea = HJM_illager_activity_high
+				NOT = {
+					OR = {
+						has_idea = HJM_illager_activity_low
+						has_idea = HJM_illager_activity_medium
+					}
+				}
+			}
+		}
+
+		timeout_effect = {
+			if = {
+				limit = {
+					has_idea = HJM_illager_activity_low
+				}
+				remove_ideas = HJM_illager_activity_low
+				add_ideas = HJM_illager_activity_medium
+				activate_mission = HJM_illager_activity_escalation
+			}
+			else_if = {
+				limit = {
+					has_idea = HJM_illager_activity_medium
+				}
+				remove_ideas = HJM_illager_activity_medium
+				add_ideas = HJM_illager_activity_high
+			}
+		}
+	}
+
+	HJM_reduce_illager_activity = {
+		icon = GFX_decision_generic_political_pressure
+		cost = 75
+		days_remove = 30
+		fire_only_once = no
+		days_re_enable = 30
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_illager_activity_unlocked
+			OR = {
+				has_idea = HJM_illager_activity_high
+				has_idea = HJM_illager_activity_medium
+			}
+		}
+
+		available = {
+			has_country_flag = HJM_illager_activity_unlocked
+			OR = {
+				has_idea = HJM_illager_activity_high
+				has_idea = HJM_illager_activity_medium
+			}
+		}
+
+		complete_effect = {
+			remove_mission = HJM_illager_activity_escalation
+			if = {
+				limit = {
+					has_idea = HJM_illager_activity_high
+				}
+				remove_ideas = HJM_illager_activity_high
+				add_ideas = HJM_illager_activity_medium
+				activate_mission = HJM_illager_activity_escalation
+			}
+			else_if = {
+				limit = {
+					has_idea = HJM_illager_activity_medium
+				}
+				remove_ideas = HJM_illager_activity_medium
+				add_ideas = HJM_illager_activity_low
+				activate_mission = HJM_illager_activity_escalation
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+HJM_wartime_decisions_category = {
+	HJM_mobilize_militia = {
+		icon = GFX_decision_generic_army
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 90
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		available = {
+			has_war = yes
+			has_stability > 0.10
+		}
+
+		complete_effect = {
+			add_manpower = 25000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 1200
+				producer = HJM
+			}
+			add_war_support = 0.02
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_war_propaganda = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 40
+		fire_only_once = no
+		days_re_enable = 60
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		available = {
+			has_war = yes
+			has_stability > 0.10
+		}
+
+		complete_effect = {
+			add_war_support = 0.08
+			add_stability = -0.01
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_third_line_construction = {
+		icon = GFX_decision_generic_industry
+		cost = 75
+		days_remove = 45
+		fire_only_once = no
+		days_re_enable = 180
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		available = {
+			has_war = yes
+			NOT = { has_idea = HJM_third_line_construction_modifier }
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = HJM_third_line_construction_modifier
+				days = 180
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_support_frontier = {
+		icon = GFX_decision_generic_construct_infrastructure
+		cost = 60
+		days_remove = 30
+		fire_only_once = no
+		days_re_enable = 90
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		available = {
+			has_war = yes
+			NOT = { has_idea = HJM_frontier_support_modifier }
+		}
+
+		complete_effect = {
+			add_command_power = 15
+			army_experience = 5
+			add_timed_idea = {
+				idea = HJM_frontier_support_modifier
+				days = 120
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,199 @@
+add_namespace = HIM
+
+country_event = {
+	id = HIM.1
+	title = HIM.1.t
+	desc = HIM.1.d
+	picture = GFX_report_event_generic
+
+	is_triggered_only = yes
+	trigger = { tag = HIM }
+
+	option = {
+		name = HIM.1.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = HIM.2
+	title = HIM.2.t
+	desc = HIM.2.d
+	picture = GFX_report_event_generic
+
+	is_triggered_only = yes
+	trigger = { tag = HIM }
+
+	option = {
+		name = HIM.2.a
+		ai_chance = { base = 100 }
+		promote_character = HIM_Herobrine
+		if = {
+			limit = {
+				has_character = HIM_Zombie_Overseer
+			}
+			retire_character = HIM_Zombie_Overseer
+		}
+		HJM = {
+			country_event = {
+				id = HIM.9
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = {
+	id = HIM.3
+	title = HIM.3.t
+	desc = HIM.3.d
+	picture = GFX_report_event_generic
+
+	is_triggered_only = yes
+	trigger = { tag = HIM }
+
+	option = {
+		name = HIM.3.a
+		ai_chance = { base = 100 }
+		every_owned_state = {
+			limit = {
+				any_neighbor_state = {
+					owner = HJM
+				}
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = HIM.4
+	title = HIM.4.t
+	desc = HIM.4.d
+	picture = GFX_report_event_generic
+
+	is_triggered_only = yes
+	trigger = { tag = HIM }
+
+	option = {
+		name = HIM.4.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = HIM.5
+	title = HIM.5.t
+	desc = HIM.5.d
+	picture = GFX_report_event_generic
+
+	is_triggered_only = yes
+	trigger = { tag = HIM }
+
+	option = {
+		name = HIM.5.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = HIM.6
+	title = HIM.6.t
+	desc = HIM.6.d
+	picture = GFX_report_event_generic
+
+	is_triggered_only = yes
+	trigger = { tag = HIM }
+
+	option = {
+		name = HIM.6.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = HIM.7
+	title = HIM.7.t
+	desc = HIM.7.d
+	picture = GFX_report_event_generic
+
+	is_triggered_only = yes
+	trigger = { tag = HIM }
+
+	option = {
+		name = HIM.7.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = HIM.8
+	title = HIM.8.t
+	desc = HIM.8.d
+	picture = GFX_report_event_generic
+
+	is_triggered_only = yes
+	trigger = { tag = HIM }
+
+	option = {
+		name = HIM.8.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = HIM.9
+	title = HIM.9.t
+	desc = HIM.9.d
+	picture = GFX_report_event_generic
+	
+	is_triggered_only = yes
+	trigger = { tag = HJM }
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = HJM_brother_returns }
+			}
+			complete_national_focus = HJM_brother_returns
+		}
+	}
+
+	option = {
+		name = HIM.9.a
+		ai_chance = { base = 100 }
+		set_country_flag = HJM_record_13_played
+		if = {
+			limit = {
+				NOT = { has_active_mission = HJM_record_13_war_countdown }
+				NOT = { has_country_flag = HJM_record_13_war_activated }
+			}
+			set_country_flag = HJM_record_13_war_activated
+			activate_mission = HJM_record_13_war_countdown
+		}
+	}
+}
+
+country_event = {
+	id = HIM.10
+	title = HIM.10.t
+	desc = HIM.10.d
+	picture = GFX_report_event_generic
+
+	is_triggered_only = yes
+
+	option = {
+		name = HIM.10.a    
+		FROM = {
+			add_to_faction = ROOT        # FROM(HIM) 把 ROOT(当前国) 拉进阵营
+		}
+	}
+}

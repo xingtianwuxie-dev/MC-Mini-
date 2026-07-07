@@ -1,0 +1,62 @@
+ideas = {
+	country = {
+
+		# 下界经济体系 - 工厂产出大幅降低
+		HIM_nether_economy = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = -0.15
+				production_factory_efficiency_gain_factor = -0.10
+				production_speed_buildings_factor = -0.10
+			}
+		}
+
+		# 亡灵天性 - 组织度降低但补给消耗大幅减少
+		HIM_undead_nature = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.20
+				supply_consumption_factor = -0.40
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+			}
+		}
+
+		# 原始暴怒 - 研究速度和政治点获取降低
+		HIM_primal_fury = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = -0.15
+				political_power_gain = -0.10
+				stability_factor = -0.05
+			}
+		}
+
+		HIM_overlord_collapsed = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				surrender_limit = -0.50
+				stability_factor = -0.35
+				war_support_factor = -0.35
+				army_org_factor = -0.25
+			}
+		}
+
+	}
+}

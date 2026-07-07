@@ -1,0 +1,37 @@
+state = {
+	id = 530
+	name = "STATE_530" # Shikoku
+	manpower = 3310000
+
+	state_category = town # was large_city
+
+	history = {
+
+		owner = HJM
+		add_core_of = HJM
+
+		buildings = {
+			infrastructure = 2
+			air_base = 3
+			arms_factory = 0
+			industrial_complex = 1
+			4179 = {
+				naval_base = 1
+			}
+		}
+		
+		victory_points = {
+			7197 4 # Kochi
+		}
+
+		victory_points = {
+			4179 5 # Matsuyama
+		}
+
+	}
+	provinces = {
+		4094 4179 7046 7197 9965 11997 12028
+	}
+
+	local_supplies = 0.0 
+}

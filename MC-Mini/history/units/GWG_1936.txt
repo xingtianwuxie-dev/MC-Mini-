@@ -1,0 +1,88 @@
+division_template = {
+	name = "僵尸群"
+	priority = 0
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "骷髅骑士"
+	priority = 0
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "蜘蛛骑士"
+	priority = 0
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+
+units = {
+        # === 曼谷（首都） ===
+        division = {
+                name = "曼谷僵尸群第1团"
+                location = 7408 # Bangkok
+                division_template = "僵尸群"
+                start_experience_factor = 0.35
+                start_equipment_factor = 0.9
+        }
+        division = {
+                name = "曼谷骷髅骑士第1团"
+                location = 7408 # Bangkok
+                division_template = "骷髅骑士"
+                start_experience_factor = 0.3
+                start_equipment_factor = 0.85
+        }
+        # === 河内（北方前线） ===
+        division = {
+                name = "河内僵尸群第1团"
+                location = 4075 # Hanoi
+                division_template = "僵尸群"
+                start_experience_factor = 0.3
+                start_equipment_factor = 0.85
+        }
+        # === 西贡（南方重镇） ===
+        division = {
+                name = "西贡僵尸群第1团"
+                location = 4401 # Saigon
+                division_template = "僵尸群"
+                start_experience_factor = 0.25
+                start_equipment_factor = 0.8
+        }
+        # === 兰纳（西北山地） ===
+        division = {
+                name = "兰纳蜘蛛骑士第1团"
+                location = 4496 # Lanna
+                division_template = "蜘蛛骑士"
+                start_experience_factor = 0.25
+                start_equipment_factor = 0.8
+        }
+        # === 金边/马德望（东部） ===
+        division = {
+                name = "马德望骷髅骑士第2团"
+                location = 10134 # Battambang
+                division_template = "骷髅骑士"
+                start_experience_factor = 0.2
+                start_equipment_factor = 0.75
+        }
+  }

@@ -1,0 +1,299 @@
+focus_tree = {
+	id = HJM_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HJM
+		}
+	}
+	initial_show_position = {
+		x = 0
+	}
+	##############################################################
+	# 第一阶段：战前（主线 1-4）
+	##############################################################
+	# ===== 1. MC帝国之始 =====
+	focus = {
+		id = MC_start
+		x = 11
+		y = 0
+		cost = 5
+		icon = GFX_focus_HJM_MC_start
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			country_event = {
+				# 立即触发
+				id = HJM.1
+			}
+		}
+	}
+	# ===== 2. 山雨欲来 =====
+	focus = {
+		id = HJM_underground_riot
+		x = 11
+		y = 1
+		cost = 5
+		icon = GFX_HJM_troubles_are_coming
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = MC_start
+		}
+		completion_reward = {
+			country_event = {
+				id = HJM.3
+			}
+		}
+	}
+	# ===== 3. 他们在干什么 =====
+	focus = {
+		id = HJM_illager_spy
+		x = 11
+		y = 2
+		cost = 5
+		icon = GFX_HJM_suspicious
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HJM_underground_riot
+		}
+		completion_reward = {
+			country_event = {
+				id = HJM.4
+			}
+			set_country_flag = HJM_illager_activity_unlocked
+			if = {
+				limit = {
+					NOT = { has_idea = HJM_illager_activity_low }
+					NOT = { has_idea = HJM_illager_activity_medium }
+					NOT = { has_idea = HJM_illager_activity_high }
+				}
+				add_ideas = HJM_illager_activity_low
+				activate_mission = HJM_illager_activity_escalation
+			}
+		}
+	}
+	# ===== 4. 13号唱片 =====
+	focus = {
+		id = HJM_brother_returns
+		x = 11
+		y = 3
+		cost = 5
+		icon = GFX_HJM_come_again
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HJM_illager_spy
+		}
+		completion_reward = {
+			set_country_flag = HJM_record_13_played
+			if = {
+				limit = {
+					NOT = { has_active_mission = HJM_record_13_war_countdown }
+					NOT = { has_country_flag = HJM_record_13_war_activated }
+				}
+				set_country_flag = HJM_record_13_war_activated
+				activate_mission = HJM_record_13_war_countdown
+			}
+			country_event = {
+				id = HJM.5
+			}
+		}
+	}
+	##############################################################
+	# 第二阶段：三线并进（5-10）
+	##############################################################
+	# ===== 内政线 =====
+	# 5. 加强村庄防备
+	focus = {
+		id = HJM_village_defense
+		x = 9
+		y = 4
+		cost = 5
+		icon = GFX_HJM_Strengthen_village_defenses
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		# 6. 是铁傀儡，我们有救了！
+		prerequisite = {
+			focus = HJM_brother_returns
+		}
+		completion_reward = {
+			country_event = {
+				id = HJM.14
+			}
+		}
+	}
+	focus = {
+		id = HJM_iron_golem
+		x = 9
+		y = 5
+		cost = 5
+		icon = GFX_HJM_iron_golem
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HJM_village_defense
+		}
+		completion_reward = {
+			country_event = {
+				id = HJM.15
+			}
+		}
+	}
+	# ===== 军事线 =====
+	# 7. 加强红石科技研究
+	focus = {
+		id = HJM_redstone_research
+		x = 11
+		y = 4
+		cost = 5
+		icon = GFX_HJM_redstone_research
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		available = {
+			has_war = no
+		}
+		prerequisite = {
+			focus = HJM_brother_returns
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = HJM_redstone_radio_bonus
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+			country_event = {
+				id = HJM.16
+			}
+		}
+	}
+	# 8. 红石大炮
+	focus = {
+		id = HJM_redstone_cannon
+		x = 11
+		y = 5
+		cost = 5
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HJM_redstone_research
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = HJM_redstone_artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+			country_event = {
+				id = HJM.17
+			}
+		}
+	}
+	# ===== 外交线 =====
+	# 9. 加强方外势力接触
+	focus = {
+		id = HJM_outsider_contact
+		x = 16
+		y = 4
+		cost = 5
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HJM_brother_returns
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.08
+			}
+			country_event = {
+				id = HJM.18
+			}
+		}
+	}
+	# 10. 穿越者协约
+	focus = {
+		id = HJM_player_pact
+		x = 16
+		y = 5
+		cost = 5
+		icon = GFX_HJM_chaunyuezhexieyue
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HJM_outsider_contact
+		}
+		completion_reward = {
+			set_technology = {
+				tech_mountaineers = 1
+				marines = 1
+				paratroopers = 1
+			}
+			division_template = {
+				name = "穿越者特种师"
+				priority = 3
+				regiments = {
+					paratrooper = {
+						x = 0
+						y = 0
+					}
+					paratrooper = {
+						x = 0
+						y = 1
+					}
+					paratrooper = {
+						x = 0
+						y = 2
+					}
+					mountaineers = {
+						x = 1
+						y = 0
+					}
+					mountaineers = {
+						x = 1
+						y = 1
+					}
+					mountaineers = {
+						x = 1
+						y = 2
+					}
+					infantry = {
+						x = 2
+						y = 0
+					}
+					infantry = {
+						x = 2
+						y = 1
+					}
+				}
+				support = {
+					engineer = {
+						x = 0
+						y = 0
+					}
+					recon = {
+						x = 0
+						y = 1
+					}
+					artillery = {
+						x = 0
+						y = 2
+					}
+				}
+			}
+			set_power_balance = {
+				id = HJM_power_balance
+				left_side = HJM_empire_side
+				right_side = HJM_traveler_side
+				set_value = 0.0
+			}
+			country_event = {
+				id = HJM.6
+			}
+		}
+	}
+}

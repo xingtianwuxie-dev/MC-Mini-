@@ -1,0 +1,173 @@
+characters = {
+	HJM_Notch = {
+		name = HJM_Notch
+		portraits={
+			army={
+				large="gfx/leaders/HJM/portrait_Notch_sword.png"
+			}
+			civilian={
+				large ="gfx/leaders/HJM/portrait_Notch.png"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchist
+			traits = { 
+				rende
+			 }
+			expire = "1965.1.1.1"
+		}
+		field_marshal = { 
+			traits = { old_guard politically_connected }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				has_government = feudalist
+			}
+		}
+	}
+	HJM_Heiling = {
+		name = HJM_Heiling
+		portraits = {
+			army = {
+				large = "gfx/leaders/HJM/portrait_Heiling_sword.png"
+			}
+		}
+		corps_commander = {
+			traits = { defensive_doctrine infantry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	HJM_Steve_Builder = {
+		name = HJM_Steve_Builder
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		corps_commander = {
+			traits = { organizer logistics_wizard }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	HJM_Alex_Crafter = {
+		name = HJM_Alex_Crafter
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer trait_engineer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	HJM_Marcus_Redstone = {
+		name = HJM_Marcus_Redstone
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		corps_commander = {
+			traits = { brilliant_strategist trait_cautious }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	HJM_Daniel_Oakshield = {
+		name = HJM_Daniel_Oakshield
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		corps_commander = {
+			traits = { defensive_doctrine urban_assault_specialist }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	HJM_wutu = {
+		name = HJM_wutu
+		portraits = {
+			army={
+				large="gfx/leaders/HJM/portrait_wutu_sword.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = wutu
+			cost = 80
+			allowed = {
+				original_tag = HJM
+			}
+			available = {
+
+			}
+			traits = {
+				zhongjian
+			}
+		}
+		corps_commander = {
+			traits = { brilliant_strategist  infantry_officer  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+
+	
+}

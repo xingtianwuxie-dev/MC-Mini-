@@ -1,0 +1,63 @@
+division_template = {
+	name = "末影人突击队"
+	priority = 0
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "末影游击队"
+	priority = 0
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "雅库茨克末影人突击队第1团"
+		location = 10641
+		division_template = "末影人突击队"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "克拉斯诺亚尔斯克末影人突击队第2团"
+		location = 4724
+		division_template = "末影人突击队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "新西伯利亚末影游击队第1团"
+		location = 7274
+		division_template = "末影游击队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "维尔霍扬斯克末影游击队第2团"
+		location = 12549
+		division_template = "末影游击队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "鄂霍茨克末影人突击队第3团"
+		location = 4881
+		division_template = "末影人突击队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+	}
+}

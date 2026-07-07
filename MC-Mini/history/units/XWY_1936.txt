@@ -1,0 +1,65 @@
+division_template = {
+	name = "史莱姆军团"
+	priority = 0
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "骷髅游击队"
+	priority = 0
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+        # === 海得拉巴（首都） ===
+        division = {
+                name = "海得拉巴史莱姆第1团"
+                location = 8087 # Hyderabad
+                division_template = "史莱姆军团"
+                start_experience_factor = 0.3
+                start_equipment_factor = 0.85
+        }
+        division = {
+                name = "海得拉巴骷髅游击第1团"
+                location = 8087 # Hyderabad
+                division_template = "骷髅游击队"
+                start_experience_factor = 0.25
+                start_equipment_factor = 0.8
+        }
+        # === 孟买 ===
+        division = {
+                name = "孟买史莱姆第1团"
+                location = 1349 # Bombay
+                division_template = "史莱姆军团"
+                start_experience_factor = 0.3
+                start_equipment_factor = 0.85
+        }
+        # === 马德拉斯 ===
+        division = {
+                name = "马德拉斯史莱姆第1团"
+                location = 10278 # Madras
+                division_template = "史莱姆军团"
+                start_experience_factor = 0.25
+                start_equipment_factor = 0.8
+        }
+        # === 迈索尔 ===
+        division = {
+                name = "迈索尔骷髅游击第1团"
+                location = 8011 # Mysore
+                division_template = "骷髅游击队"
+                start_experience_factor = 0.2
+                start_equipment_factor = 0.75
+        }
+  }

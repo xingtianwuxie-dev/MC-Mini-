@@ -1,0 +1,180 @@
+HJM = {
+	male = {
+		names = {
+			Notch Steve Alex Brian Daniel Ethan Jason Kevin Marcus Victor
+		}
+		surnames = {
+			Builder Miner Crafter Redstone Ironwood Stonewall Oakshield
+		}
+		callsigns = {
+			"Diamond Sword" "Iron Golem" "Redstone" "Overworld" "Village Guard"
+		}
+	}
+
+	female = {
+		names = {
+			Alex Emma Julia Linda Maya Nora Olivia Sarah
+		}
+		surnames = {
+			Builder Miner Crafter Redstone Ironwood Stonewall Oakshield
+		}
+		callsigns = {
+			"Diamond Sword" "Iron Golem" "Redstone" "Overworld" "Village Guard"
+		}
+	}
+
+	surnames = {
+		Builder Miner Crafter Redstone Ironwood Stonewall Oakshield
+	}
+	callsigns = {
+		"Diamond Sword" "Iron Golem" "Redstone" "Overworld" "Village Guard"
+	}
+}
+
+HIM = {
+	male = {
+		names = {
+			Herobrine Null Dread Blaze Wither Ghast Ender Nether Ashen
+		}
+		surnames = {
+			Hellrock Netherborne Ashwalker Soulfire Blackstone Witherborn
+		}
+		callsigns = {
+			"Hellrock" "Soul Fire" "Nether Gate" "White Eyes" "Blackstone"
+		}
+	}
+
+	female = {
+		names = {
+			Ember Nyx Ash Vex Mira Lyra
+		}
+		surnames = {
+			Hellrock Netherborne Ashwalker Soulfire Blackstone Witherborn
+		}
+		callsigns = {
+			"Hellrock" "Soul Fire" "Nether Gate" "White Eyes" "Blackstone"
+		}
+	}
+
+	surnames = {
+		Hellrock Netherborne Ashwalker Soulfire Blackstone Witherborn
+	}
+	callsigns = {
+		"Hellrock" "Soul Fire" "Nether Gate" "White Eyes" "Blackstone"
+	}
+}
+
+XWY = {
+        male = {
+                names = {
+                        Slime Gel Jelly Blob Gloop Goo Ooze Muc
+                }
+                surnames = {
+                        Slimeborn Gelkin Blobling Gloopson Oozewalker Mucson
+                }
+                callsigns = {
+                        "Green Slime" "Blue Gel" "Magma Cube" "Sticky Shock" "Bouncy Doom"
+                }
+        }
+        female = {
+                names = {
+                        Gela Jella Bloba Gloopa Ooza Muca
+                }
+                surnames = {
+                        Slimeborn Gelkin Blobling Gloopson Oozewalker Mucson
+                }
+        }
+        surnames = {
+                Slimeborn Gelkin Blobling Gloopson Oozewalker Mucson
+        }
+        callsigns = {
+                "Green Slime" "Blue Gel" "Magma Cube" "Sticky Shock" "Bouncy Doom"
+        }
+  }
+
+LLL = {
+        male = {
+                names = {
+                        Vex Illager Ravager Evoker Pillager Geomancer Warlock Shade
+                }
+                surnames = {
+                        Darkwood Shadowmere Grimhold Thornwood Blackwood Nightvale
+                }
+                callsigns = {
+                        "Dark Manor" "Grim Vex" "Shadow Fang" "Woodland Doom" "Pillager Raid"
+                }
+        }
+        female = {
+                names = {
+                        Vexa Illara Evoka Shada Thorna Ravena
+                }
+                surnames = {
+                        Darkwood Shadowmere Grimhold Thornwood Blackwood Nightvale
+                }
+        }
+        surnames = {
+                Darkwood Shadowmere Grimhold Thornwood Blackwood Nightvale
+        }
+        callsigns = {
+                "Dark Manor" "Grim Vex" "Shadow Fang" "Woodland Doom" "Pillager Raid"
+        }
+  }
+
+GWG = {
+        male = {
+                names = {
+                        Zomb Husk Rotter Ghoul Decay Crawler Molder Revenant
+                }
+                surnames = {
+                        Graveborn Rotwalker Bonerot Fleshrend Duskfall Cavespawn
+                }
+                callsigns = {
+                        "Cave Hoard" "Zombie Swarm" "Bat Wing" "Spider Fang" "Underground Horde"
+                }
+        }
+        female = {
+                names = {
+                        Zomba Huska Ghola Revena Decaya Crawla
+                }
+                surnames = {
+                        Graveborn Rotwalker Bonerot Fleshrend Duskfall Cavespawn
+                }
+        }
+        surnames = {
+                Graveborn Rotwalker Bonerot Fleshrend Duskfall Cavespawn
+        }
+        callsigns = {
+                "Cave Hoard" "Zombie Swarm" "Bat Wing" "Spider Fang" "Underground Horde"
+        }
+  }
+
+ZLG = {
+        male = {
+                names = {
+                        Tusk Goldsnout Brute Hoglin Warpig Gilded Grimtusk
+                }
+                surnames = {
+                        Goldhoof Bruteborn Bastionpig Tuskrender Nethertusk
+                }
+                callsigns = {
+                        "Golden Sword" "Bastion Guard" "Tusk Charge" "Piglin Horde" "Nether Gold"
+                }
+        }
+        female = {
+                names = {
+                        Tuska Golda Bruta Hogla Grima
+                }
+                surnames = {
+                        Goldhoof Bruteborn Bastionpig Tuskrender Nethertusk
+                }
+        }
+        surnames = {
+                Goldhoof Bruteborn Bastionpig Tuskrender Nethertusk
+        }
+        callsigns = {
+                "Golden Sword" "Bastion Guard" "Tusk Charge" "Piglin Horde" "Nether Gold"
+        }
+  }
+
+  
+

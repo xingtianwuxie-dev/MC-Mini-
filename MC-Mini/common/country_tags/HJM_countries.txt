@@ -1,0 +1,8 @@
+HJM = "countries/Hajimi.txt"
+HIM = "countries/HIM.txt"
+LLL = "countries/LLL.txt"
+ZLG = "countries/ZLG.txt"
+XWY = "countries/XWY.txt"
+GWG = "countries/GWG.txt"
+MDG = "countries/MDG.txt"
+MYR = "countries/MYR.txt"

@@ -1,0 +1,657 @@
+add_namespace = HJM
+add_namespace = HJM_news
+
+country_event = {
+    id = HJM.1
+    title = HJM.1.t
+    desc = HJM.1.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.1.a
+        set_country_flag = HJM_God_Save_The_Queen
+    }
+}
+
+country_event = {
+    id = HJM.2
+    title = HJM.2.t
+    desc = HJM.2.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.2.a
+    }
+    option = {
+        name = HJM.2.b
+    }
+}
+
+country_event = {
+    id = HJM.3
+    title = HJM.3.t
+    desc = HJM.3.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.3.a
+        if = {
+          limit = { 
+            is_ai = no 
+            }
+          scoped_play_song = "Destiny"     # 立刻播命运
+        }
+        add_stability = -0.05
+        country_event = {
+            id = HJM.19
+            days = 10
+        }
+    }
+    option = {
+        name = HJM.3.b
+        add_stability = 0.05
+        country_event = {
+            id = HJM.19
+            days = 20
+        }
+    }
+}
+
+country_event = {
+    id = HJM.19
+    title = HJM.19.t
+    desc = HJM.19.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.19.a
+        add_political_power = -25
+        country_event = {
+            id = HJM.20
+            days = 15
+        }
+    }
+}
+
+country_event = {
+    id = HJM.20
+    title = HJM.20.t
+    desc = HJM.20.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.20.a
+        add_war_support = 0.03
+        country_event = {
+            id = HJM.21
+            days = 20
+        }
+    }
+}
+
+country_event = {
+    id = HJM.21
+    title = HJM.21.t
+    desc = HJM.21.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.21.a
+        army_experience = 5
+        if = {
+            limit = {
+                NOT = { has_completed_focus = HJM_illager_spy }
+            }
+            add_political_power = 25
+        }
+    }
+}
+
+country_event = {
+    id = HJM.4
+    title = HJM.4.t
+    desc = HJM.4.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.4.a
+    }
+    option = {
+        name = HJM.4.b
+    }
+}
+
+country_event = {
+    id = HJM.5
+    title = HJM.5.t
+    desc = HJM.5.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.5.a
+        set_country_flag = HJM_record_13_played
+        if = {
+            limit = {
+                NOT = { has_active_mission = HJM_record_13_war_countdown }
+                NOT = { has_country_flag = HJM_record_13_war_activated }
+            }
+            set_country_flag = HJM_record_13_war_activated
+            activate_mission = HJM_record_13_war_countdown
+        }
+    }
+}
+
+country_event = {
+    id = HJM.6
+    title = HJM.6.t
+    desc = HJM.6.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.6.a
+    }
+}
+
+country_event = {
+    id = HJM.7
+    title = HJM.7.t
+    desc = HJM.7.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.7.a
+    }
+}
+
+country_event = {
+    id = HJM.8
+    title = HJM.8.t
+    desc = HJM.8.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.8.a
+    }
+    option = {
+        name = HJM.8.b
+    }
+}
+
+country_event = {
+    id = HJM.9
+    title = HJM.9.t
+    desc = HJM.9.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.9.a
+    }
+}
+
+country_event = {
+    id = HJM.10
+    title = HJM.10.t
+    desc = HJM.10.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.10.a
+        if = {
+            limit = {
+                has_character = HJM_Notch
+            }
+            retire_character = HJM_Notch
+        }
+    }
+}
+
+country_event = {
+    id = HJM.11
+    title = HJM.11.t
+    desc = HJM.11.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.11.a
+    }
+}
+
+country_event = {
+    id = HJM.12
+    title = HJM.12.t
+    desc = HJM.12.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.12.a
+    }
+}
+
+country_event = {
+    id = HJM.13
+    title = HJM.13.t
+    desc = HJM.13.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.13.a
+    }
+}
+
+country_event = {
+    id = HJM.14
+    title = HJM.14.t
+    desc = HJM.14.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.14.a
+		325 = {
+			add_building_construction = { type = bunker province = 1319 level = 1 instant_build = yes }
+			add_building_construction = { type = bunker province = 4501 level = 1 instant_build = yes }
+			add_building_construction = { type = bunker province = 12262 level = 1 instant_build = yes }
+			add_building_construction = { type = bunker province = 5072 level = 1 instant_build = yes }
+		}
+		594 = {
+			add_building_construction = { type = bunker province = 7137 level = 1 instant_build = yes }
+			add_building_construction = { type = bunker province = 10459 level = 1 instant_build = yes }
+		}
+		601 = {
+			add_building_construction = { type = bunker province = 10856 level = 1 instant_build = yes }
+		}
+		747 = {
+			add_building_construction = { type = bunker province = 7965 level = 1 instant_build = yes }
+		}
+		757 = {
+			add_building_construction = { type = bunker province = 5033 level = 1 instant_build = yes }
+		}
+		1033 = {
+			add_building_construction = { type = bunker province = 10004 level = 1 instant_build = yes }
+		}
+    }
+}
+
+country_event = {
+    id = HJM.15
+    title = HJM.15.t
+    desc = HJM.15.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.15.a
+        add_equipment_to_stockpile = {
+            type = infantry_equipment_1
+            amount = 10000
+            producer = HJM
+        }
+        1036 = {
+            create_unit = {
+                division = "name = \"第1铁傀儡装甲师\" division_template = \"铁傀儡装甲师\" start_experience_factor = 0.8 start_equipment_factor = 1 start_manpower_factor = 1"
+                owner = HJM
+            }
+        }
+    }
+}
+
+country_event = {
+    id = HJM.16
+    title = HJM.16.t
+    desc = HJM.16.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.16.a
+    }
+}
+
+country_event = {
+    id = HJM.17
+    title = HJM.17.t
+    desc = HJM.17.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.17.a
+    }
+}
+
+country_event = {
+    id = HJM.18
+    title = HJM.18.t
+    desc = HJM.18.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.18.a
+    }
+}
+
+country_event = {
+    id = HJM.22
+    title = HJM.22.t
+    desc = HJM.22.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.22.a
+        remove_ideas = HJM_southern_front_crisis
+        if = {
+            limit = {
+                HIM = { exists = yes }
+            }
+            annex_country = {
+                target = HIM
+                transfer_troops = yes
+            }
+        }
+        country_event = { id = HJM.23 hours = 1 }
+    }
+}
+
+country_event = {
+    id = HJM.23
+    title = HJM.23.t
+    desc = HJM.23.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.23.a
+        if = {
+            limit = {
+                LLL = { exists = yes }
+            }
+            annex_country = {
+                target = LLL
+                transfer_troops = yes
+            }
+        }
+        country_event = { id = HJM.24 hours = 1 }
+    }
+}
+
+country_event = {
+    id = HJM.24
+    title = HJM.24.t
+    desc = HJM.24.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.24.a
+        if = {
+            limit = {
+                XWY = { exists = yes }
+            }
+            annex_country = {
+                target = XWY
+                transfer_troops = yes
+            }
+        }
+        country_event = { id = HJM.25 hours = 1 }
+    }
+}
+
+country_event = {
+    id = HJM.25
+    title = HJM.25.t
+    desc = HJM.25.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.25.a
+        if = {
+            limit = {
+                ZLG = { exists = yes }
+            }
+            annex_country = {
+                target = ZLG
+                transfer_troops = yes
+            }
+        }
+        country_event = { id = HJM.26 hours = 1 }
+    }
+}
+
+country_event = {
+    id = HJM.26
+    title = HJM.26.t
+    desc = HJM.26.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.26.a
+        if = {
+            limit = {
+                GWG = { exists = yes }
+            }
+            annex_country = {
+                target = GWG
+                transfer_troops = yes
+            }
+        }
+        country_event = { id = HJM.27 hours = 1 }
+    }
+}
+
+country_event = {
+    id = HJM.27
+    title = HJM.27.t
+    desc = HJM.27.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.27.a
+        if = {
+            limit = {
+                MDG = { exists = yes }
+            }
+            annex_country = {
+                target = MDG
+                transfer_troops = yes
+            }
+        }
+        country_event = { id = HJM.28 hours = 1 }
+    }
+}
+
+country_event = {
+    id = HJM.28
+    title = HJM.28.t
+    desc = HJM.28.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.28.a
+        if = {
+            limit = {
+                MYR = { exists = yes }
+            }
+            annex_country = {
+                target = MYR
+                transfer_troops = yes
+            }
+        }
+    }
+}
+
+news_event = {
+    id = HJM_news.1
+    title = HJM_news.1.t
+    desc = HJM_news.1.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = HJM_news.1.a
+    }
+}
+
+news_event = {
+    id = HJM_news.2
+    title = HJM_news.2.t
+    desc = HJM_news.2.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = HJM_news.2.a
+    }
+}
+
+news_event = {
+    id = HJM_news.3
+    title = HJM_news.3.t
+    desc = HJM_news.3.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = HJM_news.3.a
+    }
+}
+

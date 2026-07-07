@@ -1,0 +1,106 @@
+characters = {
+	HIM_Zombie_Overseer = {
+		name = HIM_Zombie_Overseer
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = {
+				dictator
+			}
+			expire = "1965.1.1.1"
+		}
+	}
+	HIM_Herobrine = {
+		name = HIM_Herobrine
+		portraits={
+			army={
+				large="gfx/leaders/HIM/portrait_Herobrine.png"
+			}
+			civilian={
+				large="gfx/leaders/HIM/portrait_Herobrine.png"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits = {
+				dictator
+			}
+			expire = "1965.1.1.1"
+		}
+		field_marshal = {
+			traits = { old_guard politically_connected }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				has_government = fascism
+			}
+		}
+	}
+	HIM_Dread_Soulfire = {
+		name = HIM_Dread_Soulfire
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer aggressive_assaulter }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			visible = {
+				has_government = fascism
+			}
+		}
+	}
+	HIM_Blaze_Netherborne = {
+		name = HIM_Blaze_Netherborne
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer trait_reckless }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			visible = {
+				has_government = fascism
+			}
+		}
+	}
+	HIM_Wither_Ashwalker = {
+		name = HIM_Wither_Ashwalker
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		corps_commander = {
+			traits = { defensive_doctrine infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+				has_government = fascism
+			}
+		}
+	}
+}

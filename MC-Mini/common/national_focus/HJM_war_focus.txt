@@ -1,0 +1,151 @@
+focus_tree = {
+	id = HJM_war_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HJM
+			has_war_with = HIM
+		}
+	}
+	initial_show_position = {
+		x = 10
+	}
+	focus = {
+		id = HJM_liberate_village
+		x = 10
+		y = 0
+		cost = 1
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		available = {
+			has_war_with = HIM
+		}
+		completion_reward = {
+			news_event = {
+				id = HJM_news.1
+			}
+			country_event = {
+				id = HJM.7
+			}
+		}
+	}
+	focus = {
+		id = HJM_player_general
+		x = 10
+		y = 1
+		cost = 5
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		available = {
+			has_war_with = HIM
+		}
+		prerequisite = {
+			focus = HJM_liberate_village
+		}
+		completion_reward = {
+			country_event = {
+				id = HJM.8
+			}
+		}
+	}
+	focus = {
+		id = HJM_nether_strike
+		x = 10
+		y = 2
+		cost = 5
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		available = {
+			has_war_with = HIM
+		}
+		prerequisite = {
+			focus = HJM_player_general
+		}
+		completion_reward = {
+			439 = {
+				create_unit = {
+					division = "name = \"第1火星兵突击师\" division_template = \"穿越者特种师\" start_experience_factor = 0.75 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = HJM
+				}
+			}
+			1076 = {
+				create_unit = {
+					division = "name = \"第2火星兵突击师\" division_template = \"穿越者特种师\" start_experience_factor = 0.75 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = HJM
+				}
+			}
+			995 = {
+				create_unit = {
+					division = "name = \"第3火星兵突击师\" division_template = \"穿越者特种师\" start_experience_factor = 0.75 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = HJM
+				}
+			}
+			country_event = {
+				id = HJM.9
+			}
+		}
+	}
+	focus = {
+		id = HJM_dignity_blade
+		x = 10
+		y = 3
+		cost = 5
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		available = {
+			has_war_with = HIM
+		}
+		prerequisite = {
+			focus = HJM_nether_strike
+		}
+		completion_reward = {
+			country_event = {
+				id = HJM.11
+			}
+		}
+	}
+	focus = {
+		id = HJM_total_war
+		x = 10
+		y = 4
+		cost = 5
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		available = {
+			has_war_with = HIM
+		}
+		prerequisite = {
+			focus = HJM_dignity_blade
+		}
+		completion_reward = {
+			remove_ideas = volunteer_only
+			remove_ideas = limited_conscription
+			remove_ideas = extensive_conscription
+			add_ideas = extensive_conscription
+			country_event = {
+				id = HJM.12
+			}
+		}
+	}
+	focus = {
+		id = HJM_liberate_nether
+		x = 10
+		y = 5
+		cost = 5
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		available = {
+			has_war_with = HIM
+		}
+		prerequisite = {
+			focus = HJM_total_war
+		}
+		completion_reward = {
+			add_ideas = HJM_liberate_nether_offensive
+			country_event = {
+				id = HJM.13
+			}
+		}
+	}
+}

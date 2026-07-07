@@ -1,0 +1,38 @@
+state = {
+	id = 535
+	name = "STATE_535" # was Koshinetsu, is actually Hokuriku
+	manpower = 3871000
+	state_category = city # was large_city
+	
+	resources = {
+		steel = 27 # was: 35
+		tungsten = 8 # was: 10
+	}
+
+	history = {
+
+		owner = HJM
+		add_core_of = HJM
+
+		buildings = {
+
+			arms_factory = 0
+			industrial_complex = 1
+			infrastructure = 2
+			dockyard = 1
+			fuel_silo = 1
+
+		}
+		
+		victory_points = {
+			10032 7 # Kanazawa
+		}
+
+	}
+
+	provinces = {
+		998 7102 7217 10032 
+	}
+
+	local_supplies = 0.0 
+}

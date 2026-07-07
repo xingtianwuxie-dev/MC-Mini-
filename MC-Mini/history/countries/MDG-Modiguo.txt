@@ -1,0 +1,34 @@
+capital = 330 # Mongolia
+
+oob = "MDG_1936"
+
+set_research_slots = 2
+set_stability = 0.55
+set_war_support = 0.45
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+}
+
+set_politics = {
+	ruling_party = feudalist
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	feudalist = 70
+	neutrality = 20
+	fascism = 10
+}
+
+recruit_character = MDG_Ender_Dragon
+
+add_ideas = {
+	MDG_end_realm_garrisons
+}

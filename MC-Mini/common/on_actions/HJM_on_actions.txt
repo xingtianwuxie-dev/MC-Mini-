@@ -1,0 +1,131 @@
+on_actions = {
+	on_war_relation_added = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = HIM }
+				}
+				every_country = {
+					limit = {
+						is_subject_of = HIM
+						OR = {
+							original_tag = LLL
+							original_tag = ZLG
+							original_tag = XWY
+							original_tag = GWG
+						}
+						NOT = { has_war_with = FROM }
+					}
+					add_to_war = {
+						targeted_alliance = HIM
+						enemy = FROM
+						hostility_reason = asked_to_join
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { tag = HIM }
+				}
+				every_country = {
+					limit = {
+						is_subject_of = HIM
+						OR = {
+							original_tag = LLL
+							original_tag = ZLG
+							original_tag = XWY
+							original_tag = GWG
+						}
+						NOT = { has_war_with = ROOT }
+					}
+					add_to_war = {
+						targeted_alliance = HIM
+						enemy = ROOT
+						hostility_reason = asked_to_join
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = HJM }
+					FROM = { tag = HIM }
+				}
+				ROOT = {
+					set_country_flag = HJM_record_13_war_activated
+					set_country_flag = HJM_record_13_war_started
+					set_country_flag = HJM_war_focus_loaded
+					load_focus_tree = { tree = HJM_war_focus keep_completed = yes }
+					add_ideas = HJM_southern_front_crisis
+					news_event = { id = HJM_news.2 }
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = HIM }
+					FROM = { tag = HJM }
+				}
+				FROM = {
+					set_country_flag = HJM_record_13_war_activated
+					set_country_flag = HJM_record_13_war_started
+					set_country_flag = HJM_war_focus_loaded
+					load_focus_tree = { tree = HJM_war_focus keep_completed = yes }
+					add_ideas = HJM_southern_front_crisis
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						tag = HJM
+						NOT = { has_global_flag = HJM_MDG_split_happened }
+					}
+				}
+				ROOT = { country_event = { id = HJM_MDG.1 } }
+			}
+			if = {
+				limit = {
+					FROM = {
+						tag = HJM
+						NOT = { has_global_flag = HJM_MDG_split_happened }
+					}
+				}
+				FROM = { country_event = { id = HJM_MDG.1 } }
+			}
+		}
+	}
+
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = HIM }
+				}
+				every_country = {
+					limit = {
+						is_subject_of = HIM
+						OR = {
+							original_tag = LLL
+							original_tag = ZLG
+							original_tag = XWY
+							original_tag = GWG
+						}
+						has_capitulated = no
+					}
+					add_ideas = HIM_overlord_collapsed
+					add_stability = -0.35
+					add_war_support = -0.35
+					set_country_flag = HIM_subject_overlord_collapsed
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = HIM }
+					FROM = { tag = HJM }
+				}
+				FROM = {
+					country_event = { id = HJM.22 }
+					news_event = { id = HJM_news.3 }
+				}
+			}
+		}
+	}
+}

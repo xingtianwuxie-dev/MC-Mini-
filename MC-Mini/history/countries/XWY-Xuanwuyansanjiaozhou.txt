@@ -1,0 +1,35 @@
+capital = 427 # 海得拉巴
+
+oob = "XWY_1936"
+
+set_research_slots = 2
+set_stability = 0.45
+set_war_support = 0.5
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+}
+
+set_grand_doctrine = new_mobile_warfare
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	fascism = 60
+	feudalist = 40
+}
+
+recruit_character = XWY_FeralSlime
+
+add_ideas = {
+	XWY_burning_city
+}

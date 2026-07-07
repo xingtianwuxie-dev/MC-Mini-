@@ -1,0 +1,18 @@
+characters = {
+	MYR_Enderman_Commander = {
+		name = MYR_Enderman_Commander
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { dictator }
+			expire = "1965.1.1.1"
+		}
+	}
+}

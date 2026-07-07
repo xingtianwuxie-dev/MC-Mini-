@@ -1,0 +1,133 @@
+add_namespace = HJM_MDG
+
+country_event = {
+	id = HJM_MDG.1
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = HJM
+		NOT = { has_global_flag = HJM_MDG_split_happened }
+		MDG = { exists = yes }
+	}
+
+	immediate = {
+		set_global_flag = HJM_MDG_split_happened
+
+		329 = { remove_core_of = MDG add_core_of = MYR }
+		516 = { remove_core_of = MDG add_core_of = MYR }
+		562 = { remove_core_of = MDG add_core_of = MYR }
+		563 = { remove_core_of = MDG add_core_of = MYR }
+		564 = { remove_core_of = MDG add_core_of = MYR }
+		565 = { remove_core_of = MDG add_core_of = MYR }
+		566 = { remove_core_of = MDG add_core_of = MYR }
+		567 = { remove_core_of = MDG add_core_of = MYR }
+		568 = { remove_core_of = MDG add_core_of = MYR }
+		569 = { remove_core_of = MDG add_core_of = MYR }
+		570 = { remove_core_of = MDG add_core_of = MYR }
+		571 = { remove_core_of = MDG add_core_of = MYR }
+		572 = { remove_core_of = MDG add_core_of = MYR }
+		573 = { remove_core_of = MDG add_core_of = MYR }
+		574 = { remove_core_of = MDG add_core_of = MYR }
+		575 = { remove_core_of = MDG add_core_of = MYR }
+		576 = { remove_core_of = MDG add_core_of = MYR }
+		577 = { remove_core_of = MDG add_core_of = MYR }
+		578 = { remove_core_of = MDG add_core_of = MYR }
+		579 = { remove_core_of = MDG add_core_of = MYR }
+		580 = { remove_core_of = MDG add_core_of = MYR }
+		581 = { remove_core_of = MDG add_core_of = MYR }
+		582 = { remove_core_of = MDG add_core_of = MYR }
+		637 = { remove_core_of = MDG add_core_of = MYR }
+		644 = { remove_core_of = MDG add_core_of = MYR }
+		651 = { remove_core_of = MDG add_core_of = MYR }
+		652 = { remove_core_of = MDG add_core_of = MYR }
+		653 = { remove_core_of = MDG add_core_of = MYR }
+		654 = { remove_core_of = MDG add_core_of = MYR }
+		822 = { remove_core_of = MDG add_core_of = MYR }
+		824 = { remove_core_of = MDG add_core_of = MYR }
+		874 = { remove_core_of = MDG add_core_of = MYR }
+		875 = { remove_core_of = MDG add_core_of = MYR }
+		876 = { remove_core_of = MDG add_core_of = MYR }
+		877 = { remove_core_of = MDG add_core_of = MYR }
+		878 = { remove_core_of = MDG add_core_of = MYR }
+
+		MYR = {
+			transfer_state = 329
+			transfer_state = 516
+			transfer_state = 562
+			transfer_state = 563
+			transfer_state = 564
+			transfer_state = 565
+			transfer_state = 566
+			transfer_state = 567
+			transfer_state = 568
+			transfer_state = 569
+			transfer_state = 570
+			transfer_state = 571
+			transfer_state = 572
+			transfer_state = 573
+			transfer_state = 574
+			transfer_state = 575
+			transfer_state = 576
+			transfer_state = 577
+			transfer_state = 578
+			transfer_state = 579
+			transfer_state = 580
+			transfer_state = 581
+			transfer_state = 582
+			transfer_state = 637
+			transfer_state = 644
+			transfer_state = 651
+			transfer_state = 652
+			transfer_state = 653
+			transfer_state = 654
+			transfer_state = 822
+			transfer_state = 824
+			transfer_state = 874
+			transfer_state = 875
+			transfer_state = 876
+			transfer_state = 877
+			transfer_state = 878
+			set_capital = { state = 574 }
+			load_oob = "MYR_1936"
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			set_popularities = {
+				fascism = 85
+				feudalist = 10
+				neutrality = 5
+			}
+		}
+
+		HJM = {
+			if = {
+				limit = {
+					MDG = {
+						exists = yes
+						NOT = { is_subject_of = HJM }
+					}
+				}
+				puppet = MDG
+			}
+		}
+		HIM = {
+			if = {
+				limit = { is_in_faction = yes }
+				add_to_faction = MYR
+			}
+		}
+
+		MYR = {
+			if = {
+				limit = { NOT = { has_war_with = HJM } }
+				declare_war_on = { target = HJM type = annex_everything }
+			}
+			if = {
+				limit = { NOT = { has_war_with = MDG } }
+				declare_war_on = { target = MDG type = annex_everything }
+			}
+		}
+	}
+}

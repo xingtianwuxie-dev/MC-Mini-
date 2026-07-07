@@ -1,0 +1,24 @@
+ideas = {
+        country = {
+                # 劫掠：有组织有纪律的匪徒，魔法、巫术、利刃都只是抢劫道具
+                LLL_pillage = {
+                        allowed = { always = no }
+                        removal_cost = -1
+                        modifier = {
+                                supply_consumption_factor = -0.10     # 以战养战，补给需求-10%
+                                consumer_goods_expected_value = -0.03 # 不需要工厂生产奢侈品
+                        }
+                }
+
+                # "归化族"：情报泄露
+                LLL_infiltrator = {
+                        allowed = { always = no }
+                        removal_cost = -1
+                        modifier = {
+                                decryption_factor = 0.10              # 情报渗透，破译+10%
+                        }
+                }
+
+                
+        }
+  }

@@ -1,0 +1,26 @@
+characters = {
+        ZLG_AncientPiglin = {
+                name = ZLG_AncientPiglin #远古猪灵
+                portraits = {
+                        army = {
+                                large = "gfx/leaders/leader_unknown.dds"
+                        }
+                        civilian = {
+                                large = "gfx/leaders/leader_unknown.dds"
+                        }
+                }
+                country_leader = {
+                        ideology = fascism_ideology
+                        traits = { dictator }
+                        expire = "1965.1.1.1"
+                }
+                corps_commander = {
+                        traits = { cavalry_officer trait_reckless }
+                        skill = 2
+                        attack_skill = 3
+                        defense_skill = 2
+                        planning_skill = 1
+                        logistics_skill = 2
+                }
+        }
+  }

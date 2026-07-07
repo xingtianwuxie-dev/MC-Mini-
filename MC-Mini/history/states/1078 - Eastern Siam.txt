@@ -1,0 +1,21 @@
+state={
+	id=1078
+	name="STATE_1078"
+	resources={
+	}
+	state_category=town
+	history={
+		owner = GWG
+		add_core_of = GWG
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		12224 10293 7225 4433 1244 7292
+	}
+	manpower=723155
+	buildings_max_level_factor=1.000
+
+}

@@ -1,0 +1,18 @@
+characters = {
+	MDG_Ender_Dragon = {
+		name = MDG_Ender_Dragon
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchist
+			traits = { dictator }
+			expire = "1965.1.1.1"
+		}
+	}
+}

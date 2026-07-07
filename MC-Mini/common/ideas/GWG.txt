@@ -1,0 +1,16 @@
+ideas = {
+        country = {
+
+                # 阴性力量：在黑夜中，我们比白天更强大！
+                GWG_dark_strength = {
+                        allowed = { always = no }
+                        removal_cost = -1
+                        modifier = {
+                                army_attack_factor = 0.03           # 夜间突袭加成
+                                army_morale_factor = 0.05           # 黑暗赋予勇气
+                        }
+                }
+
+                
+        }
+  }

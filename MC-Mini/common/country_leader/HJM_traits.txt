@@ -1,0 +1,27 @@
+leader_traits = {
+
+	zhongjian = {
+		random = no
+		sprite = 13
+		
+		neutrality_drift = 0.01
+		fascism_drift = 0.01
+		enemy_justify_war_goal_time = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	rende = {
+		random = no
+		sprite = 13
+		
+		feudalist_drift = 0.01
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}	

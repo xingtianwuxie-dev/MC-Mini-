@@ -1,0 +1,10 @@
+spriteTypes = {	
+
+	#### Generic continuous goal icons
+
+	SpriteType = {
+	name = "GFX_New_deal"
+	texturefile = "gfx/interface/goals/focus_HJM_New_deal.png"			
+	}	
+	
+}

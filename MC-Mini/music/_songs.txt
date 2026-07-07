@@ -1,0 +1,70 @@
+music_station = "base_music"           #电台绑定
+
+music = {
+	song = "God_Save_The_Queen"
+	chance = {
+		factor = 1
+	
+		modifier = {
+			factor = 100                        # flag 存在时 ×5 优先播
+			has_country_flag = HJM_God_Save_The_Queen
+		}
+
+	}	
+}
+
+music = {
+	song = "Holiday"
+	chance = {
+		factor = 1
+	}
+}
+
+music = {
+	song = "Hexi_corridor"
+	chance = {
+		factor = 1
+	}
+}
+
+music = {
+	song = "Destiny"
+	chance = {
+		factor = 1
+	}
+}
+
+music = {
+	song = "Light"
+	chance = {
+		factor = 1   #基础权重
+ 
+		modifier = { 
+			factor = 0
+			NOT = { tag = HJM }
+		}
+
+        modifier = {
+			factor = 100
+			date < 1936.1.3
+		}
+
+		modifier = {
+			factor = 1
+			date > 1936.1.2
+		} 
+	}
+}
+
+
+music = {
+	song = "Century_Dream"
+	chance = {
+		factor = 1
+
+		modifier = {
+			factor = 3                 # ×3 = 战争时优先播
+			has_war = yes
+		}
+	}
+}

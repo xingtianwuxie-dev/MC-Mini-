@@ -1,0 +1,258 @@
+ideas = {
+	country = {
+
+        Xinxiehui = {
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.05  
+                stability_factor = -0.1 
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+        
+        liuxue = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 has_government = feudalist
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = -0.1
+                training_time_factor = -0.05
+                army_core_defence_factor = 0.05
+			}
+		}
+
+        tongmeng = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 has_government = feudalist
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.1
+			}
+		}
+
+        bingyuanqiangzheng = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 has_government = feudalist
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.1
+                weekly_casualties_war_support = -0.006
+			}
+		}
+
+		HJM_emergency_factory_output = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				consumer_goods_expected_value = 0.02
+			}
+		}
+
+		HJM_third_line_construction_modifier = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_infrastructure_factor = 0.15
+				consumer_goods_expected_value = 0.03
+			}
+		}
+
+		HJM_frontier_support_modifier = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				supply_consumption_factor = -0.08
+				attrition = -0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		HJM_southern_front_crisis = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				surrender_limit = -0.35
+			}
+		}
+
+		HJM_liberate_nether_offensive = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+
+		HJM_illager_activity_low = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				training_time_army_factor = -0.10
+				civilian_intel_to_others = -10
+				army_intel_to_others = -10
+				navy_intel_to_others = -5
+				airforce_intel_to_others = -5
+			}
+		}
+
+		HJM_illager_activity_medium = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				intelligence_agency_defense = -0.10
+				civilian_intel_to_others = 10
+				army_intel_to_others = 10
+				navy_intel_to_others = 5
+				airforce_intel_to_others = 5
+			}
+		}
+
+		HJM_illager_activity_high = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10
+				intelligence_agency_defense = -0.20
+				civilian_intel_to_others = 20
+				army_intel_to_others = 20
+				navy_intel_to_others = 10
+				airforce_intel_to_others = 10
+			}
+		}
+
+	}
+
+	materiel_manufacturer = {
+    designer = yes
+    
+    Hongwujungong = {
+        allowed = { original_tag = HJM }
+        research_bonus = { infantry_weapons = 0.15 }
+        traits = { infantry_equipment_manufacturer }
+        modifier = {
+            production_speed_arms_factory_factor = 0.05
+        }
+    }
+    
+    # 炮兵制造商
+    Northwest_Artillery_Factory = {
+        allowed = { original_tag = HJM }
+        research_bonus = { artillery = 0.15 }
+        traits = { artillery_manufacturer }
+        modifier = {
+            production_speed_arms_factory_factor = 0.05
+        }
+    }
+    
+    # 坦克制造商
+    First_Tank_Plant = {
+        allowed = { original_tag = HJM }
+        research_bonus = { medium_tank = 0.15 }
+        traits = { tank_manufacturer }
+        modifier = {
+            army_attack_factor = 0.05
+        }
+    }
+    
+    # 飞机制造商
+    Red_Eagle_Aviation = {
+        allowed = { original_tag = HJM }
+        research_bonus = { fighter = 0.15 }
+        traits = { light_aircraft_manufacturer }
+        modifier = {
+            air_attack_factor = 0.05
+        }
+    }
+}
+
+# 军事精神公司
+theorist = {
+    designer = yes
+    
+    Red_Army_Tactician = {
+        allowed = { original_tag = HJM }
+        traits = { mass_assault_theorist }    # 或其他学说理论家
+        cost = 1
+        removal_cost = -1
+        modifier = {
+            army_org = 50
+            army_defence_factor = 0.1
+        }
+    }
+}
+
+}

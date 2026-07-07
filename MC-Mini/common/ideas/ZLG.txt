@@ -1,0 +1,13 @@
+ideas = {
+        country = {
+                # 野蛮力量：擅闯堡垒的外来者被斧刃砍成碎泥
+                ZLG_brutal_force = {
+                        allowed = { always = no }
+                        removal_cost = -1
+                        modifier = {
+                                army_attack_factor = 0.05             # 攻击+5%
+
+                        }
+                }
+        }
+  }

@@ -1,0 +1,46 @@
+spriteTypes = {
+	SpriteType = { 
+		name = "GFX_focus_HJM_MC_start" 
+		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_MC_start.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_focus_HJM_underground_riot" 
+		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_underground_riot.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_F099F7AC57E87FA5D11604599A9E7846" 
+		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_HJM_troubles_are_coming" 
+		texturefile = "gfx/editor/interface/focusIcon/HJM_troubles are coming.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_HJM_suspicious" 
+		texturefile = "gfx/editor/interface/focusIcon/HJM_suspicious.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_HJM_come_again" 
+		texturefile = "gfx/editor/interface/focusIcon/HJM_come_again.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_HJM_Strengthen_village_defenses" 
+		texturefile = "gfx/editor/interface/focusIcon/HJM_Strengthen_village_defenses.dds" 
+	}
+	SpriteType = {
+		name = "GFX_HJM_iron_golem"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_iron_golem.dds"
+	}
+	SpriteType = {
+		name = "GFX_HJM_redstone_research"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_redstone_research.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_HJM_chaunyuezhexieyue"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_chaunyuezhexieyue.dds"
+	}
+
+
+
+}

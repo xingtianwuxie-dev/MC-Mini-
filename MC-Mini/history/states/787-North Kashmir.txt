@@ -1,0 +1,25 @@
+state={
+	id=787
+	name="STATE_787" # Northern Kashmir
+	manpower = 1672000
+	
+	state_category = rural
+
+	history={
+		victory_points = {
+			1910 1
+		}
+		owner = ZLG
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = ZLG
+		add_claim_by = RAJ
+	}
+
+	provinces={
+		1910 2041 2084 
+	}
+
+	local_supplies=0.0 
+}

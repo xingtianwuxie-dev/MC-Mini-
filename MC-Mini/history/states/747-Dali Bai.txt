@@ -1,0 +1,57 @@
+state = {
+	id = 747
+	name = "STATE_747"
+	
+	manpower = 1000000
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
+
+	history = {
+
+		owner = HJM
+		add_core_of = HJM
+		add_core_of = HJM
+		add_core_of = HJM
+
+		victory_points = {
+			7965 11 # Dali 
+		}
+
+		victory_points = {
+			10863 1 # Heshun  
+		}
+
+		buildings = {
+			infrastructure = 2
+			7965 = {
+				supply_node = 1
+				rail_way = 1
+			}
+			10863 = {
+				rail_way = 1
+			}
+		}
+		1938.10.25 = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "Waking the Tiger" 
+					}
+
+				}
+				HJM = {
+					transfer_state = PREV
+
+				}
+
+			}
+		}
+
+	}
+
+	provinces = {
+		4559 4937 5009 7965 7976 8126 10413 10863 12789 12898 
+	}
+
+	local_supplies = 0.0 
+}

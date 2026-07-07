@@ -1,0 +1,29 @@
+state = {
+	id = 1061
+	name = "STATE_1061"
+	manpower = 323100
+	
+	state_category = town
+	
+	resources = {
+		rubber = 25
+	}
+
+	history = {
+
+		owner = GWG
+		add_core_of = GWG
+		buildings = {
+
+			infrastructure = 1
+
+		}
+		
+	}
+
+	provinces = {
+		1291 7342 12144 
+	}
+
+	local_supplies = 0.0 
+}
