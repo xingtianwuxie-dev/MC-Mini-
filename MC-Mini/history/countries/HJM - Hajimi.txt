@@ -87,6 +87,20 @@ if = {
 	}
 }
 
+#初始陆军装备
+add_equipment_to_stockpile = { 
+	type = infantry_equipment_0  
+	amount = 30000 
+}   # 步枪
+  add_equipment_to_stockpile = { 
+	type = support_equipment      
+	amount = 3000  
+}  # 支援装备
+  add_equipment_to_stockpile = { 
+	type = motorized              
+	amount = 2000  
+}   # 卡车
+
 # 初始空军装备
 add_equipment_to_stockpile = {
 	type = CAS_equipment_1

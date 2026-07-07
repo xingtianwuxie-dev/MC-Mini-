@@ -655,3 +655,82 @@ news_event = {
     }
 }
 
+
+# ============ 灾厄村民猖獗度：自动升级（链式事件） ============AI写的！！！！！
+# 每 60 天触发一次，按 低→中→高 升一级；到"高"封顶并停止重排。
+# 用 country_event 的 days=60 自我重排
+country_event = {
+    id = HJM.illager_tick
+    hidden = yes                    # 内部机制事件，不弹窗
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        has_country_flag = HJM_illager_activity_unlocked
+    }
+
+    # immediate 在事件触发瞬间执行
+    immediate = {
+        if = {
+            limit = { 
+                has_idea = HJM_illager_activity_low 
+            }
+            remove_ideas = HJM_illager_activity_low
+            add_ideas = HJM_illager_activity_medium
+        }
+        else_if = {
+            limit = { 
+                has_idea = HJM_illager_activity_medium 
+            }
+            remove_ideas = HJM_illager_activity_medium
+            add_ideas = HJM_illager_activity_high
+        }
+        # 已是 high：封顶
+    }
+
+    option = {
+        name = HJM.illager_tick.a
+        # 只要还没到"高"，就排下一次升级（60 天后）
+        if = {
+            limit = { 
+                has_country_flag = HJM_illager_activity_unlocked   # 新增：开关被关就不重排
+                NOT = { 
+                    has_idea = HJM_illager_activity_high 
+                } 
+            }
+            country_event = { 
+                id = HJM.illager_tick  days = 60 
+            }
+        }
+    }
+}
+
+# ============ 灾厄村民猖獗度：终止事件 ============ 依旧AI写的！！！
+# HJM 与 HIM 开战后由 on_war_relation_added 触发。
+# 关闭整个系统：清 flag（决议分类+清剿决议隐藏）、移除三个等级民族精神；
+# 升级事件 HJM.illager_tick 因失去 flag 而不再重排，自动停摆。
+country_event = {
+    id = HJM.illager_purge
+    title = HJM.illager_purge.t
+    desc = HJM.illager_purge.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    # immediate：触发瞬间执行，不依赖玩家点选项，最保险
+    immediate = {
+        # ① 关掉总开关 → 清剿决议 visible=false、分类隐藏
+        clr_country_flag = HJM_illager_activity_unlocked
+        # ② 移除民族精神（三个都 remove，remove 不存在的 idea 无副作用）
+        remove_ideas = HJM_illager_activity_low
+        remove_ideas = HJM_illager_activity_medium
+        remove_ideas = HJM_illager_activity_high
+    }
+
+    option = {
+        name = HJM.illager_purge.a
+        # 严厉打击的正面反馈（可自行调整）
+        add_stability = 0.05
+        add_war_support = 0.05
+    }
+}

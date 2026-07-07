@@ -6,7 +6,7 @@ state = {
 
 		owner = HJM
 		add_core_of = HJM
-		add_core_of = HJM
+
 
 		buildings = {
 			infrastructure = 2 #was 2

@@ -57,6 +57,7 @@ on_actions = {
 					load_focus_tree = { tree = HJM_war_focus keep_completed = yes }
 					add_ideas = HJM_southern_front_crisis
 					news_event = { id = HJM_news.2 }
+					country_event = { id = HJM.illager_purge }   # 新增
 				}
 			}
 			if = {
@@ -70,6 +71,7 @@ on_actions = {
 					set_country_flag = HJM_war_focus_loaded
 					load_focus_tree = { tree = HJM_war_focus keep_completed = yes }
 					add_ideas = HJM_southern_front_crisis
+					country_event = { id = HJM.illager_purge }   # 新增
 				}
 			}
 			if = {

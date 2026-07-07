@@ -64,14 +64,23 @@ focus_tree = {
 				id = HJM.4
 			}
 			set_country_flag = HJM_illager_activity_unlocked
+			# 初始化为"低"，并启动第一次 60 天升级倒计时 以下为AI修改，严格注意！！！
 			if = {
 				limit = {
-					NOT = { has_idea = HJM_illager_activity_low }
-					NOT = { has_idea = HJM_illager_activity_medium }
-					NOT = { has_idea = HJM_illager_activity_high }
+					NOT = { 
+						has_idea = HJM_illager_activity_low 
+					}
+					NOT = { 
+						has_idea = HJM_illager_activity_medium 
+					}
+					NOT = { 
+						has_idea = HJM_illager_activity_high 
+					}
 				}
 				add_ideas = HJM_illager_activity_low
-				activate_mission = HJM_illager_activity_escalation
+				country_event = { 
+					id = HJM.illager_tick  days = 60 
+				}
 			}
 		}
 	}

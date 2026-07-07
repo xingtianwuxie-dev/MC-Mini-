@@ -11,8 +11,7 @@ state={
 
 		owner = HJM
 		add_core_of = HJM
-		add_core_of = HJM
-		add_core_of = HJM
+
 
 		victory_points = {
 			4783 1 # Ejin Banner

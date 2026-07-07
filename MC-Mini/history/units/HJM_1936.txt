@@ -139,21 +139,21 @@ units = {
 		location = 10612
 		division_template = "禁卫师"
 		start_experience_factor = 0.4
-		start_equipment_factor = 0.8
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "漠北禁卫第2师"
 		location = 10612
 		division_template = "禁卫师"
 		start_experience_factor = 0.35
-		start_equipment_factor = 0.8
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "漠北禁卫第3师"
 		location = 1776
 		division_template = "禁卫师"
 		start_experience_factor = 0.35
-		start_equipment_factor = 0.8
+		start_equipment_factor = 1.0
 	}
 	# === 步兵师 ===
 	division = {
@@ -161,63 +161,63 @@ units = {
 		location = 1776
 		division_template = "步兵师"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.75
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "漠北步兵第2师"
 		location = 1693
 		division_template = "步兵师"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.75
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "漠南步兵第1师"
 		location = 10372
 		division_template = "步兵师"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.75
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "滇南步兵第1师"
 		location = 1319
 		division_template = "步兵师"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.75
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "桂南步兵第1师"
 		location = 7137
 		division_template = "步兵师"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.75
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "漠北步兵第3师"
 		location = 12485
 		division_template = "步兵师"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.75
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "漠南步兵第2师"
 		location = 10372
 		division_template = "步兵师"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.75
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "绥远步兵第1师"
 		location = 7158
 		division_template = "步兵师"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.75
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "西域步兵第1师"
 		location = 4823
 		division_template = "步兵师"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.75
+		start_equipment_factor = 1.0
 	}
 	# === 民兵师 ===
 	division = {
@@ -225,91 +225,91 @@ units = {
 		location = 12485
 		division_template = "民兵师"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "绥远民兵第1师"
 		location = 7158
 		division_template = "民兵师"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "西域民兵第1师"
 		location = 4823
 		division_template = "民兵师"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "西域民兵第2师"
 		location = 4709
 		division_template = "民兵师"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "塞外民兵第1师"
 		location = 4783
 		division_template = "民兵师"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "藏南民兵第1师"
 		location = 5033
 		division_template = "民兵师"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "滇西民兵第1师"
 		location = 7965
 		division_template = "民兵师"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "漠北民兵第2师"
 		location = 1693
 		division_template = "民兵师"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "西域民兵第3师"
 		location = 4709
 		division_template = "民兵师"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "塞外民兵第2师"
 		location = 4783
 		division_template = "民兵师"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "滇南民兵第1师"
 		location = 1319
 		division_template = "民兵师"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "桂南民兵第1师"
 		location = 7137
 		division_template = "民兵师"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "藏南民兵第2师"
 		location = 5033
 		division_template = "民兵师"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 1.0
 	}
 	# === 骑兵师（草原与边境机动） ===
 	division = {
@@ -317,28 +317,28 @@ units = {
 		location = 10612
 		division_template = "骑兵师"
 		start_experience_factor = 0.35
-		start_equipment_factor = 0.85
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "漠北骑兵第2师"
 		location = 1776
 		division_template = "骑兵师"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "绥远骑兵第1师"
 		location = 7158
 		division_template = "骑兵师"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "西域骑兵第1师"
 		location = 4709
 		division_template = "骑兵师"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
+		start_equipment_factor = 1.0
 	}
 	# === 山地步兵师（西南与高原防线） ===
 	division = {
@@ -346,28 +346,28 @@ units = {
 		location = 7965
 		division_template = "山地步兵师"
 		start_experience_factor = 0.35
-		start_equipment_factor = 0.85
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "滇南山地步兵第1师"
 		location = 1319
 		division_template = "山地步兵师"
 		start_experience_factor = 0.35
-		start_equipment_factor = 0.85
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "藏南山地步兵第1师"
 		location = 5033
 		division_template = "山地步兵师"
 		start_experience_factor = 0.35
-		start_equipment_factor = 0.85
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "西域山地步兵第1师"
 		location = 4823
 		division_template = "山地步兵师"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
+		start_equipment_factor = 1.0
 	}
 	# === 机动部队（矿车与红石运输纵队） ===
 	division = {
@@ -375,28 +375,87 @@ units = {
 		location = 12485
 		division_template = "机动步兵师"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.75
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "滇南机动步兵第1师"
 		location = 1319
 		division_template = "机动步兵师"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.75
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "桂南机动步兵第1师"
 		location = 7137
 		division_template = "机动步兵师"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.75
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "绥远机动步兵第1师"
 		location = 7158
 		division_template = "机动步兵师"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+		# === 京畿步兵师（首都卫戍，武汉 state 1036） ===
+	division = {
+		name = "京畿步兵第1师"
+		location = 4619              # 武汉 VP，有补给中心+铁路，适合集结
+		division_template = "步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "京畿步兵第2师"
+		location = 7167
+		division_template = "步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "京畿步兵第3师"
+		location = 12467             # 汉口
+		division_template = "步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	# === 湘西步兵师（常德 state 750） ===
+	division = {
+		name = "湘西步兵第1师"
+		location = 7101              # 常德 VP
+		division_template = "步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "湘西步兵第2师"
+		location = 4896
+		division_template = "步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "湘西步兵第3师"
+		location = 5030
+		division_template = "步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	# === 皖南步兵师（黄山 state 749） ===
+	division = {
+		name = "皖南步兵第1师"
+		location = 12019             # 黄山 VP
+		division_template = "步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "皖南步兵第2师"
+		location = 4105
+		division_template = "步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
 	}
 }
 

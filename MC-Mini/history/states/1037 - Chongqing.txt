@@ -1,14 +1,13 @@
 state = {
 	id = 1037
 	name = "STATE_1037"
-	resources = {
-	}
+
 
 	history = {
 
 		owner = HJM
 		add_core_of = HJM
-		add_core_of = HJM
+
 
 		buildings = {
 			infrastructure = 2 #was 3

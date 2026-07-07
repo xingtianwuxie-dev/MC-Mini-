@@ -5,14 +5,10 @@ state = {
 	manpower = 25582133
 	state_category = rural
 	
-	resources = {
-		
-	}
-	
+
 	history = {
 
 		owner = HJM
-		add_core_of = HJM
 		add_core_of = HJM
 
 		1936.1.1 = {

@@ -3,9 +3,6 @@ state = {
 	name = "STATE_1033"
 	manpower = 4145000
 	state_category = town
-	resources = {
-
-	}
 
 	history = {
 		owner = HJM
@@ -20,8 +17,8 @@ state = {
 				remove_core_of = HJM
 			}
 		}
-		add_core_of = HJM
-		add_core_of = HJM
+
+
 
 		buildings = {
 			infrastructure = 2

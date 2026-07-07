@@ -1,4 +1,5 @@
 ﻿l_simp_chinese:
+ #HJM国策
  MC_start: "MC帝国之始"
  HJM_underground_riot: "山雨欲来"
  HJM_illager_spy: "他们在干什么"
@@ -24,6 +25,7 @@
  HIM_overworld_dominion: "君临主世界"
  HIM_zombie_siege: "僵尸围城"
  HIM_sky_is_not_the_limit: "天空不是极限"
+ #HJM国策描述
  MC_start_desc: "起初，人皇不过是整合了周边几个零散的村庄。但百年飘摇间，城邦林立，田野广布，一个帝国正在升起，成为这个世界唯一的太阳。而后，MC帝国必将光耀百世，名震古今。"
  HJM_underground_riot_desc: "老人们看到牛羊的骚乱，边疆也频传异动，山雨欲来风满楼。MC帝国不害怕挑战，只怕风雨还不够猛烈。帝国不知道威胁在何方，因为所有的威胁都将被扫平。"
  HJM_illager_spy_desc: "他们在干什么？身为帝国的归化异族，活在阴影中的灾厄村民如今却格外活跃。他们在林地府邸重燃烽火，灰色的皮肤游走在边境线上传递密信。他们到底在为谁服务？倘若背叛，帝国不会姑息。"
@@ -40,6 +42,7 @@
  HJM_dignity_blade_desc: "曾几何时，所有人都认为帝国会盛世永续。奈何魔族入侵，意欲染指中原。儿郎们，举起锋芒，既然他们敢来，就用他们的血浇铸丰碑，他们的头垒起京观。捍卫帝国的尊严！尊严只在剑锋之上！"
  HJM_total_war_desc: "《全面战争法案》被通过。帝国从未如此上下齐心。我们要动员帝国全境，民用工厂将转产军用物资，村民们将获得制式装备。现在已经到了全力一搏的时候了！"
  HJM_liberate_nether_desc: "这场战争始于那里，帝国旗帜将从每一座下界要塞上升起，我们一定要解放下界！"
+ #HIM国策描述
  HIM_demon_host_desc: "主世界的人类把我们写成传说，把下界称作荒芜之地。他们错了。魔族并非散乱的怪物，而是一支等待命令的军队。现在，旗帜已经升起。"
  HIM_evil_resurgence_desc: "Herobrine的名字重新回到祭坛与军营之间。僵尸听见了召唤，骷髅取下了旧弓，烈焰人的火焰在要塞中连成一片。沉睡的邪恶并未消亡，它只是在等待归来。"
  HIM_nether_mobilization_desc: "下界并不是一个国家，而是一片由要塞、岩浆海和各族巢穴拼合而成的战场。要让它服务于同一个目标，就必须先把它铸造成一台战争机器。"
@@ -48,6 +51,7 @@
  HIM_overworld_dominion_desc: "主世界的天空、村庄、矿洞和城墙都将承认新的主人。我们不再满足于阴影中的袭扰，魔族要在阳光之下建立统治。"
  HIM_zombie_siege_desc: "尸潮不需要补给线，也不需要军饷。它们只需要一个方向。第一座村庄倒下时，整个主世界都会明白：这不是边境冲突，这是世界大战的开始。"
  HIM_sky_is_not_the_limit_desc: "人类以为城墙能挡住尸潮，以为高山能挡住军队，以为天空是最后的边界。下界的火焰将升入云层，战争不会停在地面。"
+ #HIM国策
  HIM_evil_resurgence_threat: "Herobrine的邪恶复苏"
  HIM_nether_mobilization_bonus: "下界整备"
  HIM_end_portal_bonus: "末地传送门研究"
@@ -56,6 +60,7 @@
  HIM_sky_is_not_the_limit_bonus: "天空不是极限"
  HJM_redstone_radio_bonus: "红石通信研究"
  HJM_redstone_artillery_bonus: "红石火炮研究"
+ #HIM事件
  HIM.1.t: "魔族集结"
  HIM.1.d: "下界的各个巢穴、要塞和废弃矿道传来了同一个命令。零散的怪物不再各自游荡，它们开始在同一面旗帜下集合。魔族不再只是人类故事里的恐惧，它已经有了军队的形状。"
  HIM.1.a: "黑暗终于有了秩序。"
@@ -83,6 +88,8 @@
  HIM.9.t: "13号唱片的播放"
  HIM.9.d: "一阵破碎、低沉的旋律从唱片机中传出。它不像音乐，更像某种被封存的记忆。议会厅里无人说话，但所有人都知道，那不是普通的唱片。某个被刻意遗忘的名字，正在从黑暗中回到主世界。"
  HIM.9.a: "唱片已经开始播放。"
+
+#HJM事件
  HJM.1.t: "MC帝国之始"
  HJM.2.t: "地下动乱"
  HJM.3.t: "边境异常"
@@ -171,11 +178,18 @@
  HJM.28.t: "吞并末影人起义军"
  HJM.28.d: "末影人起义军的叛乱已被镇压。非蒙古地区的末地残余势力被帝国军队重新占领，叛乱领袖和魔族联络网将被彻底清算。"
  HJM.28.a: "末影人起义军并入帝国。"
+
+
+ #HJM决议
+
+
  HJM_record_13_category: "13号唱片"
  HJM_record_13_war_countdown: "13号唱片的回声"
  HJM_record_13_war_countdown_desc: "那张唱片已经开始播放。该任务会显示距离开战还剩多少天；倒计时结束时，HJM 将正式向 HIM 开战。也可以直接选择该任务，立刻发动对 HIM 的战争。"
  HJM_delay_record_13_war: "拖延开战"
  HJM_delay_record_13_war_desc: "动员官僚、安抚议会、重新解释唱片里的噪声。战争倒计时将延后30天，剩余天数显示在“13号唱片的回声”任务上。"
+
+
  HJM_war_preparation_category: "战备整顿"
  HJM_war_preparation_category_desc: "边境异常已经从传闻变成报告。帝国可以在战争正式到来前整肃内部、抢修交通、扩张军需和动员民心。"
  HJM_suppress_illager_cells: "打压灾厄暗线"
@@ -190,6 +204,8 @@
  HJM_wartime_propaganda_desc: "告诉村民边境上正在发生什么，也告诉他们为什么必须忍受更高的税负、征发和夜间戒严。"
  HJM_recommission_old_rifles: "重启老旧装备"
  HJM_recommission_old_rifles_desc: "打开旧仓库，清点封存的老式步枪。它们不先进，但比木棍可靠。"
+
+
  HJM_wartime_decisions_category: "战时决议"
  HJM_wartime_decisions_category_desc: "战争已经开始，帝国可以采取非常手段补充兵员、鼓动民心、转移工业并支援边疆。"
  HJM_mobilize_militia: "动员民兵"
@@ -204,6 +220,8 @@
  HJM_third_line_construction_modifier_desc: "内陆工坊和后方工程队正在全速运转，军需与基础设施建设得到加强，但民用部门承受额外压力。"
  HJM_frontier_support_modifier: "支援边疆"
  HJM_frontier_support_modifier_desc: "边疆补给线得到额外人力和运输队支援，前线部队的消耗与损耗暂时下降。"
+#灾厄村民猖獗度
+ HJM.illager_tick.a: "（系统）"
  HJM_illager_activity_category: "灾厄村民猖獗度"
  HJM_illager_activity_category_desc: "灾厄村民在边境与村庄暗处结网。若帝国长期不处理，猖獗度会每60天上升一级；投入政治资源清剿可以压低一级。"
  HJM_illager_activity_escalation: "灾厄村民活动扩张"
@@ -216,6 +234,8 @@
  HJM_illager_activity_medium_desc: "灾厄村民仍在边境和村庄间活动，暗线时断时续。帝国情报保护出现漏洞，敌人更容易窥探我们的部署。"
  HJM_illager_activity_high: "灾厄村民猖獗度：高"
  HJM_illager_activity_high_desc: "灾厄村民的活动已经公开化。混乱压低了稳定，帝国情报保护也严重恶化，敌人更容易窥探我们的部署。"
+
+
  HJM_emergency_factory_output: "加班军需生产"
  HJM_emergency_factory_output_desc: "工厂和铁匠铺进入加班状态，短期军需产能上升，但民用订单被迫延后。"
  HJM_southern_front_crisis: "南线危局"
@@ -260,10 +280,17 @@
  LLL_infiltrator_desc: "渗透MC情报网，知己知彼。"
  GWG_dark_strength: "阴性力量"
  GWG_dark_strength_desc: "在黑夜中，我们比白天更强大！"
+
+
+
+
+
+ #末地
  MDG_end_realm_garrisons: "末地驻防体系"
  MDG_end_realm_garrisons_desc: "末影王庭依靠稀疏的传送门、边境哨站和龙息信标维系辽阔北境。驻军规模有限，但他们熟悉荒原、冻土与无尽长夜。"
  MYR_shadow_uprising: "暗影起义"
  MYR_shadow_uprising_desc: "末影人起义军擅长突然集结、穿插袭击和切断后方道路，但这支叛军的补给体系粗糙，组织纪律也远不如正规军。"
+ #魔族阵营
  HIM_faction: "魔族"
  HIM_faction_desc: "在Herobrine的领导下，魔族的重新复苏。"
  HIM.10.t: "Herobrine的邀请"

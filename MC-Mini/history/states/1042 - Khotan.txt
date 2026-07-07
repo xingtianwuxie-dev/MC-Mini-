@@ -8,8 +8,7 @@ state = {
 
 		owner = HJM
 		add_core_of = HJM
-		add_core_of = HJM
-		add_core_of = HJM
+
 
 		1936.1.1 = {
 			IF = {
