@@ -139,6 +139,7 @@ add_ideas = {
 	liuxue
 	tongmeng
 	bingyuanqiangzheng
+	HJM_long_peace
 }
 
 puppet = MDG

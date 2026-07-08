@@ -74,12 +74,15 @@ on_actions = {
 					country_event = { id = HJM.illager_purge }   # 新增
 				}
 			}
+			#末地分裂
 			if = {
 				limit = {
 					ROOT = {
 						tag = HJM
 						NOT = { has_global_flag = HJM_MDG_split_happened }
 					}
+					has_war_with = HIM
+		
 				}
 				ROOT = { country_event = { id = HJM_MDG.1 } }
 			}
@@ -91,6 +94,24 @@ on_actions = {
 					}
 				}
 				FROM = { country_event = { id = HJM_MDG.1 } }
+			}
+			# HJM↔HIM 开战：魔族阵营获得“战争狂热”
+			if = {
+				limit = {
+					OR = {
+						AND = { ROOT = { tag = HJM } FROM = { tag = HIM } }
+						AND = { ROOT = { tag = HIM } FROM = { tag = HJM } }
+					}
+				}
+				every_country = {
+					limit = {
+						OR = {
+							original_tag = HIM
+							is_in_faction_with = HIM      # 自动覆盖阵营里所有成员（XWY/LLL/GWG/ZLG/MYR/未来新加的）
+						}
+					}
+					add_ideas = demon_war_fervor
+				}
 			}
 		}
 	}

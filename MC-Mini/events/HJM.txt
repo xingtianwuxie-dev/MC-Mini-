@@ -449,10 +449,11 @@ country_event = {
             limit = {
                 HIM = { exists = yes }
             }
-            annex_country = {
-                target = HIM
-                transfer_troops = yes
+            puppet = HIM                              # 改：HIM 成附庸（原 annex_country）
+            HIM = {
+                retire_character = HIM_Herobrine      # Herobrine 假死失踪（不是死）
             }
+            set_global_flag = HIM_herobrine_missing   # IF 线伏笔（以后重集结/海岛奇兵）
         }
         country_event = { id = HJM.23 hours = 1 }
     }
@@ -475,10 +476,8 @@ country_event = {
             limit = {
                 LLL = { exists = yes }
             }
-            annex_country = {
-                target = LLL
-                transfer_troops = yes
-            }
+            puppet = LLL
+
         }
         country_event = { id = HJM.24 hours = 1 }
     }
@@ -501,10 +500,8 @@ country_event = {
             limit = {
                 XWY = { exists = yes }
             }
-            annex_country = {
-                target = XWY
-                transfer_troops = yes
-            }
+            puppet = XWY
+
         }
         country_event = { id = HJM.25 hours = 1 }
     }
@@ -527,10 +524,7 @@ country_event = {
             limit = {
                 ZLG = { exists = yes }
             }
-            annex_country = {
-                target = ZLG
-                transfer_troops = yes
-            }
+            puppet = ZLG
         }
         country_event = { id = HJM.26 hours = 1 }
     }
@@ -553,10 +547,8 @@ country_event = {
             limit = {
                 GWG = { exists = yes }
             }
-            annex_country = {
-                target = GWG
-                transfer_troops = yes
-            }
+            puppet = GWG
+
         }
         country_event = { id = HJM.27 hours = 1 }
     }
@@ -579,10 +571,8 @@ country_event = {
             limit = {
                 MDG = { exists = yes }
             }
-            annex_country = {
-                target = MDG
-                transfer_troops = yes
-            }
+            puppet = MDG
+
         }
         country_event = { id = HJM.28 hours = 1 }
     }
@@ -605,10 +595,7 @@ country_event = {
             limit = {
                 MYR = { exists = yes }
             }
-            annex_country = {
-                target = MYR
-                transfer_troops = yes
-            }
+            puppet = MYR
         }
     }
 }
@@ -655,6 +642,43 @@ news_event = {
     }
 }
 
+country_event = {
+    id = HJM.30
+    title = HJM.30.t
+    desc = HJM.30.d
+    picture = GFX_report_event_generic
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = HJM
+        has_war_with = HIM
+        has_idea = HJM_long_peace                # 还在无力期 = 还没觉醒
+    }
+
+    mean_time_to_happen = {
+        days = 90                                # 基础：僵持 90 天触发（守得住但推不动，也是弱）
+        modifier = {
+            factor = 0.1                         # 丢任一关键地块 → MTTH 缩到约 9 天，很快觉醒
+            OR = {
+                NOT = { controls_state = 322 }   # 西藏
+                NOT = { controls_state = 752 }   # 昌都
+                NOT = { controls_state = 325 }   # 云南
+                NOT = { controls_state = 1041 }  # 成都
+                NOT = { controls_state = 1037 }  # 重庆
+            }
+        }
+    }
+
+    immediate = {
+        remove_ideas = HJM_long_peace            # 移除无力
+        add_ideas = HJM_sleeping_lion            # 觉醒
+    }
+
+    option = {
+        name = HJM.30.a
+    }
+}
 
 # ============ 灾厄村民猖獗度：自动升级（链式事件） ============AI写的！！！！！
 # 每 60 天触发一次，按 低→中→高 升一级；到"高"封顶并停止重排。

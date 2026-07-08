@@ -64,6 +64,10 @@ focus_tree = {
 			country_event = {
 				id = HIM.2
 			}
+			promote_character = {    #HIM上位的步骤罢了
+				character = HIM_Herobrine
+				ideology = fascism
+			}
 		}
 	}
 	focus = {

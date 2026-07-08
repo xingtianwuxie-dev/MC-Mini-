@@ -57,6 +57,7 @@ ideas = {
 				army_org_factor = -0.25
 			}
 		}
+		
 
 	}
 }

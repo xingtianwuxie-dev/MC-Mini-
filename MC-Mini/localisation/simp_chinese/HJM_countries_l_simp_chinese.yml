@@ -141,6 +141,11 @@
  tongmeng_desc: "从和魔族作战以来，人族、龙族、精灵族便结为同盟。战争开始时，盟友会给予帝国必要的人员支持。"
  bingyuanqiangzheng: "兵员强征"
  bingyuanqiangzheng_desc: "帝国以强制方式扩大兵源，这会降低部队组织度，并在战争伤亡中削弱民心。"
+ HJM_long_peace: "承平日久"
+ HJM_long_peace_desc: "帝国承平百年，村民手不沾血。战士忘记如何战斗，帝国忘记何为敌人。"
+ HJM_sleeping_lion: "睡狮苏醒"
+ HJM_sleeping_lion_desc: "睡狮既醒，四海震惶。人皇 Notch 亲临基层，沉睡百年的战争机器轰然转动——铁傀儡列阵如林，红石大炮齐声轰鸣，人们执戈披甲。从漠北到南疆，工厂无不彻夜燃烧，村庄无不摇旗呐喊。这盛世空前，烈火烹油，鲜花着锦。帝国从久眠中苏醒——而醒来的狮子，誓要让整个世界为之颤抖。"
+
 
 
  Northwest_Artillery_Factory: "西北炮兵制造厂"

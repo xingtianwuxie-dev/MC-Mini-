@@ -141,6 +141,42 @@ ideas = {
 			}
 		}
 
+		HJM_long_peace = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.10        # 组织 -10%（原 -5%）
+				army_attack_factor = -0.10     # 攻击 -10%（原 -5%）
+				army_defence_factor = -0.05    # 防御 -5%（新增）
+				war_support_factor = -0.05     # 战支 -5%（新增，厌战）
+			}
+		}
+
+		HJM_sleeping_lion = {
+
+			allowed = {
+				always = no #不能手动移除的意思
+			}
+
+			removal_cost = -1 #不能手动移除的意思
+
+			modifier = {
+				army_attack_factor = 0.10
+				army_defence_factor = 0.10
+				army_org_factor = 0.10
+				industrial_capacity_factory = 0.10
+				war_support_factor = 0.10
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}		
+
+
 		HJM_illager_activity_low = {
 
 			allowed = {
@@ -191,6 +227,28 @@ ideas = {
 				army_intel_to_others = 20
 				navy_intel_to_others = 10
 				airforce_intel_to_others = 10
+			}
+		}
+
+		demon_war_fervor = {                    # 战争狂热（魔族正面，开战给）
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.10
+				army_defence_factor = 0.10
+				army_org_factor = 0.10
+				war_support_factor = 0.15
+			}
+		}
+
+		demon_low_morale = {                    # 斗志涣散（魔族负面，人皇口谕换上）
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.10
+				army_defence_factor = -0.10
+				army_org_factor = -0.15         # 组织崩得最狠（涣散=溃散）
+				war_support_factor = -0.10
 			}
 		}
 
