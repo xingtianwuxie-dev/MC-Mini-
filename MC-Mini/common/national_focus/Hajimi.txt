@@ -27,11 +27,14 @@ focus_tree = {
 				# 立即触发
 				id = HJM.1
 			}
+
 		}
 	}
 	# ===== 2. 山雨欲来 =====
 	focus = {
 		id = HJM_underground_riot
+		# 无 prerequisite（无线条实验性）
+
 		x = 11
 		y = 1
 		cost = 5
@@ -41,6 +44,10 @@ focus_tree = {
 		prerequisite = {
 			focus = MC_start
 		}
+		available = {
+			
+		}
+
 		completion_reward = {
 			country_event = {
 				id = HJM.3

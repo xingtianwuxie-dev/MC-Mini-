@@ -24,4 +24,16 @@ leader_traits = {
 			factor = 1
 		}
 	}
+
+	regent = {
+		random = no
+		sprite = 13
+
+		democratic_drift = 0.02          # 摄政推动微软(民主)影响
+		political_power_gain = 0.05      # 摄政集权
+
+		
+		ai_will_do = { factor = 1 }
+	}
+
 }	

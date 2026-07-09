@@ -252,6 +252,14 @@ ideas = {
 			}
 		}
 
+		capital_lost_surrender = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				surrender_limit = -0.99          # 投降界限砸到底，原版投降机制立刻接管
+			}
+		}
+
 	}
 
 	materiel_manufacturer = {

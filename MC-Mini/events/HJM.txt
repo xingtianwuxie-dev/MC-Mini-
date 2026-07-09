@@ -680,6 +680,94 @@ country_event = {
     }
 }
 
+country_event = {
+    id = HJM.31
+    title = HJM.31.t
+    desc = HJM.31.d
+    picture = GFX_report_event_generic
+    fire_only_once = yes
+
+    trigger = {
+        has_war = yes
+        OR = {
+            AND = { original_tag = HJM NOT = { controls_state = 1036 } }   # 武汉
+            AND = { original_tag = HIM NOT = { controls_state = 439 } }    # 德里
+            AND = { original_tag = XWY NOT = { controls_state = 427 } }    # 海得拉巴
+            AND = { original_tag = LLL NOT = { controls_state = 640 } }    # 曼德勒
+            AND = { original_tag = GWG NOT = { controls_state = 1076 } }   # 曼谷
+            AND = { original_tag = ZLG NOT = { controls_state = 440 } }    # 拉合尔
+            AND = { original_tag = MDG NOT = { controls_state = 330 } }    # 蒙古
+            AND = { original_tag = MYR NOT = { controls_state = 574 } }    # 雅库茨克
+        }
+    }
+
+    mean_time_to_happen = { days = 1 }          # 丢首都第二天必触发
+
+    immediate = {
+        add_ideas = capital_lost_surrender
+    }
+
+    option = {
+        name = HJM.31.a
+    }
+}
+
+country_event = {
+    id = HJM.32
+    title = HJM.32.t
+    desc = HJM.32.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    immediate = {
+        retire_character = HJM_Notch
+        promote_character = { character = HJM_Jeb ideology = absolute_monarchist }   # Jeb 接保皇党
+        set_politics = {
+            ruling_party = democratic          # 政府变民主（微软摄政上台）
+            election_frequency = 48
+            elections_allowed = no
+        }
+        # 菲尔(conservatism/democratic leader)因政府变 democratic 自动当权，带“摄政王”特质
+    }
+
+    option = {
+        name = HJM.32.a
+    }
+}
+
+country_event = {
+    id = HJM.33
+    hidden = yes
+    is_triggered_only = yes
+
+    immediate = {
+        set_country_flag = MC_start_done        # 事件 set flag（触发 allow_branch 刷新）
+    }
+
+    option = {
+        name = HJM.33.a
+    }
+}
+
+country_event = {
+    id = HJM.34
+    title = HJM.34.t
+    desc = HJM.34.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = HJM.34.a                              # 施舍雨露（和平线）
+        complete_national_focus = HJM_grace_realm           # 解锁恩及天下
+    }
+    option = {
+        name = HJM.34.b                              # 投射雷霆（毁灭线）
+        complete_national_focus = HJM_blood_debt           # 解锁血债血偿
+    }
+}
+
+
+
 # ============ 灾厄村民猖獗度：自动升级（链式事件） ============AI写的！！！！！
 # 每 60 天触发一次，按 低→中→高 升一级；到"高"封顶并停止重排。
 # 用 country_event 的 days=60 自我重排

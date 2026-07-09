@@ -1,7 +1,7 @@
 replace_path="music"
-version="0.0.2"
+version="0.0.3"
 tags={
 	"Gameplay"
 }
-name="MC-Mini"
-supported_version="1.19.0.1"
+name="沙盒世纪"
+supported_version="1.19.2.0"

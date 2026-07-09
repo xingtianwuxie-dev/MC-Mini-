@@ -28,6 +28,84 @@ characters = {
 			}
 		}
 	}
+
+H	JM_Zimin = {
+		name = HJM_Zimin
+		portraits = {
+			civilian = { large = "gfx/leaders/leader_unknown.dds" }   # 有图换 portrait_Zimin.png
+		}
+		country_leader = {
+			ideology = social_liberal_ideology      # 多玩 → social_liberal group
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = political_advisor
+			available = { has_completed_focus = HJM_player_pact }
+			modifier = { 
+				monthly_population = 0.05    # 任命为顾问时生效
+				social_liberal_drift = 0.02      # 籽岷 → 推多玩党支持
+			}
+		}
+
+	}
+	HJM_DingLei = {
+		name = HJM_DingLei
+		portraits = {
+			civilian = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		country_leader = {
+			ideology = oligarchism                   # 网易 → neutrality group 的寡头 type
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = political_advisor
+			available = { has_completed_focus = HJM_player_pact }
+			modifier = {
+				political_power_gain = 0.05
+				neutrality_drift = 0.02          # 丁磊 → 推网易党支持
+			}
+		}
+
+
+	}
+	HJM_PhilSpencer = {
+		name = HJM_PhilSpencer
+		portraits = {
+			civilian = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		country_leader = {
+			ideology = conservatism                  # 微软 → democratic group 的保守 type
+			traits = { 
+				regent
+			}
+			expire = "1965.1.1.1"
+		}
+		advisor = {
+			slot = political_advisor
+			available = { has_completed_focus = HJM_player_pact }
+			modifier = {
+				research_speed_factor = 0.03
+				democratic_drift = 0.02          # 菲尔 → 推微软党支持
+			}
+		}
+
+
+	}
+
+	HJM_Jeb = {
+		name = HJM_Jeb
+		portraits = {
+			civilian = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		country_leader = {
+			ideology = absolute_monarchist       # 保皇党（同 Notch 的 sub_ideology）
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+
 	HJM_Heiling = {
 		name = HJM_Heiling
 		portraits = {

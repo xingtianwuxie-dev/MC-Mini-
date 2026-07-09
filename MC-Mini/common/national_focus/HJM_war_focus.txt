@@ -148,4 +148,145 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = HJM_uproot_claws
+		x = 20
+		y = 0
+		cost = 0
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		completion_reward = {
+			country_event = { 
+				id = HJM.34 
+			} 
+		}
+	}
+	focus = {
+		id = HJM_grace_realm
+		x = 18
+		y = 1
+		cost = 0
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		prerequisite = {
+
+		}
+	}
+	focus = {
+		id = HJM_blood_debt
+		x = 22
+		y = 1
+		cost = 0
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		prerequisite = {
+
+		}
+	}
+	focus = {
+		id = HJM_skyfire_plan
+		x = 17
+		y = 2
+		cost = 0
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		prerequisite = {
+			focus = HJM_uproot_claws
+		}
+	}
+	focus = {
+		id = HJM_no_mercy
+		x = 23
+		y = 2
+		cost = 0
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		prerequisite = {
+			focus = HJM_uproot_claws
+		}
+	}
+	focus = {
+		id = HJM_homeland_return
+		x = 19
+		y = 2
+		cost = 0
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		mutually_exclusive = {
+			focus = HJM_ash_policy
+		}
+		prerequisite = {
+			focus = HJM_grace_realm
+		}
+	}
+	focus = {
+		id = HJM_golden_offensive
+		x = 19
+		y = 3
+		cost = 0
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		mutually_exclusive = {
+			focus = HJM_bloody_gate
+		}
+		prerequisite = {
+			focus = HJM_grace_realm
+		}
+	}
+	focus = {
+		id = HJM_magma_servant
+		x = 19
+		y = 4
+		cost = 0
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		mutually_exclusive = {
+			focus = HJM_beneath_magma
+		}
+		prerequisite = {
+			focus = HJM_grace_realm
+		}
+	}
+	focus = {
+		id = HJM_ash_policy
+		x = 21
+		y = 2
+		cost = 0
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		mutually_exclusive = {
+			focus = HJM_homeland_return
+		}
+		prerequisite = {
+			focus = HJM_blood_debt
+		}
+	}
+	focus = {
+		id = HJM_bloody_gate
+		x = 21
+		y = 3
+		cost = 0
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		mutually_exclusive = {
+			focus = HJM_golden_offensive
+		}
+		prerequisite = {
+			focus = HJM_blood_debt
+		}
+	}
+	focus = {
+		id = HJM_beneath_magma
+		x = 21
+		y = 4
+		cost = 0
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		mutually_exclusive = {
+			focus = HJM_magma_servant
+		}
+		prerequisite = {
+			focus = HJM_blood_debt
+		}
+	}
 }
