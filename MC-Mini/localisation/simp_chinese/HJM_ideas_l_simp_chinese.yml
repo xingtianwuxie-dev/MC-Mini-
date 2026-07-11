@@ -1,0 +1,86 @@
+﻿l_simp_chinese:
+
+   # ==================== HJM 民族精神 ====================
+   HJM_long_peace: "承平日久"
+   HJM_long_peace_desc: "帝国承平百年，村民手不沾血。战士忘记如何战斗，帝国忘记何为敌人。"
+   HJM_sleeping_lion: "睡狮苏醒"
+   HJM_sleeping_lion_desc: "睡狮既醒，四海震惶。人皇 Notch亲临基层，沉睡百年的战争机器轰然转动——铁傀儡列阵如林，红石大炮齐声轰鸣，人们执戈披甲。从漠北到南疆，工厂无不彻夜燃烧，村庄无不摇旗呐喊。这盛世空前，烈火烹油，鲜花着锦。帝国从久眠中苏醒——而醒来的狮子，誓要让整个世界为之颤抖。"
+   HJM_southern_front_crisis: "南线危局"
+   HJM_southern_front_crisis_desc: "魔族战争的冲击首先压在帝国南方。边境村庄与补给线一旦失守，帝国全境的抵抗意志都会被迫面对最严酷的考验。"
+   HJM_liberate_nether_offensive: "解放下界"
+   HJM_liberate_nether_offensive_desc: "帝国已经把战争目标写进军令：下界要塞必须升起MC帝国旗帜，魔族必须被赶出每一条补给线和每一座堡垒。"
+   capital_lost_surrender: "国都沦陷"
+   capital_lost_surrender_desc: "首都已经陷落。战争的意志随着最后一面城头旗帜的倒下而崩溃——这个国家，已经无力再战。"
+   demon_war_fervor: "战争狂热"
+   demon_war_fervor_desc: "魔族的圣战已经开始。每一个怪物都相信，这是它们统治主世界的时刻——狂热的信念让它们无畏，也让它们格外危险。"
+   demon_low_morale: "斗志涣散"
+   demon_low_morale_desc: "人皇的口谕传遍主世界，也传进了魔族的耳朵。那些原本相信必胜的怪物开始动摇：如果连沉睡百年的帝国都能苏醒，它们那点胜利的信心又算什么？狂热变成了怀疑，怀疑变成了涣散。"
+
+   # ==================== HJM timed modifier ====================
+   HJM_emergency_factory_output: "加班军需生产"
+   HJM_emergency_factory_output_desc: "工厂和铁匠铺进入加班状态，短期军需产能上升，但民用订单被迫延后。"
+   HJM_third_line_construction_modifier: "三线建设"
+   HJM_third_line_construction_modifier_desc: "内陆工坊和后方工程队正在全速运转，军需与基础设施建设得到加强，但民用部门承受额外压力。"
+   HJM_frontier_support_modifier: "支援边疆"
+   HJM_frontier_support_modifier_desc: "边疆补给线得到额外人力和运输队支援，前线部队的消耗与损耗暂时下降。"
+
+   # ==================== HJM 开局/派系精神 ====================
+   Xinxiehui: "暗流涌动"
+   Xinxiehui_desc: "边境传来的消息越来越不安，敌意正在地下滋长。"
+   Wulin: "武林模式"
+   Wulin_desc: "帝国社会被动员到一种准战时秩序中，民生负担增加，但战争支持有所提升。"
+   Hongwujungong: "洪武军工"
+   Hongwujungong_desc: "洪武军工负责为帝国生产标准化步兵装备。"
+   liuxue: "春秋乱世"
+   liuxue_desc: "乱世迫使更多人口离开家园，也让军队训练与补员面临压力。"
+   tongmeng: "古老的同盟"
+   tongmeng_desc: "从和魔族作战以来，人族，村民，末影龙便结为同盟。战争开始时，盟友会给予帝国必要的人员支持。"
+   bingyuanqiangzheng: "兵员强征"
+   bingyuanqiangzheng_desc: "帝国以强制方式扩大兵源，这会降低部队组织度，并在战争伤亡中削弱民心。"
+
+   # ==================== HIM 民族精神 ====================
+   HIM_nether_economy: "下界经济体系"
+   HIM_nether_economy_desc: "下界从来不是为工业而生的土地。岩浆海的炽热灼烧着齿轮，灵魂沙磨钝了每一件工具。魔族的工厂在混乱中运转，产出远不及主世界的同行。"
+   HIM_undead_nature: "亡灵天性"
+   HIM_undead_nature_desc: "亡灵不需要粮草，不需要被服，也不需要营房——它们只需要一个前进的方向。然而，缺乏纪律与恐惧的本能让它们在战场上难以维持阵线，组织度远逊于人类军队。"
+   HIM_primal_fury: "原始暴怒"
+   HIM_primal_fury_desc: "魔族依靠蛮力与本能作战，而非科学与策略。研究进程缓慢，政治结构松散，内部的混乱始终在消耗着帝国的根基。"
+   HIM_overlord_collapsed: "宗主崩溃"
+   HIM_overlord_collapsed_desc: "Herobrine的旗帜已经倒下，附庸势力的指挥链随之瓦解。继续抵抗只会把剩余的军队拖入毫无意义的毁灭。"
+
+   # ==================== 仆从国精神 ====================
+   XWY_burning_city: "滚烫之城"
+   XWY_burning_city_desc: "建立在火山上的燃烧之城。"
+   ZLG_brutal_force: "野蛮力量"
+   ZLG_brutal_force_desc: "任何擅闯堡垒的外来者，都将被斧刃砍成碎泥。"
+   LLL_pillage: "劫掠"
+   LLL_pillage_desc: "一群有组织有纪律的匪徒，魔法、巫术、利刃都只是他们的抢劫道具。"
+   LLL_infiltrator: "归化族"
+   LLL_infiltrator_desc: "渗透MC情报网，知己知彼。"
+   GWG_dark_strength: "阴性力量"
+   GWG_dark_strength_desc: "在黑夜中，我们比白天更强大！"
+   MDG_end_realm_garrisons: "末地驻防体系"
+   MDG_end_realm_garrisons_desc: "末影王庭依靠稀疏的传送门、边境哨站和龙息信标维系辽阔北境。驻军规模有限，但他们熟悉荒原、冻土与无尽长夜。"
+   MYR_shadow_uprising: "暗影起义"
+   MYR_shadow_uprising_desc: "末影人起义军擅长突然集结、穿插袭击和切断后方道路，但这支叛军的补给体系粗糙，组织纪律也远不如正规军。"
+
+   # ==================== 处置线精神 ====================
+   HJM_demilitarized: "非军事化"
+   HJM_demilitarized_desc: "帝国的铁蹄碾过之后，这里再无铸造刀剑的炉火，再无举起旗帜的青壮。它将世代为帝国提供沉默的劳力——仅此而已。"
+
+   HJM_vassal_state: "帝国藩属"
+   HJM_vassal_state_desc: "这片土地的主人换了一副面孔。总督由帝国任命，律法由帝国裁定，连贸易的价码都要看宗主的脸色。它还存在于地图上——但已不再属于自己。"
+
+   # ==================== 顾问/领袖特质 ====================
+   zhongjian: "武道修炼者"
+   zhongjian_desc: "这名顾问相信体魄、纪律与传统武道可以塑造更强的国家。"
+   rende: "仁德"
+   rende_desc: "仁德的统治者能够稳定人心，并维持帝国各阶层之间的忠诚。"
+   HJM_regent: "摄政王"
+   HJM_regent_desc: "以微软的名义代行帝国权柄。法理正统，却非天命所归。"
+
+   # ==================== 设计商/理论家 ====================
+   Northwest_Artillery_Factory: "西北炮兵制造厂"
+   First_Tank_Plant: "第一坦克厂"
+   Red_Eagle_Aviation: "红鹰航空"
+   Red_Army_Tactician : "红石战术学派"

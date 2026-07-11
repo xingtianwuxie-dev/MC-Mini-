@@ -1,0 +1,45 @@
+﻿l_simp_chinese:
+   
+   # ==================== 11号唱片 ====================
+   HJM_record_13_category: "11号唱片"
+   HJM_record_13_war_countdown: "11号唱片的回声"
+   HJM_record_13_war_countdown_desc: "那张唱片已经开始播放。该任务会显示距离开战还剩多少天；倒计时结束时，HJM 将正式向 HIM开战。也可以直接选择该任务，立刻发动对 HIM 的战争。"
+   HJM_record_13_war_countdown_tt: "选择该任务会立刻向HIM宣战；若不选择，倒计时结束时自动开战。"
+   HJM_delay_record_13_war: "拖延开战"
+   HJM_delay_record_13_war_desc: "动员官僚、安抚议会、重新解释唱片里的噪声。战争倒计时将延后30天，剩余天数显示在“11号唱片的回声”任务上。"
+
+   # ==================== 战备整顿 ====================
+   HJM_war_preparation_category: "战备整顿"
+   HJM_war_preparation_category_desc: "边境异常已经从传闻变成报告。帝国可以在战争正式到来前整肃内部、抢修交通、扩张军需和动员民心。"
+   HJM_suppress_illager_cells: "打压灾厄暗线"
+   HJM_suppress_illager_cells_desc: "清查灾厄村民的联络点，扣押可疑信使，切断那些通往林地府邸和边境哨站的灰色渠道。"
+   HJM_build_northern_railway: "抢修漠北军用铁路"
+   HJM_build_northern_railway_desc: "调集民用工厂和工程队，为漠北驻军修筑一条临时军用铁路。它不漂亮，但能把补给送到前线。"
+   HJM_build_western_railway: "抢修西线军用铁路"
+   HJM_build_western_railway_desc: "绥远、西域和塞外驻军之间缺少可靠补给线。工程队将用最快速度铺设可用的军用铁路。"
+   HJM_expand_factory_output: "加大工厂产出"
+   HJM_expand_factory_output_desc: "延长铁匠铺和军工厂班次，压缩非必要订单，在短期内把更多钢铁和红石设备送进军队仓库。"
+   HJM_wartime_propaganda: "战时政治宣传"
+   HJM_wartime_propaganda_desc: "告诉村民边境上正在发生什么，也告诉他们为什么必须忍受更高的税负、征发和夜间戒严。"
+   HJM_recommission_old_rifles: "重启老旧装备"
+   HJM_recommission_old_rifles_desc: "打开旧仓库，清点封存的老式步枪。它们不先进，但比木棍可靠。"
+
+   # ==================== 灾厄村民猖獗度 ====================
+   HJM_illager_activity_category: "灾厄村民猖獗度"
+   HJM_illager_activity_category_desc: "灾厄村民在边境与村庄暗处结网。若帝国长期不处理，猖獗度会每60天上升一级；投入政治资源清剿可以压低一级。"
+   HJM_illager_activity_escalation: "灾厄村民活动扩张"
+   HJM_illager_activity_escalation_desc: "如果未来60天内不继续清剿灾厄暗线，灾厄村民猖獗度将上升一个阶段。"
+   HJM_reduce_illager_activity: "清剿灾厄暗线"
+   HJM_reduce_illager_activity_desc: "投入行政力量、侦察队与地方驻军，切断灾厄村民的联络网。完成后，灾厄村民猖獗度将降低一个阶段，并重新计算下一轮扩张倒计时。"
+
+   # ==================== 战时决议 ====================
+   HJM_wartime_decisions_category: "战时决议"
+   HJM_wartime_decisions_category_desc: "战争已经开始，帝国可以采取非常手段补充兵员、鼓动民心、转移工业并支援边疆。"
+   HJM_mobilize_militia: "动员民兵"
+   HJM_mobilize_militia_desc: "从村庄、矿区和边境聚落中抽调民兵，补充前线兵员和旧式武器。此举会削弱国内稳定。"
+   HJM_war_propaganda: "战争宣传"
+   HJM_war_propaganda_desc: "通过告示、巡回演讲和村庄集会重申战争目标，提升战争支持，但持续动员会加重社会压力。"
+   HJM_third_line_construction: "三线建设"
+   HJM_third_line_construction_desc: "把部分工坊、仓库和后备产能转入内陆与山区。短期内提升军工、民工和基础设施建设速度，但会增加民用负担。"
+   HJM_support_frontier: "支援边疆"
+   HJM_support_frontier_desc: "向边疆道路、哨站和前线补给点派出运输队与工程队，暂时改善部队补给和本土防御。"

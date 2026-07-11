@@ -148,11 +148,12 @@ focus_tree = {
 			}
 		}
 	}
+	# 拔除爪牙，反攻第一步的纲领
 	focus = {
 		id = HJM_uproot_claws
 		x = 20
 		y = 0
-		cost = 0
+		cost = 1
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		completion_reward = {
@@ -161,132 +162,455 @@ focus_tree = {
 			} 
 		}
 	}
+	# 恩及天下（温和纲领）—— 完成后解锁故土新归/黄金攻势/岩浆之臣
 	focus = {
 		id = HJM_grace_realm
 		x = 18
 		y = 1
-		cost = 0
+		cost = 1
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		prerequisite = {
-
+		prerequisite = { 
+			focus = HJM_uproot_claws 
+		} 
+		completion_reward = {
+			add_stability = 0.05 # 稳定+5%
+			add_political_power = 100 # 政治点+100
 		}
+		ai_will_do = {
+			 factor = 1 
+			}
 	}
+	# 血债血偿（复仇纲领）—— 完成后解锁烬化政策/城门血海/岩浆之下
 	focus = {
 		id = HJM_blood_debt
 		x = 22
 		y = 1
-		cost = 0
+		cost = 1
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		prerequisite = {
-
+		prerequisite = { 
+			focus = HJM_uproot_claws 
+		} 
+		completion_reward = {
+			add_war_support = 0.08 # 战支+8%
+			army_experience = 15 # 陆军经验+15
+		}
+		ai_will_do = { 
+			factor = 1 
 		}
 	}
+	# 焚天计划（LLL灭国，土地转给GWG）
 	focus = {
 		id = HJM_skyfire_plan
 		x = 17
 		y = 2
-		cost = 0
+		cost = 1
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		prerequisite = {
-			focus = HJM_uproot_claws
-		}
+		prerequisite = { 
+		focus = HJM_uproot_claws 
 	}
+		available = { 
+			controls_state = 640 
+		} # 必须占领LLL首都(曼德勒)
+		completion_reward = {
+			LLL = { # 对LLL执行：
+				every_owned_state = { # 遍历LLL每个省份
+					set_variable = { 
+						name = pop_kill 
+						value = manpower 
+					} # 读取当前人口
+					multiply_variable = { 
+						name = pop_kill 
+						value = -0.95 
+					} # 乘-0.95 = 杀95%
+					add_manpower = pop_kill # 执行减人口
+					set_owner = GWG # 省份转给洞穴聚落
+				}
+			}
+			add_named_threat = { 
+				threat = 5 
+				name = HJM_skyfire_threat 
+			} # 世界威胁+5
+			add_war_support = 0.10 # 战支+10%
+			add_stability = -0.03 # 稳定-3%
+		}
+		ai_will_do = { factor = 1 }
+	}
+	# 绝不姑息（MYR灭国，土地转给MDG）
 	focus = {
 		id = HJM_no_mercy
 		x = 23
 		y = 2
-		cost = 0
+		cost = 1
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		prerequisite = {
-			focus = HJM_uproot_claws
+		prerequisite = { 
+			focus = HJM_uproot_claws 
 		}
+		available = { 
+			controls_state = 574 
+		} # 必须占领MYR首都(雅库茨克)
+		completion_reward = {
+			MYR = { # 对MYR执行：
+				every_owned_state = {
+					set_variable = { 
+						name = pop_kill 
+						value = manpower 
+					}
+					multiply_variable = { 
+						name = pop_kill 
+						value = -0.95 
+					} # 杀95%
+					add_manpower = pop_kill
+					set_owner = MDG # 省份转给末地
+				}
+			}
+			add_stability = 0.05 # 稳定+5%
+			add_war_support = 0.08 # 战支+8%
+		}
+		ai_will_do = { factor = 1 }
 	}
+	# 故土新归（GWG洞穴聚落，温和附庸）
 	focus = {
 		id = HJM_homeland_return
 		x = 19
 		y = 2
-		cost = 0
+		cost = 1
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		mutually_exclusive = {
-			focus = HJM_ash_policy
+		mutually_exclusive = { 
+			focus = HJM_ash_policy 
+		} # 与烬化政策互斥
+		prerequisite = { 
+			focus = HJM_grace_realm 
+		} # 前置：恩及天下
+		available = { 
+			controls_state = 1076 
+		} # 必须占领GWG首都(曼谷)
+		completion_reward = {
+			GWG = { # 对GWG执行：
+				set_cosmetic_tag = GWG_vassal # 改名：世界边境特别行政区
+				set_politics = { 
+					ruling_party = feudalist
+					last_election = "1936.1.1" 
+					election_frequency = 48 
+					elections_allowed = no 
+				} # 改执政党为封建
+				recruit_character = HJM_viceroy_gwg # 招募帝国总督
+				promote_character = { 
+					character = HJM_viceroy_gwg 
+					ideology = absolute_monarchist 
+				} # 总督上台
+				add_ideas = HJM_vassal_state # 挂藩属精神
+				every_owned_state = {
+					set_variable = { 
+						name = pop_kill 
+						value = manpower 
+					}
+					multiply_variable = { 
+						name = pop_kill 
+						value = -0.2 
+					} # 减20%
+					add_manpower = pop_kill
+				}
+			}
+			puppet = GWG # GWG成为HJM附庸
+			add_stability = 0.05 # 稳定+5%
+			add_political_power = 50 # 政治点+50
 		}
-		prerequisite = {
-			focus = HJM_grace_realm
+		ai_will_do = { 
+			factor = 1 
 		}
 	}
+	# 黄金攻势（ZLG猪灵堡垒，温和附庸，可不占首都花钱搞定）
 	focus = {
 		id = HJM_golden_offensive
 		x = 19
 		y = 3
-		cost = 0
+		cost = 1
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		mutually_exclusive = {
-			focus = HJM_bloody_gate
+		mutually_exclusive = { 
+			focus = HJM_bloody_gate 
+		} # 与城门血海互斥
+		prerequisite = { 
+			focus = HJM_grace_realm 
 		}
-		prerequisite = {
-			focus = HJM_grace_realm
+		available = {
+			OR = {
+				controls_state = 440 # 占领ZLG首都(拉合尔)
+				has_political_power > 200 # 或有200政治点（贿赂）
+			}
+		}
+		completion_reward = {
+			if = { # 如果没占领首都(走花钱路线)：
+				limit = { 
+					NOT = { 
+						controls_state = 440 
+					} 
+				}
+				add_political_power = -200 # 扣200政治点
+			}
+			ZLG = {
+				set_cosmetic_tag = ZLG_vassal # 改名：猪灵自治区
+				set_politics = { 
+					ruling_party = feudalist 
+					last_election = "1936.1.1" 
+					election_frequency = 48 
+					elections_allowed = no 
+				}
+				recruit_character = HJM_viceroy_zlg
+				promote_character = { 
+					character = HJM_viceroy_zlg 
+					ideology = absolute_monarchist 
+				}
+				add_ideas = HJM_vassal_state
+				every_owned_state = {
+					set_variable = { 
+						name = pop_kill 
+						value = manpower 
+					}
+					multiply_variable = { 
+						name = pop_kill 
+						value = -0.2 
+					} # 减20%
+					add_manpower = pop_kill
+				}
+			}
+			puppet = ZLG
+			add_political_power = 75 # 黄金回报，PP+75
+		}
+		ai_will_do = { 
+			factor = 1 
 		}
 	}
+	# 岩浆之臣（XWY玄武岩城邦，温和附庸）
 	focus = {
 		id = HJM_magma_servant
 		x = 19
 		y = 4
-		cost = 0
+		cost = 1
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		mutually_exclusive = {
-			focus = HJM_beneath_magma
+		mutually_exclusive = { 
+			focus = HJM_beneath_magma 
+		} # 与岩浆之下互斥
+		prerequisite = { 
+			focus = HJM_grace_realm 
 		}
-		prerequisite = {
-			focus = HJM_grace_realm
+		available = { 
+			controls_state = 427 
+		} # 必须占领XWY首都(海得拉巴)
+		completion_reward = {
+			XWY = {
+				set_cosmetic_tag = XWY_vassal # 改名：玄武自治区
+				set_politics = { 
+					ruling_party = feudalist 
+					last_election = "1936.1.1" 
+					election_frequency = 48 
+					elections_allowed = no 
+				}
+				recruit_character = HJM_viceroy_xwy
+				promote_character = { 
+					character = HJM_viceroy_xwy 
+					ideology = absolute_monarchist 
+				}
+				add_ideas = HJM_vassal_state
+				every_owned_state = {
+					set_variable = { 
+						name = pop_kill 
+						value = manpower 
+					}
+					multiply_variable = { 
+						name = pop_kill 
+						value = -0.2 
+					} # 减20%
+					add_manpower = pop_kill
+				}
+			}
+			puppet = XWY
+			add_tech_bonus = { 
+				name = HJM_magma_tech_bonus 
+				bonus = 0.5 
+				uses = 1 
+				category = electronics 
+			} # 科研加速，要不要直接加科技
+			army_experience = 10 # 陆军经验+10
+		}
+		ai_will_do = { 
+			factor = 1 
 		}
 	}
+	# 烬化政策（GWG洞穴聚落，复仇焦土）
 	focus = {
 		id = HJM_ash_policy
 		x = 21
 		y = 2
-		cost = 0
+		cost = 1
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		mutually_exclusive = {
-			focus = HJM_homeland_return
+		mutually_exclusive = { 
+			focus = HJM_homeland_return 
+		} # 与故土新归互斥
+		prerequisite = { 
+			focus = HJM_blood_debt 
+		} # 前置：血债血偿
+		available = { 
+			controls_state = 1076 
+		} # 必须占领GWG首都
+		completion_reward = {
+			GWG = {
+				set_cosmetic_tag = GWG_vassal # 改名：世界边境特别行政区
+				set_politics = { 
+					ruling_party = feudalist 
+					last_election = "1936.1.1" 
+					election_frequency = 48 
+					elections_allowed = no 
+				}
+				recruit_character = HJM_viceroy_gwg
+				promote_character = { 
+					character = HJM_viceroy_gwg 
+					ideology = absolute_monarchist 
+				}
+				add_ideas = HJM_vassal_state # 藩属精神
+				add_ideas = HJM_demilitarized # 禁军事化（复仇线独有）
+				every_owned_state = {
+					set_variable = { 
+						name = pop_kill 
+						value = manpower 
+					}
+					multiply_variable = { 
+						name = pop_kill 
+						value = -0.7 
+					} # 减70%
+					add_manpower = pop_kill
+					set_building_level = { 
+						building = industrial_complex level = 0 
+					} # 摧毁民工厂
+				}
+			}
+			puppet = GWG
+			add_war_support = 0.05 # 战支+5%
 		}
-		prerequisite = {
-			focus = HJM_blood_debt
+		ai_will_do = { 
+			factor = 1 
 		}
 	}
+
+	# 城门血海（ZLG猪灵堡垒，复仇血战）
 	focus = {
 		id = HJM_bloody_gate
 		x = 21
 		y = 3
-		cost = 0
+		cost = 1
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		mutually_exclusive = {
-			focus = HJM_golden_offensive
+		mutually_exclusive = { 
+			focus = HJM_golden_offensive 
+		} # 与黄金攻势互斥
+		prerequisite = { 
+			focus = HJM_blood_debt 
 		}
-		prerequisite = {
-			focus = HJM_blood_debt
+		available = { 
+			controls_state = 440 
+		} # 必须占领ZLG首都
+		completion_reward = {
+			ZLG = {
+				set_cosmetic_tag = ZLG_vassal # 改名：猪灵自治区
+				set_politics = { 
+					ruling_party = feudalist 
+					last_election = "1936.1.1" 
+					election_frequency = 48 
+					elections_allowed = no 
+				}
+				recruit_character = HJM_viceroy_zlg
+				promote_character = { 
+					character = HJM_viceroy_zlg 
+					ideology = absolute_monarchist 
+				}
+				add_ideas = HJM_vassal_state
+				add_ideas = HJM_demilitarized # 禁军事化
+				every_owned_state = {
+					set_variable = { 
+						name = pop_kill 
+						value = manpower 
+					}
+					multiply_variable = { 
+						name = pop_kill 
+						value = -0.7 
+					} # 减70%
+					add_manpower = pop_kill
+					set_building_level = { 
+						building = arms_factory 
+						level = 0 
+					} # 摧毁军工厂
+				}
+			}
+			puppet = ZLG
+			army_experience = 15 # 经验+15
+			add_war_support = 0.08 # 战支+8%
+		}
+		ai_will_do = { 
+			factor = 1 
 		}
 	}
+	# 岩浆之下（XWY玄武岩城邦，复仇征服）
 	focus = {
 		id = HJM_beneath_magma
 		x = 21
 		y = 4
-		cost = 0
+		cost = 1
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		mutually_exclusive = {
-			focus = HJM_magma_servant
+		mutually_exclusive = { 
+			focus = HJM_magma_servant 
+		} # 与岩浆之臣互斥
+		prerequisite = { 
+			focus = HJM_blood_debt 
 		}
-		prerequisite = {
-			focus = HJM_blood_debt
+		available = { 
+			controls_state = 427 
+		} # 必须占领XWY首都
+		completion_reward = {
+			XWY = {
+				set_cosmetic_tag = XWY_vassal # 改名：玄武自治区
+				set_politics = { 
+					ruling_party = feudalist 
+					last_election = "1936.1.1" 
+					election_frequency = 48 
+					elections_allowed = no 
+				}
+				recruit_character = HJM_viceroy_xwy
+				promote_character = { 
+					character = HJM_viceroy_xwy 
+					ideology = absolute_monarchist 
+				}
+				add_ideas = HJM_vassal_state
+				add_ideas = HJM_demilitarized # 禁军事化
+				every_owned_state = {
+					set_variable = { 
+						name = pop_kill 
+						value = manpower 
+					}
+					multiply_variable = { 
+						name = pop_kill 
+						value = -0.7 
+					} # 减70%
+					add_manpower = pop_kill
+					set_building_level = { 
+						building = infrastructure
+						level = 0
+					} # 摧毁基建
+				}
+			}
+			puppet = XWY
+			air_experience = 10 # 空军经验+10
+			add_war_support = 0.05 # 战支+5%
+		}
+		ai_will_do = { 
+			factor = 1 
 		}
 	}
 }

@@ -1,0 +1,120 @@
+﻿l_simp_chinese:
+     
+   # ==================== HJM 战前国策 ====================
+   MC_start: "MC帝国之始"
+   MC_start_desc: "起初，人皇不过是整合了周边几个零散的村庄。但百年飘摇间，城邦林立，田野广布，一个帝国正在升起，成为这个世界唯一的太阳。而后，MC帝国必将光耀百世，名震古今。"
+
+   HJM_underground_riot: "山雨欲来"
+   HJM_underground_riot_desc: "老人们看到牛羊的骚乱，边疆也频传异动，山雨欲来风满楼。MC帝国不害怕挑战，只怕风雨还不够猛烈。帝国不知道威胁在何方，因为所有的威胁都将被扫平。"
+
+   HJM_illager_spy: "他们在干什么"
+   HJM_illager_spy_desc: "他们在干什么？身为帝国的归化异族，活在阴影中的灾厄村民如今却格外活跃。他们在林地府邸重燃烽火，灰色的皮肤游走在边境线上传递密信。他们到底在为谁服务？倘若背叛，帝国不会姑息。"
+
+   HJM_brother_returns: "11号唱片"
+   HJM_brother_returns_desc: "是谁播放了11号唱片！是谁在传播恐怖的回归！魔族曾因零散而无足挂齿，但如若HEROBRINE的传言为真，无脑的魔族们将会在他一人的旗帜下集结成军。帝国无惧挑战，但我们必须做点什么。"
+
+   HJM_village_defense: "加强村庄防备"
+   HJM_village_defense_desc: "战争是进攻和防御的不断的交替和结合，单有无往不利的矛却无坚不可摧的盾是万万不可。现在边境村庄都得全副武装，让胆敢进犯的敌人作出回答！"
+
+   HJM_iron_golem: "铸就铁拳"
+   HJM_iron_golem_desc: "村子里的铁会铸成护卫，村子里的村民会成为精锐。制造铁傀儡，就是铸就铁拳。他们不关心什么是魔族，什么是神，他们只会出拳。不要停下，直到钢铁成为长城。"
+
+   HJM_redstone_research: "加强红石科技研究"
+   HJM_redstone_research_desc: "红色的矿石可以传导信号，红光在线路上闪烁，叫远方的灯光亮起。不要低估红石的力量，它能让矿车永无止境地奔流，也能让武器更具威胁。加强红石科技研究，帝国的基石需要一抹红色。"
+   HJM_redstone_radio_bonus: "红石通信研究"
+
+   HJM_redstone_cannon: "红石大炮"
+   HJM_redstone_cannon_desc: "世界上只有两种人，炮兵和他的目标！我们将完善红石系统的控制，提高TNT的当量。射程范围内，帝国的火炮就是真理。"
+   HJM_redstone_artillery_bonus: "红石火炮研究"
+
+   HJM_outsider_contact: "加强方外势力接触"
+   HJM_outsider_contact_desc: "村庄里来了群异乡人，他们无所不能，又能起死回生。祭司说他们与吾皇一样伟大，同僚们说他们可以比肩一个帝国。帝国的外交部应该懂得如何接触这么一股力量。"
+
+   HJM_player_pact: "穿越者协约"
+   HJM_player_pact_desc: "穿越者们决出一个代表，单枪匹马闯进国都，大刀阔斧立下合作协约。他们会成为帝国最锋利的剑，为帝国扫清一切障碍。与此相应的，他们要求在帝国内享有特殊的权力。阳光下，紫色的光晕在他的铠甲上闪耀，帝国乐意看到协约的确立。"
+
+   # ==================== HJM 战时国策（主链） ====================
+   HJM_liberate_village: "魔族战争咨文"
+   HJM_liberate_village_desc: "那一天终究是到来了，自从唱片播放以来我们便枕戈待战，现在是时候把他们彻底赶出这片大陆了！"
+
+   HJM_player_general: "任命穿越者将领"
+   HJM_player_general_desc: "穿越者们给我们的进攻带来了巨大帮助，他们似乎已经身经百战。帝国可以提拔一些穿越者成为前锋，他们的经验将会将我军导向胜利。"
+
+   HJM_nether_strike: "奇兵暗度"
+   HJM_nether_strike_desc: "魔族军队主力集中在前线，而后方却空无一人。穿越者将领敏锐的察觉到了这一点，穿越者提出的地狱门跃迁构想将打魔族个措手不及。不错，现在开门！"
+
+   HJM_dignity_blade: "尊严只在剑锋之上"
+   HJM_dignity_blade_desc: "曾几何时，所有人都认为帝国会盛世永续。奈何魔族入侵，意欲染指中原。儿郎们，举起锋芒，既然他们敢来，就用他们的血浇铸丰碑，他们的头垒起京观。捍卫帝国的尊严！尊严只在剑锋之上！"
+
+   HJM_total_war: "这是全面战争"
+   HJM_total_war_desc: "《全面战争法案》被通过。帝国从未如此上下齐心。我们要动员帝国全境，民用工厂将转产军用物资，村民们将获得制式装备。现在已经到了全力一搏的时候了！"
+
+   HJM_liberate_nether: "一定要解放下界"
+   HJM_liberate_nether_desc: "这场战争始于那里，帝国旗帜将从每一座下界要塞上升起，我们一定要解放下界！"
+
+   # ==================== HJM 战时国策（处置仆从国） ====================
+   HJM_uproot_claws: "拔除爪牙"
+   HJM_uproot_claws_desc: "Herobrine的爪牙遍布四方，拱卫着下界要塞。要想彻底击破魔族，第一步就是拔除他的爪牙，清算他的附庸，直到打开通往下界要塞的门户。"
+
+   HJM_grace_realm: "恩及天下"
+   HJM_grace_realm_desc: "帝国的旗帜插到哪里，恩泽就覆盖到哪里。不焚其城，不毁其业。饱受折磨的土地，需要迎来真正的解放，叫世界重新沐浴在帝国的光辉之下。王师所至，箪食壶浆。"
+
+   HJM_blood_debt: "血债血偿"
+   HJM_blood_debt_desc: "魔族欠下的血债，只能用血来偿还。每一座被焚毁的村庄，每一条被夺去的性命，都要魔族百倍奉还。毁灭敌人的基业，屠杀Herobrine的臣民，直到魔族的脊梁寸寸断裂。永绝后患！"
+
+   HJM_skyfire_plan: "焚天计划"
+   HJM_skyfire_plan_desc: "天空为谁而哭泣？是叛徒？还是所谓义军？火焰将烧穿天穹，TNT将震碎山岳。帝国的怒火不会终止，那群叛徒不会知道骑墙的下场了。碳化是林地府邸的结局。"
+   HJM_skyfire_threat: "林地府邸的覆灭"
+
+   HJM_no_mercy: "绝不姑息"
+   HJM_no_mercy_desc: "对变节者，帝国绝不姑息。投降不纳，降卒不留，野火烧不尽，那就大火烧！对背刺者的仁慈，就是对帝国的背叛。"
+
+   HJM_homeland_return: "故土新归"
+   HJM_homeland_return_desc: "这片土地离开太久了，久到土地的主人也忘记了他们曾经也是主世界的一员。帝国愿意敞开怀抱，迎接他们归乡。尽管他们曾陷入迷惘，但如今他们也能成为帝国的尖刀。"
+
+   HJM_golden_offensive: "黄金攻势"
+   HJM_golden_offensive_desc: "帝国愿意以金钱开道，用黄金砸开猪灵堡垒的门。他们会为Herobrine卖命，自然也会向更大的利益臣服。"
+
+   HJM_magma_servant: "岩浆之臣"
+   HJM_magma_servant_desc: "岩浆海上的玄武岩城邦曾被视为不可征服，如今，它也要向帝国的俯首称臣，献上最为顶尖的技术。火，从来只臣服于更大的火。"
+   HJM_magma_tech_bonus: "玄武岩军工技术"
+
+   HJM_ash_policy: "烬化政策"
+   HJM_ash_policy_desc: "只有焦土，才不会结出恶之花。烬化——不留余地，不留城市，寸草不留，化为灰烬。让它们尝尝，被连根拔起的滋味。"
+
+   HJM_bloody_gate: "城门血海"
+   HJM_bloody_gate_desc: "猪灵堡垒的城门之下，已经汇成一片血海。接着杀，把车轮放平！杀到猪灵丢掉胆子，做回任人宰割的猪。剑锋已经出鞘，帝国绝不低头。"
+
+   HJM_beneath_magma: "岩浆之下"
+   HJM_beneath_magma_desc: "越过沸腾的岩浆，直捣玄武岩聚落。安装海量的TNT，让这座悬于岩浆海上的玄武岩岛彻底沉没于岩浆之下。"
+
+   # ==================== HIM 国策 ====================
+   HIM_demon_host: "魔族"
+   HIM_demon_host_desc: "主世界的人类把我们写成传说，把下界称作荒芜之地。他们错了。魔族并非散乱的怪物，而是一支等待命令的军队。现在，旗帜已经升起。"
+
+   HIM_evil_resurgence: "邪恶复苏"
+   HIM_evil_resurgence_desc: "Herobrine的名字重新回到祭坛与军营之间。僵尸听见了召唤，骷髅取下了旧弓，烈焰人的火焰在要塞中连成一片。沉睡的邪恶并未消亡，它只是在等待归来。"
+   HIM_evil_resurgence_threat: "Herobrine的邪恶复苏"
+
+   HIM_nether_mobilization: "下界整备"
+   HIM_nether_mobilization_desc: "下界并不是一个国家，而是一片由要塞、岩浆海和各族巢穴拼合而成的战场。要让它服务于同一个目标，就必须先把它铸造成一台战争机器。"
+   HIM_nether_mobilization_bonus: "下界整备"
+
+   HIM_illager_defectors: "叛变者投诚"
+   HIM_illager_defectors_desc: "灾厄村民比任何人都了解主世界的村庄。他们憎恨村民，也憎恨那些保护村民的人。如今，他们愿意开启传送门，作为投诚的第一份礼物。"
+
+   HIM_open_the_gate: "开门！解放末地"
+   HIM_open_the_gate_desc: "下界传送门证明了世界之间的边界可以被撕开。末地不该继续沉默。只要传送门被点亮，末影之地的力量也将被拖入我们的战争。"
+   HIM_open_the_gate_threat: "末地传送门被开启"
+   HIM_end_portal_bonus: "末地传送门研究"
+
+   HIM_overworld_dominion: "君临主世界"
+   HIM_overworld_dominion_desc: "主世界的天空、村庄、矿洞和城墙都将承认新的主人。我们不再满足于阴影中的袭扰，魔族要在阳光之下建立统治。"
+
+   HIM_zombie_siege: "僵尸围城"
+   HIM_zombie_siege_desc: "尸潮不需要补给线，也不需要军饷。它们只需要一个方向。第一座村庄倒下时，整个主世界都会明白：这不是边境冲突，这是世界大战的开始。"
+   HIM_zombie_siege_threat: "僵尸围城"
+
+   HIM_sky_is_not_the_limit: "天空不是极限"
+   HIM_sky_is_not_the_limit_desc: "人类以为城墙能挡住尸潮，以为高山能挡住军队，以为天空是最后的边界。下界的火焰将升入云层，战争不会停在地面。"
+   HIM_sky_is_not_the_limit_bonus: "天空不是极限"

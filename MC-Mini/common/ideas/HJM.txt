@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 
-        Xinxiehui = {
+        Xinxiehui = {    #哈基米最后一口气，之前的遗留，不用管，不启用
 
 			removal_cost = -1
 
@@ -14,7 +14,7 @@ ideas = {
 			}
 		}
         
-        liuxue = {
+        liuxue = {    #哈基米的倒数第二口气，之前的遗留，不用管，不启用
 
 			allowed = {
 				always = no
@@ -154,6 +154,8 @@ ideas = {
 				army_attack_factor = -0.10     # 攻击 -10%（原 -5%）
 				army_defence_factor = -0.05    # 防御 -5%（新增）
 				war_support_factor = -0.05     # 战支 -5%（新增，厌战）
+				stability_factor = -0.08           # 稳定 -8%
+                political_power_gain = -0.05       # 政治点 -5%
 			}
 		}
 
@@ -187,7 +189,7 @@ ideas = {
 
 			modifier = {
 				production_speed_buildings_factor = -0.05
-				training_time_army_factor = -0.10
+				training_time_factor = -0.10
 				civilian_intel_to_others = -10
 				army_intel_to_others = -10
 				navy_intel_to_others = -5
@@ -260,6 +262,36 @@ ideas = {
 			}
 		}
 
+		HJM_demilitarized = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				mobilization_speed = -0.50          # 动员速度减半
+				conscription = -0.30                # 征兵大幅降
+				industrial_capacity_factory = -0.30  # 工厂产出降
+			}
+		}
+
+		HJM_vassal_state = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.30       # 傀儡无自主权
+				trade_laws_cost_factor = 0.50        # 贸易受宗主限制
+				generate_wargoal_tension = 1.0       # 不能自主宣战
+			}
+		}
+
 	}
 
 	materiel_manufacturer = {
@@ -315,7 +347,7 @@ theorist = {
         cost = 1
         removal_cost = -1
         modifier = {
-            army_org = 50
+            army_org_factor = 0.5
             army_defence_factor = 0.1
         }
     }

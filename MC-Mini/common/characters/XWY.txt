@@ -23,4 +23,18 @@ characters = {
                         logistics_skill = 2
                 }
         }
+
+        HJM_viceroy_xwy = {
+                name = HJM_viceroy_xwy
+                portraits = {
+                        civilian = {
+                                large = "gfx/leaders/leader_unknown.dds"
+                        }
+                }
+                country_leader = {
+                        ideology = absolute_monarchist
+                        traits = { }
+                        expire = "1965.1.1.1"
+                }
+        }
   }
