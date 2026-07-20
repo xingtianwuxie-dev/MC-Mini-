@@ -29,6 +29,7 @@ set_popularities = {
 }
 
 recruit_character = ZLG_AncientPiglin
+recruit_character = HJM_viceroy_zlg
 
 add_ideas = {
     ZLG_brutal_force

@@ -1,0 +1,509 @@
+focus_tree = {
+	id = GWG_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GWG
+		}
+	}
+
+	focus = {
+		id = GWG_cave_council
+		x = 0
+		y = 0
+		cost = 5
+		icon = GFX_focus_generic_self_management
+		completion_reward = {
+			add_political_power = 50 # Local cave elders restore basic administration.
+			add_stability = 0.03 # Settling tunnel disputes steadies the settlement.
+		}
+	}
+
+	focus = {
+		id = GWG_tunnel_workshops
+		x = 0
+		y = 1
+		cost = 5
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = GWG_cave_council }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex # Expand cave-side workshops into civilian industry.
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 25 # Workshop registration improves tax collection.
+		}
+	}
+
+	focus = {
+		id = GWG_zombie_militia
+		x = 0
+		y = 2
+		cost = 5
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = GWG_tunnel_workshops }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1 # Issue stored blades and bows to cave militia.
+				amount = 500
+			}
+			army_experience = 10 # Tunnel patrols become practical combat lessons.
+		}
+	}
+
+	focus = {
+		id = GWG_dark_patrols
+		x = 0
+		y = 3
+		cost = 5
+		icon = GFX_focus_generic_army_doctrines_2
+		prerequisite = { focus = GWG_zombie_militia }
+		completion_reward = {
+			add_war_support = 0.05 # Night patrol propaganda raises defensive resolve.
+			add_command_power = 15 # Patrol posts improve local command response.
+		}
+	}
+
+	focus = {
+		id = GWG_hold_the_depths
+		x = 0
+		y = 4
+		cost = 5
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { focus = GWG_dark_patrols }
+		completion_reward = {
+			add_manpower = 3000 # Hidden cave families are registered for defense duty.
+			add_stability = 0.05 # The settlement accepts a common survival plan.
+			army_experience = 10 # Defensive drills in the depths refine doctrine.
+		}
+	}
+}
+
+focus_tree = {
+	id = LLL_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LLL
+		}
+	}
+
+	focus = {
+		id = LLL_mansion_council
+		x = 0
+		y = 0
+		cost = 5
+		icon = GFX_focus_generic_self_management
+		completion_reward = {
+			add_political_power = 50 # The mansion council gathers scattered illager authority.
+			add_stability = 0.03 # A single council quiets rival evoker halls.
+		}
+	}
+
+	focus = {
+		id = LLL_woodland_stores
+		x = 0
+		y = 1
+		cost = 5
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = LLL_mansion_council }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex # Hidden woodland stores become usable workshops.
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 25 # Confiscated mansion ledgers feed the treasury.
+		}
+	}
+
+	focus = {
+		id = LLL_vindicator_drills
+		x = 0
+		y = 2
+		cost = 5
+		icon = GFX_focus_generic_army_doctrines_2
+		prerequisite = { focus = LLL_woodland_stores }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1 # Axes, crossbows, and captured rifles are standardized.
+				amount = 500
+			}
+			army_experience = 10 # Vindicator drills turn raids into organized warfare.
+		}
+	}
+
+	focus = {
+		id = LLL_totem_watch
+		x = 0
+		y = 3
+		cost = 5
+		icon = GFX_focus_generic_national_security
+		prerequisite = { focus = LLL_vindicator_drills }
+		completion_reward = {
+			add_war_support = 0.05 # Totem rites harden the mansion guards.
+			add_command_power = 15 # Watch posts speed up woodland response orders.
+		}
+	}
+
+	focus = {
+		id = LLL_raid_the_border
+		x = 0
+		y = 4
+		cost = 5
+		icon = GFX_focus_generic_army_attack
+		prerequisite = { focus = LLL_totem_watch }
+		completion_reward = {
+			add_manpower = 3000 # Border raiding bands are folded into the army rolls.
+			add_war_support = 0.05 # Successful raids reinforce illager confidence.
+			army_experience = 10 # Repeated raids sharpen woodland tactics.
+		}
+	}
+}
+
+focus_tree = {
+	id = MDG_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MDG
+		}
+	}
+
+	focus = {
+		id = MDG_end_court
+		x = 0
+		y = 0
+		cost = 5
+		icon = GFX_focus_generic_monarchy_1
+		completion_reward = {
+			add_political_power = 50 # The End court restores royal command channels.
+			add_stability = 0.03 # Nobles accept a temporary court settlement.
+		}
+	}
+
+	focus = {
+		id = MDG_chorus_workshops
+		x = 0
+		y = 1
+		cost = 5
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = MDG_end_court }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex # Chorus workshops support basic industry.
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 25 # Court monopolies restore revenue.
+		}
+	}
+
+	focus = {
+		id = MDG_ender_guards
+		x = 0
+		y = 2
+		cost = 5
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = MDG_chorus_workshops }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1 # Ender guards receive standardized weapons.
+				amount = 500
+			}
+			army_experience = 10 # Guard rotations become a doctrine school.
+		}
+	}
+
+	focus = {
+		id = MDG_portal_registry
+		x = 0
+		y = 3
+		cost = 5
+		icon = GFX_focus_generic_national_security
+		prerequisite = { focus = MDG_ender_guards }
+		completion_reward = {
+			add_war_support = 0.05 # Portal control is sold as national survival.
+			add_command_power = 15 # Registry networks improve rapid redeployment orders.
+		}
+	}
+
+	focus = {
+		id = MDG_guard_the_void
+		x = 0
+		y = 4
+		cost = 5
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { focus = MDG_portal_registry }
+		completion_reward = {
+			add_manpower = 3000 # Remote End settlements are counted for defense.
+			add_stability = 0.05 # The void frontier is folded into royal administration.
+			army_experience = 10 # Void drills improve defensive discipline.
+		}
+	}
+}
+
+focus_tree = {
+	id = MYR_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MYR
+		}
+	}
+
+	focus = {
+		id = MYR_rebel_camp
+		x = 0
+		y = 0
+		cost = 5
+		icon = GFX_focus_generic_self_management
+		completion_reward = {
+			add_political_power = 50 # Rebel captains form a single command camp.
+			add_stability = 0.03 # Camp discipline reduces factional quarrels.
+		}
+	}
+
+	focus = {
+		id = MYR_hidden_supplies
+		x = 0
+		y = 1
+		cost = 5
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = MYR_rebel_camp }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex # Hidden caches become improvised supply shops.
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 25 # Supply control strengthens rebel taxation.
+		}
+	}
+
+	focus = {
+		id = MYR_shadow_spears
+		x = 0
+		y = 2
+		cost = 5
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = MYR_hidden_supplies }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1 # Shadow bands receive captured weapon stocks.
+				amount = 500
+			}
+			army_experience = 10 # Ambush training gives the rebels real field experience.
+		}
+	}
+
+	focus = {
+		id = MYR_break_the_court
+		x = 0
+		y = 3
+		cost = 5
+		icon = GFX_focus_generic_army_attack
+		prerequisite = { focus = MYR_shadow_spears }
+		completion_reward = {
+			add_war_support = 0.05 # Anti-court agitation raises rebel fervor.
+			add_command_power = 15 # Cell commanders coordinate through stricter signals.
+		}
+	}
+
+	focus = {
+		id = MYR_northern_oath
+		x = 0
+		y = 4
+		cost = 5
+		icon = GFX_focus_generic_national_security
+		prerequisite = { focus = MYR_break_the_court }
+		completion_reward = {
+			add_manpower = 3000 # Northern clans pledge fighters to the rebellion.
+			add_war_support = 0.05 # The oath turns revolt into a national cause.
+			army_experience = 10 # Coordinated cells learn to fight as an army.
+		}
+	}
+}
+
+focus_tree = {
+	id = XWY_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = XWY
+		}
+	}
+
+	focus = {
+		id = XWY_basalt_senate
+		x = 0
+		y = 0
+		cost = 5
+		icon = GFX_focus_generic_self_management
+		completion_reward = {
+			add_political_power = 50 # Basalt city delegates restore senate authority.
+			add_stability = 0.03 # A recognized senate lowers city-state infighting.
+		}
+	}
+
+	focus = {
+		id = XWY_magma_forges
+		x = 0
+		y = 1
+		cost = 5
+		icon = GFX_focus_generic_military_industry
+		prerequisite = { focus = XWY_basalt_senate }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory # Magma forges are converted into war production.
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 25 # Forge contracts enrich the senate.
+		}
+	}
+
+	focus = {
+		id = XWY_slime_levies
+		x = 0
+		y = 2
+		cost = 5
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = XWY_magma_forges }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1 # Forge weapons are issued to city levies.
+				amount = 500
+			}
+			army_experience = 10 # Levies learn to fight around lava channels.
+		}
+	}
+
+	focus = {
+		id = XWY_lava_channels
+		x = 0
+		y = 3
+		cost = 5
+		icon = GFX_focus_generic_army_doctrines_2
+		prerequisite = { focus = XWY_slime_levies }
+		completion_reward = {
+			add_war_support = 0.05 # Lava defenses become a symbol of survival.
+			add_command_power = 15 # Channel control improves city defense command.
+		}
+	}
+
+	focus = {
+		id = XWY_blackstone_line
+		x = 0
+		y = 4
+		cost = 5
+		icon = GFX_focus_generic_mountain_fortification
+		prerequisite = { focus = XWY_lava_channels }
+		completion_reward = {
+			add_manpower = 3000 # Outlying blackstone towns join the defense rolls.
+			add_stability = 0.05 # The defense line binds the city-states together.
+			army_experience = 10 # Fortified line drills refine local tactics.
+		}
+	}
+}
+
+focus_tree = {
+	id = ZLG_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ZLG
+		}
+	}
+
+	focus = {
+		id = ZLG_bastion_ledger
+		x = 0
+		y = 0
+		cost = 5
+		icon = GFX_focus_generic_arms_trade
+		completion_reward = {
+			add_political_power = 50 # Bastion ledgers restore central bargaining power.
+			add_stability = 0.03 # Clear gold accounts reduce clan disputes.
+		}
+	}
+
+	focus = {
+		id = ZLG_gold_workshops
+		x = 0
+		y = 1
+		cost = 5
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = ZLG_bastion_ledger }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex # Gold workshops expand bastion industry.
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 25 # Gold taxes refill the bastion treasury.
+		}
+	}
+
+	focus = {
+		id = ZLG_piglin_warbands
+		x = 0
+		y = 2
+		cost = 5
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = ZLG_gold_workshops }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1 # Warbands receive standardized bastion weapons.
+				amount = 500
+			}
+			army_experience = 10 # Clan warbands learn to obey common orders.
+		}
+	}
+
+	focus = {
+		id = ZLG_barter_oaths
+		x = 0
+		y = 3
+		cost = 5
+		icon = GFX_focus_generic_arms_trade
+		prerequisite = { focus = ZLG_piglin_warbands }
+		completion_reward = {
+			add_war_support = 0.05 # Barter oaths bind profit to wartime loyalty.
+			add_command_power = 15 # Clan chiefs accept a shared command ledger.
+		}
+	}
+
+	focus = {
+		id = ZLG_defend_the_bastion
+		x = 0
+		y = 4
+		cost = 5
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { focus = ZLG_barter_oaths }
+		completion_reward = {
+			add_manpower = 3000 # Bastion households are mobilized for defense.
+			add_stability = 0.05 # Defense contracts settle clan rivalries.
+			army_experience = 10 # Bastion defense drills improve army cohesion.
+		}
+	}
+}

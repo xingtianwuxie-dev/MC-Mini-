@@ -1,6 +1,6 @@
 HJM_record_13_category = {
 	HJM_record_13_war_countdown = {
-		icon = GFX_decision_ignite_civil_war
+		icon = GFX_decision_generic_ignite_civil_war
 
 		allowed = {
 			original_tag = HJM
@@ -40,13 +40,13 @@ HJM_record_13_category = {
 				}
 			}
 		}
-		complete_effect = {             #主动开战说是
+
+		complete_effect = {
 			declare_war_on = {
 				target = HIM
 				type = annex_everything
-			}
+			} # Start the HJM-HIM war immediately if the player selects the mission.
 		}
-
 	}
 
 	HJM_delay_record_13_war = {
@@ -71,7 +71,7 @@ HJM_record_13_category = {
 			add_days_mission_timeout = {
 				mission = HJM_record_13_war_countdown
 				days = 30
-			}
+			} # Delay the record-13 war countdown by thirty days.
 		}
 
 		ai_will_do = {
@@ -80,11 +80,9 @@ HJM_record_13_category = {
 	}
 }
 
-
-#这个应该是战备决议
 HJM_war_preparation_category = {
 	HJM_suppress_illager_cells = {
-		icon = GFX_decision_generic_political_pressure
+		icon = GFX_decision_generic_police_action
 		cost = 35
 		fire_only_once = no
 		days_re_enable = 45
@@ -103,9 +101,9 @@ HJM_war_preparation_category = {
 		}
 
 		complete_effect = {
-			add_stability = 0.02
-			add_war_support = 0.01
-			army_experience = 3
+			add_stability = 0.02 # Local crackdowns calm the frontier.
+			add_war_support = 0.01 # Public security work reminds villagers of the coming danger.
+			army_experience = 3 # Patrols provide small practical lessons.
 		}
 
 		ai_will_do = {
@@ -114,11 +112,13 @@ HJM_war_preparation_category = {
 	}
 
 	HJM_build_northern_railway = {
-		icon = GFX_decision_generic_construct_infrastructure
+		icon = GFX_decision_generic_construction
 		cost = 50
-		civilian_factory_use = 2
 		days_remove = 45
 		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 2
+		}
 
 		allowed = {
 			original_tag = HJM
@@ -137,7 +137,7 @@ HJM_war_preparation_category = {
 			build_railway = {
 				level = 1
 				path = { 10612 1776 12485 1693 }
-			}
+			} # Build a temporary northern military railway.
 		}
 
 		ai_will_do = {
@@ -146,11 +146,13 @@ HJM_war_preparation_category = {
 	}
 
 	HJM_build_western_railway = {
-		icon = GFX_decision_generic_construct_infrastructure
+		icon = GFX_decision_generic_construction
 		cost = 50
-		civilian_factory_use = 2
 		days_remove = 45
 		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 2
+		}
 
 		allowed = {
 			original_tag = HJM
@@ -169,7 +171,7 @@ HJM_war_preparation_category = {
 			build_railway = {
 				level = 1
 				path = { 7158 4783 4709 4823 }
-			}
+			} # Build a temporary western military railway.
 		}
 
 		ai_will_do = {
@@ -200,7 +202,7 @@ HJM_war_preparation_category = {
 			add_timed_idea = {
 				idea = HJM_emergency_factory_output
 				days = 90
-			}
+			} # Temporarily raise emergency military factory output.
 		}
 
 		ai_will_do = {
@@ -224,12 +226,12 @@ HJM_war_preparation_category = {
 
 		available = {
 			has_completed_focus = HJM_underground_riot
-			stability > 0.15
+			has_stability > 0.15
 		}
 
 		complete_effect = {
-			add_war_support = 0.08
-			add_stability = -0.03
+			add_war_support = 0.08 # Propaganda raises prewar resolve.
+			add_stability = -0.03 # Heavy agitation strains society.
 		}
 
 		ai_will_do = {
@@ -259,8 +261,8 @@ HJM_war_preparation_category = {
 				type = infantry_equipment_0
 				amount = 2500
 				producer = HJM
-			}
-			add_stability = -0.01
+			} # Reissue old rifles from imperial depots.
+			add_stability = -0.01 # Old weapons remind the public how unprepared the realm is.
 		}
 
 		ai_will_do = {
@@ -269,26 +271,25 @@ HJM_war_preparation_category = {
 	}
 }
 
-
-#AI写的！！！！！猖獗度决议
 HJM_illager_activity_category = {
-	# 清剿灾厄暗线：花 75 政治点压低一级，并重置 60 天升级倒计时
 	HJM_reduce_illager_activity = {
-		icon = GFX_decision_generic_political_pressure
+		icon = GFX_decision_generic_police_action
 		cost = 75
 		fire_only_once = no
-		days_re_enable = 30          # 30 天冷却，防止 AI 高频清剿制造拉锯
+		days_re_enable = 30
 
-		allowed = { original_tag = HJM }
+		allowed = {
+			original_tag = HJM
+		}
 
-		# 只有 中/高 时才需要清剿（已经是"低"就不用再降）
 		visible = {
-				has_country_flag = HJM_illager_activity_unlocked
+			has_country_flag = HJM_illager_activity_unlocked
 			OR = {
 				has_idea = HJM_illager_activity_medium
 				has_idea = HJM_illager_activity_high
 			}
 		}
+
 		available = {
 			has_country_flag = HJM_illager_activity_unlocked
 			OR = {
@@ -298,23 +299,23 @@ HJM_illager_activity_category = {
 		}
 
 		complete_effect = {
-				# 高 → 中
 			if = {
-				limit = { has_idea = HJM_illager_activity_high }
-				remove_ideas = HJM_illager_activity_high
-				add_ideas = HJM_illager_activity_medium
+				limit = {
+					has_idea = HJM_illager_activity_high
+				}
+				remove_ideas = HJM_illager_activity_high # Reduce illager activity from high to medium.
+				add_ideas = HJM_illager_activity_medium # Apply the medium activity spirit.
 			}
-			# 中 → 低
 			else_if = {
-				limit = { has_idea = HJM_illager_activity_medium }
-				remove_ideas = HJM_illager_activity_medium
-				add_ideas = HJM_illager_activity_low
+				limit = {
+					has_idea = HJM_illager_activity_medium
+				}
+				remove_ideas = HJM_illager_activity_medium # Reduce illager activity from medium to low.
+				add_ideas = HJM_illager_activity_low # Apply the low activity spirit.
 			}
-			# 降级后重启 60 天倒计时（用事件而非 mission，避免闪烁）
-			country_event = { id = HJM.illager_tick  days = 60 }
+			country_event = { id = HJM.illager_tick days = 60 } # Restart the sixty-day escalation timer.
 		}
 
-		# AI 只在猖獗度"高"时才清剿，避免 中↔低 反复拉锯
 		ai_will_do = {
 			factor = 0
 			modifier = {
@@ -325,79 +326,85 @@ HJM_illager_activity_category = {
 	}
 }
 
-
-
-#战时决议
 HJM_wartime_decisions_category = {
-	
-	# ① 动员民兵：用稳定度换人力 + 旧式步枪
 	HJM_mobilize_militia = {
 		icon = GFX_decision_generic_army
 		cost = 50
 		fire_only_once = no
 		days_re_enable = 90
 
-		allowed = { original_tag = HJM }
+		allowed = {
+			original_tag = HJM
+		}
 
 		visible = {
 			has_war = yes
 		}
-		available = {
-			has_war = yes
-			has_stability > 0.10          # 稳定度太低就动员不动
-		}
 
-		complete_effect = {
-			add_manpower = 25000
-			add_equipment_to_stockpile = {
-				type = infantry_equipment_0
-				amount = 2000
-				producer = HJM
-			}
-			add_war_support = 0.02
-			add_stability = -0.03          # 抽调民兵削弱稳定
-		}
-
-		ai_will_do = { factor = 1 }
-	}
-
-	# ② 战争宣传：用稳定度换战争支持 + 政治点
-	HJM_war_propaganda = {
-		icon = GFX_decision_generic_political_discourse
-		cost = 40
-		fire_only_once = no
-		days_re_enable = 60
-
-		allowed = { original_tag = HJM }
-
-		visible = {
-			has_war = yes
-		}
 		available = {
 			has_war = yes
 			has_stability > 0.10
 		}
 
 		complete_effect = {
-			add_war_support = 0.08
-			add_stability = -0.02
-			add_political_power = 25
+			add_manpower = 25000 # Draft village and mining militia into the army pool.
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 2000
+				producer = HJM
+			} # Issue old rifles to the mobilized militia.
+			add_war_support = 0.02 # Militia mobilization raises visible war resolve.
+			add_stability = -0.03 # Pulling villagers from work weakens domestic stability.
 		}
 
-		ai_will_do = { factor = 1 }
+		ai_will_do = {
+			factor = 1
+		}
 	}
 
-	# ③ 三线建设：180 天 timed idea（加军工/民工/基建建筑速度），idea 已在 ideas/HJM.txt:86 定义
+	HJM_war_propaganda = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 40
+		fire_only_once = no
+		days_re_enable = 60
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		available = {
+			has_war = yes
+			has_stability > 0.10
+		}
+
+		complete_effect = {
+			add_war_support = 0.08 # Wartime speeches raise support for continuing the war.
+			add_stability = -0.02 # Constant agitation wears down public patience.
+			add_political_power = 25 # The propaganda apparatus strengthens central control.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	HJM_third_line_construction = {
 		icon = GFX_decision_generic_industry
 		cost = 75
 		fire_only_once = yes
 
-		allowed = { original_tag = HJM }
+		allowed = {
+			original_tag = HJM
+		}
 
 		visible = {
-				has_war = yes
+			has_war = yes
 		}
+
 		available = {
 			has_war = yes
 		}
@@ -406,56 +413,435 @@ HJM_wartime_decisions_category = {
 			add_timed_idea = {
 				idea = HJM_third_line_construction_modifier
 				days = 180
-			}
-			# 铺设西藏铁路干线
+			} # Temporarily boost rear-area construction.
 			build_railway = {
 				level = 1
 				path = { 4973 12801 5094 8121 2093 4994 5033 10741 8059 4964 8018 12846 10750 10517 8049 }
-			}
-			# 在 8121 建补给中心
-			add_building_construction = {
-				type = supply_node
-				level = 1
-				province = 8121
-				instant_build = yes
-			}
+			} # Lay the western strategic railway trunk.
+			757 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 8121
+					instant_build = yes
+				}
+			} # Build a supply node at province 8121 inside state 757.
 		}
 
-		ai_will_do = { factor = 1 }
+		ai_will_do = {
+			factor = 1
+		}
 	}
 
-	# ④ 支援边疆：120 天 timed idea（减消耗/损耗、加防御）+ 指挥点与陆军经验，idea 在 ideas/HJM.txt:102
 	HJM_support_frontier = {
-		icon = GFX_decision_generic_construct_infrastructure
+		icon = GFX_decision_generic_construction
 		cost = 60
 		fire_only_once = yes
 
-		allowed = { original_tag = HJM }
+		allowed = {
+			original_tag = HJM
+		}
 
 		visible = {
 			has_war = yes
 		}
+
 		available = {
 			has_war = yes
 		}
 
 		complete_effect = {
-			add_command_power = 15
-			army_experience = 5
+			add_command_power = 15 # Frontier support improves operational command.
+			army_experience = 5 # Engineers and transport officers gain field experience.
 			add_timed_idea = {
 				idea = HJM_frontier_support_modifier
 				days = 120
-			}
-			# 西藏基建 1→3 级，提速部队移动和建筑建造
-			322={
+			} # Temporarily improve frontier supply and defense.
+			322 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 2
 					instant_build = yes
 				}
-			}
+			} # Improve Tibet infrastructure for frontier movement.
 		}
 
-		ai_will_do = { factor = 1 }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+HJM_postwar_regency_category = {
+	HJM_postwar_village_relief = {
+		icon = GFX_decision_generic_welfare
+		cost = 75
+		fire_only_once = yes
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_regional_situation_summarized
+		}
+
+		available = {
+			has_country_flag = HJM_regional_situation_summarized
+			has_war = no
+		}
+
+		complete_effect = {
+			add_stability = 0.05 # Relief grain and pensions calm devastated villages.
+			add_war_support = -0.02 # Demobilized society lets wartime fervor fade.
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			} # Rebuild one damaged local road network.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_reopen_nether_routes = {
+		icon = GFX_decision_generic_construction
+		cost = 100
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_regional_situation_summarized
+		}
+
+		available = {
+			has_country_flag = HJM_regional_situation_summarized
+			has_war = no
+		}
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			} # Convert secured portal traffic into one civilian workshop.
+			add_political_power = 25 # Portal tolls and transport charters restore administrative revenue.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_inspect_vassal_oaths = {
+		icon = GFX_decision_generic_police_action
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 90
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_regional_situation_summarized
+		}
+
+		available = {
+			has_country_flag = HJM_regional_situation_summarized
+			has_war = no
+		}
+
+		complete_effect = {
+			every_subject_country = {
+				limit = {
+					OR = {
+						original_tag = GWG
+						original_tag = ZLG
+						original_tag = XWY
+						original_tag = LLL
+						original_tag = MDG
+						original_tag = MYR
+					}
+				}
+				add_stability = 0.03 # Imperial inspectors steady loyal subject administrations.
+			}
+			add_political_power = 25 # Inspection reports strengthen the regency cabinet.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_limit_traveler_privileges = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 75
+		fire_only_once = yes
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_regional_situation_summarized
+		}
+
+		available = {
+			has_country_flag = HJM_regional_situation_summarized
+			has_war = no
+			command_power > 15
+		}
+
+		complete_effect = {
+			add_command_power = -15 # Restricting traveler privileges consumes command authority.
+			add_stability = 0.04 # Old institutions calm down when traveler power is checked.
+			add_political_power = -25 # Legal reviews and negotiations cost cabinet effort.
+			set_country_flag = HJM_traveler_privileges_limited # Mark the first postwar restriction on traveler authority.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_demobilize_front_armies = {
+		icon = GFX_decision_generic_army
+		cost = 50
+		fire_only_once = yes
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_regional_situation_summarized
+		}
+
+		available = {
+			has_country_flag = HJM_regional_situation_summarized
+			has_war = no
+		}
+
+		complete_effect = {
+			add_stability = 0.03 # Returning soldiers reduce pressure on families and villages.
+			add_war_support = -0.05 # Demobilization deliberately lowers wartime fervor.
+			add_manpower = 10000 # Some garrison and support troops return to the available manpower pool.
+			set_country_flag = HJM_front_armies_demobilized # Mark the first postwar demobilization wave.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_old_guard_compromise = {
+		icon = GFX_decision_generic_police_action
+		cost = 50
+		fire_only_once = yes
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_regional_situation_summarized
+		}
+
+		available = {
+			has_country_flag = HJM_regional_situation_summarized
+			has_war = no
+		}
+
+		complete_effect = {
+			add_political_power = 75 # Bargaining with old ministers unlocks dormant bureaucratic support.
+			add_stability = 0.02 # A compromise with the old guard reduces court panic.
+			set_country_flag = HJM_old_guard_compromise_reached # Mark the regency's first compromise with old ministers.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_hunt_demon_remnants = {
+		icon = GFX_decision_generic_police_action
+		cost = 60
+		fire_only_once = yes
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_him_legacy_unlocked
+			NOT = { has_country_flag = HJM_demon_remnants_hunted }
+		}
+
+		available = {
+			has_country_flag = HJM_regional_situation_summarized
+			has_country_flag = HJM_him_legacy_unlocked
+			has_war = no
+		}
+
+		complete_effect = {
+			add_political_power = -10 # Local sweeps consume regency administrative attention.
+			add_stability = 0.02 # Clearing armed remnants reassures border villages.
+			add_war_support = -0.01 # Fewer active threats let wartime fury fade.
+			set_country_flag = HJM_demon_remnants_hunted # Mark the first remnant sweep complete.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_purify_portal_scars = {
+		icon = GFX_decision_generic_construction
+		cost = 80
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_him_legacy_unlocked
+			NOT = { has_country_flag = HJM_portal_scars_purified }
+		}
+
+		available = {
+			has_country_flag = HJM_regional_situation_summarized
+			has_country_flag = HJM_him_legacy_unlocked
+			has_war = no
+		}
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			} # Repair one portal-scarred road and garrison network.
+			add_stability = 0.01 # Portal cleanup reduces village rumors and travel panic.
+			set_country_flag = HJM_portal_scars_purified # Mark portal scar cleanup complete.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_seal_record_anomalies = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 45
+		fire_only_once = yes
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_him_legacy_unlocked
+			NOT = { has_country_flag = HJM_record_anomalies_sealed }
+		}
+
+		available = {
+			has_country_flag = HJM_regional_situation_summarized
+			has_country_flag = HJM_him_legacy_unlocked
+			has_war = no
+		}
+
+		complete_effect = {
+			add_political_power = -15 # Archivists and redstone auditors require cabinet backing.
+			add_stability = 0.02 # Sealing anomalous records calms the capital and border schools.
+			set_country_flag = HJM_record_anomalies_sealed # Mark the record anomalies as sealed.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_interrogate_nether_prisoners = {
+		icon = GFX_decision_generic_army
+		cost = 50
+		fire_only_once = yes
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_him_legacy_unlocked
+			NOT = { has_country_flag = HJM_nether_prisoners_interrogated }
+		}
+
+		available = {
+			has_country_flag = HJM_regional_situation_summarized
+			has_country_flag = HJM_him_legacy_unlocked
+			has_war = no
+		}
+
+		complete_effect = {
+			army_experience = 8 # Prisoner maps and testimonies become counter-remnant doctrine.
+			add_political_power = 10 # Usable intelligence strengthens the regency's postwar briefings.
+			set_country_flag = HJM_nether_prisoners_interrogated # Mark prisoner interrogation complete.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_seal_herobrine_legacy = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 100
+		fire_only_once = yes
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_him_legacy_unlocked
+			has_idea = HJM_him_legacy_unsettled
+			has_country_flag = HJM_demon_remnants_hunted
+			has_country_flag = HJM_portal_scars_purified
+			has_country_flag = HJM_record_anomalies_sealed
+			has_country_flag = HJM_nether_prisoners_interrogated
+		}
+
+		available = {
+			has_country_flag = HJM_regional_situation_summarized
+			has_war = no
+		}
+
+		complete_effect = {
+			remove_ideas = HJM_him_legacy_unsettled # Remove the lingering demon-war legacy pressure.
+			add_stability = 0.04 # A formal sealing ceremony steadies the realm.
+			add_political_power = 50 # The regency gains authority from closing the Herobrine dossier.
+			set_country_flag = HJM_herobrine_legacy_sealed # Mark HIM's defeat legacy as politically sealed.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
 	}
 }

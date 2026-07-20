@@ -1,4 +1,4 @@
-add_namespace = HJM
+﻿add_namespace = HJM
 add_namespace = HJM_news
 
 country_event = {
@@ -261,12 +261,9 @@ country_event = {
 
     option = {
         name = HJM.10.a
-        if = {
-            limit = {
-                has_character = HJM_Notch
-            }
-            retire_character = HJM_Notch
-        }
+        add_command_power = 10 # Reward the frontline purge with command capacity instead of killing Notch early.
+        army_experience = 10 # Represent the army learning from the purge and reorganization.
+        add_war_support = 0.03 # The public sees the army purge as renewed wartime discipline.
     }
 }
 
@@ -431,174 +428,8 @@ country_event = {
     }
 }
 
-country_event = {
-    id = HJM.22
-    title = HJM.22.t
-    desc = HJM.22.d
-    picture = GFX_report_event_chinese_officers
-
-    is_triggered_only = yes
-    trigger = {
-        tag = HJM
-    }
-
-    option = {
-        name = HJM.22.a
-        remove_ideas = HJM_southern_front_crisis
-        if = {
-            limit = {
-                HIM = { exists = yes }
-            }
-            puppet = HIM                              # 改：HIM 成附庸（原 annex_country）
-            HIM = {
-                retire_character = HIM_Herobrine      # Herobrine 假死失踪（不是死）
-            }
-            set_global_flag = HIM_herobrine_missing   # IF 线伏笔（以后重集结/海岛奇兵）
-        }
-        country_event = { id = HJM.23 hours = 1 }
-    }
-}
-
-country_event = {
-    id = HJM.23
-    title = HJM.23.t
-    desc = HJM.23.d
-    picture = GFX_report_event_chinese_officers
-
-    is_triggered_only = yes
-    trigger = {
-        tag = HJM
-    }
-
-    option = {
-        name = HJM.23.a
-        if = {
-            limit = {
-                LLL = { exists = yes }
-            }
-            puppet = LLL
-
-        }
-        country_event = { id = HJM.24 hours = 1 }
-    }
-}
-
-country_event = {
-    id = HJM.24
-    title = HJM.24.t
-    desc = HJM.24.d
-    picture = GFX_report_event_chinese_officers
-
-    is_triggered_only = yes
-    trigger = {
-        tag = HJM
-    }
-
-    option = {
-        name = HJM.24.a
-        if = {
-            limit = {
-                XWY = { exists = yes }
-            }
-            puppet = XWY
-
-        }
-        country_event = { id = HJM.25 hours = 1 }
-    }
-}
-
-country_event = {
-    id = HJM.25
-    title = HJM.25.t
-    desc = HJM.25.d
-    picture = GFX_report_event_chinese_officers
-
-    is_triggered_only = yes
-    trigger = {
-        tag = HJM
-    }
-
-    option = {
-        name = HJM.25.a
-        if = {
-            limit = {
-                ZLG = { exists = yes }
-            }
-            puppet = ZLG
-        }
-        country_event = { id = HJM.26 hours = 1 }
-    }
-}
-
-country_event = {
-    id = HJM.26
-    title = HJM.26.t
-    desc = HJM.26.d
-    picture = GFX_report_event_chinese_officers
-
-    is_triggered_only = yes
-    trigger = {
-        tag = HJM
-    }
-
-    option = {
-        name = HJM.26.a
-        if = {
-            limit = {
-                GWG = { exists = yes }
-            }
-            puppet = GWG
-
-        }
-        country_event = { id = HJM.27 hours = 1 }
-    }
-}
-
-country_event = {
-    id = HJM.27
-    title = HJM.27.t
-    desc = HJM.27.d
-    picture = GFX_report_event_chinese_officers
-
-    is_triggered_only = yes
-    trigger = {
-        tag = HJM
-    }
-
-    option = {
-        name = HJM.27.a
-        if = {
-            limit = {
-                MDG = { exists = yes }
-            }
-            puppet = MDG
-
-        }
-        country_event = { id = HJM.28 hours = 1 }
-    }
-}
-
-country_event = {
-    id = HJM.28
-    title = HJM.28.t
-    desc = HJM.28.d
-    picture = GFX_report_event_chinese_officers
-
-    is_triggered_only = yes
-    trigger = {
-        tag = HJM
-    }
-
-    option = {
-        name = HJM.28.a
-        if = {
-            limit = {
-                MYR = { exists = yes }
-            }
-            puppet = MYR
-        }
-    }
-}
+# ==================== World news events ====================
+# HJM_news.* are major news events. Use them only for world-facing turning points.
 
 news_event = {
     id = HJM_news.1
@@ -642,6 +473,230 @@ news_event = {
     }
 }
 
+news_event = {
+    id = HJM_news.4
+    title = HJM_news.4.t
+    desc = HJM_news.4.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = HJM_news.4.a
+    }
+}
+
+news_event = {
+    id = HJM_news.5
+    title = HJM_news.5.t
+    desc = HJM_news.5.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = HJM_news.5.a
+    }
+}
+
+news_event = {
+    id = HJM_news.6
+    title = HJM_news.6.t
+    desc = HJM_news.6.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = HJM_news.6.a
+    }
+}
+
+news_event = {
+    id = HJM_news.7
+    title = HJM_news.7.t
+    desc = HJM_news.7.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = HJM_news.7.a
+    }
+}
+
+news_event = {
+	id = HJM_news.8
+	title = HJM_news.8.t
+	desc = HJM_news.8.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.8.a
+	}
+}
+
+news_event = {
+	id = HJM_news.9
+	title = HJM_news.9.t
+	desc = HJM_news.9.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.9.a
+	}
+}
+
+news_event = {
+	id = HJM_news.10
+	title = HJM_news.10.t
+	desc = HJM_news.10.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.10.a
+	}
+}
+
+news_event = {
+	id = HJM_news.11
+	title = HJM_news.11.t
+	desc = HJM_news.11.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.11.a
+	}
+}
+
+news_event = {
+	id = HJM_news.12
+	title = HJM_news.12.t
+	desc = HJM_news.12.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.12.a
+	}
+}
+
+news_event = {
+	id = HJM_news.13
+	title = HJM_news.13.t
+	desc = HJM_news.13.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.13.a
+	}
+}
+
+news_event = {
+	id = HJM_news.14
+	title = HJM_news.14.t
+	desc = HJM_news.14.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.14.a
+	}
+}
+
+news_event = {
+	id = HJM_news.15
+	title = HJM_news.15.t
+	desc = HJM_news.15.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.15.a
+	}
+}
+
+news_event = {
+	id = HJM_news.16
+	title = HJM_news.16.t
+	desc = HJM_news.16.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.16.a
+	}
+}
+
+news_event = {
+	id = HJM_news.17
+	title = HJM_news.17.t
+	desc = HJM_news.17.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.17.a
+	}
+}
+
+news_event = {
+	id = HJM_news.18
+	title = HJM_news.18.t
+	desc = HJM_news.18.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.18.a
+	}
+}
+
+news_event = {
+	id = HJM_news.19
+	title = HJM_news.19.t
+	desc = HJM_news.19.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.19.a
+	}
+}
+
 country_event = {
     id = HJM.30
     title = HJM.30.t
@@ -677,6 +732,7 @@ country_event = {
 
     option = {
         name = HJM.30.a
+        news_event = { id = HJM_news.6 }
     }
 }
 
@@ -720,7 +776,11 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
-        retire_character = HJM_Notch
+        if = {
+            limit = { has_character = HJM_Notch }
+            retire_character = HJM_Notch # Remove Notch only in the intended succession event.
+        }
+        set_country_flag = HJM_regency_superevent_start # Show the regency super event when Notch dies.
         promote_character = { character = HJM_Jeb ideology = absolute_monarchist }   # Jeb 接保皇党
         set_politics = {
             ruling_party = democratic          # 政府变民主（微软摄政上台）
@@ -732,6 +792,7 @@ country_event = {
 
     option = {
         name = HJM.32.a
+		news_event = { id = HJM_news.17 }
     }
 }
 
@@ -763,6 +824,390 @@ country_event = {
     option = {
         name = HJM.34.b                              # 投射雷霆（毁灭线）
         complete_national_focus = HJM_blood_debt           # 解锁血债血偿
+    }
+}
+
+country_event = {
+    id = HJM.35
+    title = HJM.35.t
+    desc = HJM.35.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = HJM.35.a
+        news_event = { id = HJM_news.18 } # Publish the end-of-war news item.
+    }
+}
+
+country_event = {
+    id = HJM.36
+    title = HJM.36.t
+    desc = HJM.36.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = HJM.36.a
+        news_event = { id = HJM_news.19 } # Publish the regency audit news item.
+        country_event = { id = HJM.37 days = 7 } # Start the ordinary regency follow-up chain.
+    }
+}
+
+# ==================== Ordinary regency story events ====================
+# These are deliberately country events, not major news. They show daily postwar governance.
+
+country_event = {
+    id = HJM.37
+    title = HJM.37.t
+    desc = HJM.37.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        has_country_flag = HJM_regional_situation_summarized
+    }
+
+    option = {
+        name = HJM.37.a
+        add_political_power = -25 # Spend regency authority on urgent village relief.
+        add_stability = 0.03 # Relief calms the border villages.
+        country_event = { id = HJM.38 days = 14 } # Continue the ordinary regency chain.
+    }
+    option = {
+        name = HJM.37.b
+        add_political_power = 25 # Keep resources under central control for now.
+        add_stability = -0.02 # Delayed relief deepens local resentment.
+        country_event = { id = HJM.38 days = 14 } # Continue the ordinary regency chain.
+    }
+}
+
+country_event = {
+    id = HJM.38
+    title = HJM.38.t
+    desc = HJM.38.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        has_country_flag = HJM_regional_situation_summarized
+    }
+
+    option = {
+        name = HJM.38.a
+        add_political_power = -35 # Ratify a limited workshop charter for the travelers.
+        add_tech_bonus = {
+            name = HJM_traveler_workshop_bonus
+            bonus = 0.5
+            uses = 1
+            category = industry
+        } # Traveler workshops grant one practical industry research boost.
+        country_event = { id = HJM.39 days = 18 } # Continue the ordinary regency chain.
+    }
+    option = {
+        name = HJM.38.b
+        add_political_power = 20 # The regency keeps the workshops under tighter review.
+        add_stability = -0.02 # Travelers and front officers dislike the delay.
+        country_event = { id = HJM.39 days = 18 } # Continue the ordinary regency chain.
+    }
+}
+
+country_event = {
+    id = HJM.39
+    title = HJM.39.t
+    desc = HJM.39.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        has_country_flag = HJM_regional_situation_summarized
+    }
+
+    option = {
+        name = HJM.39.a
+        add_political_power = 30 # Accept delayed tribute in exchange for written compliance.
+        add_stability = 0.01 # The vassals breathe, and the ledger stays open.
+        country_event = { id = HJM.40 days = 21 } # Continue the ordinary regency chain.
+    }
+    option = {
+        name = HJM.39.b
+        add_political_power = -20 # Dispatch inspectors and soldiers to enforce tribute.
+        add_war_support = 0.02 # Hardliners praise the regency's firmness.
+        add_stability = -0.02 # Vassal regions resent the pressure.
+        country_event = { id = HJM.40 days = 21 } # Continue the ordinary regency chain.
+    }
+}
+
+country_event = {
+    id = HJM.40
+    title = HJM.40.t
+    desc = HJM.40.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        has_country_flag = HJM_regional_situation_summarized
+    }
+
+    option = {
+        name = HJM.40.a
+        add_political_power = -25 # Fund a careful court ceremony around the old crown.
+        add_stability = 0.03 # The old guard accepts the regency for now.
+        set_country_flag = HJM_regency_daily_chain_done # Mark the first ordinary regency chain complete.
+    }
+    option = {
+        name = HJM.40.b
+        add_political_power = 25 # Keep the regency focused on administration instead of ritual.
+        add_stability = -0.02 # Old courtiers read the decision as contempt.
+        set_country_flag = HJM_regency_daily_chain_done # Mark the first ordinary regency chain complete.
+    }
+}
+
+# ==================== Servant-state settlement reaction events ====================
+# These country events show internal reactions after each wartime vassal or punishment focus.
+
+country_event = {
+    id = HJM.41
+    title = HJM.41.t
+    desc = HJM.41.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_skyfire_reaction_seen }
+    }
+
+    option = {
+        name = HJM.41.a
+        add_political_power = 30 # The court gains authority by proving imperial threats are real.
+        add_war_support = 0.03 # Hardliners and frontier officers rally around the terror policy.
+        add_stability = -0.02 # Clerks, villages, and allied courts quietly fear what the empire has become.
+        if = {
+            limit = { GWG = { exists = yes } }
+            GWG = {
+                add_stability = -0.01 # The receiving administration struggles to govern land made into ashes.
+            }
+        }
+        set_country_flag = HJM_skyfire_reaction_seen # Prevent this reaction from being shown twice.
+    }
+}
+
+country_event = {
+    id = HJM.42
+    title = HJM.42.t
+    desc = HJM.42.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_no_mercy_reaction_seen }
+    }
+
+    option = {
+        name = HJM.42.a
+        add_political_power = 25 # The regency converts the northern purge into court discipline.
+        add_war_support = 0.02 # The army reads the punishment as proof that betrayal is unforgivable.
+        add_stability = -0.01 # The End frontier grows quieter, but less trusting.
+        if = {
+            limit = { MDG = { exists = yes } }
+            MDG = {
+                add_stability = -0.01 # The End state inherits frightened territory and uneasy subjects.
+            }
+        }
+        set_country_flag = HJM_no_mercy_reaction_seen # Prevent this reaction from being shown twice.
+    }
+}
+
+country_event = {
+    id = HJM.43
+    title = HJM.43.t
+    desc = HJM.43.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_homeland_reaction_seen }
+    }
+
+    option = {
+        name = HJM.43.a
+        add_political_power = -20 # The empire spends officials, seals, and grain to make leniency visible.
+        add_stability = 0.02 # A measured settlement reassures border villages and moderate courtiers.
+        if = {
+            limit = { GWG = { exists = yes } }
+            GWG = {
+                add_political_power = 20 # The new vassal administration receives room to organize itself.
+                add_stability = 0.03 # Preserved offices make the cave lands easier to pacify.
+            }
+        }
+        set_country_flag = HJM_homeland_reaction_seen # Prevent this reaction from being shown twice.
+    }
+}
+
+country_event = {
+    id = HJM.44
+    title = HJM.44.t
+    desc = HJM.44.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_golden_reaction_seen }
+    }
+
+    option = {
+        name = HJM.44.a
+        add_political_power = -15 # Maintaining a bargain with the piglins costs court attention and gold permits.
+        add_stability = 0.01 # A bloodless settlement slightly calms merchants and frontier officers.
+        if = {
+            limit = { ZLG = { exists = yes } }
+            ZLG = {
+                add_political_power = 30 # The piglin vassal uses the agreement to rebuild its local authority.
+                add_stability = 0.02 # Gold-backed surrender prevents an immediate occupation panic.
+            }
+        }
+        set_country_flag = HJM_golden_reaction_seen # Prevent this reaction from being shown twice.
+    }
+}
+
+country_event = {
+    id = HJM.45
+    title = HJM.45.t
+    desc = HJM.45.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_magma_reaction_seen }
+    }
+
+    option = {
+        name = HJM.45.a
+        add_political_power = -25 # The court spends authority to protect captured workshops from plunder.
+        add_tech_bonus = {
+            name = HJM_magma_workshop_audit
+            bonus = 0.3
+            uses = 1
+            category = electronics
+        } # Basalt engineers provide one limited research boost after registration.
+        if = {
+            limit = { XWY = { exists = yes } }
+            XWY = {
+                add_stability = 0.02 # Preserving the furnaces gives the basalt vassal a reason to cooperate.
+            }
+        }
+        set_country_flag = HJM_magma_reaction_seen # Prevent this reaction from being shown twice.
+    }
+}
+
+country_event = {
+    id = HJM.46
+    title = HJM.46.t
+    desc = HJM.46.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_ash_reaction_seen }
+    }
+
+    option = {
+        name = HJM.46.a
+        add_war_support = 0.03 # Revenge rhetoric keeps the army and border militias mobilized.
+        add_political_power = 20 # Fear of imperial punishment strengthens the central decree.
+        add_stability = -0.03 # Punitive rule creates unease inside the wider imperial bureaucracy.
+        if = {
+            limit = { GWG = { exists = yes } }
+            GWG = {
+                add_stability = -0.04 # The punished vassal is quiet, but quiet through fear.
+            }
+        }
+        set_country_flag = HJM_ash_reaction_seen # Prevent this reaction from being shown twice.
+    }
+}
+
+country_event = {
+    id = HJM.47
+    title = HJM.47.t
+    desc = HJM.47.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_bloody_reaction_seen }
+    }
+
+    option = {
+        name = HJM.47.a
+        army_experience = 10 # Officers codify the assault and occupation lessons from the fortress gate.
+        add_war_support = 0.03 # The blood price satisfies revenge factions for the moment.
+        add_stability = -0.02 # Merchants and quartermasters fear the cost of ruling through terror.
+        if = {
+            limit = { ZLG = { exists = yes } }
+            ZLG = {
+                add_stability = -0.03 # The piglin vassal obeys, but the oath is born in blood.
+            }
+        }
+        set_country_flag = HJM_bloody_reaction_seen # Prevent this reaction from being shown twice.
+    }
+}
+
+country_event = {
+    id = HJM.48
+    title = HJM.48.t
+    desc = HJM.48.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_beneath_magma_reaction_seen }
+    }
+
+    option = {
+        name = HJM.48.a
+        air_experience = 8 # Engineers study the blast, smoke, and vertical assault reports.
+        add_war_support = 0.02 # The punishment convinces hardliners that the empire still has fire.
+        add_stability = -0.03 # Destroying useful industry unsettles planners who must rebuild afterward.
+        if = {
+            limit = { XWY = { exists = yes } }
+            XWY = {
+                add_stability = -0.04 # The basalt vassal begins its new existence amid ruins.
+            }
+        }
+        set_country_flag = HJM_beneath_magma_reaction_seen # Prevent this reaction from being shown twice.
+    }
+}
+
+country_event = {
+    id = HJM.49
+    title = HJM.49.t
+    desc = HJM.49.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        has_country_flag = HJM_him_legacy_unlocked
+        NOT = { has_country_flag = HJM_him_legacy_report_seen }
+    }
+
+    option = {
+        name = HJM.49.a
+        add_political_power = -25 # Open the first regency office for demon-war legacy cases.
+        add_stability = -0.01 # The report reminds the realm that victory did not erase every danger.
+        set_country_flag = HJM_him_legacy_report_seen # Prevent the first legacy report from repeating.
     }
 }
 

@@ -239,6 +239,7 @@
 
    # ==================== 权力平衡（BOP） ====================
    HJM_power_balance: "帝国权力平衡"
+   HJM_power_balance_desc: "人皇、保皇旧臣、穿越者与地方力量都在争夺帝国未来的解释权。战争能暂时压住裂缝，却不能让裂缝消失。"
    HJM_empire_side: "帝国"
    HJM_traveler_side: "穿越者"
    HJM_bop_balanced_range: "帝国与穿越者共治"

@@ -64,7 +64,7 @@ focus_tree = {
 			country_event = {
 				id = HIM.2
 			}
-			promote_character = {    #HIM上位的步骤罢了
+			promote_character = { # Put Herobrine in power after the resurgence focus.
 				character = HIM_Herobrine
 				ideology = fascism
 			}
@@ -104,7 +104,7 @@ focus_tree = {
 				can_create_factions = yes
 			}
 			create_faction = "HIM_faction"
-			XWY = { country_event = HIM.10 } #这玩意是邀请事件
+			XWY = { country_event = HIM.10 } # Invite the basalt city into the demon faction.
 			ZLG = { country_event = HIM.10 }
 			GWG = { country_event = HIM.10 }
 			LLL = { country_event = HIM.10 }

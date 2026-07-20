@@ -29,7 +29,7 @@ characters = {
 		}
 	}
 
-H	JM_Zimin = {
+	HJM_Zimin = {
 		name = HJM_Zimin
 		portraits = {
 			civilian = { large = "gfx/leaders/leader_unknown.dds" }   # 有图换 portrait_Zimin.png

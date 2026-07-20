@@ -58,7 +58,7 @@ country_event = {
 		every_owned_state = {
 			limit = {
 				any_neighbor_state = {
-					owner = HJM
+					is_owned_by = HJM
 				}
 			}
 			add_building_construction = {

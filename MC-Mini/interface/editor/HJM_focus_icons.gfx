@@ -35,6 +35,10 @@ spriteTypes = {
 		name = "GFX_HJM_redstone_research"
 		texturefile = "gfx/editor/interface/focusIcon/HJM_redstone_research.dds"
 	}	
+	SpriteType = {
+		name = "GFX_HJM_redstone_cannon"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_redstone_cannon.dds"
+	}
 
 	SpriteType = {
 		name = "GFX_HJM_chaunyuezhexieyue"

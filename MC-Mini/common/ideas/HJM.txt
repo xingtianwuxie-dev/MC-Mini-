@@ -141,6 +141,21 @@ ideas = {
 			}
 		}
 
+		HJM_him_legacy_unsettled = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.02
+				war_support_factor = -0.01
+				political_power_gain = -0.02
+			}
+		}
+
 		HJM_long_peace = {
 
 			allowed = {

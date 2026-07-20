@@ -1,0 +1,145 @@
+guiTypes = {
+	containerWindowType = {
+		name = "HJM_war_superevent_window"
+		position = { x = 0 y = 0 }
+		size = { width = 1920 height = 1080 }
+		orientation = center
+
+		containerWindowType = {
+			name = "HJM_war_superevent_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 982 height = 594 }
+			orientation = center
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_1b_border"
+			}
+
+			instantTextBoxType = {
+				name = "HJM_war_superevent_overline"
+				position = { x = 48 y = 44 }
+				maxWidth = 886
+				maxHeight = 28
+				font = "hoi_18mbs"
+				text = "HJM_SUPEREVENT_WAR_OVERLINE"
+				format = centre
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "HJM_war_superevent_title"
+				position = { x = 48 y = 92 }
+				maxWidth = 886
+				maxHeight = 86
+				font = "hoi_36header"
+				text = "HJM_SUPEREVENT_WAR_TITLE"
+				format = centre
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "HJM_war_superevent_quote"
+				position = { x = 90 y = 202 }
+				maxWidth = 802
+				maxHeight = 96
+				font = "hoi_20bs"
+				text = "HJM_SUPEREVENT_WAR_QUOTE"
+				format = centre
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "HJM_war_superevent_body"
+				position = { x = 92 y = 334 }
+				maxWidth = 798
+				maxHeight = 72
+				font = "hoi_18mbs"
+				text = "HJM_SUPEREVENT_WAR_BODY"
+				format = centre
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "HJM_war_superevent_close"
+				position = { x = 360 y = 492 }
+				quadTextureSprite = "GFX_button_261x34"
+				buttonText = "HJM_SUPEREVENT_CLOSE"
+				buttonFont = "hoi_16mbs"
+				clicksound = click_default
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "HJM_regency_superevent_window"
+		position = { x = 0 y = 0 }
+		size = { width = 1920 height = 1080 }
+		orientation = center
+
+		containerWindowType = {
+			name = "HJM_regency_superevent_panel"
+			position = { x = 0 y = 0 }
+			size = { width = 982 height = 594 }
+			orientation = center
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_1b_border"
+			}
+
+			instantTextBoxType = {
+				name = "HJM_regency_superevent_overline"
+				position = { x = 48 y = 44 }
+				maxWidth = 886
+				maxHeight = 28
+				font = "hoi_18mbs"
+				text = "HJM_SUPEREVENT_REGENCY_OVERLINE"
+				format = centre
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "HJM_regency_superevent_title"
+				position = { x = 48 y = 92 }
+				maxWidth = 886
+				maxHeight = 86
+				font = "hoi_36header"
+				text = "HJM_SUPEREVENT_REGENCY_TITLE"
+				format = centre
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "HJM_regency_superevent_quote"
+				position = { x = 90 y = 202 }
+				maxWidth = 802
+				maxHeight = 96
+				font = "hoi_20bs"
+				text = "HJM_SUPEREVENT_REGENCY_QUOTE"
+				format = centre
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "HJM_regency_superevent_body"
+				position = { x = 92 y = 334 }
+				maxWidth = 798
+				maxHeight = 72
+				font = "hoi_18mbs"
+				text = "HJM_SUPEREVENT_REGENCY_BODY"
+				format = centre
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "HJM_regency_superevent_close"
+				position = { x = 360 y = 492 }
+				quadTextureSprite = "GFX_button_261x34"
+				buttonText = "HJM_SUPEREVENT_CLOSE"
+				buttonFont = "hoi_16mbs"
+				clicksound = click_default
+			}
+		}
+	}
+}

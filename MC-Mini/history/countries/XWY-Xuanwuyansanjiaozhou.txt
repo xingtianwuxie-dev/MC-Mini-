@@ -29,6 +29,7 @@ set_popularities = {
 }
 
 recruit_character = XWY_FeralSlime
+recruit_character = HJM_viceroy_xwy
 
 add_ideas = {
 	XWY_burning_city

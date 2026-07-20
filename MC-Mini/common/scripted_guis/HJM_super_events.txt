@@ -1,0 +1,35 @@
+scripted_gui = {
+	HJM_war_superevent_gui = {
+		context_type = player_context
+		window_name = "HJM_war_superevent_window"
+		parent_window_token = top_bar
+
+		visible = {
+			tag = HJM
+			has_country_flag = HJM_war_superevent_start
+		}
+
+		effects = {
+			HJM_war_superevent_close_click = {
+				clr_country_flag = HJM_war_superevent_start # Close the HJM-HIM war super event after the player acknowledges it.
+			}
+		}
+	}
+
+	HJM_regency_superevent_gui = {
+		context_type = player_context
+		window_name = "HJM_regency_superevent_window"
+		parent_window_token = top_bar
+
+		visible = {
+			tag = HJM
+			has_country_flag = HJM_regency_superevent_start
+		}
+
+		effects = {
+			HJM_regency_superevent_close_click = {
+				clr_country_flag = HJM_regency_superevent_start # Close the regency super event after the player acknowledges it.
+			}
+		}
+	}
+}

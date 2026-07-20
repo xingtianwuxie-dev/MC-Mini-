@@ -97,7 +97,7 @@ add_equipment_to_stockpile = {
 	amount = 3000  
 }  # 支援装备
   add_equipment_to_stockpile = { 
-	type = motorized              
+	type = motorized_equipment_1              
 	amount = 2000  
 }   # 卡车
 

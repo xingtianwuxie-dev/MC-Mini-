@@ -29,6 +29,7 @@ set_popularities = {
 }
 
 recruit_character = GWG_BigZombie
+recruit_character = HJM_viceroy_gwg
 
 add_ideas = {
 	GWG_dark_strength

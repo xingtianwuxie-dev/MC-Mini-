@@ -13,6 +13,7 @@ country_event = {
 
 	immediate = {
 		set_global_flag = HJM_MDG_split_happened
+		news_event = { id = HJM_news.8 }
 
 		329 = { remove_core_of = MDG add_core_of = MYR }
 		516 = { remove_core_of = MDG add_core_of = MYR }

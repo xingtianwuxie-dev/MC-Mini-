@@ -15,7 +15,7 @@ HJM_record_13_category = {
 
 HJM_war_preparation_category = {
 	priority = 95
-	icon = GFX_decision_category_generic_preparing_for_war
+	icon = GFX_decision_category_generic_propaganda
 	visible_when_empty = no
 
 	allowed = {
@@ -43,7 +43,7 @@ HJM_illager_activity_category = {
 
 HJM_wartime_decisions_category = {
 	priority = 97
-	icon = GFX_decision_category_generic_preparing_for_war
+	icon = GFX_decision_category_generic_propaganda
 	visible_when_empty = no
 
 	allowed = {
@@ -52,5 +52,19 @@ HJM_wartime_decisions_category = {
 
 	visible = {
 		has_war = yes
+	}
+}
+
+HJM_postwar_regency_category = {
+	priority = 98
+	icon = GFX_decision_category_generic_industry
+	visible_when_empty = no
+
+	allowed = {
+		original_tag = HJM
+	}
+
+	visible = {
+		has_country_flag = HJM_regional_situation_summarized
 	}
 }
