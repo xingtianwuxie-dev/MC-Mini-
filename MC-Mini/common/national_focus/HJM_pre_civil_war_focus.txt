@@ -1,0 +1,122 @@
+focus_tree = {
+	id = HJM_pre_civil_war_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HJM
+			has_country_flag = HJM_nether_war_concluded
+		}
+	}
+	initial_show_position = {
+		x = 10
+	}
+
+	focus = {
+		id = HJM_emperor_passes
+		x = 10
+		y = 0
+		cost = 1
+		icon = GFX_focus_generic_the_giant_wakes
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		available = {
+			has_country_flag = HJM_nether_war_concluded
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = HJM_sleeping_lion
+				}
+				remove_ideas = HJM_sleeping_lion # Notch's death ends the wartime awakening illusion.
+			}
+			add_ideas = HJM_pre_civil_war_authority_crisis_heavy # Heavy stage: central authority breaks first.
+			add_ideas = HJM_pre_civil_war_industrial_crisis_heavy # Heavy stage: workshops and reconstruction stall.
+			add_ideas = HJM_pre_civil_war_military_crisis_heavy # Heavy stage: army command and mobilization falter.
+			add_stability = -0.1 # The emperor's death shakes the realm.
+			add_war_support = -0.05 # The death notice weakens postwar war fervor.
+			set_country_flag = HJM_notch_dead # Mark Notch as gone for later regency content.
+			set_country_flag = HJM_pre_civil_war_started # Open the pre-civil-war decisions and countdown.
+			activate_mission = HJM_civil_war_countdown # Start the three-year civil war countdown.
+			country_event = {
+				id = HJM.32
+			}
+			# 2026-08-01 人皇逝世连锁负面事件：延迟弹三个事件，分别扣基建/工厂/军心
+			country_event = { id = HJM.60 days = 8 }
+			country_event = { id = HJM.61 days = 20 }
+			country_event = { id = HJM.62 days = 35 }
+		}
+	}
+
+	focus = {
+		id = HJM_regional_situation_summary
+		x = 10
+		y = 1
+		cost = 1
+		icon = GFX_focus_generic_self_management
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HJM_emperor_passes
+		}
+		completion_reward = {
+			add_political_power = 100 # Regency gains resources from regional reports.
+			add_stability = 0.03 # Clear reports briefly steady the realm.
+			add_command_power = 20 # Re-registering armies restores central command.
+			set_country_flag = HJM_regional_situation_summarized # Mark regional situation summarized.
+			country_event = {
+				id = HJM.36 # Open the regency's first regional audit event.
+			}
+		}
+	}
+
+	focus = {
+		id = HJM_side_with_opposition
+		x = 8
+		y = 2
+		cost = 5
+		icon = GFX_focus_generic_support_the_left_right
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = HJM_support_mojang_faction
+		}
+		prerequisite = {
+			focus = HJM_regional_situation_summary
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.05 # Opposition and traveler community support rises.
+			}
+			add_stability = -0.03 # Openly backing the opposition alarms the regency court.
+			add_political_power = 50 # Opposition organizers provide a new political machine.
+			set_country_flag = HJM_sided_with_opposition # Mark the anti-regency branch choice.
+		}
+	}
+
+	focus = {
+		id = HJM_support_mojang_faction
+		x = 12
+		y = 2
+		cost = 5
+		icon = GFX_focus_generic_self_management
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = HJM_side_with_opposition
+		}
+		prerequisite = {
+			focus = HJM_regional_situation_summary
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05 # Mojang/Microsoft regency support rises.
+			}
+			add_stability = 0.02 # Supporting the regency steadies the central cabinet.
+			add_political_power = 25 # Mojang-aligned administrators reinforce the government.
+			set_country_flag = HJM_supported_mojang_faction # Mark the Mojang branch choice.
+		}
+	}
+}

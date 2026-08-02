@@ -51,7 +51,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				surrender_limit = -0.50
+				# 2026-08-01：移除 surrender_limit=-0.50，让附庸也守原版80%基线。保留动荡减成。
 				stability_factor = -0.35
 				war_support_factor = -0.35
 				army_org_factor = -0.25

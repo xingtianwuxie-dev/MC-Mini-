@@ -132,21 +132,18 @@ focus_tree = {
 			focus = HJM_player_general
 		}
 		completion_reward = {
-			439 = {
+			# 奇兵暗度：在恒河三角洲河口(东孟加拉430，下界要塞境内)空降禁军突击师
+			430 = {
 				create_unit = {
-					division = "name = \"第一火星兵突击师\" division_template = \"穿越者特种师\" start_experience_factor = 0.75 start_equipment_factor = 1 start_manpower_factor = 1"
+					division = "name = \"第一禁军突击师\" division_template = \"穿越者特种师\" start_experience_factor = 0.75 start_equipment_factor = 1 start_manpower_factor = 1"
 					owner = HJM
 				}
-			}
-			1076 = {
 				create_unit = {
-					division = "name = \"第二火星兵突击师\" division_template = \"穿越者特种师\" start_experience_factor = 0.75 start_equipment_factor = 1 start_manpower_factor = 1"
+					division = "name = \"第二禁军突击师\" division_template = \"穿越者特种师\" start_experience_factor = 0.75 start_equipment_factor = 1 start_manpower_factor = 1"
 					owner = HJM
 				}
-			}
-			995 = {
 				create_unit = {
-					division = "name = \"第三火星兵突击师\" division_template = \"穿越者特种师\" start_experience_factor = 0.75 start_equipment_factor = 1 start_manpower_factor = 1"
+					division = "name = \"第三禁军突击师\" division_template = \"穿越者特种师\" start_experience_factor = 0.75 start_equipment_factor = 1 start_manpower_factor = 1"
 					owner = HJM
 				}
 			}
@@ -245,56 +242,25 @@ focus_tree = {
 			add_war_support = -0.05			# War fervor starts to ebb.
 			add_stability = -0.02			# Victory exposes exhaustion and casualty ledgers.
 			set_country_flag = HJM_nether_war_concluded			# Mark the war as entering aftermath.
+			# 2026-08-01 卸树前兜底：若有仆从国还没被处置国策处置，延迟弹 HJM.50 路由事件让玩家补选。
+			# 防重复：仅当 on_war_closed 还没兜底过时触发。
+			if = {
+				limit = {
+					NOT = { has_country_flag = HJM_disposal_fallback_done }
+				}
+				set_country_flag = HJM_disposal_fallback_done
+				country_event = { id = HJM.50 days = 3 }
+			}
+			load_focus_tree = {
+				tree = HJM_pre_civil_war_focus # Switch from the wartime tree into the pre-civil-war tree.
+				keep_completed = yes
+			}
 			country_event = {
 				id = HJM.35				# Open the post-Nether aftermath event.
 			}
-		}
-	}
-	focus = {
-		id = HJM_emperor_passes
-		x = 10
-		y = 8
-		cost = 1
-		icon = GFX_focus_generic_the_giant_wakes
-		continue_if_invalid = no
-		cancel_if_invalid = yes
-		prerequisite = {
-			focus = HJM_is_it_over
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					has_idea = HJM_sleeping_lion
-				}
-				remove_ideas = HJM_sleeping_lion				# Notch's death ends the wartime awakening illusion.
-			}
-			add_stability = -0.1			# The emperor's death shakes the realm.
-			add_war_support = -0.05			# The death notice weakens postwar war fervor.
-			set_country_flag = HJM_notch_dead			# Mark Notch as gone for later regency content.
-			country_event = {
-				id = HJM.32
-			}
-		}
-	}
-	focus = {
-		id = HJM_regional_situation_summary
-		x = 10
-		y = 9
-		cost = 1
-		icon = GFX_focus_generic_self_management
-		continue_if_invalid = no
-		cancel_if_invalid = yes
-		prerequisite = {
-			focus = HJM_emperor_passes
-		}
-		completion_reward = {
-			add_political_power = 100			# Regency gains resources from regional reports.
-			add_stability = 0.03			# Clear reports briefly steady the realm.
-			add_command_power = 20			# Re-registering armies restores central command.
-			set_country_flag = HJM_regional_situation_summarized			# Mark regional situation summarized.
-			country_event = {
-				id = HJM.36				# Open the regency's first regional audit event.
-			}
+			# 2026-08-01 打赢后60天自动触发"人皇逝世"：延迟弹 HJM.56 路由事件自动完成 HJM_emperor_passes 国策。
+			# 防重复：complete_national_focus 后该国策已完成，玩家无法再手动点。
+			country_event = { id = HJM.56 days = 60 }
 		}
 	}
 	focus = {
@@ -347,6 +313,7 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.08
 			army_experience = 15
+			add_ideas = HJM_blood_debt_doctrine			# 复仇线纲领 buff：训练速度+15%、陆军攻防+5%
 		}
 	}
 	focus = {
@@ -405,6 +372,7 @@ focus_tree = {
 			}
 			add_war_support = 0.1
 			add_stability = -0.03
+			set_country_flag = HJM_skyfire_disposed		# 标记 LLL 已被毁灭线处置，兜底事件据此跳过
 		}
 	}
 	focus = {
@@ -459,6 +427,7 @@ focus_tree = {
 			}
 			add_stability = 0.05
 			add_war_support = 0.08
+			set_country_flag = HJM_no_mercy_disposed		# 标记 MYR 已被毁灭线处置，兜底事件据此跳过
 		}
 	}
 	focus = {
@@ -519,6 +488,7 @@ focus_tree = {
 			puppet = GWG
 			add_stability = 0.05
 			add_political_power = 50
+			set_country_flag = HJM_homeland_disposed		# 标记 GWG 已温和处置，兜底跳过
 		}
 	}
 	focus = {
@@ -589,6 +559,7 @@ focus_tree = {
 			}
 			puppet = ZLG
 			add_political_power = 75
+			set_country_flag = HJM_golden_disposed		# 标记 ZLG 已温和处置，兜底跳过
 		}
 	}
 	focus = {
@@ -654,6 +625,7 @@ focus_tree = {
 				category = electronics
 			}
 			army_experience = 10
+			set_country_flag = HJM_magma_disposed		# 标记 XWY 已温和处置，兜底跳过
 		}
 	}
 	focus = {
@@ -718,6 +690,7 @@ focus_tree = {
 			}
 			puppet = GWG
 			add_war_support = 0.05
+			set_country_flag = HJM_ash_disposed		# 标记 GWG 已复仇处置，兜底跳过
 		}
 	}
 	focus = {
@@ -783,6 +756,7 @@ focus_tree = {
 			puppet = ZLG
 			army_experience = 15
 			add_war_support = 0.08
+			set_country_flag = HJM_bloody_disposed		# 标记 ZLG 已复仇处置，兜底跳过
 		}
 	}
 	focus = {
@@ -848,6 +822,7 @@ focus_tree = {
 			puppet = XWY
 			air_experience = 10
 			add_war_support = 0.05
+			set_country_flag = HJM_beneath_disposed		# 标记 XWY 已复仇处置，兜底跳过
 		}
 	}
 }

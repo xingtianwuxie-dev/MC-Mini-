@@ -101,7 +101,9 @@ characters = {
 		}
 		country_leader = {
 			ideology = absolute_monarchist       # 保皇党（同 Notch 的 sub_ideology）
-			traits = { }
+			traits = {
+				regent				# 摄政王：Mojang 保皇党领袖，Notch 身后的掌舵者
+			}
 			expire = "1965.1.1.1"
 		}
 	}

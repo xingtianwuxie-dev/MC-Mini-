@@ -127,6 +127,20 @@ ideas = {
 			}
 		}
 
+		HJM_blood_debt_doctrine = {
+			# 复仇线纲领 buff：血债血偿路线带来的铁腕整军（走复仇线时挂）
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				training_time_factor = -0.15			# 复仇动员：陆军训练速度+15%
+				army_attack_factor = 0.05			# 复仇之师：陆军攻击+5%
+				army_defence_factor = 0.05			# 铁血纪律：陆军防御+5%
+			}
+		}
+
 		HJM_liberate_nether_offensive = {
 
 			allowed = {
@@ -153,6 +167,144 @@ ideas = {
 				stability_factor = -0.02
 				war_support_factor = -0.01
 				political_power_gain = -0.02
+			}
+		}
+
+		HJM_pre_civil_war_authority_crisis_heavy = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10 # Succession panic damages public order.
+				political_power_gain = -0.15 # Rival courts and factions slow cabinet work.
+				drift_defence_factor = -0.20 # The center struggles to contain ideological drift.
+			}
+		}
+
+		HJM_pre_civil_war_industrial_crisis_heavy = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = 0.05 # Emergency court spending pulls factories from useful work.
+				industrial_capacity_factory = -0.10 # Arsenal output falls while ministries dispute orders.
+				production_speed_buildings_factor = -0.12 # Provincial construction stalls under unclear authority.
+			}
+		}
+
+		HJM_pre_civil_war_military_crisis_heavy = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.08 # War fatigue deepens after the emperor's death.
+				mobilization_speed = -0.20 # Recruitment offices wait for new legitimacy.
+				training_time_factor = 0.15 # Units need longer to absorb uncertain recruits.
+				army_org_factor = -0.08 # Regional command rivalries weaken organization.
+			}
+		}
+
+		HJM_pre_civil_war_authority_crisis_medium = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.06 # The first court settlement only partially restores order.
+				political_power_gain = -0.08 # Ministries still spend effort balancing factions.
+				drift_defence_factor = -0.12 # Ideological drift remains harder to contain.
+			}
+		}
+
+		HJM_pre_civil_war_industrial_crisis_medium = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = 0.03 # Emergency claims still burden civilian allocation.
+				industrial_capacity_factory = -0.06 # Arsenal orders remain inconsistent.
+				production_speed_buildings_factor = -0.07 # Reconstruction contracts continue to lag.
+			}
+		}
+
+		HJM_pre_civil_war_military_crisis_medium = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.04 # The public remains tired of mobilization.
+				mobilization_speed = -0.12 # Draft offices recover slowly.
+				training_time_factor = 0.08 # Training bottlenecks persist.
+				army_org_factor = -0.04 # Army command is steadier but still divided.
+			}
+		}
+
+		HJM_pre_civil_war_authority_crisis_light = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.03 # Residual court rumors still disturb public order.
+				political_power_gain = -0.03 # Minor factional bargaining continues.
+				drift_defence_factor = -0.05 # The center is no longer dominant enough to silence all drift.
+			}
+		}
+
+		HJM_pre_civil_war_industrial_crisis_light = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = 0.01 # Small emergency allocations remain.
+				industrial_capacity_factory = -0.03 # Some arsenals still wait for stable contracts.
+				production_speed_buildings_factor = -0.03 # Local works continue to face legal delays.
+			}
+		}
+
+		HJM_pre_civil_war_military_crisis_light = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.02 # War exhaustion lingers in villages and barracks.
+				mobilization_speed = -0.05 # Recruitment remains slightly sluggish.
+				training_time_factor = 0.03 # Training routines are not fully normalized.
+				army_org_factor = -0.02 # Command rivalries leave a small organizational scar.
 			}
 		}
 

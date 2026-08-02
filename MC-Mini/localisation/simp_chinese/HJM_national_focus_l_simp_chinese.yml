@@ -70,6 +70,12 @@
    HJM_regional_situation_summary: "各地情况汇总"
    HJM_regional_situation_summary_desc: "摄政政府要求各地总督、军区、藩属与边疆驻军上呈战后奏报。哪里仍有余烬，哪里需要赈济，哪里暗藏离心，哪里已经承认新秩序，都必须写进同一份账册。帝国要在胜利后重新认识自己，而这份汇总，将成为摄政时代的第一张地图。"
 
+   HJM_pre_civil_war_focus: "内战前夕国策树"
+   HJM_side_with_opposition: "站在反对派一侧"
+   HJM_side_with_opposition_desc: "摄政政府的账册写满重建、藩属、军令与贡赋，却写不下帝国真正的裂缝。穿越者社区、地方反对派和不愿继续听命于摄政案头的人已经开始彼此通信。站在他们一侧，便是承认王冠之下不止一种未来。"
+   HJM_support_mojang_faction: "支持Mojang派"
+   HJM_support_mojang_faction_desc: "旧王冠已经失去握住帝国的手，战后秩序必须交给能够维持行政、技术和重建的人。Mojang派与微软摄政政府愿意把帝国继续缝合在一起，即便这份缝合会让旧臣和地方势力心生寒意。"
+
    # ==================== HJM 战时国策（处置仆从国） ====================
    HJM_uproot_claws: "拔除爪牙"
    HJM_uproot_claws_desc: "Herobrine的爪牙遍布四方，拱卫着下界要塞。要想彻底击破魔族，第一步就是拔除他的爪牙，清算他的附庸，直到打开通往下界要塞的门户。"

@@ -1,0 +1,9 @@
+﻿l_simp_chinese:
+
+ # MC-Mini 意识形态全局改名 2026-08-01（同名覆盖原版 parties_l）
+ neutrality: "威权民主"
+ neutrality_noun: "威权民主"
+ democratic: "市场自由"
+ democratic_noun: "市场自由"
+ communism: "威权社会"
+ communism_noun: "威权社会"

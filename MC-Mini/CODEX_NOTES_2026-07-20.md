@@ -214,6 +214,7 @@
 - LLL/MYR  punitive state transfer 限制为 HJM 实际控制的地区，避免意外转移未占领地区。
 - 多轮 HOI4 `-debug` 测试未发现 HJM/MC-Mini 新增内容相关错误。
 - 当前长期存在的 `IRQ_kamil_shabib` 报错来自游戏本体 `history/countries/IRQ - Iraq.txt`，不是 MC-Mini 本轮改动。
+- 2026-07-20 晚间测试发现 `HJM_player_general` / `HJM_player_general_desc` 在 `HJM_national_focus_l_simp_chinese.yml` 与 `HJM_war_focus_l_simp_chinese.yml` 重复。本轮删除了仅包含重复键的 `HJM_war_focus_l_simp_chinese.yml`，显示文本保留在主国策本地化文件中。
 
 ### 11. HIM 战败后遗产
 
@@ -302,3 +303,46 @@
 - 首轮 HOI4 `-debug -skiplauncher` 发现 `Missing icon shine for focus: HJM_redstone_cannon`，原因是国策 icon 名为 `GFX_HJM_redstone_cannon`，shine 需要同名后缀 `GFX_HJM_redstone_cannon_shine`。
 - 补齐 shine 后复测通过；`error.log` 中不再有红石大炮图标、sprite、texture 或 shine 相关报错。
 - 剩余日志噪音仍为本体旧问题：`IRQ_kamil_shabib`、`PRC_luo_ruiqing`。
+
+### 14. 内战前夕国策树与三阶段危机
+
+涉及文件：
+
+- `common/national_focus/HJM_war_focus.txt`
+- `common/national_focus/HJM_pre_civil_war_focus.txt`
+- `common/ideas/HJM.txt`
+- `common/decisions/HJM_decisions.txt`
+- `common/decisions/categories/HJM_decision_categories.txt`
+- `localisation/simp_chinese/HJM_national_focus_l_simp_chinese.yml`
+- `localisation/simp_chinese/HJM_ideas_l_simp_chinese.yml`
+- `localisation/simp_chinese/HJM_decisions_l_simp_chinese.yml`
+
+内容：
+
+- 将 `HJM_emperor_passes` 与 `HJM_regional_situation_summary` 从战时树移入新树 `HJM_pre_civil_war_focus`。
+- `HJM_is_it_over` 完成后设置 `HJM_nether_war_concluded` 并 `load_focus_tree = HJM_pre_civil_war_focus`。
+- 新树开头为 `HJM_emperor_passes`，之后接 `HJM_regional_situation_summary`。
+- `HJM_regional_situation_summary` 下方新增两个互斥分支：
+  - `HJM_side_with_opposition` / 站在反对派一侧
+  - `HJM_support_mojang_faction` / 支持Mojang派
+- `HJM_emperor_passes` 完成后添加三种重度危机民族精神，并激活 `HJM_civil_war_countdown` 三年倒计时任务。
+- 三阶段危机民族精神已经拆为 3 条压力线，共 9 个民族精神：
+  - 权威线：`HJM_pre_civil_war_authority_crisis_heavy` -> `HJM_pre_civil_war_authority_crisis_medium` -> `HJM_pre_civil_war_authority_crisis_light`
+  - 工业线：`HJM_pre_civil_war_industrial_crisis_heavy` -> `HJM_pre_civil_war_industrial_crisis_medium` -> `HJM_pre_civil_war_industrial_crisis_light`
+  - 军队线：`HJM_pre_civil_war_military_crisis_heavy` -> `HJM_pre_civil_war_military_crisis_medium` -> `HJM_pre_civil_war_military_crisis_light`
+- 新决议分类 `HJM_pre_civil_war_category` / 内战前夕。
+- 危机降级决议：
+  - `HJM_emergency_court_session`：重度 -> 中度
+  - `HJM_reconcile_regional_commands`：中度 -> 轻度
+  - `HJM_restore_capital_order`：移除轻度
+- 党派支持决议：
+  - `HJM_rally_royalist_courts`：增加 `feudalist` / 保皇党支持
+  - `HJM_expand_opposition_contacts`：增加 `social_liberal` / 反对派与穿越者社区支持
+  - `HJM_support_mojang_administration`：增加 `democratic` / Mojang-Microsoft 摄政支持
+  - `HJM_back_netease_party`：增加 `neutrality` / 网易党派支持
+
+注释：
+
+- 三年倒计时目前只设置 `HJM_civil_war_countdown_expired` 旗标并施加小额惩罚，作为后续正式内战爆发脚本的触发口；暂不直接开内战，避免拆国与阵营脚本未完成时破坏存档。
+- 每个阶段至少有三个不同 debuff 民族精神，分别覆盖权威/稳定与政治点、工业/消费品与建设、军队/战支与动员组织。
+- 新增效果均使用 ASCII 注释，避免中文注释粘连脚本。

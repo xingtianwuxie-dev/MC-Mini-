@@ -6,6 +6,11 @@ set_research_slots = 3
 set_stability = 0.6
 set_war_support = 0.7
 
+# 三军初始经验
+army_experience = 150
+air_experience = 150
+navy_experience = 150
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 3
@@ -133,6 +138,7 @@ recruit_character = HJM_Steve_Builder
 recruit_character = HJM_Alex_Crafter
 recruit_character = HJM_Marcus_Redstone
 recruit_character = HJM_Daniel_Oakshield
+recruit_character = HJM_Jeb
 
 add_ideas = {
 	Wulin

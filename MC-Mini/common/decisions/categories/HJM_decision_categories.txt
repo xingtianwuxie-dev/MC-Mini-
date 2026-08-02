@@ -68,3 +68,32 @@ HJM_postwar_regency_category = {
 		has_country_flag = HJM_regional_situation_summarized
 	}
 }
+
+HJM_pre_civil_war_category = {
+	priority = 99
+	icon = GFX_decision_category_generic_crisis
+	visible_when_empty = yes
+
+	allowed = {
+		original_tag = HJM
+	}
+
+	visible = {
+		has_country_flag = HJM_pre_civil_war_started
+	}
+}
+
+# 2026-08-01 党派竞争：Notch死后摄政时期，对四方党派扶持或打压
+HJM_party_struggle_category = {
+	priority = 90
+	icon = GFX_decision_category_generic_political_discourse
+	visible_when_empty = yes
+
+	allowed = {
+		original_tag = HJM
+	}
+
+	visible = {
+		has_country_flag = HJM_notch_dead
+	}
+}

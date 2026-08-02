@@ -472,6 +472,387 @@ HJM_wartime_decisions_category = {
 	}
 }
 
+HJM_pre_civil_war_category = {
+	HJM_civil_war_countdown = {
+		icon = GFX_decision_generic_ignite_civil_war
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		available = {
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = HJM_pre_civil_war_started
+			NOT = { has_country_flag = HJM_civil_war_countdown_expired }
+		}
+
+		is_good = no
+		days_mission_timeout = 1095
+
+		cancel_trigger = {
+			has_country_flag = HJM_civil_war_countdown_cancelled
+		}
+
+		timeout_effect = {
+			set_country_flag = HJM_civil_war_countdown_expired # Mark the three-year pre-civil-war countdown as expired.
+			add_stability = -0.05 # The failed countdown resolution shakes the realm.
+			add_political_power = -50 # Emergency preparations consume cabinet authority.
+		}
+	}
+
+	HJM_emergency_court_session = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 75
+		fire_only_once = yes
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			OR = {
+				has_idea = HJM_pre_civil_war_authority_crisis_heavy
+				has_idea = HJM_pre_civil_war_industrial_crisis_heavy
+				has_idea = HJM_pre_civil_war_military_crisis_heavy
+			}
+		}
+
+		available = {
+			has_country_flag = HJM_pre_civil_war_started
+			OR = {
+				has_idea = HJM_pre_civil_war_authority_crisis_heavy
+				has_idea = HJM_pre_civil_war_industrial_crisis_heavy
+				has_idea = HJM_pre_civil_war_military_crisis_heavy
+			}
+			has_war = no
+		}
+
+		complete_effect = {
+			remove_ideas = HJM_pre_civil_war_authority_crisis_heavy # Heavy authority crisis is downgraded.
+			remove_ideas = HJM_pre_civil_war_industrial_crisis_heavy # Heavy industrial crisis is downgraded.
+			remove_ideas = HJM_pre_civil_war_military_crisis_heavy # Heavy military crisis is downgraded.
+			add_ideas = HJM_pre_civil_war_authority_crisis_medium # Apply medium authority crisis.
+			add_ideas = HJM_pre_civil_war_industrial_crisis_medium # Apply medium industrial crisis.
+			add_ideas = HJM_pre_civil_war_military_crisis_medium # Apply medium military crisis.
+			add_stability = 0.02 # Emergency court procedure slightly steadies the capital.
+			set_country_flag = HJM_court_session_held # Mark the first crisis downgrade.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_reconcile_regional_commands = {
+		icon = GFX_decision_generic_army
+		cost = 75
+		fire_only_once = yes
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			OR = {
+				has_idea = HJM_pre_civil_war_authority_crisis_medium
+				has_idea = HJM_pre_civil_war_industrial_crisis_medium
+				has_idea = HJM_pre_civil_war_military_crisis_medium
+			}
+		}
+
+		available = {
+			has_country_flag = HJM_pre_civil_war_started
+			OR = {
+				has_idea = HJM_pre_civil_war_authority_crisis_medium
+				has_idea = HJM_pre_civil_war_industrial_crisis_medium
+				has_idea = HJM_pre_civil_war_military_crisis_medium
+			}
+			has_war = no
+			command_power > 10
+		}
+
+		complete_effect = {
+			remove_ideas = HJM_pre_civil_war_authority_crisis_medium # Medium authority crisis is downgraded.
+			remove_ideas = HJM_pre_civil_war_industrial_crisis_medium # Medium industrial crisis is downgraded.
+			remove_ideas = HJM_pre_civil_war_military_crisis_medium # Medium military crisis is downgraded.
+			add_ideas = HJM_pre_civil_war_authority_crisis_light # Apply light authority crisis.
+			add_ideas = HJM_pre_civil_war_industrial_crisis_light # Apply light industrial crisis.
+			add_ideas = HJM_pre_civil_war_military_crisis_light # Apply light military crisis.
+			add_command_power = -10 # Reconciling regional commands spends central command authority.
+			add_stability = 0.02 # Re-registered commands reduce immediate panic.
+			set_country_flag = HJM_regional_commands_reconciled # Mark the second crisis downgrade.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_restore_capital_order = {
+		icon = GFX_decision_generic_police_action
+		cost = 75
+		fire_only_once = yes
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			OR = {
+				has_idea = HJM_pre_civil_war_authority_crisis_light
+				has_idea = HJM_pre_civil_war_industrial_crisis_light
+				has_idea = HJM_pre_civil_war_military_crisis_light
+			}
+		}
+
+		available = {
+			has_country_flag = HJM_pre_civil_war_started
+			OR = {
+				has_idea = HJM_pre_civil_war_authority_crisis_light
+				has_idea = HJM_pre_civil_war_industrial_crisis_light
+				has_idea = HJM_pre_civil_war_military_crisis_light
+			}
+			has_war = no
+		}
+
+		complete_effect = {
+			remove_ideas = HJM_pre_civil_war_authority_crisis_light # Remove the final authority crisis.
+			remove_ideas = HJM_pre_civil_war_industrial_crisis_light # Remove the final industrial crisis.
+			remove_ideas = HJM_pre_civil_war_military_crisis_light # Remove the final military crisis.
+			add_stability = 0.03 # Restored capital order lowers public panic.
+			add_political_power = 25 # A calmer capital returns some governing capacity.
+			set_country_flag = HJM_capital_order_restored # Mark the crisis spirit as cleared.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_rally_royalist_courts = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 60
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_pre_civil_war_started
+		}
+
+		available = {
+			has_country_flag = HJM_pre_civil_war_started
+			has_war = no
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = feudalist
+				popularity = 0.03 # Royalist court support increases.
+			}
+			add_stability = 0.01 # Old ritual briefly steadies conservative villages.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_expand_opposition_contacts = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 60
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_pre_civil_war_started
+		}
+
+		available = {
+			has_country_flag = HJM_pre_civil_war_started
+			has_war = no
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03 # Opposition and traveler-community support increases.
+			}
+			add_stability = -0.01 # Opposition organizing irritates the regency court.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_support_mojang_administration = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 60
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_pre_civil_war_started
+		}
+
+		available = {
+			has_country_flag = HJM_pre_civil_war_started
+			has_war = no
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03 # Mojang/Microsoft regency support increases.
+			}
+			add_political_power = 10 # Administrative backing returns a little cabinet capacity.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HJM_back_netease_party = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 60
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_pre_civil_war_started
+		}
+
+		available = {
+			has_country_flag = HJM_pre_civil_war_started
+			has_war = no
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03 # NetEase party support increases.
+			}
+			add_stability = -0.005 # NetEase organizing adds another factional pressure point.
+			add_political_power = 5 # Local platform networks provide minor administrative leverage.
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 2026-08-01 延缓开战：消耗PP为内战倒计时争取时间，可重复
+	HJM_buy_time_for_civil_war = {
+		icon = GFX_decision_generic_extend_war_goal
+		cost = 100
+		fire_only_once = no
+		days_re_enable = 90
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_pre_civil_war_started
+			NOT = { has_country_flag = HJM_civil_war_countdown_expired }
+		}
+
+		available = {
+			has_country_flag = HJM_pre_civil_war_started
+			has_war = no
+			has_political_power > 100
+		}
+
+		complete_effect = {
+			add_political_power = -100
+			add_stability = 0.01
+			add_days_mission_timeout = {
+				mission = HJM_civil_war_countdown
+				days = 120
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 2026-08-01 安抚傀儡藩属：稳定各附庸、降低其独立倾向，可重复
+	HJM_pacify_vassals = {
+		icon = GFX_decision_generic_diplomatic_conference
+		cost = 75
+		fire_only_once = no
+		days_re_enable = 120
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_pre_civil_war_started
+		}
+
+		available = {
+			has_country_flag = HJM_pre_civil_war_started
+			has_war = no
+			any_subject_country = {
+				OR = {
+					original_tag = GWG
+					original_tag = ZLG
+					original_tag = XWY
+					original_tag = LLL
+					original_tag = MYR
+				}
+			}
+		}
+
+		complete_effect = {
+			add_political_power = -25
+			# 遍历 HJM 的附庸，给符合条件的仆从国加稳定
+			every_subject_country = {
+				limit = {
+					OR = {
+						original_tag = GWG
+						original_tag = ZLG
+						original_tag = XWY
+						original_tag = LLL
+						original_tag = MYR
+					}
+				}
+				add_stability = 0.10
+				add_war_support = 0.05
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
 HJM_postwar_regency_category = {
 	HJM_postwar_village_relief = {
 		icon = GFX_decision_generic_welfare
@@ -843,5 +1224,164 @@ HJM_postwar_regency_category = {
 		ai_will_do = {
 			factor = 1
 		}
+	}
+}
+
+HJM_party_struggle_category = {
+
+	feudalist_back = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 25
+		fire_only_once = no
+		days_re_enable = 30
+
+		allowed = { original_tag = HJM }
+		visible = { has_country_flag = HJM_notch_dead }
+		available = {
+			has_country_flag = HJM_notch_dead
+			has_political_power > 25
+		}
+		complete_effect = {
+			add_political_power = -25
+			add_popularity = { ideology = feudalist popularity = 0.03 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	feudalist_suppress = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 40
+		fire_only_once = no
+		days_re_enable = 45
+
+		allowed = { original_tag = HJM }
+		visible = { has_country_flag = HJM_notch_dead }
+		available = {
+			has_country_flag = HJM_notch_dead
+			has_political_power > 40
+		}
+		complete_effect = {
+			add_political_power = -40
+			add_popularity = { ideology = feudalist popularity = -0.04 }
+			add_stability = 0.01
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	social_liberal_back = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 25
+		fire_only_once = no
+		days_re_enable = 30
+
+		allowed = { original_tag = HJM }
+		visible = { has_country_flag = HJM_notch_dead }
+		available = {
+			has_country_flag = HJM_notch_dead
+			has_political_power > 25
+		}
+		complete_effect = {
+			add_political_power = -25
+			add_popularity = { ideology = social_liberal popularity = 0.03 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	social_liberal_suppress = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 40
+		fire_only_once = no
+		days_re_enable = 45
+
+		allowed = { original_tag = HJM }
+		visible = { has_country_flag = HJM_notch_dead }
+		available = {
+			has_country_flag = HJM_notch_dead
+			has_political_power > 40
+		}
+		complete_effect = {
+			add_political_power = -40
+			add_popularity = { ideology = social_liberal popularity = -0.04 }
+			add_stability = 0.01
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	neutrality_back = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 25
+		fire_only_once = no
+		days_re_enable = 30
+
+		allowed = { original_tag = HJM }
+		visible = { has_country_flag = HJM_notch_dead }
+		available = {
+			has_country_flag = HJM_notch_dead
+			has_political_power > 25
+		}
+		complete_effect = {
+			add_political_power = -25
+			add_popularity = { ideology = neutrality popularity = 0.03 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	neutrality_suppress = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 40
+		fire_only_once = no
+		days_re_enable = 45
+
+		allowed = { original_tag = HJM }
+		visible = { has_country_flag = HJM_notch_dead }
+		available = {
+			has_country_flag = HJM_notch_dead
+			has_political_power > 40
+		}
+		complete_effect = {
+			add_political_power = -40
+			add_popularity = { ideology = neutrality popularity = -0.04 }
+			add_stability = 0.01
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	democratic_back = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 25
+		fire_only_once = no
+		days_re_enable = 30
+
+		allowed = { original_tag = HJM }
+		visible = { has_country_flag = HJM_notch_dead }
+		available = {
+			has_country_flag = HJM_notch_dead
+			has_political_power > 25
+		}
+		complete_effect = {
+			add_political_power = -25
+			add_popularity = { ideology = democratic popularity = 0.03 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	democratic_suppress = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 40
+		fire_only_once = no
+		days_re_enable = 45
+
+		allowed = { original_tag = HJM }
+		visible = { has_country_flag = HJM_notch_dead }
+		available = {
+			has_country_flag = HJM_notch_dead
+			has_political_power > 40
+		}
+		complete_effect = {
+			add_political_power = -40
+			add_popularity = { ideology = democratic popularity = -0.04 }
+			add_stability = 0.01
+		}
+		ai_will_do = { factor = 1 }
 	}
 }

@@ -169,4 +169,20 @@ on_actions = {
 			}
 		}
 	}
+
+	# 2026-08-01 战争结束后处置兜底：HJM 与 HIM 的战争关闭时，若还没兜底过，延迟弹 HJM.50 路由事件。
+	# 双保险：HJM_is_it_over 国策完成时也挂了同样兜底，二者靠 HJM_disposal_fallback_done flag 互斥。
+	on_war_closed = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = HJM }
+					FROM = { tag = HIM }
+					NOT = { has_country_flag = HJM_disposal_fallback_done }
+				}
+				set_country_flag = HJM_disposal_fallback_done
+				country_event = { id = HJM.50 days = 5 }
+			}
+		}
+	}
 }
