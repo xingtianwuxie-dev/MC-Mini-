@@ -13,20 +13,20 @@ state={
 	state_category = pastoral
 
 	history= {
-		owner = ALB
+		owner = HJM
 		victory_points = {
 			914 1
 		}
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = ALB
+		add_core_of = HJM
 		add_claim_by = GRE
 		add_claim_by = ITA
 
 		1939.4.12 = {
-			owner = ITA
-			controller = ITA
+			owner = HJM
+			controller = HJM
 			remove_claim_by = ITA
 		}
 	}

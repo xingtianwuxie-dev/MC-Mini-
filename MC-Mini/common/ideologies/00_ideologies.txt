@@ -3,6 +3,12 @@ ideologies = {
 		types = {
 			absolute_monarchist = {
 			}
+			jeb_supremacism = {
+			}
+			imperial_militarism = {
+			}
+			imperial_villager_council = {
+			}
 		}
 
 		dynamic_faction_names = {
@@ -324,6 +330,8 @@ ideologies = {
 	libertarian_socialist = {
 		types = {
 			libertarian_socialist_ideology = {
+			}
+			duowanism = {
 			}
 		}
 

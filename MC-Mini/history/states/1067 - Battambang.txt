@@ -5,8 +5,8 @@ state = {
 
 	history = {
 
-		owner = GWG
-		add_core_of = GWG
+		owner = FRA
+		add_core_of = FRA
 		buildings = {
 			infrastructure = 1
 		}

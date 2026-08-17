@@ -6,7 +6,7 @@ state = {
 	state_category = city
 
 	history = {
-		owner = ITA
+		owner = HJM
 		victory_points = { 9904 40 } #Rome
 		victory_points = { 11846 2 } #Anzio (was 5)
 		victory_points = { 13413 1 } #Ostia
@@ -33,7 +33,7 @@ state = {
                 }
             }
 		}
-		add_core_of = ITA
+		add_core_of = HJM
 		add_core_of = PAP
 		1939.1.1 = {
 			buildings = {

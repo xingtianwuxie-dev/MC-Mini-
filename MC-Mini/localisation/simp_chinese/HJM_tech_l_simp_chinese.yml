@@ -1,0 +1,61 @@
+﻿l_simp_chinese:
+	# HJM 专属 MC 主题科技名 (2026-08-14)
+
+	# ===== HJM 专属装备科技（2026-08-14 第二批，沿用原版通用科技树名，之后改MC名）=====
+	# 步兵线
+	HJM_infantry_weapons: "步兵武器"
+	HJM_infantry_weapons_desc: "步兵部队使用的单兵武器与基础装备，是一切陆军的基石。"
+	HJM_infantry_weapons1: "步兵武器 I"
+	HJM_infantry_weapons1_desc: "在标准步兵装备上更进一步，换装更精良的单兵武器。"
+	HJM_improved_infantry_weapons: "改进步兵装备 I"
+	HJM_improved_infantry_weapons_desc: "单兵武器与重装备全面换代，步兵的打击力显著提升。"
+	HJM_advanced_infantry_weapons: "改进步兵装备 II"
+	HJM_advanced_infantry_weapons_desc: "突击步枪与班组自动武器普及，步兵火力冠绝当世。"
+	# 卡车线
+	HJM_tech_trucks: "军用卡车"
+	HJM_tech_trucks_desc: "大规模列装摩托化运输载具，军队的机动与补给能力大幅跃升。"
+	HJM_motorised_infantry: "摩托化步兵"
+	HJM_motorised_infantry_desc: "以卡车投送的步兵部队，可快速挺进与支援装甲集群。"
+	# 装甲车线
+	HJM_armored_car1: "装甲车 I"
+	HJM_armored_car1_desc: "轻型装甲载具，为部队提供侦察与机动火力。"
+	HJM_armored_car2: "装甲车 II"
+	HJM_armored_car2_desc: "防护与火力全面提升的装甲载具。"
+	HJM_armored_car3: "装甲车 III"
+	HJM_armored_car3_desc: "重型装甲载具，堪称陆上铁骑。"
+	# 火炮线
+	HJM_artillery1: "火炮"
+	HJM_artillery1_desc: "牵引式火炮投入列装，为步兵提供曲射火力支援。"
+	HJM_artillery2: "改进型火炮"
+	HJM_artillery2_desc: "火炮射程与射速全面改良，轰击更为致命。"
+	HJM_artillery3: "先进型火炮"
+	HJM_artillery3_desc: "新型火炮系统服役，钢铁风暴倾泻敌阵。"
+	# 火箭炮线
+	HJM_rocket_artillery: "火箭炮"
+	HJM_rocket_artillery_desc: "火箭发射装置投入战场，以密集弹雨覆盖目标。"
+	HJM_rocket_artillery2: "先进型火箭炮"
+	HJM_rocket_artillery2_desc: "火箭炮射程与精度提升，火力覆盖更加迅猛。"
+	# 防空线
+	HJM_antiair1: "防空炮"
+	HJM_antiair1_desc: "高射炮组列装，为地面部队撑起防空之伞。"
+	HJM_antiair2: "改进型防空炮"
+	HJM_antiair2_desc: "更高射速与自动化的防空炮，撕裂来袭机群。"
+	# 反坦克线
+	HJM_antitank1: "反坦克炮"
+	HJM_antitank1_desc: "反坦克炮列装，为步兵提供对抗装甲的利器。"
+	HJM_antitank2: "改进型反坦克炮"
+	HJM_antitank2_desc: "威力更大的反坦克炮，可击穿重型战车装甲。"
+	HJM_antitank3: "先进型反坦克炮"
+	HJM_antitank3_desc: "新一代反坦克武器普及，装甲洪流的噩梦。"
+	# 机械化线
+	HJM_mechanised_infantry: "机械化步兵"
+	HJM_mechanised_infantry_desc: "乘装甲载具作战的步兵，与坦克集群同步推进。"
+	HJM_mechanised_infantry2: "机械化步兵 II"
+	HJM_mechanised_infantry2_desc: "机械化部队换装更重型的装甲输送车。"
+	HJM_mechanised_infantry3: "机械化步兵 III"
+	HJM_mechanised_infantry3_desc: "全军高度机械化，步坦协同登峰造极。"
+	# 两栖线
+	HJM_amphibious_mechanized_infantry: "两栖牵引机"
+	HJM_amphibious_mechanized_infantry_desc: "水陆两栖牵引载具，登陆作战的先锋。"
+	HJM_amphibious_mechanized_infantry_2: "改进型两栖突击车"
+	HJM_amphibious_mechanized_infantry_2_desc: "火力防护俱佳的两栖突击车，抢滩利器。"

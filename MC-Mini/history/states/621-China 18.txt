@@ -10,11 +10,11 @@ state = {
 
 	history = {
 
-		owner = HJM
-		add_core_of = HJM
-		add_core_of = HJM
-		add_core_of = HJM
-		add_core_of = HJM
+		owner = PRC
+		add_core_of = PRC
+		add_core_of = PRC
+		add_core_of = PRC
+		add_core_of = PRC
 
 		victory_points = {
 			7158 1 # Ulanqab 
@@ -36,7 +36,7 @@ state = {
 				level = 1
 			}
 
-			owner = HJM
+			owner = PRC
 			controller = HJM
 
 		}

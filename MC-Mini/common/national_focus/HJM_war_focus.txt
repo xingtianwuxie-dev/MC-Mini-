@@ -2,10 +2,18 @@ focus_tree = {
 	id = HJM_war_focus
 	country = {
 		factor = 0
+		# 战时树加载条件：与 HIM 交战时加载；战争结束后若 is_it_over 尚未完成，则暂时保活，
+		# 让 on_war_closed 能 complete_national_focus = HJM_is_it_over（完成后再卸载，战后树接上）。2026-08-08 加回 is_it_over。
 		modifier = {
 			add = 10
 			tag = HJM
-			has_war_with = HIM
+			OR = {
+				has_war_with = HIM
+				AND = {
+					has_country_flag = HJM_nether_war_concluded
+					NOT = { has_completed_focus = HJM_is_it_over }
+				}
+			}
 		}
 	}
 	initial_show_position = {
@@ -14,13 +22,11 @@ focus_tree = {
 	focus = {
 		id = HJM_liberate_village
 		x = 10
-		y = 0
+		y = 1
 		cost = 1
+		icon = GFX_focus_HJM_liberate_village
 		continue_if_invalid = no
 		cancel_if_invalid = yes
-		available = {
-			has_war_with = HIM
-		}
 		completion_reward = {
 			add_political_power = 75			# War communique emergency authority.
 			add_war_support = 0.1			# Realm-wide war resolve.
@@ -33,46 +39,31 @@ focus_tree = {
 				id = HJM.7
 			}
 		}
-	}
-	focus = {
-		id = HJM_wuhan_conference
-		x = 10
-		y = 1
-		cost = 5
-		continue_if_invalid = no
-		cancel_if_invalid = yes
 		available = {
 			has_war_with = HIM
+		}
+	}
+	# HJM_wuhan_conference（武汉会议）已移除（用户要求 2026-08-06）
+	# village_general / player_general 前置已改接 liberate_village
+	focus = {
+		id = HJM_village_general
+		x = 11
+		y = 2
+		cost = 5
+		icon = GFX_focus_HJM_village_general
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = HJM_player_general
 		}
 		prerequisite = {
 			focus = HJM_liberate_village
 		}
 		completion_reward = {
-			news_event = {
-				id = HJM_news.9
-			}
-			add_political_power = 100
-			add_stability = 0.05
+			army_experience = 15
 		}
-	}
-	focus = {
-		id = HJM_village_general
-		x = 12
-		y = 2
-		cost = 5
-		continue_if_invalid = no
-		cancel_if_invalid = yes
 		available = {
 			has_war_with = HIM
-		}
-		mutually_exclusive = {
-			focus = HJM_player_general
-		}
-		prerequisite = {
-			focus = HJM_wuhan_conference
-		}
-		completion_reward = {
-			army_experience = 15
 		}
 	}
 	focus = {
@@ -80,11 +71,9 @@ focus_tree = {
 		x = 12
 		y = 3
 		cost = 5
+		icon = GFX_focus_HJM_group_offensive
 		continue_if_invalid = no
 		cancel_if_invalid = yes
-		available = {
-			has_war_with = HIM
-		}
 		prerequisite = {
 			focus = HJM_village_general
 		}
@@ -92,22 +81,23 @@ focus_tree = {
 			army_experience = 20
 			add_war_support = 0.05
 		}
-	}
-	focus = {
-		id = HJM_player_general
-		x = 8
-		y = 2
-		cost = 5
-		continue_if_invalid = no
-		cancel_if_invalid = yes
 		available = {
 			has_war_with = HIM
 		}
+	}
+	focus = {
+		id = HJM_player_general
+		x = 9
+		y = 2
+		cost = 5
+		icon = GFX_focus_HJM_player_general
+		continue_if_invalid = no
+		cancel_if_invalid = yes
 		mutually_exclusive = {
 			focus = HJM_village_general
 		}
 		prerequisite = {
-			focus = HJM_wuhan_conference
+			focus = HJM_liberate_village
 		}
 		completion_reward = {
 			army_experience = 20			# Traveler cross-world combat lessons.
@@ -117,17 +107,18 @@ focus_tree = {
 				id = HJM.8
 			}
 		}
+		available = {
+			has_war_with = HIM
+		}
 	}
 	focus = {
 		id = HJM_nether_strike
 		x = 8
 		y = 3
 		cost = 5
+		icon = GFX_focus_HJM_nether_strike
 		continue_if_invalid = no
 		cancel_if_invalid = yes
-		available = {
-			has_war_with = HIM
-		}
 		prerequisite = {
 			focus = HJM_player_general
 		}
@@ -151,44 +142,23 @@ focus_tree = {
 				id = HJM.9
 			}
 		}
-	}
-	focus = {
-		id = HJM_dignity_blade
-		x = 10
-		y = 4
-		cost = 5
-		continue_if_invalid = no
-		cancel_if_invalid = yes
 		available = {
 			has_war_with = HIM
 		}
-		prerequisite = {
-			focus = HJM_nether_strike
-		}
-		prerequisite = {
-			focus = HJM_group_offensive
-		}
-		completion_reward = {
-			add_war_support = 0.1			# Sword-oath raises revenge and defense fervor.
-			army_experience = 15			# Offensive preparations become army lessons.
-			add_command_power = 25			# Command capacity for the thunder offensive.
-			country_event = {
-				id = HJM.11
-			}
-		}
 	}
+	# HJM_dignity_blade（尊严只在剑锋之上）已移除（用户要求 2026-08-06）
+	# total_war 前置已改接 nether_strike + group_offensive
 	focus = {
 		id = HJM_total_war
 		x = 10
-		y = 5
+		y = 3
 		cost = 5
+		icon = GFX_focus_HJM_total_war
 		continue_if_invalid = no
 		cancel_if_invalid = yes
-		available = {
-			has_war_with = HIM
-		}
 		prerequisite = {
-			focus = HJM_dignity_blade
+			focus = HJM_village_general
+			focus = HJM_player_general
 		}
 		completion_reward = {
 			remove_ideas = volunteer_only
@@ -199,51 +169,58 @@ focus_tree = {
 				id = HJM.12
 			}
 		}
+		available = {
+			has_war_with = HIM
+		}
 	}
 	focus = {
 		id = HJM_liberate_nether
 		x = 10
-		y = 6
+		y = 4
 		cost = 5
+		icon = GFX_focus_HJM_liberate_nether
 		continue_if_invalid = no
 		cancel_if_invalid = yes
-		available = {
-			has_war_with = HIM
-		}
 		prerequisite = {
 			focus = HJM_total_war
 		}
 		completion_reward = {
 			add_ideas = HJM_liberate_nether_offensive
+			add_ideas = HJM_sleeping_lion
 			country_event = {
 				id = HJM.13
 			}
 		}
+		available = {
+			has_war_with = HIM
+		}
 	}
+	# HJM_is_it_over（结束了？）已加回战时树终点（2026-08-08，应 XT 要求）
+	# 战时树加载条件加了 OR 保活分支：战争结束后、is_it_over 未完成前树暂不卸载，
+	# on_war_closed 设 HJM_nether_war_concluded flag + load 战后树 + complete 本国策；完成后树卸载、战后树接上。
+	# 2026-08-16 双保险（XT 实测点完成不换树修复）：完成奖励里同样设 flag + load 战后树，
+	# 手动/控制台完成本国策不再依赖 on_war_closed 是否触发过；两路幂等，跑几次都一样。
 	focus = {
 		id = HJM_is_it_over
 		x = 10
-		y = 7
+		y = 5
 		cost = 1
-		icon = GFX_focus_generic_treaty
+		icon = GFX_HJM_is_it_over
 		continue_if_invalid = no
 		cancel_if_invalid = yes
-		available = {
-			NOT = {
-				has_war_with = HIM
-			}
-		}
 		prerequisite = {
 			focus = HJM_liberate_nether
 		}
+		available = {
+			has_country_flag = HJM_nether_war_concluded
+		}
 		completion_reward = {
-			remove_ideas = HJM_liberate_nether_offensive			# Remove wartime Nether offensive spirit.
-			add_political_power = 50			# Postwar accounting returns administrative capacity.
-			add_war_support = -0.05			# War fervor starts to ebb.
-			add_stability = -0.02			# Victory exposes exhaustion and casualty ledgers.
-			set_country_flag = HJM_nether_war_concluded			# Mark the war as entering aftermath.
-			# 2026-08-01 卸树前兜底：若有仆从国还没被处置国策处置，延迟弹 HJM.50 路由事件让玩家补选。
-			# 防重复：仅当 on_war_closed 还没兜底过时触发。
+			set_country_flag = HJM_nether_war_concluded # 双保险：控制台强点本国策时也把 flag 补上（available 平时已保证）
+			load_focus_tree = { tree = HJM_pre_civil_war_focus keep_completed = yes } # 本国策完成即换战后树（主路在 on_war_closed，此处兜底手动完成路径）
+			remove_ideas = HJM_liberate_nether_offensive
+			add_political_power = 50
+			add_war_support = -0.05
+			add_stability = -0.02
 			if = {
 				limit = {
 					NOT = { has_country_flag = HJM_disposal_fallback_done }
@@ -251,15 +228,7 @@ focus_tree = {
 				set_country_flag = HJM_disposal_fallback_done
 				country_event = { id = HJM.50 days = 3 }
 			}
-			load_focus_tree = {
-				tree = HJM_pre_civil_war_focus # Switch from the wartime tree into the pre-civil-war tree.
-				keep_completed = yes
-			}
-			country_event = {
-				id = HJM.35				# Open the post-Nether aftermath event.
-			}
-			# 2026-08-01 打赢后60天自动触发"人皇逝世"：延迟弹 HJM.56 路由事件自动完成 HJM_emperor_passes 国策。
-			# 防重复：complete_national_focus 后该国策已完成，玩家无法再手动点。
+			country_event = { id = HJM.35 }
 			country_event = { id = HJM.56 days = 60 }
 		}
 	}
@@ -286,15 +255,15 @@ focus_tree = {
 		cost = 1
 		continue_if_invalid = no
 		cancel_if_invalid = yes
-		ai_will_do = {
-			factor = 1
-		}
 		prerequisite = {
 			focus = HJM_uproot_claws
 		}
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	focus = {
@@ -304,9 +273,6 @@ focus_tree = {
 		cost = 1
 		continue_if_invalid = no
 		cancel_if_invalid = yes
-		ai_will_do = {
-			factor = 1
-		}
 		prerequisite = {
 			focus = HJM_uproot_claws
 		}
@@ -314,6 +280,9 @@ focus_tree = {
 			add_war_support = 0.08
 			army_experience = 15
 			add_ideas = HJM_blood_debt_doctrine			# 复仇线纲领 buff：训练速度+15%、陆军攻防+5%
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	focus = {
@@ -323,18 +292,6 @@ focus_tree = {
 		cost = 1
 		continue_if_invalid = no
 		cancel_if_invalid = yes
-		available = {
-			LLL = {
-				exists = yes
-			}			# Require the raiders to still exist before their states can be transferred.
-			GWG = {
-				exists = yes
-			}			# Require the receiving state to exist before the punitive transfer runs.
-			controls_state = 640
-		}
-		ai_will_do = {
-			factor = 1
-		}
 		prerequisite = {
 			focus = HJM_uproot_claws
 		}
@@ -372,7 +329,21 @@ focus_tree = {
 			}
 			add_war_support = 0.1
 			add_stability = -0.03
-			set_country_flag = HJM_skyfire_disposed		# 标记 LLL 已被毁灭线处置，兜底事件据此跳过
+			set_country_flag = HJM_skyfire_disposed			# 标记 LLL 已被毁灭线处置，兜底事件据此跳过
+		}
+		available = {
+			LLL = {
+				exists = yes
+			}
+			# Require the raiders to still exist before their states can be transferred.
+			GWG = {
+				exists = yes
+			}
+			# Require the receiving state to exist before the punitive transfer runs.
+			controls_state = 12
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	focus = {
@@ -382,18 +353,6 @@ focus_tree = {
 		cost = 1
 		continue_if_invalid = no
 		cancel_if_invalid = yes
-		available = {
-			MYR = {
-				exists = yes
-			}			# Require the rebel remnant to still exist before its states can be transferred.
-			MDG = {
-				exists = yes
-			}			# Require the End state to exist before it receives the punished territory.
-			controls_state = 574
-		}
-		ai_will_do = {
-			factor = 1
-		}
 		prerequisite = {
 			focus = HJM_uproot_claws
 		}
@@ -427,7 +386,21 @@ focus_tree = {
 			}
 			add_stability = 0.05
 			add_war_support = 0.08
-			set_country_flag = HJM_no_mercy_disposed		# 标记 MYR 已被毁灭线处置，兜底事件据此跳过
+			set_country_flag = HJM_no_mercy_disposed			# 标记 MYR 已被毁灭线处置，兜底事件据此跳过
+		}
+		available = {
+			MYR = {
+				exists = yes
+			}
+			# Require the rebel remnant to still exist before its states can be transferred.
+			MDG = {
+				exists = yes
+			}
+			# Require the End state to exist before it receives the punished territory.
+			controls_state = 111 # HJM需攻占MYR首都赫尔辛基
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	focus = {
@@ -437,15 +410,6 @@ focus_tree = {
 		cost = 1
 		continue_if_invalid = no
 		cancel_if_invalid = yes
-		available = {
-			GWG = {
-				exists = yes
-			}			# Keep the vassal setup from targeting a dead country.
-			controls_state = 1076
-		}
-		ai_will_do = {
-			factor = 1
-		}
 		mutually_exclusive = {
 			focus = HJM_ash_policy
 		}
@@ -488,7 +452,17 @@ focus_tree = {
 			puppet = GWG
 			add_stability = 0.05
 			add_political_power = 50
-			set_country_flag = HJM_homeland_disposed		# 标记 GWG 已温和处置，兜底跳过
+			set_country_flag = HJM_homeland_disposed			# 标记 GWG 已温和处置，兜底跳过
+		}
+		available = {
+			GWG = {
+				exists = yes
+			}
+			# Keep the vassal setup from targeting a dead country.
+			controls_state = 10
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	focus = {
@@ -498,18 +472,6 @@ focus_tree = {
 		cost = 1
 		continue_if_invalid = no
 		cancel_if_invalid = yes
-		available = {
-			ZLG = {
-				exists = yes
-			}			# Keep the vassal setup from targeting a dead country.
-			OR = {
-				controls_state = 440
-				has_political_power > 200
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
 		mutually_exclusive = {
 			focus = HJM_bloody_gate
 		}
@@ -527,7 +489,7 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						controls_state = 440
+						controls_state = 46
 					}
 				}
 				add_political_power = -200
@@ -559,7 +521,20 @@ focus_tree = {
 			}
 			puppet = ZLG
 			add_political_power = 75
-			set_country_flag = HJM_golden_disposed		# 标记 ZLG 已温和处置，兜底跳过
+			set_country_flag = HJM_golden_disposed			# 标记 ZLG 已温和处置，兜底跳过
+		}
+		available = {
+			ZLG = {
+				exists = yes
+			}
+			# Keep the vassal setup from targeting a dead country.
+			OR = {
+				controls_state = 46
+				has_political_power > 200
+			}
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	focus = {
@@ -569,15 +544,6 @@ focus_tree = {
 		cost = 1
 		continue_if_invalid = no
 		cancel_if_invalid = yes
-		available = {
-			XWY = {
-				exists = yes
-			}			# Keep the vassal setup from targeting a dead country.
-			controls_state = 427
-		}
-		ai_will_do = {
-			factor = 1
-		}
 		mutually_exclusive = {
 			focus = HJM_beneath_magma
 		}
@@ -625,7 +591,17 @@ focus_tree = {
 				category = electronics
 			}
 			army_experience = 10
-			set_country_flag = HJM_magma_disposed		# 标记 XWY 已温和处置，兜底跳过
+			set_country_flag = HJM_magma_disposed			# 标记 XWY 已温和处置，兜底跳过
+		}
+		available = {
+			XWY = {
+				exists = yes
+			}
+			# Keep the vassal setup from targeting a dead country.
+			controls_state = 229
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	focus = {
@@ -635,15 +611,6 @@ focus_tree = {
 		cost = 1
 		continue_if_invalid = no
 		cancel_if_invalid = yes
-		available = {
-			GWG = {
-				exists = yes
-			}			# Keep the punitive vassal setup from targeting a dead country.
-			controls_state = 1076
-		}
-		ai_will_do = {
-			factor = 1
-		}
 		mutually_exclusive = {
 			focus = HJM_homeland_return
 		}
@@ -690,7 +657,26 @@ focus_tree = {
 			}
 			puppet = GWG
 			add_war_support = 0.05
-			set_country_flag = HJM_ash_disposed		# 标记 GWG 已复仇处置，兜底跳过
+			set_country_flag = HJM_ash_disposed			# 标记 GWG 已复仇处置，兜底跳过
+			# 屠杀线奖励：本土 +3 军用工厂
+			capital_scope = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			GWG = {
+				exists = yes
+			}
+			# Keep the punitive vassal setup from targeting a dead country.
+			controls_state = 10
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	focus = {
@@ -700,15 +686,6 @@ focus_tree = {
 		cost = 1
 		continue_if_invalid = no
 		cancel_if_invalid = yes
-		available = {
-			ZLG = {
-				exists = yes
-			}			# Keep the punitive vassal setup from targeting a dead country.
-			controls_state = 440
-		}
-		ai_will_do = {
-			factor = 1
-		}
 		mutually_exclusive = {
 			focus = HJM_golden_offensive
 		}
@@ -756,7 +733,26 @@ focus_tree = {
 			puppet = ZLG
 			army_experience = 15
 			add_war_support = 0.08
-			set_country_flag = HJM_bloody_disposed		# 标记 ZLG 已复仇处置，兜底跳过
+			set_country_flag = HJM_bloody_disposed			# 标记 ZLG 已复仇处置，兜底跳过
+			# 屠杀线奖励：本土 +3 军用工厂
+			capital_scope = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			ZLG = {
+				exists = yes
+			}
+			# Keep the punitive vassal setup from targeting a dead country.
+			controls_state = 46
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	focus = {
@@ -766,15 +762,6 @@ focus_tree = {
 		cost = 1
 		continue_if_invalid = no
 		cancel_if_invalid = yes
-		available = {
-			XWY = {
-				exists = yes
-			}			# Keep the punitive vassal setup from targeting a dead country.
-			controls_state = 427
-		}
-		ai_will_do = {
-			factor = 1
-		}
 		mutually_exclusive = {
 			focus = HJM_magma_servant
 		}
@@ -822,7 +809,26 @@ focus_tree = {
 			puppet = XWY
 			air_experience = 10
 			add_war_support = 0.05
-			set_country_flag = HJM_beneath_disposed		# 标记 XWY 已复仇处置，兜底跳过
+			set_country_flag = HJM_beneath_disposed			# 标记 XWY 已复仇处置，兜底跳过
+			# 屠杀线奖励：本土 +3 军用工厂
+			capital_scope = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			XWY = {
+				exists = yes
+			}
+			# Keep the punitive vassal setup from targeting a dead country.
+			controls_state = 229
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 }

@@ -1,0 +1,22 @@
+capital = 1038 # 济南军
+
+set_research_slots = 2
+set_stability = 0.50
+set_war_support = 0.50
+
+set_politics = {
+	ruling_party = feudalist
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+		feudalist = 70
+		neutrality = 10
+		democratic = 8
+		fascism = 7
+		libertarian_socialist = 5
+}
+
+recruit_character = W03_warlord

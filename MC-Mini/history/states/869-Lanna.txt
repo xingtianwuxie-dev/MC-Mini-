@@ -8,8 +8,8 @@ state={
 		buildings = {
 			infrastructure = 1
 		}
-		owner = GWG
-		add_core_of = GWG
+		owner = SIA
+		add_core_of = SIA
 	}
 	manpower=1373994
 	

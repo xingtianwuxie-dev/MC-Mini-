@@ -1,0 +1,27 @@
+# MC-Mini 帝国分裂三国领袖 2026-08-14
+characters = {
+	DWF_Leader = {
+		name = DWF_Leader
+		country_leader = {
+			ideology = duowanism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	NTE_Leader = {
+		name = NTE_Leader
+		country_leader = {
+			ideology = oligarchism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	MST_Leader = {
+		name = MST_Leader
+		country_leader = {
+			ideology = conservatism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+}

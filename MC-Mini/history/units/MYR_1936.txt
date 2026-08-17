@@ -26,36 +26,36 @@ division_template = {
 
 units = {
 	division = {
-		name = "雅库茨克末影人突击队第1团"
-		location = 10641
+		name = "赫尔辛基末影人突击队第1团"
+		location = 204 # Helsinki
 		division_template = "末影人突击队"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.85
 	}
 	division = {
-		name = "克拉斯诺亚尔斯克末影人突击队第2团"
-		location = 4724
+		name = "图尔库末影人突击队第2团"
+		location = 32 # Turku
 		division_template = "末影人突击队"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "新西伯利亚末影游击队第1团"
-		location = 7274
+		name = "坦佩雷末影游击队第1团"
+		location = 3025 # Tampere
 		division_template = "末影游击队"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "维尔霍扬斯克末影游击队第2团"
-		location = 12549
+		name = "奥卢末影游击队第2团"
+		location = 7 # Oulu
 		division_template = "末影游击队"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.75
 	}
 	division = {
-		name = "鄂霍茨克末影人突击队第3团"
-		location = 4881
+		name = "罗瓦涅米末影人突击队第3团"
+		location = 30 # Rovaniemi
 		division_template = "末影人突击队"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.75

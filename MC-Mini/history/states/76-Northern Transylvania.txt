@@ -7,8 +7,8 @@ state = {
 	
 	history = {
 
-		owner = ROM
-		add_core_of = ROM
+		owner = ZLG
+		add_core_of = ZLG
 		add_core_of = TRA
 
 		buildings = {

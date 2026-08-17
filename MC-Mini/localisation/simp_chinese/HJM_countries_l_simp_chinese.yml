@@ -232,10 +232,44 @@
    HIM_Wither_Ashwalker: "凋零·灰行者"
    MDG_Ender_Dragon: "末影龙"
    MYR_Enderman_Commander: "末影女王"
-   XWY_FeralSlime: "狂暴史莱姆"
-   LLL_LLLusioner: "唤魔者"
+   XWY_FeralSlime: "岩浆怪"
+   LLL_LLLusioner: "奇厄教主"
    GWG_BigZombie: "大僵尸"
    ZLG_AncientPiglin: "远古猪灵"
+
+   # ==================== 角色介绍（_desc，人物卡片/悬停显示） ====================
+   HJM_Notch_desc: "MC帝国的缔造者与人皇。他一手打造了帝国的疆域与秩序，却在暮年病榻上，听见胜利的捷报之下传来帝国裂缝生长的声音。"
+   HJM_Jeb_desc: "摄政王，Notch身后真正的掌舵者。帝国行政的实际运转都经过他的案头，稳重寡言，在保皇党的牌桌上默默发牌。"
+   HJM_Zimin_desc: "籽岷，多玩穿越者社区的灵魂人物。他坚信散落四方的穿越者应当结成一个联盟，以共同章程与议事会取代各自为战。"
+   HJM_DingLei_desc: "丁磊，网易党首。寡头资本与远洋贸易的操盘手，相信银子和船队比任何口号都更有说服力。"
+   HJM_PhilSpencer_desc: "菲尔·斯宾塞，微软模式实验的主导者。技术官僚出身，试图用报表、流程与标准模式重新编排帝国的神经。"
+   HJM_Heiling_desc: "黑灵，帝国军团长。正面突破的老手，军靴踏过之处，魔族阵线碎裂。"
+   HJM_wutu_desc: "舞荼，武道修炼者。既能安坐朝堂运筹，也能亲赴沙场搏杀，是帝国文武之间的桥梁。"
+   HJM_Steve_Builder_desc: "史蒂夫·建造者。工程出身，精于组织与后勤，帝国重建的第一批人手。"
+   HJM_Alex_Crafter_desc: "艾丽克斯·工匠。工事与装备的行家，前线工事图大半出自她的手笔。"
+   HJM_Marcus_Redstone_desc: "马库斯·红石。红石机关的大师，谋略过人，善用机关阵扭转战局。"
+   HJM_Daniel_Oakshield_desc: "丹尼尔·橡盾。防御的专家，所守之城坚如城墙，从不让背后的人失望。"
+   HJM_Bedrock_Marshal_desc: "基岩元帅，帝国陆军元帅。名如其人，是帝国最坚硬的盾，也是内战阴影下军队的定海神针。"
+   HJM_Admiral_Drowned_desc: "溺尸提督，帝国海军元帅。统帅帝国水师，深谙海战与远洋航线。"
+   HJM_War_Minister_desc: "军务部长，统管帝国军务、军需与动员。帝国战争机器的总枢纽。"
+   HJM_Naval_Minister_desc: "海务部长，掌海军与造船。帝国舰队的灵魂人物。"
+
+   HIM_Herobrine_desc: "下界之主，魔族战争的总导演。白瞳所及之处皆为他的领地，是帝国最危险的敌人。"
+   HIM_Zombie_Overseer_desc: "恐惧魔王，Herobrine 的首席督军，统率下界大军的第一道獠牙。"
+   HIM_Dread_Soulfire_desc: "恐惧·魂火，魂火缠身的下界将领，所过之处连灰烬都会尖叫。"
+   HIM_Blaze_Netherborne_desc: "烈焰·下界裔，出身下界烈焰的猛将，将焦土作为自己的旌旗。"
+   HIM_Wither_Ashwalker_desc: "凋零·灰行者，行走于灰烬与凋零之中，是下界最沉默也最致命的存在。"
+
+   GWG_BigZombie_desc: "大僵尸，僵尸议会的领袖，帝国最早的一批附庸之一。"
+   LLL_LLLusioner_desc: "奇厄教主，唤魔者议会的首领，精通咒术与幻术。"
+   MYR_Enderman_Commander_desc: "末影女王，末影人起义军的领袖，无声而来，无声而去。"
+   MDG_Ender_Dragon_desc: "末影龙，末影王庭之主，龙威之下万物噤声。"
+   XWY_FeralSlime_desc: "岩浆怪，玄武岩议会之主，滚烫的意志如熔岩般不可阻挡。"
+   ZLG_AncientPiglin_desc: "远古猪灵，猪灵议会的王者，黄金与战利品的守护者。"
+
+   HJM_viceroy_gwg_desc: "方正茂，帝国派驻僵尸议会的总督，代表朝廷治理一方。"
+   HJM_viceroy_xwy_desc: "克里克，帝国派驻玄武岩议会的总督，代表朝廷治理一方。"
+   HJM_viceroy_zlg_desc: "密尔哈，帝国派驻猪灵议会的总督，代表朝廷治理一方。"
 
    # ==================== 权力平衡（BOP） ====================
    HJM_power_balance: "帝国权力平衡"
@@ -247,6 +281,10 @@
    HJM_empire_dominant_range: "帝国绝对主导"
    HJM_traveler_influence_range: "穿越者影响扩大"
    HJM_traveler_dominant_range: "穿越者主导"
+   HJM_Bedrock_Marshal: "基岩元帅"
+   HJM_Admiral_Drowned: "溺尸提督"
+   HJM_War_Minister: "军务部长"
+   HJM_Naval_Minister: "海务部长"
 
    # ==================== 阵营 ====================
    HIM_faction: "魔族"

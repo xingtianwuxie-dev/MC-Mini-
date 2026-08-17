@@ -11,10 +11,10 @@ state={
 	}
 
 	history={
-		owner = ZLG
+		owner = RAJ
 		buildings = {
 		}
-		add_core_of = ZLG
+		add_core_of = RAJ
 		set_compliance = 0
 		start_resistance = yes
 		set_resistance =  70

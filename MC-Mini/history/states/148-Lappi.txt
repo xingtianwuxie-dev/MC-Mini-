@@ -12,8 +12,8 @@ state = {
 
 	history = {
 
-		owner = FIN
-		add_core_of = FIN
+		owner = MDG
+		add_core_of = MDG
 		add_core_of = SMI
 
 		victory_points = { 

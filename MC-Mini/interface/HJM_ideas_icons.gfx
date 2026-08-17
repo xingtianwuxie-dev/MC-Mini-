@@ -1,0 +1,75 @@
+spriteTypes = {
+
+	# HJM 民族精神图标（2026-08-14 更新）
+	# sprite 名必须带 _idea 前缀：引擎按 GFX_idea_<picture值> 查找（原版 ideas.gfx 惯例），缺前缀会找不到→显示默认图标
+	# 图源：主人 2026-08-14 新画的 PNG（68x68），PNG 直接可用零转换，不转 DDS
+	SpriteType = {
+		name = "GFX_idea_bingyuanqiangzheng"
+		texturefile = "gfx/interface/ideas/bingyuanqiangzheng.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_liuxue"
+		texturefile = "gfx/interface/ideas/liuxue.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_tongmeng"
+		texturefile = "gfx/interface/ideas/tongmeng.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_long_peace"
+		texturefile = "gfx/interface/ideas/HJM_long_peace.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_emergency_factory_output"
+		texturefile = "gfx/interface/ideas/HJM_emergency_factory_output.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_illager_activity_low"
+		texturefile = "gfx/interface/ideas/HJM_illager_activity_low.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_illager_activity_medium"
+		texturefile = "gfx/interface/ideas/HJM_illager_activity_medium.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_illager_activity_high"
+		texturefile = "gfx/interface/ideas/HJM_illager_activity_high.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_sleeping_lion"
+		texturefile = "gfx/interface/ideas/HJM_sleeping_lion.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_liberate_nether_offensive"
+		texturefile = "gfx/interface/ideas/HJM_liberate_nether_offensive.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_southern_front_crisis"
+		texturefile = "gfx/interface/ideas/HJM_southern_front_crisis.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_him_legacy_unsettled"
+		texturefile = "gfx/interface/ideas/HJM_him_legacy_unsettled.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_industrial_crisis_heavy"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_industrial_crisis_heavy.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_authority_crisis_heavy"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_authority_crisis_heavy.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_military_crisis_heavy"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_military_crisis_heavy.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_frontier_support_modifier"
+		texturefile = "gfx/interface/ideas/HJM_frontier_support_modifier.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_third_line_construction_modifier"
+		texturefile = "gfx/interface/ideas/HJM_third_line_construction_modifier.png"
+	}
+
+}

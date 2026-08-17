@@ -32,10 +32,10 @@ characters = {
 	HJM_Zimin = {
 		name = HJM_Zimin
 		portraits = {
-			civilian = { large = "gfx/leaders/leader_unknown.dds" }   # 有图换 portrait_Zimin.png
+			civilian = { large = "gfx/leaders/HJM/portrait_Zimin.dds" }
 		}
 		country_leader = {
-			ideology = social_liberal_ideology      # 多玩 → social_liberal group
+			ideology = duowanism      # 多玩 → 多玩主义
 			traits = { }
 			expire = "1965.1.1.1"
 		}
@@ -44,7 +44,7 @@ characters = {
 			available = { has_completed_focus = HJM_player_pact }
 			modifier = { 
 				monthly_population = 0.05    # 任命为顾问时生效
-				social_liberal_drift = 0.02      # 籽岷 → 推多玩党支持
+				libertarian_socialist_drift = 0.02      # 籽岷 → 推多玩党支持
 			}
 		}
 
@@ -97,10 +97,10 @@ characters = {
 	HJM_Jeb = {
 		name = HJM_Jeb
 		portraits = {
-			civilian = { large = "gfx/leaders/leader_unknown.dds" }
+			civilian = { large = "gfx/leaders/HJM/portrait_Jeb.dds" }
 		}
 		country_leader = {
-			ideology = absolute_monarchist       # 保皇党（同 Notch 的 sub_ideology）
+			ideology = jeb_supremacism          # 保皇党：Jeb至尊主义
 			traits = {
 				regent				# 摄政王：Mojang 保皇党领袖，Notch 身后的掌舵者
 			}
@@ -213,6 +213,79 @@ characters = {
 			}
 		}
 	}
+	# 2026-08-05 四军事职位角色（陆军元帅/海军元帅/陆军部长/海军部长）
+	HJM_Bedrock_Marshal = {
+		name = HJM_Bedrock_Marshal
+		portraits = {
+			army = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		field_marshal = {
+			traits = { defensive_doctrine infantry_officer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			visible = {
+				has_government = feudalist
+			}
+		}
+	}
+
+	HJM_Admiral_Drowned = {
+		name = HJM_Admiral_Drowned
+		portraits = {
+			army = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		admiral = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+			visible = {
+				has_government = feudalist
+			}
+		}
+	}
+
+	HJM_War_Minister = {
+		name = HJM_War_Minister
+		portraits = {
+			civilian = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = war_minister
+			cost = 150
+			allowed = { original_tag = HJM }
+			available = { has_government = feudalist }
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				experience_gain_army = 0.05
+			}
+		}
+	}
+
+	HJM_Naval_Minister = {
+		name = HJM_Naval_Minister
+		portraits = {
+			civilian = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = naval_minister
+			cost = 150
+			allowed = { original_tag = HJM }
+			available = { has_government = feudalist }
+			modifier = {
+				experience_gain_navy = 0.10
+				research_speed_factor = 0.03
+			}
+		}
+	}
+
 	HJM_wutu = {
 		name = HJM_wutu
 		portraits = {

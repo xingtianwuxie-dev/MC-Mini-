@@ -33,8 +33,7 @@
    capital_lost_surrender_desc: "首都已经陷落。战争的意志随着最后一面城头旗帜的倒下而崩溃——这个国家，已经无力再战。"
    demon_war_fervor: "战争狂热"
    demon_war_fervor_desc: "魔族的圣战已经开始。每一个怪物都相信，这是它们统治主世界的时刻——狂热的信念让它们无畏，也让它们格外危险。"
-   demon_low_morale: "斗志涣散"
-   demon_low_morale_desc: "人皇的口谕传遍主世界，也传进了魔族的耳朵。那些原本相信必胜的怪物开始动摇：如果连沉睡百年的帝国都能苏醒，它们那点胜利的信心又算什么？狂热变成了怀疑，怀疑变成了涣散。"
+   # demon_low_morale / demon_low_morale_desc 已移除（2026-08-08，应 XT 要求消除人皇演讲给魔族的 debuff；孤儿清理）
 
    # ==================== HJM timed modifier ====================
    HJM_emergency_factory_output: "加班军需生产"
@@ -106,3 +105,11 @@
    Red_Army_Tactician: "红石战术学派"
  HJM_blood_debt_doctrine: "血债教条"
  HJM_blood_debt_doctrine_desc: "复仇路线让帝国军队在血与火中重塑纪律。训练更加严酷，进攻更加凶狠，防线更加冷酷。"
+
+   # ==================== 灾厄村民渗透（2026-08-14 新增） ====================
+   HJM_illager_activity_low: "灾厄渗透·低"
+   HJM_illager_activity_low_desc: "灾厄村民的踪迹出现在帝国边境。村民失踪、施工放缓、训练受阻，边境的情报悄然向外流失。"
+   HJM_illager_activity_medium: "灾厄渗透·中"
+   HJM_illager_activity_medium_desc: "灾厄村民的活动已成规模。边境情报网被逐步侵蚀，帝国情报部门的效率开始下滑。"
+   HJM_illager_activity_high: "灾厄渗透·高"
+   HJM_illager_activity_high_desc: "灾厄村民已经深入帝国肌理。国内稳定动摇，机密情报全面外泄，帝国处处受制。"

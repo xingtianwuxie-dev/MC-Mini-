@@ -278,23 +278,7 @@ country_event = {
     }
 }
 
-country_event = {
-    id = HJM.11
-    title = HJM.11.t
-    desc = HJM.11.d
-    picture = GFX_report_event_chinese_officers
-
-    is_triggered_only = yes
-    trigger = {
-        tag = HJM
-    }
-
-    option = {
-        name = HJM.11.a
-        add_stability = 0.02
-        add_political_power = 10
-    }
-}
+# HJM.11（演说）已移除（随 dignity_blade 国策一并删除，2026-08-06）
 
 country_event = {
     id = HJM.12
@@ -344,27 +328,27 @@ country_event = {
 
     option = {
         name = HJM.14.a
-		325 = {
-			add_building_construction = { type = bunker province = 1319 level = 1 instant_build = yes }
-			add_building_construction = { type = bunker province = 4501 level = 1 instant_build = yes }
-			add_building_construction = { type = bunker province = 12262 level = 1 instant_build = yes }
-			add_building_construction = { type = bunker province = 5072 level = 1 instant_build = yes }
+		2 = { # 欧洲搬迁 2
+			add_building_construction = { type = bunker province = 923 level = 1 instant_build = yes }
+			add_building_construction = { type = bunker province = 6862 level = 1 instant_build = yes }
+			add_building_construction = { type = bunker province = 9794 level = 1 instant_build = yes }
+			add_building_construction = { type = bunker province = 9904 level = 1 instant_build = yes }
 		}
-		594 = {
-			add_building_construction = { type = bunker province = 7137 level = 1 instant_build = yes }
-			add_building_construction = { type = bunker province = 10459 level = 1 instant_build = yes }
+		64 = { # 欧洲搬迁 64
+			add_building_construction = { type = bunker province = 375 level = 1 instant_build = yes }
+			add_building_construction = { type = bunker province = 478 level = 1 instant_build = yes }
 		}
-		601 = {
-			add_building_construction = { type = bunker province = 10856 level = 1 instant_build = yes }
+		16 = { # 欧洲搬迁 16
+			add_building_construction = { type = bunker province = 6547 level = 1 instant_build = yes }
 		}
-		747 = {
-			add_building_construction = { type = bunker province = 7965 level = 1 instant_build = yes }
+		41 = { # 欧洲搬迁 41
+			add_building_construction = { type = bunker province = 858 level = 1 instant_build = yes }
 		}
-		757 = {
-			add_building_construction = { type = bunker province = 5033 level = 1 instant_build = yes }
+		4 = { # 欧洲搬迁 4
+			add_building_construction = { type = bunker province = 704 level = 1 instant_build = yes }
 		}
-		1033 = {
-			add_building_construction = { type = bunker province = 10004 level = 1 instant_build = yes }
+		159 = { # 欧洲搬迁 159
+			add_building_construction = { type = bunker province = 607 level = 1 instant_build = yes }
 		}
     }
 }
@@ -387,7 +371,7 @@ country_event = {
             amount = 10000
             producer = HJM
         }
-        1036 = {
+        2 = { # 欧洲搬迁 2
             create_unit = {
                 division = "name = \"第1铁傀儡装甲师\" division_template = \"铁傀儡装甲师\" start_experience_factor = 0.8 start_equipment_factor = 1 start_manpower_factor = 1"
                 owner = HJM
@@ -562,19 +546,7 @@ news_event = {
 	}
 }
 
-news_event = {
-	id = HJM_news.9
-	title = HJM_news.9.t
-	desc = HJM_news.9.d
-	picture = GFX_report_event_chinese_officers
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = HJM_news.9.a
-	}
-}
+# HJM_news.9（武汉会议召开）已移除（随 wuhan_conference 国策删除，2026-08-06）
 
 news_event = {
 	id = HJM_news.10
@@ -728,20 +700,12 @@ country_event = {
         tag = HJM
         has_war_with = HIM
         has_idea = HJM_long_peace                # 还在无力期 = 还没觉醒
+        months_at_war > 12                       # 开战满一年（XT：打满一年才许觉醒）
+        HIM = { num_occupied_states > 6 }        # 魔族被占本土超一成（68州×10%≈7，2026-08-17 从134州迁欧改）
     }
 
     mean_time_to_happen = {
-        days = 90                                # 基础：僵持 90 天触发（守得住但推不动，也是弱）
-        modifier = {
-            factor = 0.1                         # 丢任一关键地块 → MTTH 缩到约 9 天，很快觉醒
-            OR = {
-                NOT = { controls_state = 322 }   # 西藏
-                NOT = { controls_state = 752 }   # 昌都
-                NOT = { controls_state = 325 }   # 云南
-                NOT = { controls_state = 1041 }  # 成都
-                NOT = { controls_state = 1037 }  # 重庆
-            }
-        }
+        days = 10                                # 条件已极严（满一年+沦陷一成），满足后约10天即触发
     }
 
     immediate = {
@@ -765,14 +729,14 @@ country_event = {
     trigger = {
         has_war = yes
         OR = {
-            AND = { original_tag = HJM NOT = { controls_state = 1036 } }   # 武汉
-            AND = { original_tag = HIM NOT = { controls_state = 439 } }    # 德里
-            AND = { original_tag = XWY NOT = { controls_state = 427 } }    # 海得拉巴
-            AND = { original_tag = LLL NOT = { controls_state = 640 } }    # 曼德勒
-            AND = { original_tag = GWG NOT = { controls_state = 1076 } }   # 曼谷
-            AND = { original_tag = ZLG NOT = { controls_state = 440 } }    # 拉合尔
-            AND = { original_tag = MDG NOT = { controls_state = 330 } }    # 蒙古
-            AND = { original_tag = MYR NOT = { controls_state = 574 } }    # 雅库茨克
+            AND = { original_tag = HJM NOT = { controls_state = 64 } }   # 柏林
+            AND = { original_tag = HIM NOT = { controls_state = 219 } }    # 莫斯科
+            AND = { original_tag = XWY NOT = { controls_state = 229 } }    # 巴库
+            AND = { original_tag = LLL NOT = { controls_state = 12 } }    # 里加
+            AND = { original_tag = GWG NOT = { controls_state = 10 } }   # 华沙
+            AND = { original_tag = ZLG NOT = { controls_state = 46 } }    # 布加勒斯特
+            AND = { original_tag = MDG NOT = { controls_state = 38 } }    # 斯德哥尔摩
+            AND = { original_tag = MYR NOT = { controls_state = 111 } }    # 赫尔辛基
         }
     }
 
@@ -1403,6 +1367,8 @@ country_event = {
     hidden = yes
 
     immediate = {
+        # 2026-08-16 保险：无论从哪条路过来，先确保战后树已加载（重复 load 幂等），否则下面的 complete 会静默失败
+        load_focus_tree = { tree = HJM_pre_civil_war_focus keep_completed = yes }
         # 仅当国策还没完成时才执行（防重复）
         if = {
             limit = {
@@ -1414,6 +1380,54 @@ country_event = {
 
     option = {
         name = HJM.56.a
+    }
+}
+
+# 2026-08-05 BOP 权力平衡区间事件：进入"帝国绝对主导"时触发（保皇旧臣振奋）
+country_event = {
+    id = HJM.70
+    title = HJM.70.t
+    desc = HJM.70.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_empire_dominant_seen }
+    }
+
+    immediate = {
+        set_country_flag = HJM_empire_dominant_seen
+        add_stability = 0.05
+        add_political_power = 50
+    }
+
+    option = {
+        name = HJM.70.a
+    }
+}
+
+# 2026-08-05 BOP 权力平衡区间事件：进入"穿越者主导"时触发（穿越者掌权）
+country_event = {
+    id = HJM.71
+    title = HJM.71.t
+    desc = HJM.71.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_traveler_dominant_seen }
+    }
+
+    immediate = {
+        set_country_flag = HJM_traveler_dominant_seen
+        add_stability = -0.03
+        add_political_power = 50
+    }
+
+    option = {
+        name = HJM.71.a
     }
 }
 

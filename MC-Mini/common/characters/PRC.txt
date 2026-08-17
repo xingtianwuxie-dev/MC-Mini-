@@ -1,0 +1,10 @@
+characters = {
+	PRC_leader = {
+		name = PRC_leader
+		country_leader = {
+			ideology = neutrality
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+}

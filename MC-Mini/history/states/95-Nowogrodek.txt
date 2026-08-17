@@ -12,13 +12,13 @@ state={
 			3393 3
 		}
 		
-		owner = POL
+		owner = GWG
 		buildings = {
 			infrastructure = 3
 			air_base = 3
 
 		}
-		add_core_of = POL
+		add_core_of = GWG
 		add_core_of = BLR
 
 	}

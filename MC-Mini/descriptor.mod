@@ -1,5 +1,5 @@
 replace_path="music"
-version="0.0.3"
+version="0.1.0"
 tags={
 	"Gameplay"
 }

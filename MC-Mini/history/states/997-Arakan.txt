@@ -10,8 +10,8 @@ state = {
 	manpower = 530980
 	
 	history = {
-		owner = LLL
-		add_core_of = LLL
+		owner = BRM
+		add_core_of = BRM
 		buildings = {
 			infrastructure = 1
 			air_base = 1

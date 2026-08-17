@@ -37,6 +37,9 @@ HJM_power_balance = {
 				research_speed_factor = -0.06
 				army_org_factor = 0.05
 			}
+			on_activate = {
+				country_event = { id = HJM.70 }
+			}
 		}
 	}
 
@@ -64,6 +67,9 @@ HJM_power_balance = {
 				army_speed_factor = 0.10
 				planning_speed = 0.10
 				stability_factor = -0.08
+			}
+			on_activate = {
+				country_event = { id = HJM.71 }
 			}
 		}
 	}

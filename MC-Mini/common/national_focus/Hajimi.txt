@@ -225,6 +225,11 @@ focus_tree = {
 				uses = 1
 				category = electronics
 			}
+			# 2026-08-14 独立MC科技树：研究红石基础
+			set_technology = {
+				HJM_redstone_basic = 1
+				popup = no
+			}
 			country_event = {
 				id = HJM.16
 			}
@@ -252,6 +257,11 @@ focus_tree = {
 				uses = 1
 				category = artillery
 			}
+			# 2026-08-14 独立MC科技树：进阶红石电路
+			set_technology = {
+				HJM_redstone_circuitry = 1
+				popup = no
+			}
 			country_event = {
 				id = HJM.17
 			}
@@ -275,8 +285,7 @@ focus_tree = {
 			# 穿越者协约成：穿越者三人组入伙，接管对应党派
 			# recruit 进角色池后，角色 country_leader 块自动立为对应意识形态政党领袖
 			# 籼岷→多玩(social_liberal) / 丁磊→网易(oligarchism) / 斯宾塞→微软(conservatism)
-			recruit_character = HJM_Zimin
-			recruit_character = HJM_DingLei
+			# 籽岷/丁磊已改为开局 recruit（初始党派领导人），此处只保留微软 PhilSpencer
 			recruit_character = HJM_PhilSpencer
 			news_event = {
 				id = HJM_news.5

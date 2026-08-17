@@ -183,6 +183,19 @@ on_actions = {
 				set_country_flag = HJM_disposal_fallback_done
 				country_event = { id = HJM.50 days = 5 }
 			}
+			# 战争结束：设flag加载战后树 + 自动完成"结束了"（进而60天后自动完成"人皇逝世"）
+			if = {
+				limit = {
+					ROOT = { tag = HJM }
+					FROM = { tag = HIM }
+					NOT = { has_completed_focus = HJM_is_it_over }
+				}
+				ROOT = {
+					set_country_flag = HJM_nether_war_concluded
+					load_focus_tree = { tree = HJM_pre_civil_war_focus keep_completed = yes }
+					complete_national_focus = HJM_is_it_over
+				}
+			}
 		}
 	}
 }

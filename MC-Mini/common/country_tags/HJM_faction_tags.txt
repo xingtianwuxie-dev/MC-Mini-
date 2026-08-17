@@ -1,0 +1,4 @@
+# MC-Mini 帝国分裂四国(DWF多玩/NTE网易/MST微软)注册 2026-08-14
+DWF = "countries/DWF.txt"
+NTE = "countries/NTE.txt"
+MST = "countries/MST.txt"

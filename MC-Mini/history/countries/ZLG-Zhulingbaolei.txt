@@ -1,4 +1,4 @@
-capital = 440 # 拉合尔
+capital = 46 # 布加勒斯特 拉合尔
 
 oob = "ZLG_1936"
 

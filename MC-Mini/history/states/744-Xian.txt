@@ -11,16 +11,16 @@ state = {
 
 	history = {
 
-		owner = HJM
-		add_core_of = HJM
-		add_core_of = HJM
+		owner = PRC
+		add_core_of = PRC
+		add_core_of = PRC
 		1936.1.1 = {
 			IF = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 				}
 				transfer_state_to = HJM
-				add_core_of = HJM
+				add_core_of = PRC
 			}
 		}
 
@@ -31,7 +31,7 @@ state = {
 				}
 				remove_core_of = HJM
 			}		
-			owner = HJM
+			owner = PRC
 			controller = HJM
 		}
 

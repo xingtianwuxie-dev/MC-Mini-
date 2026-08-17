@@ -10,8 +10,8 @@ state = {
 
 	history = {
 
-		owner = GWG
-		add_core_of = GWG
+		owner = ENG
+		add_core_of = ENG
 
 		victory_points = {
 			13408 1 # Seberang Perai 

@@ -13,8 +13,8 @@ state = {
 
 	history = {
 
-		owner = GWG
-		add_core_of = GWG
+		owner = MAL
+		add_core_of = MAL
 		buildings = {
 
 			infrastructure = 1

@@ -7,8 +7,8 @@ state={
 	}
 	state_category=rural
 	history={
-		owner = GWG
-		add_core_of = GWG
+		owner = SIA
+		add_core_of = SIA
 		victory_points = {
 			7312 1 #Mae Sot
 		}

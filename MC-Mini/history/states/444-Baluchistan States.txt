@@ -13,8 +13,8 @@ state={
 	local_supplies=0.000
 	history={
 
-		add_core_of = ZLG
-		owner = ZLG
+		add_core_of = RAJ
+		owner = RAJ
 		victory_points = {
 			12774 1 # Gwadar
 		}

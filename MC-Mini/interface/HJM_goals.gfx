@@ -4,7 +4,9 @@ spriteTypes = {
 
 	SpriteType = {
 	name = "GFX_New_deal"
-	texturefile = "gfx/interface/goals/focus_HJM_New_deal.png"			
-	}	
-	
+	texturefile = "gfx/interface/goals/focus_HJM_New_deal.png"
+	}
+
+	# 战时三国策图标已迁移到 editor/HJM_focus_icons.gfx（与正常国策图标同位置同写法）
+
 }

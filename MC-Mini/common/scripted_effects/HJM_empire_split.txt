@@ -1,0 +1,94 @@
+# MC-Mini 帝国分裂 2026-08-14(照TFR原理) 2026-08-17搬迁欧洲后重写:四国初始地盘落欧洲
+# 1)HJM_warlord_divisions=塞模板effect 2)HJM_empire_split=塞模板+划地+加核心+每核心州造兵+宣战 3)调HJM_spawn_minor_states
+
+HJM_warlord_divisions = {
+	division_template = {
+		name = "Garrison"
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+		}
+	}
+}
+
+HJM_empire_split = {
+	# === 多玩穿越者联邦 DWF(6州,首都41马德里,占西班牙) ===
+	DWF = {
+		HJM_warlord_divisions = yes
+		transfer_state = 41
+		transfer_state = 791
+		transfer_state = 788
+		transfer_state = 793
+		transfer_state = 170
+		transfer_state = 175
+		set_capital = { state = 41 }
+		every_owned_state = { add_core_of = DWF }
+		every_controlled_state = {
+			limit = { is_core_of = DWF }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.2"
+				owner = DWF
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 3000 }
+		declare_war_on = {
+			target = HJM
+			type = civil_war
+		}
+	}
+	# === 网易远洋开发团 NTE(6州,首都126伦敦,占英国) ===
+	NTE = {
+		HJM_warlord_divisions = yes
+		transfer_state = 126
+		transfer_state = 127
+		transfer_state = 123
+		transfer_state = 338
+		transfer_state = 125
+		transfer_state = 129
+		set_capital = { state = 126 }
+		every_owned_state = { add_core_of = NTE }
+		every_controlled_state = {
+			limit = { is_core_of = NTE }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.2"
+				owner = NTE
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 4000 }
+		declare_war_on = {
+			target = HJM
+			type = civil_war
+		}
+	}
+	# === 微软技术共同体 MST(9州,首都64柏林,占德国) ===
+	MST = {
+		HJM_warlord_divisions = yes
+		transfer_state = 59
+		transfer_state = 60
+		transfer_state = 61
+		transfer_state = 62
+		transfer_state = 63
+		transfer_state = 64
+		transfer_state = 65
+		transfer_state = 66
+		transfer_state = 68
+		set_capital = { state = 64 }
+		every_owned_state = { add_core_of = MST }
+		every_controlled_state = {
+			limit = { is_core_of = MST }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.2"
+				owner = MST
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 3500 }
+		declare_war_on = {
+			target = HJM
+			type = civil_war
+		}
+	}
+	# === 61小国中立生成(见HJM_spawn_minors.txt,仍指旧亚洲州,待重写落欧洲) ===
+	HJM_spawn_minor_states = yes
+	# === 保皇HJM保留意大利7州(115/156/157/117/849/2/162)不动,首都2罗马 ===
+}

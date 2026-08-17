@@ -9,7 +9,7 @@ state = {
 	}
 
 	history = {
-		owner = ALB
+		owner = HJM
         victory_points = {
             9780 3 
         }
@@ -17,11 +17,11 @@ state = {
             infrastructure = 2
             industrial_complex = 1
 		}
-		add_core_of = ALB
+		add_core_of = HJM
 		add_claim_by = ITA
 		1939.4.12 = {
-		    owner = ITA
-		    controller = ITA
+		    owner = HJM
+		    controller = HJM
 		    remove_claim_by = ITA
 		}
 

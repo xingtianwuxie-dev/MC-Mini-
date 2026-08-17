@@ -1,12 +1,30 @@
 spriteTypes = {
+	# MC-Mini 国策图标高亮(_shine) 2026-08-14 重建
+	# 原理:focus 可点亮时引擎自动叠 <icon>_shine 扫光;照原版 goals_shine.gfx:
+	#   texturefile/animationmaskfile = 图标自身dds, animationtexturefile = 原版扫光渐变(gfx/interface/goals/shine_overlay.dds)
+	#   双animation块(-90/+90)双向扫光更亮;单块只单向
+	# 原文件扫光纹理误用F099占位图导致高亮失效,本次全量修正
+
 	SpriteType = {
 		name = "GFX_focus_HJM_MC_start_shine"
 		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_MC_start.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_MC_start.dds"
-			animationtexturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_MC_start.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
 			animationdelay = 0
@@ -24,8 +42,20 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_underground_riot.dds"
-			animationtexturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_underground_riot.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
 			animationdelay = 0
@@ -43,8 +73,20 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
-			animationtexturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
 			animationdelay = 0
@@ -62,8 +104,20 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_troubles are coming.dds"
-			animationtexturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_troubles are coming.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
 			animationdelay = 0
@@ -81,8 +135,20 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_suspicious.dds"
-			animationtexturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_suspicious.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
 			animationdelay = 0
@@ -100,8 +166,82 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_come_again.dds"
-			animationtexturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_come_again.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_HJM_Strengthen_village_defenses_shine"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_Strengthen_village_defenses.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_Strengthen_village_defenses.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_Strengthen_village_defenses.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_HJM_iron_golem_shine"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_iron_golem.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_iron_golem.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_iron_golem.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
 			animationdelay = 0
@@ -119,23 +259,60 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_redstone_research.dds"
-			animationtexturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
-			animationrotation = -90
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
-			animationrotationoffset = {
-				x = 0
-				y = 0
-			}
-			animationtexturescale = {
-				x = 1
-				y = 1
-			}
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-			legacy_lazy_load = no
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_redstone_research.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_HJM_redstone_cannon_shine"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_redstone_cannon.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_redstone_cannon.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_redstone_cannon.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
 	}
 
 	SpriteType = {
@@ -144,76 +321,370 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_chaunyuezhexieyue.dds"
-			animationtexturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
-			animationrotation = -90
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
-			animationrotationoffset = {
-				x = 0
-				y = 0
-			}
-			animationtexturescale = {
-				x = 1
-				y = 1
-			}
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
-			legacy_lazy_load = no
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_chaunyuezhexieyue.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
 	}
 
+	SpriteType = {
+		name = "GFX_focus_HJM_liberate_village_shine"
+		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_liberate_village.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_liberate_village.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_liberate_village.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
 
+	SpriteType = {
+		name = "GFX_focus_HJM_player_general_shine"
+		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_player_general.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_player_general.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_player_general.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
 
-	SpriteType = { 
-		name = "GFX_focus_HJM_brother_returns_shine" 
-		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
-	SpriteType = { 
-		name = "GFX_HJM_Strengthen_village_defenses_shine" 
-		texturefile = "gfx/editor/interface/focusIcon/HJM_Strengthen_village_defenses.dds" }
-	SpriteType = { 
-		name = "GFX_focus_HJM_village_defense_shine" 
-		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
-	SpriteType = { 
-		name = "GFX_focus_HJM_iron_golem_shine" 
-		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
-	SpriteType = { 
-		name = "GFX_HJM_iron_golem_shine" 
-		texturefile = "gfx/editor/interface/focusIcon/HJM_iron_golem.dds" }
-	SpriteType = { 
-		name = "GFX_focus_HJM_redstone_research_shine" 
-		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
-	SpriteType = { 
-		name = "GFX_focus_HJM_redstone_cannon_shine" 
-		texturefile = "gfx/editor/interface/focusIcon/HJM_redstone_cannon.dds" }
-	SpriteType = { 
-		name = "GFX_HJM_redstone_cannon_shine" 
-		texturefile = "gfx/editor/interface/focusIcon/HJM_redstone_cannon.dds" }
-	SpriteType = { 
-		name = "GFX_focus_HJM_outsider_contact_shine" 
-		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
-	SpriteType = { 
-		name = "GFX_focus_HJM_player_pact_shine" 
-		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
-	SpriteType = { 
-		name = "GFX_focus_HJM_liberate_village_shine" 
-		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
-	SpriteType = { 
-		name = "GFX_focus_HJM_player_general_shine" 
-		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
-	SpriteType = { 
-		name = "GFX_focus_HJM_nether_strike_shine" 
-		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
-	SpriteType = { 
-		name = "GFX_focus_HJM_notch_vanished_shine" 
-		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
-	SpriteType = { 
-		name = "GFX_focus_HJM_dignity_blade_shine" 
-		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
-	SpriteType = { 
-		name = "GFX_focus_HJM_total_war_shine" 
-		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
-	SpriteType = { 
-		name = "GFX_focus_HJM_liberate_nether_shine" 
-		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds" }
+	SpriteType = {
+		name = "GFX_focus_HJM_village_general_shine"
+		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_village_general.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_village_general.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_village_general.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_HJM_group_offensive_shine"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_group_offensive.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_group_offensive.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_group_offensive.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_HJM_liberate_nether_shine"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_liberate_nether.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_liberate_nether.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_liberate_nether.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_HJM_nether_strike_shine"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_nether_strike.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_nether_strike.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_nether_strike.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_HJM_total_war_shine"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_total_war.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_total_war.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_total_war.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_HJM_is_it_over_shine"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_is_it_over.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_is_it_over.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_is_it_over.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_HJM_emperor_passes_shine"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_emperor_passes.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_emperor_passes.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_emperor_passes.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_HJM_regional_situation_summary_shine"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_regional_situation_summary.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_regional_situation_summary.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_regional_situation_summary.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_HJM_side_with_opposition_shine"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_side_with_opposition.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_side_with_opposition.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_side_with_opposition.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
 }

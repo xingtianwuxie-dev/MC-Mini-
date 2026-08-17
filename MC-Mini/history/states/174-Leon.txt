@@ -7,7 +7,7 @@ state={
 		coal = 3 #initial distribution
 	}
 	history={
-		owner = SPR
+		owner = HJM
 		victory_points = {
 			726 1
 		}
@@ -16,7 +16,7 @@ state={
 			industrial_complex = 1
 
 		}
-		add_core_of = SPR
+		add_core_of = HJM
 
 	}
 

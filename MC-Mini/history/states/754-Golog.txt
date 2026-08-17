@@ -8,10 +8,10 @@ state = {
 	buildings_max_level_factor = 1.000
 	state_category = rural
 	history = {
-		owner = HJM
-		add_core_of = HJM
-		add_core_of = HJM
-		add_core_of = HJM
+		owner = PRC
+		add_core_of = PRC
+		add_core_of = PRC
+		add_core_of = PRC
 
 		victory_points = {
 			12732 10 #Was 3 when it was Lanzhou, but should be Xining, the capital of Xibei 

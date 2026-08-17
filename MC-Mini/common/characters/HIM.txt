@@ -3,10 +3,10 @@ characters = {
 		name = HIM_Zombie_Overseer
 		portraits = {
 			army = {
-				large = "gfx/leaders/leader_unknown.dds"
+				large = "gfx/leaders/HIM/HIM_Zombie_Overseer.dds"
 			}
 			civilian = {
-				large = "gfx/leaders/leader_unknown.dds"
+				large = "gfx/leaders/HIM/HIM_Zombie_Overseer.dds"
 			}
 		}
 		country_leader = {
@@ -28,6 +28,14 @@ characters = {
 			}
 		}
 		
+		country_leader = {
+			ideology = fascism_ideology
+			traits = {
+				dictator
+			}
+			expire = "1965.1.1.1"
+		}
+
 		field_marshal = {
 			traits = { old_guard politically_connected }
 			skill = 2

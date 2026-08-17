@@ -10,9 +10,9 @@ state = {
 			12683 1 
 		}
 
-		owner = MDG
+		owner = SOV
 
-		add_core_of = MDG
+		add_core_of = SOV
 		buildings = {
 			infrastructure = 1
 		}

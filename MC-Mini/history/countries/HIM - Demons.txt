@@ -1,4 +1,4 @@
-capital = 439 # 德里
+capital = 219 # 莫斯科 德里
 
 oob = "HIM_1936"
 

@@ -9,8 +9,8 @@ state = {
 	
 	
 	history = {
-		owner = FIN
-		add_core_of = FIN
+		owner = MDG
+		add_core_of = MDG
 		
 		victory_points = { #Vaasa
 			3122 2

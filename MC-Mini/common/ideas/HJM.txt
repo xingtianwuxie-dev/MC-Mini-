@@ -15,6 +15,7 @@ ideas = {
 		}
         
         liuxue = {    #哈基米的倒数第二口气，之前的遗留，不用管，不启用
+			picture = liuxue
 
 			allowed = {
 				always = no
@@ -34,6 +35,7 @@ ideas = {
 		}
 
         tongmeng = {
+			picture = tongmeng
 
 			allowed = {
 				always = no
@@ -51,6 +53,7 @@ ideas = {
 		}
 
         bingyuanqiangzheng = {
+			picture = bingyuanqiangzheng
 
 			allowed = {
 				always = no
@@ -69,6 +72,7 @@ ideas = {
 		}
 
 		HJM_emergency_factory_output = {
+			picture = HJM_emergency_factory_output
 
 			allowed = {
 				always = no
@@ -84,6 +88,7 @@ ideas = {
 		}
 
 		HJM_third_line_construction_modifier = {
+			picture = HJM_third_line_construction_modifier
 
 			allowed = {
 				always = no
@@ -100,6 +105,7 @@ ideas = {
 		}
 
 		HJM_frontier_support_modifier = {
+			picture = HJM_frontier_support_modifier
 
 			allowed = {
 				always = no
@@ -115,6 +121,7 @@ ideas = {
 		}
 
 		HJM_southern_front_crisis = {
+			picture = HJM_southern_front_crisis
 
 			allowed = {
 				always = no
@@ -142,6 +149,7 @@ ideas = {
 		}
 
 		HJM_liberate_nether_offensive = {
+			picture = HJM_liberate_nether_offensive
 
 			allowed = {
 				always = no
@@ -156,6 +164,7 @@ ideas = {
 		}
 
 		HJM_him_legacy_unsettled = {
+			picture = HJM_him_legacy_unsettled
 
 			allowed = {
 				always = no
@@ -171,6 +180,7 @@ ideas = {
 		}
 
 		HJM_pre_civil_war_authority_crisis_heavy = {
+			picture = HJM_pre_civil_war_authority_crisis_heavy
 
 			allowed = {
 				always = no
@@ -186,6 +196,7 @@ ideas = {
 		}
 
 		HJM_pre_civil_war_industrial_crisis_heavy = {
+			picture = HJM_pre_civil_war_industrial_crisis_heavy
 
 			allowed = {
 				always = no
@@ -200,7 +211,8 @@ ideas = {
 			}
 		}
 
-		HJM_pre_civil_war_military_crisis_heavy = {
+		HJM_pre_civil_war_military_crisis_heavy = { 
+			picture = HJM_pre_civil_war_military_crisis_heavy
 
 			allowed = {
 				always = no
@@ -309,6 +321,7 @@ ideas = {
 		}
 
 		HJM_long_peace = {
+			picture = HJM_long_peace
 
 			allowed = {
 				always = no
@@ -317,16 +330,17 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				army_org_factor = -0.10        # 组织 -10%（原 -5%）
-				army_attack_factor = -0.10     # 攻击 -10%（原 -5%）
-				army_defence_factor = -0.05    # 防御 -5%（新增）
-				war_support_factor = -0.05     # 战支 -5%（新增，厌战）
-				stability_factor = -0.08           # 稳定 -8%
-                political_power_gain = -0.05       # 政治点 -5%
+				army_org_factor = -0.15        # 组织 -15%（加强：觉醒前更虚弱）
+				army_attack_factor = -0.15     # 攻击 -15%（加强）
+				army_defence_factor = -0.10    # 防御 -10%（加强）
+				war_support_factor = -0.08     # 战支 -8%（加强）
+				stability_factor = -0.10       # 稳定 -10%（加强）
+				political_power_gain = -0.08       # 政治点 -8%（加强）
 			}
 		}
 
 		HJM_sleeping_lion = {
+			picture = HJM_sleeping_lion
 
 			allowed = {
 				always = no #不能手动移除的意思
@@ -335,18 +349,19 @@ ideas = {
 			removal_cost = -1 #不能手动移除的意思
 
 			modifier = {
-				army_attack_factor = 0.10
-				army_defence_factor = 0.10
-				army_org_factor = 0.10
-				industrial_capacity_factory = 0.10
-				war_support_factor = 0.10
-				stability_factor = 0.05
-				political_power_gain = 0.05
+				army_attack_factor = 0.05      # 攻击 +5%（减弱：原 +10%）
+				army_defence_factor = 0.05     # 防御 +5%（减弱：原 +10%）
+				army_org_factor = 0.05         # 组织 +5%（减弱：原 +10%）
+				industrial_capacity_factory = 0.05  # 民工 +5%（减弱：原 +10%）
+				war_support_factor = 0.05      # 战支 +5%（减弱：原 +10%）
+				stability_factor = 0.03        # 稳定 +3%（减弱：原 +5%）
+				political_power_gain = 0.03    # 政治点 +3%（减弱：原 +5%）
 			}
 		}		
 
 
 		HJM_illager_activity_low = {
+			picture = HJM_illager_activity_low
 
 			allowed = {
 				always = no
@@ -365,6 +380,7 @@ ideas = {
 		}
 
 		HJM_illager_activity_medium = {
+			picture = HJM_illager_activity_medium
 
 			allowed = {
 				always = no
@@ -382,6 +398,7 @@ ideas = {
 		}
 
 		HJM_illager_activity_high = {
+			picture = HJM_illager_activity_high
 
 			allowed = {
 				always = no
@@ -410,16 +427,8 @@ ideas = {
 			}
 		}
 
-		demon_low_morale = {                    # 斗志涣散（魔族负面，人皇口谕换上）
-			allowed = { always = no }
-			removal_cost = -1
-			modifier = {
-				army_attack_factor = -0.10
-				army_defence_factor = -0.10
-				army_org_factor = -0.15         # 组织崩得最狠（涣散=溃散）
-				war_support_factor = -0.10
-			}
-		}
+		# demon_low_morale（斗志涣散，魔族负面）已移除（2026-08-08，应 XT 要求消除人皇演讲给魔族的 debuff）。
+		# 原换装事件 HJM.11「演说」已于 08-06 随 dignity_blade 删除，此定义已成孤儿；魔族开战只保留正面 demon_war_fervor。
 
 		capital_lost_surrender = {
 			allowed = { always = no }

@@ -25,39 +25,39 @@ division_template = {
 units = {
         # === 海得拉巴（首都） ===
         division = {
-                name = "海得拉巴史莱姆第1团"
-                location = 8087 # Hyderabad
+                name = "巴库史莱姆第1团"
+                location = 1467 # Baku
                 division_template = "史莱姆军团"
                 start_experience_factor = 0.3
                 start_equipment_factor = 0.85
         }
         division = {
-                name = "海得拉巴骷髅游击第1团"
-                location = 8087 # Hyderabad
+                name = "巴库骷髅游击第1团"
+                location = 1467 # Baku
                 division_template = "骷髅游击队"
                 start_experience_factor = 0.25
                 start_equipment_factor = 0.8
         }
         # === 孟买 ===
         division = {
-                name = "孟买史莱姆第1团"
-                location = 1349 # Bombay
+                name = "第比利斯史莱姆第1团"
+                location = 654 # Tbilisi
                 division_template = "史莱姆军团"
                 start_experience_factor = 0.3
                 start_equipment_factor = 0.85
         }
         # === 马德拉斯 ===
         division = {
-                name = "马德拉斯史莱姆第1团"
-                location = 10278 # Madras
+                name = "埃里温史莱姆第1团"
+                location = 3564 # Yerevan
                 division_template = "史莱姆军团"
                 start_experience_factor = 0.25
                 start_equipment_factor = 0.8
         }
         # === 迈索尔 ===
         division = {
-                name = "迈索尔骷髅游击第1团"
-                location = 8011 # Mysore
+                name = "克拉斯诺达尔骷髅游击第1团"
+                location = 717 # Krasnodar
                 division_template = "骷髅游击队"
                 start_experience_factor = 0.2
                 start_equipment_factor = 0.75
