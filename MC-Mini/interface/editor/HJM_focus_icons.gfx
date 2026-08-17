@@ -92,6 +92,11 @@ spriteTypes = {
 		texturefile = "gfx/editor/interface/focusIcon/HJM_side_with_opposition.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_HJM_duowan_alliance_reform"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_duowan_alliance_reform.dds"
+	}
+
 
 
 }

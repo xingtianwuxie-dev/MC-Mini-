@@ -135,6 +135,7 @@ ideas = {
 		}
 
 		HJM_blood_debt_doctrine = {
+			picture = HJM_blood_debt_doctrine
 			# 复仇线纲领 buff：血债血偿路线带来的铁腕整军（走复仇线时挂）
 			allowed = {
 				always = no
@@ -229,6 +230,7 @@ ideas = {
 		}
 
 		HJM_pre_civil_war_authority_crisis_medium = {
+			picture = HJM_pre_civil_war_authority_crisis_medium
 
 			allowed = {
 				always = no
@@ -244,6 +246,7 @@ ideas = {
 		}
 
 		HJM_pre_civil_war_industrial_crisis_medium = {
+			picture = HJM_pre_civil_war_industrial_crisis_medium
 
 			allowed = {
 				always = no
@@ -259,6 +262,7 @@ ideas = {
 		}
 
 		HJM_pre_civil_war_military_crisis_medium = {
+			picture = HJM_pre_civil_war_military_crisis_medium
 
 			allowed = {
 				always = no
@@ -275,6 +279,7 @@ ideas = {
 		}
 
 		HJM_pre_civil_war_authority_crisis_light = {
+			picture = HJM_pre_civil_war_authority_crisis_light
 
 			allowed = {
 				always = no
@@ -290,6 +295,7 @@ ideas = {
 		}
 
 		HJM_pre_civil_war_industrial_crisis_light = {
+			picture = HJM_pre_civil_war_industrial_crisis_light
 
 			allowed = {
 				always = no
@@ -305,6 +311,7 @@ ideas = {
 		}
 
 		HJM_pre_civil_war_military_crisis_light = {
+			picture = HJM_pre_civil_war_military_crisis_light
 
 			allowed = {
 				always = no

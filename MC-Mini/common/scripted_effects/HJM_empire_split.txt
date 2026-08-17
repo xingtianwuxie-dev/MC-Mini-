@@ -37,7 +37,7 @@ HJM_empire_split = {
 			type = civil_war
 		}
 	}
-	# === 网易远洋开发团 NTE(6州,首都126伦敦,占英国) ===
+	# === 网易远洋开发团 NTE(9州,首都126伦敦,占英国+法国北岸诺曼底/皮卡第/加来) ===
 	NTE = {
 		HJM_warlord_divisions = yes
 		transfer_state = 126
@@ -46,6 +46,9 @@ HJM_empire_split = {
 		transfer_state = 338
 		transfer_state = 125
 		transfer_state = 129
+		transfer_state = 15
+		transfer_state = 29
+		transfer_state = 785
 		set_capital = { state = 126 }
 		every_owned_state = { add_core_of = NTE }
 		every_controlled_state = {

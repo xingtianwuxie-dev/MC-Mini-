@@ -71,5 +71,34 @@ spriteTypes = {
 		name = "GFX_idea_HJM_third_line_construction_modifier"
 		texturefile = "gfx/interface/ideas/HJM_third_line_construction_modifier.png"
 	}
+	# === 2026-08-17 主人新图：血债学说 + 内战三危机三档全套 ===
+	SpriteType = {
+		name = "GFX_idea_HJM_blood_debt_doctrine"
+		texturefile = "gfx/interface/ideas/HJM_blood_debt_doctrine.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_authority_crisis_medium"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_authority_crisis_medium.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_industrial_crisis_medium"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_industrial_crisis_medium.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_military_crisis_medium"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_military_crisis_medium.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_authority_crisis_light"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_authority_crisis_light.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_industrial_crisis_light"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_industrial_crisis_light.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_military_crisis_light"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_military_crisis_light.png"
+	}
 
 }
