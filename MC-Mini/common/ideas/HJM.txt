@@ -134,6 +134,23 @@ ideas = {
 			}
 		}
 
+		HJM_group_offensive_momentum = {
+			picture = HJM_group_offensive
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.10			# 集团攻势：陆军组织度上限+10%
+				army_org_regain = 0.10			# 轮换休整：组织度恢复+10%
+				breakthrough = 0.10			# 集中突破：突破+10%
+				army_attack_factor = 0.05		# 集团冲锋：陆军攻击+5%
+			}
+		}
+
 		HJM_blood_debt_doctrine = {
 			picture = HJM_blood_debt_doctrine
 			# 复仇线纲领 buff：血债血偿路线带来的铁腕整军（走复仇线时挂）
@@ -212,7 +229,7 @@ ideas = {
 			}
 		}
 
-		HJM_pre_civil_war_military_crisis_heavy = { 
+		HJM_pre_civil_war_military_crisis_heavy = {
 			picture = HJM_pre_civil_war_military_crisis_heavy
 
 			allowed = {
@@ -472,6 +489,30 @@ ideas = {
 				political_power_factor = -0.30       # 傀儡无自主权
 				trade_laws_cost_factor = 0.50        # 贸易受宗主限制
 				generate_wargoal_tension = 1.0       # 不能自主宣战
+			}
+		}
+
+		# 多玩穿越者联邦·工业六策6「全面推进科技发展」一年期科研精神（flag→分裂时结算给DWF，2026-08-19 XT定）
+		HJM_dwf_science_legacy = {
+			picture = HJM_third_line_construction_modifier
+			allowed = {
+				original_tag = DWF
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.30
+			}
+		}
+
+		# 多玩穿越者联邦·工业六策3「优先完成基础建设」一年期建造精神（flag→分裂时结算给DWF，2026-08-19 XT定）
+		HJM_dwf_construction_legacy = {
+			picture = HJM_frontier_support_modifier
+			allowed = {
+				original_tag = DWF
+			}
+			removal_cost = -1
+			modifier = {
+				construction_speed = 0.30
 			}
 		}
 

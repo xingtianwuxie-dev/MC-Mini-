@@ -9,6 +9,8 @@
    HJM_southern_front_crisis_desc: "魔族战争的冲击首先压在帝国南方。边境村庄与补给线一旦失守，帝国全境的抵抗意志都会被迫面对最严酷的考验。"
    HJM_liberate_nether_offensive: "解放下界"
    HJM_liberate_nether_offensive_desc: "帝国已经把战争目标写进军令：下界要塞必须升起MC帝国旗帜，魔族必须被赶出每一条补给线和每一座堡垒。"
+   HJM_group_offensive_momentum: "集团攻势"
+   HJM_group_offensive_momentum_desc: "大军如潮，齐头并进。各条战线同时发起总攻，兵力如铁拳攥紧，在敌境撕开缺口。攻势如虹的六个月里，帝国的每一支师都磨快了刺刀——组织度拉满，轮换不休，突击部队枕戈待旦。"
    HJM_him_legacy_unsettled: "魔族遗患"
    HJM_him_legacy_unsettled_desc: "Herobrine 的旗帜已经倒下，但下界残党、异常唱片、传送门污染与俘虏口供仍在帝国边境发酵。战争结束了，阴影却还没有学会结束。"
    HJM_pre_civil_war_authority_crisis_heavy: "内战前夕：权威崩裂"
@@ -113,3 +115,9 @@
    HJM_illager_activity_medium_desc: "灾厄村民的活动已成规模。边境情报网被逐步侵蚀，帝国情报部门的效率开始下滑。"
    HJM_illager_activity_high: "灾厄渗透·高"
    HJM_illager_activity_high_desc: "灾厄村民已经深入帝国肌理。国内稳定动摇，机密情报全面外泄，帝国处处受制。"
+
+   # ==================== 多玩·工业六策精神（2026-08-19 新增） ====================
+   HJM_dwf_science_legacy: "联盟科学院"
+   HJM_dwf_science_legacy_desc: "多玩联盟倾力供养的科学院：穿越者带来的知识在这里被整理、验证、传授。一年之内，研究院的红石灯火不熄，为联邦的战争机器注入源源不断的技术。"
+   HJM_dwf_construction_legacy: "联盟工程局"
+   HJM_dwf_construction_legacy_desc: "大战的废墟上，联盟工程局挂牌。修桥补路，重建城垣，被战火犁过的土地一寸一寸重新隆起。一年之内，工程局的旗插到哪里，脚手架就立到哪里——废墟之上，新城拔节。"

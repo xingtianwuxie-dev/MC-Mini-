@@ -1,3 +1,4 @@
+path="C:/Users/26739/Documents/Paradox Interactive/Hearts of Iron IV/mod/MC-Mini"
 replace_path="music"
 version="0.1.0"
 tags={

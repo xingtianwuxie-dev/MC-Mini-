@@ -1,4 +1,4 @@
-capital = 111 # Helsinki 芬兰原首都(2026-08-17)
+capital = 574 # Yakutsk
 
 oob = "MYR_1936"
 

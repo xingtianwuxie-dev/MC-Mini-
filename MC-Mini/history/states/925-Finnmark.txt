@@ -16,8 +16,8 @@ state = {
 			9116 1
 		}
 		
-		owner = MDG
-		add_core_of = MDG
+		owner = NOR
+		add_core_of = NOR
 		add_core_of = SMI
 		
 		buildings = {

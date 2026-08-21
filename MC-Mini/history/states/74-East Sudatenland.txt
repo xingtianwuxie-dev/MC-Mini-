@@ -11,8 +11,8 @@ state = {
 	
 	history = {
 		
-		owner = HJM
-		add_core_of = HJM
+		owner = CZE
+		add_core_of = CZE
 		add_claim_by = SIL
 
 		buildings = {

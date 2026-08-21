@@ -11,8 +11,8 @@ state = {
 
 	history = {
 
-		owner = PRC
-		add_core_of = PRC
+		owner = HJM
+		add_core_of = HJM
 
 		1936.1.1 = {
 			IF = {

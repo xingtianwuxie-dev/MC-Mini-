@@ -7,9 +7,9 @@ state = {
 
 	history = {
 
-		owner = HJM
+		owner = FRA
 		add_core_of = OCC
-		add_core_of = HJM
+		add_core_of = FRA
 
 		victory_points = {
 			911 1 # Toulon

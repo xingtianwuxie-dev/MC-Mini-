@@ -12,7 +12,7 @@ state={
 	state_category = city
 
 	history={
-		owner = ZLG
+		owner = BUL
 		victory_points = { #Sofia
 			949 15 
 		}
@@ -24,7 +24,7 @@ state={
 			industrial_complex = 6
 			air_base = 3
 		}
-		add_core_of = ZLG
+		add_core_of = BUL
 	}
 
 	provinces={

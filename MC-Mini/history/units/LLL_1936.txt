@@ -48,24 +48,24 @@ division_template = {
 units = {
         # === 曼德勒（首都） ===
         division = {
-                name = "里加掠夺者先锋第1团"
-                location = 3388 # Riga
+                name = "曼德勒掠夺者先锋第1团"
+                location = 1492 # Mandalay
                 division_template = "掠夺者先锋"
                 start_experience_factor = 0.3
                 start_equipment_factor = 0.85
         }
         # === 掸邦（东部边境） ===
         division = {
-                name = "维尔纽斯掠夺者部队第1团"
-                location = 327 # Vilnius
+                name = "掸邦掠夺者部队第1团"
+                location = 7400 # Kentung
                 division_template = "掠夺者部队"
                 start_experience_factor = 0.3
                 start_equipment_factor = 0.8
         }
         # === 马圭 ===
         division = {
-                name = "塔林卫道士第1团"
-                location = 496 # Tallinn
+                name = "马圭卫道士第1团"
+                location = 4202 # Magwe
                 division_template = "卫道士禁军"
                 start_experience_factor = 0.25
                 start_equipment_factor = 0.8

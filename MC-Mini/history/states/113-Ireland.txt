@@ -12,7 +12,7 @@ state={
 	state_category = city
 	
 	history={
-		owner = HJM
+		owner = IRE
 		victory_points = {
 			285 1 #Wexford
 		}
@@ -31,7 +31,7 @@ state={
 				naval_base = 6
 			}
 		}
-		add_core_of = HJM
+		add_core_of = IRE
 	}
 
 	provinces={

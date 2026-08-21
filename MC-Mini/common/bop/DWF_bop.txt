@@ -1,0 +1,155 @@
+# DWF 权力平衡：协调派 ⇄ 解放派（2026-08-22 XT定政治线主擂台）
+# 结构仿 TFR-APA：每边4段位(lean/aligned/dominant/total_control)+中位；
+# 极端段位(total_control)设flag=隐藏线门槛：协调极端→红石技官线，解放极端→共同体线
+# 图标复用原版通用件；BOP由 history/countries/DWF-Warlord.txt 的 set_power_balance 激活
+# 门槛国策(DWF_order_ultimatum/DWF_revolution_ultimatum)用 is_power_balance_in_range 卡极端段位
+
+DWF_coordination_liberation_bop = {
+	initial_value = 0
+	left_side = DWF_coordination_side
+	right_side = DWF_liberation_side
+	decision_category = DWF_politics_category
+
+	# 中位：协商平衡
+	range = {
+		id = DWF_balance_center_range
+		min = -0.15
+		max = 0.15
+		modifier = {
+			political_power_gain = 0.05
+		}
+		on_activate = {
+		}
+		on_deactivate = {
+		}
+	}
+
+	# 协调派（左·负值）：元老建制·秩序优先
+	side = {
+		id = DWF_coordination_side
+		icon = GFX_bop_bulb
+		range = {
+			id = DWF_coordination_lean_range
+			min = -0.4
+			max = -0.15
+			modifier = {
+				stability_factor = 0.03
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = DWF_coordination_aligned_range
+			min = -0.65
+			max = -0.4
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.03
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = DWF_coordination_dominant_range
+			min = -0.85
+			max = -0.65
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.08
+				war_support_factor = -0.10
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		# 协调·绝对（极端）：红石技官线门槛
+		range = {
+			id = DWF_coordination_total_control_range
+			min = -1
+			max = -0.85
+			modifier = {
+				political_power_gain = 0.20
+				stability_factor = 0.12
+				research_speed_factor = 0.05
+				war_support_factor = -0.25
+				army_attack_factor = -0.05
+			}
+			on_activate = {
+				set_country_flag = DWF_coordination_extreme
+				country_event = { id = DWF.10 }
+			}
+			on_deactivate = {
+				# 2026-08-22修:BOP on_deactivate效果白名单不含remove_country_flag(原版ETH全空);极端flag由段位事件自带fire_only_once防重
+			}
+		}
+	}
+
+	# 解放派（右·正值）：激进攻伐·全面动员
+	side = {
+		id = DWF_liberation_side
+		icon = GFX_bop_bulb_L
+		range = {
+			id = DWF_liberation_lean_range
+			min = 0.15
+			max = 0.4
+			modifier = {
+				war_support_factor = 0.03
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = DWF_liberation_aligned_range
+			min = 0.4
+			max = 0.65
+			modifier = {
+				war_support_factor = 0.05
+				army_attack_factor = 0.03
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = DWF_liberation_dominant_range
+			min = 0.65
+			max = 0.85
+			modifier = {
+				war_support_factor = 0.15
+				army_attack_factor = 0.05
+				stability_factor = -0.10
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		# 解放·绝对（极端）：共同体线门槛
+		range = {
+			id = DWF_liberation_total_control_range
+			min = 0.85
+			max = 1
+			modifier = {
+				war_support_factor = 0.25
+				army_attack_factor = 0.10
+				stability_factor = -0.20
+				political_power_gain = -0.10
+			}
+			on_activate = {
+				set_country_flag = DWF_liberation_extreme
+				country_event = { id = DWF.11 }
+			}
+			on_deactivate = {
+				# 同上:on_deactivate留空
+			}
+		}
+	}
+}

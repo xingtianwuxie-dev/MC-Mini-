@@ -14,8 +14,8 @@ state = {
 
 	history = {
 		
-		owner = GWG
-		add_core_of = GWG
+		owner = POL
+		add_core_of = POL
 		add_core_of = SIL
 		add_claim_by = PRE
 

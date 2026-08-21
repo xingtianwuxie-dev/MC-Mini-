@@ -1,0 +1,130 @@
+spriteTypes = {
+
+	# ============================================================
+	# MC-Mini 图标救生注册（2026-08-18 写）
+	# 背景：恢复 8-14 备份时同名文件会被 14 号版覆盖、新增文件保留。
+	#      8-17 图标大包的新图（民族精神 16 张/国策 1 张/装甲车 1 张）会留下来，
+	#      但它们此前从未注册。本文件用全新文件名 → 不会被覆盖 → 恢复后照常生效。
+	# ⚠️ 文件名必须按字母序排在 HJM_equipment_icons.gfx 之后（M > H），
+	#    末尾重定义的 GFX_armored_car2_medium 才能压过旧定义——别改成 A 开头改名。
+	# ⚠️ 另有两处字段在同名文件里，恢复 14 号包后需补：
+	#    1. common/ideas/HJM.txt：下列 16 个 idea 补 picture = <同名> 字段
+	#    2. common/national_focus/HJM_pre_civil_war_focus.txt 的
+	#       HJM_duowan_alliance_reform：icon = GFX_focus_generic_self_management
+	#       改为 GFX_focus_HJM_duowan_alliance_reform
+	# ============================================================
+
+	# --- 民族精神 ×16（引擎按 GFX_idea_<picture> 查找，与 HJM_ideas_icons.gfx 同款） ---
+	SpriteType = {
+		name = "GFX_idea_HJM_sleeping_lion"
+		texturefile = "gfx/interface/ideas/HJM_sleeping_lion.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_blood_debt_doctrine"
+		texturefile = "gfx/interface/ideas/HJM_blood_debt_doctrine.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_southern_front_crisis"
+		texturefile = "gfx/interface/ideas/HJM_southern_front_crisis.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_frontier_support_modifier"
+		texturefile = "gfx/interface/ideas/HJM_frontier_support_modifier.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_him_legacy_unsettled"
+		texturefile = "gfx/interface/ideas/HJM_him_legacy_unsettled.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_liberate_nether_offensive"
+		texturefile = "gfx/interface/ideas/HJM_liberate_nether_offensive.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_third_line_construction_modifier"
+		texturefile = "gfx/interface/ideas/HJM_third_line_construction_modifier.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_authority_crisis_heavy"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_authority_crisis_heavy.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_authority_crisis_medium"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_authority_crisis_medium.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_authority_crisis_light"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_authority_crisis_light.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_industrial_crisis_heavy"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_industrial_crisis_heavy.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_industrial_crisis_medium"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_industrial_crisis_medium.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_industrial_crisis_light"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_industrial_crisis_light.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_military_crisis_heavy"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_military_crisis_heavy.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_military_crisis_medium"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_military_crisis_medium.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_HJM_pre_civil_war_military_crisis_light"
+		texturefile = "gfx/interface/ideas/HJM_pre_civil_war_military_crisis_light.png"
+	}
+
+	# --- 国策「多玩玩家联盟改组」图标（8-17 画好未接线）+ 流光 ---
+	SpriteType = {
+		name = "GFX_focus_HJM_duowan_alliance_reform"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_duowan_alliance_reform.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_HJM_duowan_alliance_reform_shine"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_duowan_alliance_reform.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_duowan_alliance_reform.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_duowan_alliance_reform.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	# --- 集团攻势民族精神图标（复用国策图标 HJM_group_offensive.dds，2026-08-19） ---
+	SpriteType = {
+		name = "GFX_idea_HJM_group_offensive"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_group_offensive.dds"
+	}
+
+	# --- 装甲车2代装备图标重定向到 8-17 新图（旧定义指 armored_car_equipment_2.dds） ---
+	SpriteType = {
+		name = "GFX_armored_car2_medium"
+		texturefile = "gfx/interface/technologies/armored_car2.dds"
+	}
+}

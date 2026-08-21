@@ -4,10 +4,10 @@ state = {
 
 	history = {
 
-		owner = PRC
-		add_core_of = PRC
-		add_core_of = PRC
-		add_core_of = PRC
+		owner = HJM
+		add_core_of = HJM
+		add_core_of = HJM
+		add_core_of = HJM
 
 		buildings = {
 			infrastructure = 0
@@ -19,7 +19,7 @@ state = {
 					has_dlc = "No Compromise, No Surrender" 
 				}
 				HJM = { transfer_state = PREV }
-				add_core_of = PRC
+				add_core_of = HJM
 			}
 		}	
 
@@ -30,7 +30,7 @@ state = {
 				}
 				remove_core_of = HJM
 			}	
-			owner = PRC
+			owner = HJM
 			controller = HJM		
 		}	
 	}

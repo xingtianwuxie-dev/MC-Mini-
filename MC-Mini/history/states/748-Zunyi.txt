@@ -5,9 +5,9 @@ state={
 		1010 4325 9939 10763 
 	}
 	history={
-		owner = PRC
-		add_core_of = PRC
-		add_core_of = PRC
+		owner = HJM
+		add_core_of = HJM
+		add_core_of = HJM
 		buildings = {
 			infrastructure = 1
 

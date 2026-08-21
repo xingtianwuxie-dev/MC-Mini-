@@ -276,6 +276,12 @@ ideologies = {
 		types = {
 			social_democrat_ideology = {
 			}
+			duowan_coordination = {
+				can_be_randomly_selected = no			# DWF协调主义(协调派,2026-08-21 XT定开局执政)
+			}
+			ziminism = {
+				can_be_randomly_selected = no			# DWF籽岷主义(温和元老改良)
+			}
 		}
 
 		dynamic_faction_names = {
@@ -332,6 +338,10 @@ ideologies = {
 			libertarian_socialist_ideology = {
 			}
 			duowanism = {
+				can_be_randomly_selected = no			# DWF红石主义(红石技官派·隐藏AI线,2026-08-21 XT改名)
+			}
+			academism = {
+				can_be_randomly_selected = no			# DWF学院主义(自由学术左翼)
 			}
 		}
 
@@ -386,6 +396,15 @@ ideologies = {
 			buddhist_socialism = {
 				can_be_randomly_selected = no
 			}
+			duowan_liberation = {
+				can_be_randomly_selected = no			# DWF解放主义(解放派威权线)
+			}
+			unionism = {
+				can_be_randomly_selected = no			# DWF联合主义(统一战线派)
+			}
+			purgeism = {
+				can_be_randomly_selected = no			# DWF清洗主义(肃反路线)
+			}
 		}
 
 		dynamic_faction_names = {
@@ -430,6 +449,12 @@ ideologies = {
 	totalitarian_socialist = {
 		types = {
 			totalitarian_socialist_ideology = {
+			}
+			sandbox_collectivism = {
+				can_be_randomly_selected = no			# DWF共同体主义(解放派极权线·沙盒共同体)
+			}
+			collectivism = {
+				can_be_randomly_selected = no			# DWF集体主义(全面集体化路线)
 			}
 		}
 

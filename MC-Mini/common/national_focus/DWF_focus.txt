@@ -1,0 +1,621 @@
+focus_tree = {
+	id = DWF_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = DWF
+		}
+	}
+	default = no
+
+	##############################################################
+	# DWF 多玩国策树（2026-08-21 首版落地）
+	# 布局(XT定):政治线居中 / 工业线居左 / 军事+外交居右
+	# ⚠️2026-08-21 debug实测:1.19无树级relative_position token,x/y全用绝对坐标
+	# 中间列=12:政治协商同盟会议→多玩一大→开启内部检查→威权社路线→沙盒解放阵线
+	# 左列=4:恢复生产→勘探资源→{广泛募兵3|吸引移民5}
+	# 右列:整编西北16→{建军支14-18|开战支20|外交支24}
+	# 图标=原版GFX_goal_generic_*(需GFX_前缀,名字已对照interface/*.gfx核实)
+	# ⚠️三严与建军效果为占位,XT明言未定会改
+	##############################################################
+
+	# ===== 树根·政治线(中) =====
+	focus = {
+		id = DWF_consultation_conference
+		x = 12
+		y = 0
+		cost = 1
+		icon = GFX_goal_generic_national_unity
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			add_political_power = 50			# 政治协商:各方先坐下来,确立协商机制
+			set_country_flag = DWF_consultation_conference_held
+			add_ideas = DWF_temporary_unity			# 临时团结:分歧还在,路先一起走
+			country_event = { id = DWF.1 days = 1 }			# 第一次人事=政协同盟会推举籽岷为国家主席(2026-08-21 XT定;1.19.2用country_event非fire_event)
+		}
+	}
+	focus = {
+		id = DWF_first_congress
+		prerequisite = { focus = DWF_consultation_conference }
+		x = 12
+		y = 1
+		cost = 5
+		icon = GFX_focus_HJM_duowan_alliance_reform
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			add_political_power = 120			# 大会确立两大三小格局与党争规则
+			set_country_flag = DWF_first_congress_held
+			set_cosmetic_tag = DWF_players_alliance			# 一大正式立「多玩玩家同盟」(改名链:联邦→同盟)
+			country_event = { id = DWF.2 days = 1 }			# 一大配齐机关班子:检查机关轮值起手(逐项任命链;1.19.2用country_event非fire_event)
+		}
+	}
+	focus = {
+		id = DWF_internal_inspection
+		prerequisite = { focus = DWF_first_congress }
+		x = 12
+		y = 2
+		cost = 5
+		icon = GFX_goal_generic_political_pressure
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			set_country_flag = DWF_inspection_office_opened			# 检查机关(三小党轮值)成立
+			add_ideas = DWF_inspection_office
+			# TODO(XT): 解锁检查决议类(书笔记/营造量/红石算)——决议文件下一批
+		}
+	}
+	focus = {
+		id = DWF_authoritarian_route
+		prerequisite = { focus = DWF_internal_inspection }
+		x = 12
+		y = 3
+		cost = 5
+		icon = GFX_goal_generic_propaganda
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			set_country_flag = DWF_authoritarian_route_chosen
+			add_popularity = {
+				ideology = communism			# communism=威权社会主义(2026-08-01全局改名)
+				popularity = 0.1
+			}
+			add_political_power = 50
+			# TODO(XT): TFR式检查机关量化评分/BOP选举机关,后接路线确立事件
+		}
+	}
+	focus = {
+		id = DWF_liberation_front
+		prerequisite = { focus = DWF_authoritarian_route }
+		x = 12
+		y = 4
+		cost = 5
+		icon = GFX_goal_generic_national_unity
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			set_country_flag = DWF_liberation_front_declared
+			set_cosmetic_tag = DWF_jiefang_front			# 一阶段国名「多玩解放阵线」;终局「沙盒解放阵线」由内战胜利事件挂
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			add_stability = 0.05
+		}
+	}
+
+	# ===== 工业线(左) =====
+	focus = {
+		id = DWF_restore_production
+		prerequisite = { focus = DWF_first_congress }
+		x = 4
+		y = 1
+		cost = 5
+		icon = GFX_goal_generic_construct_civ_factory
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			add_timed_idea = {
+				idea = DWF_production_drive			# 大生产运动:限时建设精神
+				days = 730
+			}
+			617 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DWF_survey_resources
+		prerequisite = { focus = DWF_restore_production }
+		x = 4
+		y = 2
+		cost = 5
+		icon = GFX_goal_generic_production
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			set_country_flag = DWF_nw_survey_done
+			add_tech_bonus = {
+				name = DWF_survey_resources
+				bonus = 0.5
+				uses = 1
+				category = industry			# 勘探反哺工业科技
+			}
+			618 = { add_extra_state_shared_building_slots = 1 }			# 准噶尔勘出可建地
+			619 = { add_extra_state_shared_building_slots = 1 }			# 叶尔羌勘出可建地
+			# TODO(XT): 资源点数(add_resource数值)后定
+		}
+	}
+	focus = {
+		id = DWF_mass_recruitment
+		prerequisite = { focus = DWF_survey_resources }
+		x = 3
+		y = 3
+		cost = 5
+		icon = GFX_goal_generic_allies_build_infantry
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			add_manpower = 75000			# 广泛募兵:西北民兵入册(占位数值)
+			army_experience = 25
+		}
+	}
+	focus = {
+		id = DWF_attract_settlers
+		prerequisite = { focus = DWF_survey_resources }
+		x = 5
+		y = 3
+		cost = 5
+		icon = GFX_goal_generic_improve_relations
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			add_manpower = 50000			# MC味:移民=新玩家入驻多玩服务器
+			add_political_power = 50
+			add_war_support = 0.03
+		}
+	}
+
+	# ===== 军事线(右·开战支) =====
+	focus = {
+		id = DWF_consolidate_northwest
+		prerequisite = { focus = DWF_first_congress }
+		x = 16
+		y = 1
+		cost = 5
+		icon = GFX_goal_generic_position_armies
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			set_country_flag = DWF_northwest_consolidated			# 解锁决议「三十六国计划」(向周围小国宣战)
+			army_experience = 25
+			add_command_power = 15
+		}
+	}
+	focus = {
+		id = DWF_far_west_strategy
+		prerequisite = { focus = DWF_consolidate_northwest }
+		x = 20
+		y = 2
+		cost = 5
+		icon = GFX_goal_generic_demand_territory
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			set_country_flag = DWF_far_west_strategy_unlocked			# 解锁决议「定远计划」(中亚)+「屋脊攻势」(西藏)
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = DWF_purge_rightists
+		prerequisite = { focus = DWF_far_west_strategy }
+		x = 20
+		y = 3
+		cost = 5
+		icon = GFX_goal_generic_political_pressure
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			set_country_flag = DWF_purge_rightists_unlocked			# 解锁决议「白山黑水攻势」(东北+网易)
+			add_stability = -0.03			# 清洗有代价
+			add_political_power = 100			# 但抄没右派家底
+		}
+	}
+	focus = {
+		id = DWF_rebuild_mc
+		prerequisite = { focus = DWF_purge_rightists }
+		x = 20
+		y = 4
+		cost = 5
+		icon = GFX_goal_generic_major_war
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			set_country_flag = DWF_rebuild_mc_unlocked			# 解锁决议「世界编辑计划」(全部宣战)
+			add_war_support = 0.10
+			add_political_power = 50
+		}
+	}
+
+	# ===== 军事线(右·建军支)——三严效果占位,XT明言会改 =====
+	focus = {
+		id = DWF_professional_army
+		prerequisite = { focus = DWF_consolidate_northwest }
+		x = 14
+		y = 2
+		cost = 5
+		icon = GFX_goal_generic_army_doctrines
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		mutually_exclusive = { focus = DWF_guerrilla_corps }
+		completion_reward = {
+			set_country_flag = DWF_professional_army_route
+			add_ideas = DWF_professional_army_spirit			# 占位:纪律=硬件执行力(计划/组织)
+			army_experience = 25
+		}
+	}
+	focus = {
+		id = DWF_guerrilla_corps
+		prerequisite = { focus = DWF_consolidate_northwest }
+		x = 18
+		y = 2
+		cost = 5
+		icon = GFX_goal_generic_cavalry
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		mutually_exclusive = { focus = DWF_professional_army }
+		completion_reward = {
+			set_country_flag = DWF_guerrilla_corps_route
+			add_ideas = DWF_guerrilla_corps_spirit			# 占位:理念=软件韧性(防御/战争支持)
+			army_experience = 25
+		}
+	}
+	focus = {
+		id = DWF_strict_conscription
+		prerequisite = { focus = DWF_professional_army }
+		x = 14
+		y = 3
+		cost = 5
+		icon = GFX_goal_generic_axis_build_infantry
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			army_experience = 25			# ⚠️占位:三严效果XT未定
+			add_manpower = 25000
+		}
+	}
+	focus = {
+		id = DWF_serious_discipline
+		# 两边皆可(OR前置):职业化/游击化任一
+		prerequisite = { focus = DWF_professional_army }
+		prerequisite = { focus = DWF_guerrilla_corps }
+		x = 16
+		y = 3
+		cost = 5
+		icon = GFX_goal_generic_army_doctrines
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			army_experience = 25			# ⚠️占位:纪律=硬件执行力,效果XT定后填
+		}
+	}
+	focus = {
+		id = DWF_clear_ideology
+		prerequisite = { focus = DWF_guerrilla_corps }
+		x = 18
+		y = 3
+		cost = 5
+		icon = GFX_goal_generic_propaganda
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			army_experience = 25			# ⚠️占位:理念=软件韧性,效果XT定后填
+			add_war_support = 0.03
+		}
+	}
+
+	# ===== 外交线(最右) =====
+	focus = {
+		id = DWF_unite_all_forces
+		prerequisite = { focus = DWF_consolidate_northwest }
+		x = 24
+		y = 2
+		cost = 5
+		icon = GFX_goal_generic_alliance
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			set_country_flag = DWF_whitelist_plan_unlocked			# 解锁决议「白名单计划」(和平吸纳近邻军阀)
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = DWF_no_useless_sacrifice
+		prerequisite = { focus = DWF_unite_all_forces }
+		x = 24
+		y = 3
+		cost = 5
+		icon = GFX_goal_generic_defence
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			set_country_flag = DWF_questioning_offensive_unlocked			# 解锁决议「问罪攻势」(武力胁迫入盟)
+			add_stability = 0.03
+		}
+	}
+	focus = {
+		id = DWF_socialist_alliance
+		prerequisite = { focus = DWF_no_useless_sacrifice }
+		x = 24
+		y = 4
+		cost = 5
+		icon = GFX_goal_generic_major_alliance
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			set_country_flag = DWF_socialist_alliance_formed
+			create_faction = DWF_volunteer_program_faction			# 阵营名「志愿者计划」
+			set_country_flag = DWF_court_demons_unlocked			# 解锁拉拢魔族决议类(六成入盟,微软四成)
+			add_stability = 0.03
+		}
+	}
+	focus = {
+		id = DWF_ideal_future
+		prerequisite = { focus = DWF_socialist_alliance }
+		x = 24
+		y = 5
+		cost = 5
+		icon = GFX_goal_generic_construction
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			set_country_flag = DWF_great_sandbox_hook			# 大沙盒联盟改名钩子,内战胜利后接
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_political_power = 50
+			# TODO(XT): 阵营增益(志愿者计划全阵营buff)机制后定
+		}
+	}
+	# ===== 政治线·极端门槛对(2026-08-22 XT定) =====
+	# BOP协调⇄解放走到极端段位(total_control)+点下对应门槛策 → 开隐藏线
+	focus = {
+		id = DWF_order_ultimatum
+		prerequisite = { focus = DWF_authoritarian_route }
+		mutually_exclusive = { focus = DWF_revolution_ultimatum }
+		x = 10
+		y = 4
+		cost = 5
+		icon = GFX_goal_generic_political_pressure
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		available = {
+			has_power_balance = { id = DWF_coordination_liberation_bop }
+			is_power_balance_in_range = {
+				id = DWF_coordination_liberation_bop
+				range = DWF_coordination_total_control_range
+			}
+		}
+		completion_reward = {
+			set_country_flag = DWF_redstone_path_open			# 永久开门:红石支allow_branch钥匙
+			country_event = { id = DWF.12 }			# 戈壁深处的低鸣(红岩发现叙事)
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = DWF_revolution_ultimatum
+		prerequisite = { focus = DWF_authoritarian_route }
+		mutually_exclusive = { focus = DWF_order_ultimatum }
+		x = 14
+		y = 4
+		cost = 5
+		icon = GFX_goal_generic_major_war
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		available = {
+			has_power_balance = { id = DWF_coordination_liberation_bop }
+			is_power_balance_in_range = {
+				id = DWF_coordination_liberation_bop
+				range = DWF_liberation_total_control_range
+			}
+		}
+		completion_reward = {
+			set_country_flag = DWF_community_path_open			# 永久开门:共同体支allow_branch钥匙
+			country_event = { id = DWF.13 }			# 公社代表大会(共同体路线开动)
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+
+	# ===== 隐藏支·红石技官线(协调极端,工业向,allow_branch整支隐藏) =====
+	focus = {
+		id = DWF_redstone_awakening
+		prerequisite = { focus = DWF_order_ultimatum }
+		allow_branch = { has_country_flag = DWF_redstone_path_open }
+		x = 10
+		y = 5
+		cost = 5
+		icon = GFX_goal_generic_construction
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			set_country_flag = DWF_hongyan_awake			# 红岩0号机苏醒
+			add_political_power = 25
+			add_stability = -0.02			# 老将们不安
+		}
+	}
+	focus = {
+		id = DWF_leishidong_directorate
+		prerequisite = { focus = DWF_redstone_awakening }
+		x = 10
+		y = 6
+		cost = 5
+		icon = GFX_focus_HJM_duowan_alliance_reform
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			recruit_character = DWF_Hongyan			# 红岩零号机入池即立红石主义党魁
+			set_politics = { ruling_party = libertarian_socialist }			# 上台:显示红石主义
+			add_ideas = DWF_redstone_directorate			# 红石统辖(接管期精神)
+			add_political_power = -50			# 接管的内耗
+		}
+	}
+	focus = {
+		id = DWF_gobi_megacircuit
+		prerequisite = { focus = DWF_leishidong_directorate }
+		x = 9
+		y = 7
+		cost = 5
+		icon = GFX_goal_generic_construct_civ_factory
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			# 戈壁巨型电路一期:都统/准噶尔各落1民工(红石电路基建)
+			617 = {
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			618 = {
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = DWF_academy_integration
+		prerequisite = { focus = DWF_leishidong_directorate }
+		x = 11
+		y = 7
+		cost = 5
+		icon = GFX_goal_generic_production
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			add_tech_bonus = {
+				name = DWF_academy_integration
+				bonus = 0.3
+				uses = 2
+				category = industry			# 科学院并入统辖体:红石算力反哺工业
+			}
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = DWF_four_sisters_online
+		prerequisite = { focus = DWF_gobi_megacircuit focus = DWF_academy_integration }
+		x = 10
+		y = 8
+		cost = 5
+		icon = GFX_goal_generic_improve_relations
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			country_event = { id = DWF.14 }			# 四姐妹上线(轻盈跳脱文风)
+			add_political_power = 50
+			add_stability = 0.05			# 四姐妹安抚了人心
+		}
+	}
+	focus = {
+		id = DWF_redstone_ascendancy
+		prerequisite = { focus = DWF_four_sisters_online }
+		x = 10
+		y = 9
+		cost = 5
+		icon = GFX_goal_generic_construction
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			add_ideas = DWF_redstone_ascendancy_spirit			# 终局精神:红石智能统辖体
+			set_cosmetic_tag = DWF_redstone_directorate_tag			# 国名:红石统辖体
+			remove_power_balance = { id = DWF_coordination_liberation_bop }			# 机器废除党争:擂台谢幕
+			add_stability = 0.05
+			add_war_support = -0.05
+		}
+	}
+
+	# ===== 隐藏支·共同体线(解放极端,军事向) =====
+	# ⚠️领袖名待XT(禁臆造):现set_politics只换到极权社基座,XT定名后加角色即显示共同体主义
+	focus = {
+		id = DWF_commune_union
+		prerequisite = { focus = DWF_revolution_ultimatum }
+		allow_branch = { has_country_flag = DWF_community_path_open }
+		x = 14
+		y = 5
+		cost = 5
+		icon = GFX_goal_generic_national_unity
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			add_ideas = DWF_commune_spirit			# 公社大联合
+			set_politics = { ruling_party = totalitarian_socialist }
+			add_political_power = -25
+			add_stability = -0.03			# 激烈转型的阵痛
+		}
+	}
+	focus = {
+		id = DWF_total_militia
+		prerequisite = { focus = DWF_commune_union }
+		x = 14
+		y = 6
+		cost = 5
+		icon = GFX_goal_generic_allies_build_infantry
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			add_manpower = 150000			# 全民皆兵:公社兵册
+			add_war_support = 0.05
+			army_experience = 25
+		}
+	}
+	focus = {
+		id = DWF_liberation_army_reorg
+		prerequisite = { focus = DWF_total_militia }
+		x = 13
+		y = 7
+		cost = 5
+		icon = GFX_goal_generic_army_doctrines
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			add_ideas = DWF_liberation_army_spirit			# 解放军整编精神
+			army_experience = 50
+		}
+	}
+	focus = {
+		id = DWF_world_revolution_output
+		prerequisite = { focus = DWF_total_militia }
+		x = 15
+		y = 7
+		cost = 5
+		icon = GFX_goal_generic_major_war
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			set_country_flag = DWF_world_revolution_unlocked			# 后接输出革命决议批
+			add_war_support = 0.08
+			add_political_power = -25
+		}
+	}
+	focus = {
+		id = DWF_community_destiny
+		prerequisite = { focus = DWF_liberation_army_reorg focus = DWF_world_revolution_output }
+		x = 14
+		y = 8
+		cost = 5
+		icon = GFX_goal_generic_major_alliance
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			add_ideas = DWF_community_destiny_spirit			# 终局精神:人类命运共同体
+			set_cosmetic_tag = DWF_commonwealth_tag			# 国名:共同体
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+	}
+}

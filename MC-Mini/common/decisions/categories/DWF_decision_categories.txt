@@ -1,0 +1,67 @@
+# DWF 决议分类(2026-08-21)——军事行动/外交吸纳/拉拢魔族
+# 解锁flag由 common/national_focus/DWF_focus.txt 各策埋点
+
+DWF_military_operations = {
+	priority = 100
+	icon = GFX_decision_category_generic_crisis
+	visible_when_empty = no
+
+	allowed = {
+		original_tag = DWF
+	}
+
+	visible = {
+		OR = {
+			has_country_flag = DWF_northwest_consolidated
+			has_country_flag = DWF_far_west_strategy_unlocked
+			has_country_flag = DWF_purge_rightists_unlocked
+			has_country_flag = DWF_rebuild_mc_unlocked
+		}
+	}
+}
+
+DWF_diplomatic_absorption = {
+	priority = 99
+	icon = GFX_decision_category_generic_propaganda
+	visible_when_empty = no
+
+	allowed = {
+		original_tag = DWF
+	}
+
+	visible = {
+		OR = {
+			has_country_flag = DWF_whitelist_plan_unlocked
+			has_country_flag = DWF_questioning_offensive_unlocked
+		}
+	}
+}
+
+DWF_demon_court = {
+	priority = 98
+	icon = GFX_decision_category_generic_political_discourse
+	visible_when_empty = no
+
+	allowed = {
+		original_tag = DWF
+	}
+
+	visible = {
+		has_country_flag = DWF_court_demons_unlocked
+	}
+}
+
+# 政治斗争(2026-08-22):BOP协调⇄解放拉扯决议,常驻类(挂BOP面板)
+DWF_politics_category = {
+	priority = 97
+	icon = GFX_decision_category_generic_political_discourse
+	visible_when_empty = no
+
+	allowed = {
+		original_tag = DWF
+	}
+
+	visible = {
+		has_power_balance = { id = DWF_coordination_liberation_bop }
+	}
+}

@@ -1,4 +1,4 @@
-capital = 2 # 罗马
+capital = 1036 # 武汉
 
 oob = "HJM_1936"
 
@@ -158,7 +158,7 @@ recruit_character = HJM_Bedrock_Marshal
 recruit_character = HJM_Admiral_Drowned
 recruit_character = HJM_War_Minister
 recruit_character = HJM_Naval_Minister
-recruit_character = HJM_Zimin
+# 2026-08-21 XT定:籽岷已归多玩DWF(角色同一,开局由DWF-Warlord.txt招募领导多玩);HJM不可再招募,否则角色冲突报错
 recruit_character = HJM_DingLei
 
 add_ideas = {

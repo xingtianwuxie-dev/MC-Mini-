@@ -9,10 +9,10 @@ state={
 	state_category = wasteland
 	history={
 
-		owner = PRC
-		add_core_of = PRC
-		add_core_of = PRC
-		add_core_of = PRC
+		owner = HJM
+		add_core_of = HJM
+		add_core_of = HJM
+		add_core_of = HJM
 
 		victory_points = {
 			7971 1 # Jiuquan 
@@ -36,7 +36,7 @@ state={
 					has_dlc = "No Compromise, No Surrender" 
 				}
 				HJM = { transfer_state = PREV }
-				add_core_of = PRC
+				add_core_of = HJM
 				remove_core_of = HJM
 			}
 		}

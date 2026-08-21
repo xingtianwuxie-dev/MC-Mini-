@@ -2,7 +2,7 @@ scripted_gui = {
 	HJM_war_superevent_gui = {
 		context_type = player_context
 		window_name = "HJM_war_superevent_window"
-		parent_window_token = top_bar
+		# parent_window_token 已删（2026-08-20）：挂 top_bar 会让全屏窗按顶栏锚点落位，分辨率不对齐时偏到屏幕角落挡按键；改用根窗口自带 origo=center 居中（仿 PB_peace_popup）
 
 		visible = {
 			tag = HJM
@@ -19,7 +19,7 @@ scripted_gui = {
 	HJM_regency_superevent_gui = {
 		context_type = player_context
 		window_name = "HJM_regency_superevent_window"
-		parent_window_token = top_bar
+		# 同上：parent_window_token 已删（2026-08-20），改根窗口居中
 
 		visible = {
 			tag = HJM

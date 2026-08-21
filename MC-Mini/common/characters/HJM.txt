@@ -35,7 +35,7 @@ characters = {
 			civilian = { large = "gfx/leaders/HJM/portrait_Zimin.dds" }
 		}
 		country_leader = {
-			ideology = duowanism      # 多玩 → 多玩主义
+			ideology = ziminism      # 2026-08-21 XT定:籽岷主义(挂社民,开局领导多玩DWF)
 			traits = { }
 			expire = "1965.1.1.1"
 		}
@@ -321,6 +321,15 @@ characters = {
 			}
 		}
 	}
-
-	
+	# ===== DWF 红石技官线领袖(2026-08-22) =====
+	DWF_Hongyan = {
+		name = DWF_Hongyan
+		# 红岩零号机:戈壁巨型电路的初号机体,雷石东1.0的前身(红石线叙事核心)
+		# ⚠️头像待XT:定了机器头像后补 portraits 块
+		country_leader = {
+			ideology = duowanism      # 红石主义(挂自由社;recruit后自动立党魁,上台即显示红石主义)
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
 }

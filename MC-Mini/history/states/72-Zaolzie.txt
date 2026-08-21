@@ -10,12 +10,12 @@ state={
 	state_category = rural
 	
 	history={
-		owner = HJM
+		owner = CZE
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
 		}
-		add_core_of = HJM
+		add_core_of = CZE
 		add_claim_by = SIL
 
 		1939.3.14 = {

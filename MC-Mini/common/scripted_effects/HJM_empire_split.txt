@@ -1,4 +1,4 @@
-# MC-Mini 帝国分裂 2026-08-14(照TFR原理) 2026-08-17搬迁欧洲后重写:四国初始地盘落欧洲
+# MC-Mini 帝国分裂 2026-08-14(照TFR原理)
 # 1)HJM_warlord_divisions=塞模板effect 2)HJM_empire_split=塞模板+划地+加核心+每核心州造兵+宣战 3)调HJM_spawn_minor_states
 
 HJM_warlord_divisions = {
@@ -13,16 +13,16 @@ HJM_warlord_divisions = {
 }
 
 HJM_empire_split = {
-	# === 多玩穿越者联邦 DWF(6州,首都41马德里,占西班牙) ===
+	# === 多玩穿越者联邦 DWF(6州,首都617) ===
 	DWF = {
 		HJM_warlord_divisions = yes
-		transfer_state = 41
-		transfer_state = 791
-		transfer_state = 788
-		transfer_state = 793
-		transfer_state = 170
-		transfer_state = 175
-		set_capital = { state = 41 }
+		transfer_state = 617
+		transfer_state = 618
+		transfer_state = 619
+		transfer_state = 760
+		transfer_state = 759
+		transfer_state = 756
+		set_capital = { state = 617 }
 		every_owned_state = { add_core_of = DWF }
 		every_controlled_state = {
 			limit = { is_core_of = DWF }
@@ -32,24 +32,49 @@ HJM_empire_split = {
 			}
 		}
 		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 3000 }
+		# 工业六策6「全面推进科技发展」：一年期科研精神「联盟科学院」（2026-08-19 XT定）
+		if = {
+			limit = { ROOT = { has_country_flag = HJM_dwf_science_legacy } }
+			add_timed_idea = {
+				idea = HJM_dwf_science_legacy
+				days = 365
+			}
+		}
+		# 工业六策科技同步给DWF（2026-08-19 XT定：HJM点了几级，DWF分裂时就拿到几级）
+		if = {
+			limit = { ROOT = { has_country_flag = HJM_dwf_tech_disp2 } }
+			set_technology = { dispersed_industry = 1 dispersed_industry2 = 1 }
+		}
+		if = {
+			limit = { ROOT = { has_country_flag = HJM_dwf_tech_conc2 } }
+			set_technology = { concentrated_industry = 1 concentrated_industry2 = 1 }
+		}
+		# 工业六策3「优先完成基础建设」：一年期建造精神「联盟工程局」（2026-08-19 XT定）
+		if = {
+			limit = { ROOT = { has_country_flag = HJM_dwf_construction_legacy } }
+			add_timed_idea = {
+				idea = HJM_dwf_construction_legacy
+				days = 365
+			}
+		}
 		declare_war_on = {
 			target = HJM
 			type = civil_war
 		}
 	}
-	# === 网易远洋开发团 NTE(9州,首都126伦敦,占英国+法国北岸诺曼底/皮卡第/加来) ===
+	# === 网易远洋开发团 NTE(9州,首都745) ===
 	NTE = {
 		HJM_warlord_divisions = yes
-		transfer_state = 126
-		transfer_state = 127
-		transfer_state = 123
-		transfer_state = 338
-		transfer_state = 125
-		transfer_state = 129
-		transfer_state = 15
-		transfer_state = 29
-		transfer_state = 785
-		set_capital = { state = 126 }
+		transfer_state = 745
+		transfer_state = 716
+		transfer_state = 328
+		transfer_state = 717
+		transfer_state = 408
+		transfer_state = 1028
+		transfer_state = 527
+		transfer_state = 525
+		transfer_state = 1029
+		set_capital = { state = 745 }
 		every_owned_state = { add_core_of = NTE }
 		every_controlled_state = {
 			limit = { is_core_of = NTE }
@@ -64,19 +89,18 @@ HJM_empire_split = {
 			type = civil_war
 		}
 	}
-	# === 微软技术共同体 MST(9州,首都64柏林,占德国) ===
+	# === 微软技术共同体 MST(8州,首都592) ===
 	MST = {
 		HJM_warlord_divisions = yes
-		transfer_state = 59
-		transfer_state = 60
-		transfer_state = 61
-		transfer_state = 62
-		transfer_state = 63
-		transfer_state = 64
-		transfer_state = 65
-		transfer_state = 66
-		transfer_state = 68
-		set_capital = { state = 64 }
+		transfer_state = 326
+		transfer_state = 729
+		transfer_state = 592
+		transfer_state = 728
+		transfer_state = 1033
+		transfer_state = 593
+		transfer_state = 594
+		transfer_state = 595
+		set_capital = { state = 592 }
 		every_owned_state = { add_core_of = MST }
 		every_controlled_state = {
 			limit = { is_core_of = MST }
@@ -91,7 +115,9 @@ HJM_empire_split = {
 			type = civil_war
 		}
 	}
-	# === 61小国中立生成(见HJM_spawn_minors.txt,仍指旧亚洲州,待重写落欧洲) ===
+	# === 61小国中立生成(见HJM_spawn_minors.txt) ===
 	HJM_spawn_minor_states = yes
-	# === 保皇HJM保留意大利7州(115/156/157/117/849/2/162)不动,首都2罗马 ===
+	# === 军阀地域分组flag(西北/中亚/西藏/东北,供DWF宣战与吸纳决议用) ===
+	DWF_set_warlord_groups = yes
+	# === 保皇HJM保留8州(1036/620/607/615/1046/622/1032/744)不动;附庸独立待#16 ===
 }

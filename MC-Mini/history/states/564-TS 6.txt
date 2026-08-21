@@ -12,9 +12,9 @@ state={
 	}
 
 	history={
-	owner = SOV
+	owner = MDG
 
-	add_core_of = SOV
+	add_core_of = MDG
 		victory_points = {
 			7835 2 
 		}

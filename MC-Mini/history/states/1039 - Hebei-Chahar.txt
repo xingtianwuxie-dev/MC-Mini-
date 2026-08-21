@@ -7,8 +7,8 @@ state = {
 
 	history = {
 
-		owner = PRC
-		add_core_of = PRC
+		owner = HJM
+		add_core_of = HJM
 	
 
 		1936.1.1 = {
@@ -17,7 +17,7 @@ state = {
 					has_dlc = "No Compromise, No Surrender"
 				}
 				transfer_state_to = HJM
-				add_core_of = PRC
+				add_core_of = HJM
 			}
 		}
 
@@ -38,7 +38,7 @@ state = {
 		}
 
 		1938.10.25 = {
-			owner = PRC
+			owner = HJM
 			controller = HJM
 		}
 

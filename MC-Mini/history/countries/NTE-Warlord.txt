@@ -1,4 +1,4 @@
-capital = 126 # 伦敦
+capital = 745 # 网易远洋开发团
 
 set_research_slots = 3
 set_stability = 0.60

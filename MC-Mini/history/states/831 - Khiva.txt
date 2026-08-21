@@ -8,8 +8,8 @@ state = {
 		victory_points = {
 			12465 1
 		}
-		owner = SOV
-		add_core_of = SOV
+		owner = HJM
+		add_core_of = HJM
 		buildings = {
 			infrastructure = 2
 

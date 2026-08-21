@@ -7,8 +7,8 @@ state = {
 
 	history = {
 
-		owner = HJM
-		add_core_of = HJM
+		owner = HUN
+		add_core_of = HUN
 
 		buildings = {
 			infrastructure = 3 #was: 6

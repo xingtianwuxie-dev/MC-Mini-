@@ -55,51 +55,51 @@ division_template = {
 units = {
 	# === 尼泊尔方面军 → 云南前线 ===
 	division = {
-		name = "莫斯科骷髅第1师"
-		location = 301 # Moscow
+		name = "尼泊尔骷髅第1师"
+		location = 4987 # 加德满都，尼泊尔
 		division_template = "凋零骷髅军团"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.9
 	}
 	division = {
-		name = "莫斯科亡灵步兵第1师"
-		location = 301 # Moscow
+		name = "尼泊尔亡灵步兵第1师"
+		location = 4987
 		division_template = "亡灵步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
 	division = {
-		name = "列宁格勒亡灵步兵第2师"
-		location = 79 # Leningrad
+		name = "尼泊尔亡灵步兵第2师"
+		location = 4386
 		division_template = "亡灵步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
 	division = {
-		name = "基辅亡灵步兵第3师"
-		location = 238 # Kiev
+		name = "尼泊尔亡灵步兵第3师"
+		location = 5310
 		division_template = "亡灵步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
 	# === 不丹方面军 → 云南前线 ===
 	division = {
-		name = "喀山亡灵步兵第1师"
-		location = 228 # Kazan
+		name = "不丹亡灵步兵第1师"
+		location = 8010 # 不丹
 		division_template = "亡灵步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
 	division = {
-		name = "萨马拉尸群第1师"
-		location = 298 # Samara
+		name = "不丹尸群第1师"
+		location = 8010
 		division_template = "尸群师"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "彼尔姆尸群第2师"
-		location = 123 # Perm
+		name = "不丹尸群第2师"
+		location = 12860
 		division_template = "尸群师"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8

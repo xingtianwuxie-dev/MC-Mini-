@@ -11,10 +11,10 @@ state = {
 	
 	history = {
 
-		owner = PRC
-		add_core_of = PRC
-		add_core_of = PRC
-		add_core_of = PRC
+		owner = HJM
+		add_core_of = HJM
+		add_core_of = HJM
+		add_core_of = HJM
 
 		victory_points = {
 			4174 5 # Taiyuan 
@@ -39,7 +39,7 @@ state = {
 
 		1938.10.25 = {
 			#remove_core_of = SHX
-			owner = PRC
+			owner = HJM
 			controller = HJM
 			HJM = {
 				set_province_controller = 1034

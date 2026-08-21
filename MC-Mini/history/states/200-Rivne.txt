@@ -6,8 +6,8 @@ state = {
 
 	history = {
 
-		owner = XWY
-		add_core_of = XWY
+		owner = SOV
+		add_core_of = SOV
 		add_core_of = UKR
 
 		victory_points = {

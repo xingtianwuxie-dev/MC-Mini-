@@ -8,8 +8,8 @@ state = {
 
 	history = {
 
-		owner = HJM
-		add_core_of = HJM
+		owner = FRA
+		add_core_of = FRA
 
 		victory_points = {
 			11506 50 # Paris

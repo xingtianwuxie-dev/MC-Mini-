@@ -165,6 +165,39 @@ on_actions = {
 						add_ideas = HJM_him_legacy_unsettled # Add lingering demon-war legacy pressure to HJM.
 						country_event = { id = HJM.49 days = 5 } # Show the first report on HIM's postwar remnants.
 					}
+					# 2026-08-22 fix: HIM capitulation means the nether war is de facto over.
+					# on_war_closed only fires after the war object formally closes (peace deal / all servants out),
+					# which can lag far behind capitulation. Set the conclude flag here so the
+					# HJM_is_it_over focus becomes available for the player right away.
+					# on_war_closed keeps its auto-complete as the backstop.
+					if = {
+						limit = {
+							NOT = { has_completed_focus = HJM_is_it_over }
+						}
+						set_country_flag = HJM_nether_war_concluded
+					}
+					# 2026-08-22 fix: MYR joined the demon war separately via the End split
+					# event, so it keeps fighting after HIM capitulates. 1.19 has no
+					# capitulate effect, so white-peace MYR out of the war and give it the
+					# same overlord-collapse shock the servant states got. MYR stays alive:
+					# the HJM_no_mercy focus / HJM.55 event later hands all its land to MDG.
+					if = {
+						limit = {
+							MYR = {
+								exists = yes
+								has_war_with = HJM
+							}
+						}
+						white_peace = {
+							tag = MYR
+						}
+						MYR = {
+							add_ideas = HIM_overlord_collapsed
+							add_stability = -0.35
+							add_war_support = -0.35
+							set_country_flag = HIM_subject_overlord_collapsed
+						}
+					}
 				}
 			}
 		}
@@ -174,28 +207,73 @@ on_actions = {
 	# 双保险：HJM_is_it_over 国策完成时也挂了同样兜底，二者靠 HJM_disposal_fallback_done flag 互斥。
 	on_war_closed = {
 		effect = {
+			# 2026-08-19修：ROOT/FROM 顺序不定（宣战/被宣角色可能互换），改用 OR 双向兼容并统一 scope 进 HJM；
+			# 切树动作移入 HJM_is_it_over 国策完成效果，此处只设flag+完成国策，避免 load 早于 complete 找不到目标树。
 			if = {
 				limit = {
-					ROOT = { tag = HJM }
-					FROM = { tag = HIM }
-					NOT = { has_country_flag = HJM_disposal_fallback_done }
+					OR = {
+						AND = { ROOT = { tag = HJM } FROM = { tag = HIM } }
+						AND = { ROOT = { tag = HIM } FROM = { tag = HJM } }
+					}
 				}
-				set_country_flag = HJM_disposal_fallback_done
-				country_event = { id = HJM.50 days = 5 }
-			}
-			# 战争结束：设flag加载战后树 + 自动完成"结束了"（进而60天后自动完成"人皇逝世"）
-			if = {
-				limit = {
-					ROOT = { tag = HJM }
-					FROM = { tag = HIM }
-					NOT = { has_completed_focus = HJM_is_it_over }
-				}
-				ROOT = {
-					set_country_flag = HJM_nether_war_concluded
-					load_focus_tree = { tree = HJM_pre_civil_war_focus keep_completed = yes }
-					complete_national_focus = HJM_is_it_over
+				HJM = {
+					if = {
+						limit = {
+							NOT = { has_country_flag = HJM_disposal_fallback_done }
+						}
+						set_country_flag = HJM_disposal_fallback_done
+						country_event = { id = HJM.50 days = 5 }
+					}
+					if = {
+						limit = {
+							NOT = { has_completed_focus = HJM_is_it_over }
+						}
+						set_country_flag = HJM_nether_war_concluded
+						complete_national_focus = HJM_is_it_over
+					}
 				}
 			}
 		}
 	}
+
+	# 2026-08-20 魔族战争保底：开局排程 1937-09-01 强制爆发（玩家/AI 拖着不打、卡死整条剧情链的兜底）
+	# 609天 = 366(1936闰年) + 243(1937年1~8月)，从 1936-01-01 起算正好落在 1937-09-01；
+	# 重载会重跑 on_startup，用 global flag 防止重复排程。
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = HJM_nether_war_fallback_armed }
+				}
+				set_global_flag = HJM_nether_war_fallback_armed
+				HJM = {
+					country_event = { id = HJM.57 days = 609 }
+				}
+			}
+		}
+	}
+
+	# ===== Civil war countdown mirror var (2026-08-22): drives live days in decision title =====
+	on_daily_HJM = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = HJM
+					has_country_flag = HJM_pre_civil_war_started
+					NOT = { has_country_flag = HJM_civil_war_countdown_expired }
+					NOT = { has_country_flag = HJM_civil_war_countdown_cancelled }
+				}
+				# Old-save fallback: mission running but var not created yet -> start from full 200
+				if = {
+					limit = { NOT = { has_variable = HJM_cw_days_left } }
+					set_variable = { var = HJM_cw_days_left value = 200 }
+				}
+				if = {
+					limit = { check_variable = { var = HJM_cw_days_left value > 0 } }
+					subtract_from_variable = { var = HJM_cw_days_left value = 1 }
+				}
+			}
+		}
+	}
+
 }

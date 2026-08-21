@@ -39,6 +39,7 @@ focus_tree = {
 			set_country_flag = HJM_notch_dead # Mark Notch as gone for later regency content.
 			set_country_flag = HJM_pre_civil_war_started # Open the pre-civil-war decisions and countdown.
 			activate_mission = HJM_civil_war_countdown # Start the three-year civil war countdown.
+			set_variable = { var = HJM_cw_days_left value = 200 } # mirror var for panel countdown display (2026-08-22)
 			country_event = {
 				id = HJM.32
 			}
@@ -127,7 +128,7 @@ focus_tree = {
 		x = 6
 		y = 4
 		cost = 5
-		icon = GFX_HJM_duowan_alliance_reform
+		icon = GFX_focus_HJM_duowan_alliance_reform
 		continue_if_invalid = no
 		cancel_if_invalid = yes
 		mutually_exclusive = {
@@ -198,6 +199,159 @@ focus_tree = {
 			add_political_power = 50
 			add_stability = 0.03
 			set_country_flag = HJM_chose_microsoft_route
+		}
+	}
+
+	# === 多玩联盟·工业六策（轻工业线1-3 / 重工业线4-6，3与6互斥，2026-08-19）===
+	focus = {
+		id = HJM_livelihood_first
+		x = 5
+		y = 5
+		cost = 5
+		icon = GFX_focus_generic_low_cost_housing
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HJM_duowan_alliance_reform
+		}
+		completion_reward = {
+			# 轻工线L1：不加科技（2026-08-19 XT改），民生产业落在联盟腹地（随分裂转移DWF）
+			617 = {
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			618 = {
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = HJM_light_industry_proposal
+		x = 5
+		y = 6
+		cost = 5
+		icon = GFX_focus_generic_industry_1
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HJM_livelihood_first
+		}
+		completion_reward = {
+			# 轻工线L2：+2民工（759/760）＋六州各+1级铁路（铁路2026-08-19 XT自3移入；不加科技）
+			759 = {
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				add_building_construction = { type = rail_way level = 1 instant_build = yes }
+			}
+			760 = {
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				add_building_construction = { type = rail_way level = 1 instant_build = yes }
+			}
+			617 = {
+				add_building_construction = { type = rail_way level = 1 instant_build = yes }
+			}
+			618 = {
+				add_building_construction = { type = rail_way level = 1 instant_build = yes }
+			}
+			619 = {
+				add_building_construction = { type = rail_way level = 1 instant_build = yes }
+			}
+			756 = {
+				add_building_construction = { type = rail_way level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = HJM_priority_infrastructure
+		x = 5
+		y = 7
+		cost = 5
+		icon = GFX_focus_generic_improve_roads
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = HJM_advance_science_tech
+		}
+		prerequisite = {
+			focus = HJM_light_industry_proposal
+		}
+		completion_reward = {
+			# 科技不加给HJM，直接给DWF（2026-08-19 XT定，防别的分裂势力继承）
+			set_country_flag = HJM_dwf_tech_disp2
+			# 轻工线L3：不直接解锁，分裂时DWF凭flag拿离散Ⅰ+Ⅱ（2026-08-19 XT定：两级一起给）
+			# 分裂时给DWF一年期建造精神「联盟工程局」（结算在HJM_empire_split的DWF块）
+			set_country_flag = HJM_dwf_construction_legacy
+		}
+	}
+
+	focus = {
+		id = HJM_industrial_power
+		x = 7
+		y = 5
+		cost = 5
+		icon = GFX_focus_generic_industry_2
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HJM_duowan_alliance_reform
+		}
+		completion_reward = {
+			# 重工线L1：不加科技（2026-08-19 XT改），+2军工（617/619）
+			617 = {
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			619 = {
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = HJM_heavy_industry_model
+		x = 7
+		y = 6
+		cost = 5
+		icon = GFX_focus_generic_steel_mill
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = HJM_industrial_power
+		}
+		completion_reward = {
+			# 重工线L2：+2军工（756/760）＋617+1民工、756+1军工（2026-08-19 XT自6移入；不加科技）
+			756 = {
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			760 = {
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			617 = {
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = HJM_advance_science_tech
+		x = 7
+		y = 7
+		cost = 5
+		icon = GFX_focus_generic_education
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = HJM_priority_infrastructure
+		}
+		prerequisite = {
+			focus = HJM_heavy_industry_model
+		}
+		completion_reward = {
+			# 科技不加给HJM，直接给DWF（2026-08-19 XT定，防别的分裂势力继承）
+			set_country_flag = HJM_dwf_tech_conc2
+			# 重工线L3：不直接解锁，分裂时DWF凭flag拿密集Ⅰ+Ⅱ（2026-08-19 XT定：两级一起给）
+			# 分裂时给DWF一年期科研精神「联盟科学院」（结算在HJM_empire_split的DWF块）
+			set_country_flag = HJM_dwf_science_legacy
 		}
 	}
 }

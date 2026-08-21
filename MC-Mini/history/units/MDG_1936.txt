@@ -26,36 +26,36 @@ division_template = {
 
 units = {
 	division = {
-		name = "斯德哥尔摩末影守卫第1团"
-		location = 49 # Stockholm
+		name = "乌兰巴托末影守卫第1团"
+		location = 4801
 		division_template = "末影守卫"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
 	division = {
-		name = "哥德堡末地边境骑兵第1团"
-		location = 295 # Gothenburg
+		name = "赛音山达末地边境骑兵第1团"
+		location = 12612
 		division_template = "末地边境骑兵"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "马尔默末影守卫第2团"
-		location = 3307 # Malmo
+		name = "乔巴山末影守卫第2团"
+		location = 12557
 		division_template = "末影守卫"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "于默奥末影守卫第3团"
-		location = 11 # Umea
+		name = "雅库茨克末影守卫第3团"
+		location = 10641
 		division_template = "末影守卫"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.75
 	}
 	division = {
-		name = "诺尔兰末地边境骑兵第2团"
-		location = 58 # Norrland
+		name = "新西伯利亚末地边境骑兵第2团"
+		location = 7274
 		division_template = "末地边境骑兵"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.75

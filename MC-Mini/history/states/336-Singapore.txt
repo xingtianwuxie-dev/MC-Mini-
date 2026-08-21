@@ -14,8 +14,8 @@ state = {
 
 	history = {
 
-		owner = MAL
-		add_core_of = MAL
+		owner = GWG
+		add_core_of = GWG
 		victory_points = {
 			10297 1 # Kuala Lumpur
 		}

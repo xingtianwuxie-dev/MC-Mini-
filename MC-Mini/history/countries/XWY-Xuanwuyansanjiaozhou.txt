@@ -1,4 +1,4 @@
-capital = 229 # 巴库 海得拉巴
+capital = 427 # 海得拉巴
 
 oob = "XWY_1936"
 

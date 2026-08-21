@@ -7,11 +7,11 @@ focus_tree = {
 		modifier = {
 			add = 10
 			tag = HJM
-			OR = {
-				has_war_with = HIM
-				AND = {
+			AND = {
+				NOT = { has_completed_focus = HJM_is_it_over }
+				OR = {
+					has_war_with = HIM
 					has_country_flag = HJM_nether_war_concluded
-					NOT = { has_completed_focus = HJM_is_it_over }
 				}
 			}
 		}
@@ -80,6 +80,10 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 20
 			add_war_support = 0.05
+			add_timed_idea = {
+				idea = HJM_group_offensive_momentum				# 集团攻势：6个月组织度/突破buff（2026-08-19）
+				days = 180
+			}
 		}
 		available = {
 			has_war_with = HIM
@@ -123,18 +127,21 @@ focus_tree = {
 			focus = HJM_player_general
 		}
 		completion_reward = {
-			# 奇兵暗度：在恒河三角洲河口(东孟加拉430，下界要塞境内)空降禁军突击师
+			# 奇兵暗度：3个禁军突击师空降敌境430（东孟加拉·下界要塞）。allow_spawning_on_enemy_provs=yes 允许在敌境成军（火星兵，2026-08-19按TFR写法）
 			430 = {
 				create_unit = {
 					division = "name = \"第一禁军突击师\" division_template = \"穿越者特种师\" start_experience_factor = 0.75 start_equipment_factor = 1 start_manpower_factor = 1"
+					allow_spawning_on_enemy_provs = yes
 					owner = HJM
 				}
 				create_unit = {
 					division = "name = \"第二禁军突击师\" division_template = \"穿越者特种师\" start_experience_factor = 0.75 start_equipment_factor = 1 start_manpower_factor = 1"
+					allow_spawning_on_enemy_provs = yes
 					owner = HJM
 				}
 				create_unit = {
 					division = "name = \"第三禁军突击师\" division_template = \"穿越者特种师\" start_experience_factor = 0.75 start_equipment_factor = 1 start_manpower_factor = 1"
+					allow_spawning_on_enemy_provs = yes
 					owner = HJM
 				}
 			}
@@ -196,10 +203,9 @@ focus_tree = {
 		}
 	}
 	# HJM_is_it_over（结束了？）已加回战时树终点（2026-08-08，应 XT 要求）
-	# 战时树加载条件加了 OR 保活分支：战争结束后、is_it_over 未完成前树暂不卸载，
-	# on_war_closed 设 HJM_nether_war_concluded flag + load 战后树 + complete 本国策；完成后树卸载、战后树接上。
-	# 2026-08-16 双保险（XT 实测点完成不换树修复）：完成奖励里同样设 flag + load 战后树，
-	# 手动/控制台完成本国策不再依赖 on_war_closed 是否触发过；两路幂等，跑几次都一样。
+	# flag 来源（2026-08-22 补）：HIM 投降时 on_capitulation 即设 HJM_nether_war_concluded（玩家可立刻手点）；
+	# on_war_closed 兜底 auto-complete（和约签订/战争正式关闭时）。两处互不冲突，complete 只做一次。
+	# 完成后树卸载、战后树（HJM_pre_civil_war_focus）接上。
 	focus = {
 		id = HJM_is_it_over
 		x = 10
@@ -215,8 +221,9 @@ focus_tree = {
 			has_country_flag = HJM_nether_war_concluded
 		}
 		completion_reward = {
-			set_country_flag = HJM_nether_war_concluded # 双保险：控制台强点本国策时也把 flag 补上（available 平时已保证）
-			load_focus_tree = { tree = HJM_pre_civil_war_focus keep_completed = yes } # 本国策完成即换战后树（主路在 on_war_closed，此处兜底手动完成路径）
+			# 战争收束：设flag+切战后树（2026-08-19修：原只在on_war_closed做，强制完成本国策时漏切换）
+			set_country_flag = HJM_nether_war_concluded
+			load_focus_tree = { tree = HJM_pre_civil_war_focus keep_completed = yes }
 			remove_ideas = HJM_liberate_nether_offensive
 			add_political_power = 50
 			add_war_support = -0.05
@@ -304,11 +311,8 @@ focus_tree = {
 				days = 2
 			}
 			LLL = {
+				# 2026-08-22 XT定：国策完成即全部领土直接转给GWG，不再要求HJM已军事占领。
 				every_owned_state = {
-					limit = {
-						is_controlled_by = HJM
-					}
-					# Only punish territory already under imperial control.
 					set_variable = {
 						name = pop_kill
 						value = manpower
@@ -339,8 +343,7 @@ focus_tree = {
 			GWG = {
 				exists = yes
 			}
-			# Require the receiving state to exist before the punitive transfer runs.
-			controls_state = 12
+			# 2026-08-22 XT定：删 controls_state = 640，转地不再要求先占领对方首都。
 		}
 		ai_will_do = {
 			factor = 1
@@ -365,11 +368,8 @@ focus_tree = {
 				days = 2
 			}
 			MYR = {
+				# 2026-08-22 XT定：国策完成即全部领土直接转给MDG，不再要求HJM已军事占领。
 				every_owned_state = {
-					limit = {
-						is_controlled_by = HJM
-					}
-					# Only punish territory already under imperial control.
 					set_variable = {
 						name = pop_kill
 						value = manpower
@@ -396,8 +396,8 @@ focus_tree = {
 			MDG = {
 				exists = yes
 			}
-			# Require the End state to exist before it receives the punished territory.
-			controls_state = 111 # HJM需攻占MYR首都赫尔辛基
+			# 2026-08-22 XT定：删 controls_state = 574；MYR在HIM投降时被白和出战争，
+			# HJM 无战争即无法占领雅库茨克，此门槛会导致国策永久卡死。
 		}
 		ai_will_do = {
 			factor = 1
@@ -459,7 +459,7 @@ focus_tree = {
 				exists = yes
 			}
 			# Keep the vassal setup from targeting a dead country.
-			controls_state = 10
+			controls_state = 1076
 		}
 		ai_will_do = {
 			factor = 1
@@ -489,7 +489,7 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						controls_state = 46
+						controls_state = 440
 					}
 				}
 				add_political_power = -200
@@ -529,7 +529,7 @@ focus_tree = {
 			}
 			# Keep the vassal setup from targeting a dead country.
 			OR = {
-				controls_state = 46
+				controls_state = 440
 				has_political_power > 200
 			}
 		}
@@ -598,7 +598,7 @@ focus_tree = {
 				exists = yes
 			}
 			# Keep the vassal setup from targeting a dead country.
-			controls_state = 229
+			controls_state = 427
 		}
 		ai_will_do = {
 			factor = 1
@@ -673,7 +673,7 @@ focus_tree = {
 				exists = yes
 			}
 			# Keep the punitive vassal setup from targeting a dead country.
-			controls_state = 10
+			controls_state = 1076
 		}
 		ai_will_do = {
 			factor = 1
@@ -749,7 +749,7 @@ focus_tree = {
 				exists = yes
 			}
 			# Keep the punitive vassal setup from targeting a dead country.
-			controls_state = 46
+			controls_state = 440
 		}
 		ai_will_do = {
 			factor = 1
@@ -825,7 +825,7 @@ focus_tree = {
 				exists = yes
 			}
 			# Keep the punitive vassal setup from targeting a dead country.
-			controls_state = 229
+			controls_state = 427
 		}
 		ai_will_do = {
 			factor = 1

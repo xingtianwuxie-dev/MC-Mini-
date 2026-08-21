@@ -5,8 +5,8 @@ state={
 	}
 	state_category=town
 	history={
-		owner = SIA
-		add_core_of = SIA
+		owner = GWG
+		add_core_of = GWG
 		buildings = {
 			infrastructure = 1
 		}

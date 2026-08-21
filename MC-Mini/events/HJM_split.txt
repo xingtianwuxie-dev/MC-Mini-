@@ -13,4 +13,53 @@ country_event = {
 		name = HJM_split.1.a
 		HJM_empire_split = yes
 	}
+	# 派系路线：玩家在内战前国策里选过的阵营，内战爆发时切成对应tag（2026-08-19 duowan定；2026-08-20 补齐网易/微软=仿TFR usa.105全阵营选边，APA↔多玩）
+	option = {
+		name = HJM_split.1.b
+		trigger = {
+			has_country_flag = HJM_chose_duowan_route
+			is_ai = no
+		}
+		HJM_empire_split = yes
+		transfer_units_fraction = {
+			target = DWF
+			stockpile_ratio = 0.1667 # 装备+燃料 1/6
+			army_ratio = 0 # 军队不转，DWF用当地6个Garrison师
+			navy_ratio = 0
+			air_ratio = 0
+		}
+		DWF = { change_tag_from = ROOT } # 玩家HJM→DWF
+	}
+	option = {
+		name = HJM_split.1.c
+		trigger = {
+			has_country_flag = HJM_chose_netease_route
+			is_ai = no
+		}
+		HJM_empire_split = yes
+		transfer_units_fraction = {
+			target = NTE
+			stockpile_ratio = 0.1667
+			army_ratio = 0 # NTE用分裂脚本塞的当地Garrison师
+			navy_ratio = 0
+			air_ratio = 0
+		}
+		NTE = { change_tag_from = ROOT }
+	}
+	option = {
+		name = HJM_split.1.d
+		trigger = {
+			has_country_flag = HJM_chose_microsoft_route
+			is_ai = no
+		}
+		HJM_empire_split = yes
+		transfer_units_fraction = {
+			target = MST
+			stockpile_ratio = 0.1667
+			army_ratio = 0
+			navy_ratio = 0
+			air_ratio = 0
+		}
+		MST = { change_tag_from = ROOT }
+	}
 }

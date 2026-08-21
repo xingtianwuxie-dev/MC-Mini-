@@ -13,8 +13,8 @@ state = {
 
 	history = {
 
-		owner = ENG
-		add_core_of = ENG
+		owner = GWG
+		add_core_of = GWG
 		victory_points = {
 			12299 3 # Singapore
 		}

@@ -1,4 +1,4 @@
-capital = 38 # 斯德哥尔摩 Mongolia
+capital = 330 # Mongolia
 
 oob = "MDG_1936"
 

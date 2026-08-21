@@ -12,7 +12,7 @@ state={
 	}
 
 	history={
-		owner = MDG
+		owner = NOR
 		buildings = {
 			infrastructure = 3 #was: 5
 			industrial_complex = 2
@@ -36,7 +36,7 @@ state={
 		victory_points = {
 			9127 1
 		}
-		add_core_of = MDG
+		add_core_of = NOR
 	}
 
 	provinces={

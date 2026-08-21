@@ -9,7 +9,7 @@ state={
 	}
 	state_category = large_town
 	history={
-		owner = HJM
+		owner = SWI
 		victory_points = { 9638 5 }
 		victory_points = { 6666 5 }
 		buildings = {
@@ -17,7 +17,7 @@ state={
 			arms_factory = 1
 			industrial_complex = 2
 		}
-		add_core_of = HJM
+		add_core_of = SWI
 	}
 	provinces={
 		6666 6683 9622 9638 13124 

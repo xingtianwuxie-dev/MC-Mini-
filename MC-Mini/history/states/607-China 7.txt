@@ -8,9 +8,9 @@ state={
 	buildings_max_level_factor=1.000
 
 	history={
-		owner = PRC
-		add_core_of = PRC
-		add_core_of = PRC
+		owner = HJM
+		add_core_of = HJM
+		add_core_of = HJM
 
 		buildings = {
 			infrastructure = 2 #was: 5/ 3

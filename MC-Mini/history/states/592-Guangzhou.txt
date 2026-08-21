@@ -10,20 +10,20 @@ state={
 	}
 
 	history={
-		owner = PRC
-		add_core_of = PRC
+		owner = HJM
+		add_core_of = HJM
 		1936.1.1 = {
 			IF = {
 				limit = {
 					 has_dlc = "No Compromise, No Surrender" 
 				}
 				HJM = { transfer_state = PREV }
-				add_core_of = PRC
+				add_core_of = HJM
 				remove_core_of = HJM
 			}
 		}	
-		add_core_of = PRC
-		add_core_of = PRC
+		add_core_of = HJM
+		add_core_of = HJM
 		
 		buildings = {
 			infrastructure = 2
@@ -49,7 +49,7 @@ state={
 		1938.10.25 = {
 			
 			remove_core_of = HJM
-			owner = PRC
+			owner = HJM
 			
 			JAP = {
 				set_province_controller = 1047

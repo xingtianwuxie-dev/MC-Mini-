@@ -5,21 +5,21 @@ state={
 	state_category = town
 
 	history={
-		owner = PRC
-		add_core_of = PRC
+		owner = HJM
+		add_core_of = HJM
 		1936.1.1 = {
 			IF = {
 				limit = {
 					 has_dlc = "No Compromise, No Surrender" 
 				}
 				transfer_state_to = HJM
-				add_core_of = PRC
+				add_core_of = HJM
 				remove_core_of = HJM
 			}
 		}	
 
-		add_core_of = PRC
-		add_core_of = PRC
+		add_core_of = HJM
+		add_core_of = HJM
 		
 		victory_points = {
 			1070 2 # Haikou
@@ -41,7 +41,7 @@ state={
 		1938.10.25 = {
 			
 			remove_core_of = HJM
-			owner = PRC
+			owner = HJM
 			
 			controller = HJM
 		}

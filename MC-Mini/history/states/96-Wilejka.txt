@@ -9,11 +9,11 @@ state={
 		victory_points = {
 			406 1
 		}
-		owner = GWG
+		owner = POL
 		buildings = {
 			infrastructure = 2
 		}
-		add_core_of = GWG
+		add_core_of = POL
 		add_core_of = BLR
 	}
 

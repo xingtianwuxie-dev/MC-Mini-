@@ -135,324 +135,324 @@ division_template = {
 units = {
 	# === 禁卫师（精锐） ===
 	division = {
-		name = "罗马禁卫第1师"
-		location = 923 # Rome
+		name = "漠北禁卫第1师"
+		location = 10612
 		division_template = "禁卫师"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "罗马禁卫第2师"
-		location = 923 # Rome
+		name = "漠北禁卫第2师"
+		location = 10612
 		division_template = "禁卫师"
 		start_experience_factor = 0.35
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "罗马禁卫第3师"
-		location = 923 # Rome
+		name = "漠北禁卫第3师"
+		location = 1776
 		division_template = "禁卫师"
 		start_experience_factor = 0.35
 		start_equipment_factor = 1.0
 	}
 	# === 步兵师 ===
 	division = {
-		name = "柏林步兵第1师"
-		location = 375 # Berlin
+		name = "漠北步兵第1师"
+		location = 1776
 		division_template = "步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "慕尼黑步兵第2师"
-		location = 532 # Munich
+		name = "漠北步兵第2师"
+		location = 1693
 		division_template = "步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "巴黎步兵第1师"
-		location = 6547 # Paris
+		name = "漠南步兵第1师"
+		location = 10372
 		division_template = "步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "马德里步兵第1师"
-		location = 858 # Madrid
+		name = "滇南步兵第1师"
+		location = 1319
 		division_template = "步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "里斯本步兵第1师"
-		location = 799 # Lisbon
+		name = "桂南步兵第1师"
+		location = 7137
 		division_template = "步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "维也纳步兵第3师"
-		location = 704 # Vienna
+		name = "漠北步兵第3师"
+		location = 12485
 		division_template = "步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "马赛步兵第2师"
-		location = 958 # Marseille
+		name = "漠南步兵第2师"
+		location = 10372
 		division_template = "步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "阿姆斯特丹步兵第1师"
-		location = 68 # Amsterdam
+		name = "绥远步兵第1师"
+		location = 7158
 		division_template = "步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "米兰步兵第1师"
-		location = 607 # Milan
+		name = "西域步兵第1师"
+		location = 4823
 		division_template = "步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	# === 民兵师 ===
 	division = {
-		name = "汉堡民兵第1师"
-		location = 3368 # Hamburg
+		name = "漠北民兵第1师"
+		location = 12485
 		division_template = "民兵师"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "布鲁塞尔民兵第1师"
-		location = 516 # Brussels
+		name = "绥远民兵第1师"
+		location = 7158
 		division_template = "民兵师"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "巴塞罗那民兵第1师"
-		location = 854 # Barcelona
+		name = "西域民兵第1师"
+		location = 4823
 		division_template = "民兵师"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "塞维利亚民兵第2师"
-		location = 1048 # Sevilla
+		name = "西域民兵第2师"
+		location = 4709
 		division_template = "民兵师"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "科隆民兵第1师"
-		location = 563 # Koeln
+		name = "塞外民兵第1师"
+		location = 4783
 		division_template = "民兵师"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "雅典民兵第1师"
-		location = 863 # Athens
+		name = "藏南民兵第1师"
+		location = 5033
 		division_template = "民兵师"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "波尔图民兵第1师"
-		location = 724 # Porto
+		name = "滇西民兵第1师"
+		location = 7965
 		division_template = "民兵师"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "斯图加特民兵第2师"
-		location = 692 # Stuttgart
+		name = "漠北民兵第2师"
+		location = 1693
 		division_template = "民兵师"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "瓦伦西亚民兵第3师"
-		location = 962 # Valencia
+		name = "西域民兵第3师"
+		location = 4709
 		division_template = "民兵师"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "法兰克福民兵第2师"
-		location = 564 # Frankfurt
+		name = "塞外民兵第2师"
+		location = 4783
 		division_template = "民兵师"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "鹿特丹民兵第1师"
-		location = 480 # Rotterdam
+		name = "滇南民兵第1师"
+		location = 1319
 		division_template = "民兵师"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "安特卫普民兵第1师"
-		location = 6598 # Antwerp
+		name = "桂南民兵第1师"
+		location = 7137
 		division_template = "民兵师"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "塞萨洛尼基民兵第2师"
-		location = 895 # Thessaloniki
+		name = "藏南民兵第2师"
+		location = 5033
 		division_template = "民兵师"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	# === 骑兵师（草原与边境机动） ===
 	division = {
-		name = "布拉格骑兵第1师"
-		location = 445 # Prague
+		name = "漠北骑兵第1师"
+		location = 10612
 		division_template = "骑兵师"
 		start_experience_factor = 0.35
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "伯尔尼骑兵第2师"
-		location = 663 # Bern
+		name = "漠北骑兵第2师"
+		location = 1776
 		division_template = "骑兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "贝尔格莱德骑兵第1师"
-		location = 619 # Belgrade
+		name = "绥远骑兵第1师"
+		location = 7158
 		division_template = "骑兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "列日骑兵第1师"
-		location = 3516 # Liege
+		name = "西域骑兵第1师"
+		location = 4709
 		division_template = "骑兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	# === 山地步兵师（西南与高原防线） ===
 	division = {
-		name = "因斯布鲁克山地步兵第1师"
-		location = 668 # Innsbruck
+		name = "滇西山地步兵第1师"
+		location = 7965
 		division_template = "山地步兵师"
 		start_experience_factor = 0.35
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "阿尔卑斯山地步兵第1师"
-		location = 658 # Alps
+		name = "滇南山地步兵第1师"
+		location = 1319
 		division_template = "山地步兵师"
 		start_experience_factor = 0.35
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "萨伏依山地步兵第1师"
-		location = 764 # Savoy
+		name = "藏南山地步兵第1师"
+		location = 5033
 		division_template = "山地步兵师"
 		start_experience_factor = 0.35
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "伊庇鲁斯山地步兵第1师"
-		location = 841 # Epirus
+		name = "西域山地步兵第1师"
+		location = 4823
 		division_template = "山地步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	# === 机动部队（矿车与红石运输纵队） ===
 	division = {
-		name = "莱茵机动步兵第1师"
-		location = 563 # Rhineland
+		name = "漠北机动步兵第1师"
+		location = 12485
 		division_template = "机动步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "热那亚机动步兵第1师"
-		location = 599 # Litorale
+		name = "滇南机动步兵第1师"
+		location = 1319
 		division_template = "机动步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "里昂机动步兵第1师"
-		location = 762 # Lyon
+		name = "桂南机动步兵第1师"
+		location = 7137
 		division_template = "机动步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "波尔多机动步兵第1师"
-		location = 6621 # Bordeaux
+		name = "绥远机动步兵第1师"
+		location = 7158
 		division_template = "机动步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 		# === 京畿步兵师（首都卫戍，武汉 state 1036） ===
 	division = {
-		name = "罗马步兵第1师"
-		location = 923 # Rome
+		name = "京畿步兵第1师"
+		location = 4619              # 武汉 VP，有补给中心+铁路，适合集结
 		division_template = "步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "罗马步兵第2师"
-		location = 923 # Rome
+		name = "京畿步兵第2师"
+		location = 7167
 		division_template = "步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "罗马步兵第3师"
-		location = 923 # Rome
+		name = "京畿步兵第3师"
+		location = 12467             # 汉口
 		division_template = "步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	# === 湘西步兵师（常德 state 750） ===
 	division = {
-		name = "那不勒斯步兵第1师"
-		location = 819 # Napoli
+		name = "湘西步兵第1师"
+		location = 7101              # 常德 VP
 		division_template = "步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "都灵步兵第2师"
-		location = 611 # Turin
+		name = "湘西步兵第2师"
+		location = 4896
 		division_template = "步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "佛罗伦萨步兵第3师"
-		location = 910 # Florence
+		name = "湘西步兵第3师"
+		location = 5030
 		division_template = "步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	# === 皖南步兵师（黄山 state 749） ===
 	division = {
-		name = "威尼斯步兵第1师"
-		location = 603 # Venice
+		name = "皖南步兵第1师"
+		location = 12019             # 黄山 VP
 		division_template = "步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "布达佩斯步兵第2师"
-		location = 684 # Budapest
+		name = "皖南步兵第2师"
+		location = 4105
 		division_template = "步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0

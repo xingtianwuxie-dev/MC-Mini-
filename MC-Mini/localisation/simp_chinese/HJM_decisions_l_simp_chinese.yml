@@ -48,8 +48,8 @@
    # ==================== 内战前夕 ====================
    HJM_pre_civil_war_category: "内战前夕"
    HJM_pre_civil_war_category_desc: "人皇逝世后，帝国进入漫长的发酵期。摄政政府、保皇旧臣、反对派、Mojang派和网易都在争夺下一场风暴之前的两百天。"
-   HJM_civil_war_countdown: "内战倒计时"
-   HJM_civil_war_countdown_desc: "人皇逝世后，帝国表面的秩序只剩两百天缓冲。倒计时归零之时，三国举旗，天下崩裂。"
+   HJM_civil_war_countdown: "内战倒计时：[?HJM_cw_days_left|0] 天"
+   HJM_civil_war_countdown_desc: "人皇逝世后，帝国表面的秩序只剩两百天缓冲。倒计时归零之时，三国举旗，天下崩裂。\n当前剩余 [?HJM_cw_days_left|0] 天——「延揽人心备战」每次可续命一百二十天。"
    HJM_emergency_court_session: "召开紧急朝会"
    HJM_emergency_court_session_desc: "召集旧臣、摄政代表、军区将领和穿越者观察员，先把王冠旁边最刺耳的争吵压下去。完成后，权威、工坊、军令三类重度危机会一并降为中度。"
    HJM_reconcile_regional_commands: "整合地方军令"

@@ -1,4 +1,4 @@
-capital = 10 # 华沙 曼谷
+capital = 1076 # 曼谷
 
 oob = "GWG_1936"
 

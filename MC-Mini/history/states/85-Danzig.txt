@@ -7,8 +7,8 @@ state = {
 
 	history = {
 
-		owner = GWG
-		add_core_of = GWG
+		owner = POL
+		add_core_of = POL
 		add_core_of = DNZ
 		add_core_of = KSH
 		add_claim_by = PRE

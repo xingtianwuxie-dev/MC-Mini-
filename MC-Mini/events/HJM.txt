@@ -328,27 +328,27 @@ country_event = {
 
     option = {
         name = HJM.14.a
-		2 = { # 欧洲搬迁 2
-			add_building_construction = { type = bunker province = 923 level = 1 instant_build = yes }
-			add_building_construction = { type = bunker province = 6862 level = 1 instant_build = yes }
-			add_building_construction = { type = bunker province = 9794 level = 1 instant_build = yes }
-			add_building_construction = { type = bunker province = 9904 level = 1 instant_build = yes }
+		325 = {
+			add_building_construction = { type = bunker province = 1319 level = 1 instant_build = yes }
+			add_building_construction = { type = bunker province = 4501 level = 1 instant_build = yes }
+			add_building_construction = { type = bunker province = 12262 level = 1 instant_build = yes }
+			add_building_construction = { type = bunker province = 5072 level = 1 instant_build = yes }
 		}
-		64 = { # 欧洲搬迁 64
-			add_building_construction = { type = bunker province = 375 level = 1 instant_build = yes }
-			add_building_construction = { type = bunker province = 478 level = 1 instant_build = yes }
+		594 = {
+			add_building_construction = { type = bunker province = 7137 level = 1 instant_build = yes }
+			add_building_construction = { type = bunker province = 10459 level = 1 instant_build = yes }
 		}
-		16 = { # 欧洲搬迁 16
-			add_building_construction = { type = bunker province = 6547 level = 1 instant_build = yes }
+		601 = {
+			add_building_construction = { type = bunker province = 10856 level = 1 instant_build = yes }
 		}
-		41 = { # 欧洲搬迁 41
-			add_building_construction = { type = bunker province = 858 level = 1 instant_build = yes }
+		747 = {
+			add_building_construction = { type = bunker province = 7965 level = 1 instant_build = yes }
 		}
-		4 = { # 欧洲搬迁 4
-			add_building_construction = { type = bunker province = 704 level = 1 instant_build = yes }
+		757 = {
+			add_building_construction = { type = bunker province = 5033 level = 1 instant_build = yes }
 		}
-		159 = { # 欧洲搬迁 159
-			add_building_construction = { type = bunker province = 607 level = 1 instant_build = yes }
+		1033 = {
+			add_building_construction = { type = bunker province = 10004 level = 1 instant_build = yes }
 		}
     }
 }
@@ -371,7 +371,7 @@ country_event = {
             amount = 10000
             producer = HJM
         }
-        2 = { # 欧洲搬迁 2
+        1036 = {
             create_unit = {
                 division = "name = \"第1铁傀儡装甲师\" division_template = \"铁傀儡装甲师\" start_experience_factor = 0.8 start_equipment_factor = 1 start_manpower_factor = 1"
                 owner = HJM
@@ -701,7 +701,7 @@ country_event = {
         has_war_with = HIM
         has_idea = HJM_long_peace                # 还在无力期 = 还没觉醒
         months_at_war > 12                       # 开战满一年（XT：打满一年才许觉醒）
-        HIM = { num_occupied_states > 6 }        # 魔族被占本土超一成（68州×10%≈7，2026-08-17 从134州迁欧改）
+        HIM = { num_occupied_states > 13 }       # 魔族占本土超一成（134州×10%≈13）
     }
 
     mean_time_to_happen = {
@@ -729,14 +729,14 @@ country_event = {
     trigger = {
         has_war = yes
         OR = {
-            AND = { original_tag = HJM NOT = { controls_state = 64 } }   # 柏林
-            AND = { original_tag = HIM NOT = { controls_state = 219 } }    # 莫斯科
-            AND = { original_tag = XWY NOT = { controls_state = 229 } }    # 巴库
-            AND = { original_tag = LLL NOT = { controls_state = 12 } }    # 里加
-            AND = { original_tag = GWG NOT = { controls_state = 10 } }   # 华沙
-            AND = { original_tag = ZLG NOT = { controls_state = 46 } }    # 布加勒斯特
-            AND = { original_tag = MDG NOT = { controls_state = 38 } }    # 斯德哥尔摩
-            AND = { original_tag = MYR NOT = { controls_state = 111 } }    # 赫尔辛基
+            AND = { original_tag = HJM NOT = { controls_state = 1036 } }   # 武汉
+            AND = { original_tag = HIM NOT = { controls_state = 439 } }    # 德里
+            AND = { original_tag = XWY NOT = { controls_state = 427 } }    # 海得拉巴
+            AND = { original_tag = LLL NOT = { controls_state = 640 } }    # 曼德勒
+            AND = { original_tag = GWG NOT = { controls_state = 1076 } }   # 曼谷
+            AND = { original_tag = ZLG NOT = { controls_state = 440 } }    # 拉合尔
+            AND = { original_tag = MDG NOT = { controls_state = 330 } }    # 蒙古
+            AND = { original_tag = MYR NOT = { controls_state = 574 } }    # 雅库茨克
         }
     }
 
@@ -1367,8 +1367,6 @@ country_event = {
     hidden = yes
 
     immediate = {
-        # 2026-08-16 保险：无论从哪条路过来，先确保战后树已加载（重复 load 幂等），否则下面的 complete 会静默失败
-        load_focus_tree = { tree = HJM_pre_civil_war_focus keep_completed = yes }
         # 仅当国策还没完成时才执行（防重复）
         if = {
             limit = {
@@ -1751,5 +1749,33 @@ country_event = {
         puppet = MYR
         add_political_power = 50
         set_country_flag = HJM_no_mercy_disposed
+    }
+}
+
+# HJM.57 魔族战争保底（hidden）：1937-09-01 战争仍未爆发 → HIM 强制宣战
+# 由 on_startup 排程（609天后）；届时若已开战/HIM已亡，条件不满足事件自然作废
+country_event = {
+    id = HJM.57
+    hidden = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+    trigger = {
+        original_tag = HJM
+        exists = HIM
+        NOT = { has_war_with = HIM }
+        NOT = { has_country_flag = HJM_record_13_war_started }
+    }
+    immediate = {
+        # 魔族不宣而战：宣战后 on_war_relation_added 自动接管
+        # （切战争国策树/挂南线危局/发宣战新闻/触发MDG分裂），此处无需重复
+        HIM = {
+            declare_war_on = {
+                target = HJM
+                type = annex_everything
+            }
+        }
+    }
+    option = {
+        name = HJM.57.a
     }
 }

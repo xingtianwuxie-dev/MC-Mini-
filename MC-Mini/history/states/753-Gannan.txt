@@ -8,10 +8,10 @@ state = {
 
 	history = {
 
-		owner = PRC
-		add_core_of = PRC
-		add_core_of = PRC
-		add_core_of = PRC
+		owner = HJM
+		add_core_of = HJM
+		add_core_of = HJM
+		add_core_of = HJM
 
 		victory_points = {
 			5193 1 # Minsien
@@ -27,7 +27,7 @@ state = {
 					has_dlc = "No Compromise, No Surrender"
 				}
 				transfer_state_to = HJM
-				add_core_of = PRC
+				add_core_of = HJM
 				remove_core_of = HJM
 			}
 		}
@@ -39,7 +39,7 @@ state = {
 				}
 				remove_core_of = HJM
 			}		
-			owner = PRC
+			owner = HJM
 			controller = HJM
 		}
 

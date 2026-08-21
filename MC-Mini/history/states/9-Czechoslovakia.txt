@@ -10,7 +10,7 @@ state={
 	state_category = large_city
 	
 	history={
-		owner = HJM
+		owner = CZE
 		victory_points = { 11542 30 }
 		victory_points = { 6418 5 }
 		victory_points = { 9569 5 }
@@ -30,7 +30,7 @@ state={
 			 	}
 			 }
 		}
-		add_core_of = HJM
+		add_core_of = CZE
 
 
 		1939.3.14 = {

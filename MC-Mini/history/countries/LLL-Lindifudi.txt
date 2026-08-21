@@ -1,4 +1,4 @@
-capital = 12 # 里加 曼德勒
+capital = 640 # 曼德勒
 
 oob = "LLL_1936"
 

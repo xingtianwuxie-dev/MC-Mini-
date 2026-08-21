@@ -3,7 +3,7 @@ characters = {
 	DWF_Leader = {
 		name = DWF_Leader
 		country_leader = {
-			ideology = duowanism
+			ideology = duowan_coordination			# 2026-08-21 XT定:开局执政=协调派
 			traits = { }
 			expire = "1965.1.1"
 		}

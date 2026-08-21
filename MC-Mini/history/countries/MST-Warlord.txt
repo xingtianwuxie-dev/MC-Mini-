@@ -1,4 +1,4 @@
-capital = 64 # 柏林
+capital = 592 # 微软技术共同体
 
 set_research_slots = 3
 set_stability = 0.60

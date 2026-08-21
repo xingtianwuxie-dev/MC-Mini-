@@ -7,8 +7,8 @@ state = {
 	
 	history = {
 	
-		owner = BRM
-		add_core_of = BRM
+		owner = LLL
+		add_core_of = LLL
 		victory_points = {
 			1403 1 # Moulmein
 		}

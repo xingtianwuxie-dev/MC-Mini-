@@ -1,0 +1,210 @@
+# DWF 中央机关·重要职位任命事件(2026-08-21 XT定)
+# 机制:政治协商同盟会议完成后 country_event DWF.1(推举国家主席籽岷,独立事件,不链)
+#      多玩一大完成后 country_event DWF.2 → DWF.3 → DWF.4 → DWF.5(机关班子逐项任命,选完接下一项,仪式感)
+# 中央政要=每次大会弹出(二大/三大再开时用新事件ID复用同套模板)
+# 角色:国家主席=籽岷(HJM_Zimin, ideology=ziminism) / 军委会=基岩元帅(HJM_Bedrock_Marshal)
+#      红石工程院=马库斯·红石(HJM_Marcus_Redstone) / 联络局=人选待XT定(事件已做,名字下轮补)
+# 检查机关=书笔社/营造社/红石派三家小党轮值(flag:DWF_inspector_*)
+# 控制台: event DWF.1
+# ⚠️1.19.2实测:fire_event已不存在(报Unknown effect-type),触发effect=country_event= {id=X days=N}(原版argentina.txt/AAT_Denmark.txt实证,2026-08-21)
+# ⚠️1.19语法:字符ideology必须子意识形态;country_event无隐藏选项时勿加hidden;选项效果照旧
+
+add_namespace = DWF
+
+country_event = {
+	id = DWF.1
+	is_triggered_only = yes
+	fire_only_once = yes
+	title = DWF.1.t
+	desc = DWF.1.desc
+	option = {
+		name = DWF.1.a
+		set_country_flag = DWF_chairman_zinmin
+		add_political_power = 25
+	}
+	option = {
+		name = DWF.1.b
+		set_country_flag = DWF_chairman_zinmin
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = DWF.2
+	is_triggered_only = yes
+	fire_only_once = yes
+	title = DWF.2.t
+	desc = DWF.2.desc
+	option = {
+		name = DWF.2.a
+		set_country_flag = DWF_inspector_shubi
+		country_event = { id = DWF.3 days = 1 }
+	}
+	option = {
+		name = DWF.2.b
+		set_country_flag = DWF_inspector_yingzao
+		country_event = { id = DWF.3 days = 1 }
+	}
+	option = {
+		name = DWF.2.c
+		set_country_flag = DWF_inspector_hongshi
+		country_event = { id = DWF.3 days = 1 }
+	}
+}
+
+country_event = {
+	id = DWF.3
+	is_triggered_only = yes
+	fire_only_once = yes
+	title = DWF.3.t
+	desc = DWF.3.desc
+	option = {
+		name = DWF.3.a
+		set_country_flag = DWF_military_commission_bedrock
+		add_political_power = 15
+		country_event = { id = DWF.4 days = 1 }
+	}
+	option = {
+		name = DWF.3.b
+		set_country_flag = DWF_military_commission_bedrock
+		army_experience = 5
+		country_event = { id = DWF.4 days = 1 }
+	}
+}
+
+country_event = {
+	id = DWF.4
+	is_triggered_only = yes
+	fire_only_once = yes
+	title = DWF.4.t
+	desc = DWF.4.desc
+	option = {
+		name = DWF.4.a
+		set_country_flag = DWF_tech_academy_marcus
+		country_event = { id = DWF.5 days = 1 }
+	}
+	option = {
+		name = DWF.4.b
+		set_country_flag = DWF_tech_academy_marcus
+		add_political_power = 10
+		country_event = { id = DWF.5 days = 1 }
+	}
+}
+
+country_event = {
+	id = DWF.5
+	is_triggered_only = yes
+	fire_only_once = yes
+	title = DWF.5.t
+	desc = DWF.5.desc
+	option = {
+		name = DWF.5.a
+		set_country_flag = DWF_contact_head_tbd
+		add_political_power = 5
+	}
+	option = {
+		name = DWF.5.b
+		set_country_flag = DWF_contact_head_tbd
+	}
+}
+
+# ===== 政治线BOP段位+隐藏线事件(2026-08-22) =====
+
+# DWF.10 协调·绝对段位(BOP极端on_activate,首次弹)
+country_event = {
+	id = DWF.10
+	title = DWF.10.t
+	desc = DWF.10.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = DWF.10.a
+		add_political_power = 25
+	}
+}
+
+# DWF.11 解放·绝对段位(BOP极端on_activate,首次弹)
+country_event = {
+	id = DWF.11
+	title = DWF.11.t
+	desc = DWF.11.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = DWF.11.a
+		add_war_support = 0.03
+	}
+}
+
+# DWF.12 戈壁深处的低鸣(「秩序的极限」完成)
+country_event = {
+	id = DWF.12
+	title = DWF.12.t
+	desc = DWF.12.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	option = {
+		name = DWF.12.a
+		add_political_power = 25
+	}
+}
+
+# DWF.13 公社代表大会(「革命的极限」完成)
+country_event = {
+	id = DWF.13
+	title = DWF.13.t
+	desc = DWF.13.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	option = {
+		name = DWF.13.a
+		add_stability = -0.02
+		add_war_support = 0.03
+	}
+}
+
+# DWF.14 四姐妹上线(「四姐妹上线」国策完成,文风=轻盈跳脱)
+country_event = {
+	id = DWF.14
+	title = DWF.14.t
+	desc = DWF.14.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	option = {
+		name = DWF.14.a
+		add_stability = 0.03
+	}
+	option = {
+		name = DWF.14.b
+		add_political_power = 25
+	}
+}
+
+# DWF.15 跳测事件(2026-08-22):控制台 event DWF.15 触发,不走正常流程;测完C选项可重置BOP
+country_event = {
+	id = DWF.15
+	title = DWF.15.t
+	desc = DWF.15.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	option = {
+		name = DWF.15.a
+		# 红石线:BOP拉到协调极端+完成门槛策+直接开门(三保险,complete_national_focus是否带completion_reward未证实)
+		add_power_balance_value = { id = DWF_coordination_liberation_bop value = -1.0 tooltip_side = DWF_coordination_side }
+		complete_national_focus = { focus = DWF_order_ultimatum }
+		set_country_flag = DWF_redstone_path_open
+	}
+	option = {
+		name = DWF.15.b
+		# 共同体线:镜像
+		add_power_balance_value = { id = DWF_coordination_liberation_bop value = 1.0 tooltip_side = DWF_liberation_side }
+		complete_national_focus = { focus = DWF_revolution_ultimatum }
+		set_country_flag = DWF_community_path_open
+	}
+	option = {
+		name = DWF.15.c
+		set_power_balance = { id = DWF_coordination_liberation_bop set_default = yes }
+	}
+}

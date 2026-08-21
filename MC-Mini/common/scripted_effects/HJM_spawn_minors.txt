@@ -898,3 +898,36 @@ HJM_spawn_minor_states = {
 		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
 	}
 }
+
+# 2026-08-21 DWF决议地域分组(按首都州名核地理,由HJM_empire_split在spawn后调用)
+# 西北近邻(三十六国计划/白名单/问罪):陇西党项吐谷浑楼兰武威朔方五原云中洮州
+# 中亚(定远计划)/西藏(屋脊攻势)/东北(白山黑水攻势)
+DWF_set_warlord_groups = {
+	W05 = { set_country_flag = DWF_warlord_group_nw }
+	W24 = { set_country_flag = DWF_warlord_group_nw }
+	W25 = { set_country_flag = DWF_warlord_group_nw }
+	W26 = { set_country_flag = DWF_warlord_group_nw }
+	W27 = { set_country_flag = DWF_warlord_group_nw }
+	W28 = { set_country_flag = DWF_warlord_group_nw }
+	W29 = { set_country_flag = DWF_warlord_group_nw }
+	W30 = { set_country_flag = DWF_warlord_group_nw }
+	W31 = { set_country_flag = DWF_warlord_group_nw }
+	W51 = { set_country_flag = DWF_warlord_group_ca }
+	W52 = { set_country_flag = DWF_warlord_group_ca }
+	W53 = { set_country_flag = DWF_warlord_group_ca }
+	W54 = { set_country_flag = DWF_warlord_group_ca }
+	W55 = { set_country_flag = DWF_warlord_group_ca }
+	W56 = { set_country_flag = DWF_warlord_group_ca }
+	W57 = { set_country_flag = DWF_warlord_group_ca }
+	W58 = { set_country_flag = DWF_warlord_group_ca }
+	W59 = { set_country_flag = DWF_warlord_group_ca }
+	W60 = { set_country_flag = DWF_warlord_group_ca }
+	W61 = { set_country_flag = DWF_warlord_group_ca }
+	W21 = { set_country_flag = DWF_warlord_group_tibet }
+	W22 = { set_country_flag = DWF_warlord_group_tibet }
+	W23 = { set_country_flag = DWF_warlord_group_tibet }
+	W32 = { set_country_flag = DWF_warlord_group_ne }
+	W33 = { set_country_flag = DWF_warlord_group_ne }
+	W34 = { set_country_flag = DWF_warlord_group_ne }
+	W35 = { set_country_flag = DWF_warlord_group_ne }
+}

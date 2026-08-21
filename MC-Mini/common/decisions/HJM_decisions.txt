@@ -136,8 +136,8 @@ HJM_war_preparation_category = {
 		complete_effect = {
 			build_railway = {
 				level = 1
-				path = { 375 3368 3260 }
-			} # 北方铁路干线(柏林-汉堡-丹麦)
+				path = { 10612 1776 12485 1693 }
+			} # Build a temporary northern military railway.
 		}
 
 		ai_will_do = {
@@ -170,8 +170,8 @@ HJM_war_preparation_category = {
 		complete_effect = {
 			build_railway = {
 				level = 1
-				path = { 6547 762 858 }
-			} # 临时西部军用铁路(巴黎-里昂-马德里)
+				path = { 7158 4783 4709 4823 }
+			} # Build a temporary western military railway.
 		}
 
 		ai_will_do = {
@@ -416,13 +416,13 @@ HJM_wartime_decisions_category = {
 			} # Temporarily boost rear-area construction.
 			build_railway = {
 				level = 1
-				path = { 923 910 607 611 }
-			} # 帝国核心区战略铁路干线(罗马-佛罗伦萨-米兰-都灵)
-			2 = { # 欧洲搬迁 罗马
+				path = { 4973 12801 5094 8121 2093 4994 5033 10741 8059 4964 8018 12846 10750 10517 8049 }
+			} # Lay the western strategic railway trunk.
+			757 = {
 				add_building_construction = {
 					type = supply_node
 					level = 1
-					province = 923
+					province = 8121
 					instant_build = yes
 				}
 			} # Build a supply node at province 8121 inside state 757.
@@ -457,7 +457,7 @@ HJM_wartime_decisions_category = {
 				idea = HJM_frontier_support_modifier
 				days = 120
 			} # Temporarily improve frontier supply and defense.
-			43 = { # 欧洲搬迁 布达佩斯
+			322 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -794,6 +794,7 @@ HJM_pre_civil_war_category = {
 				mission = HJM_civil_war_countdown
 				days = 120
 			}
+			add_to_variable = { var = HJM_cw_days_left value = 120 } # 决议面板倒计时同步+120(2026-08-22)
 		}
 
 		ai_will_do = {
