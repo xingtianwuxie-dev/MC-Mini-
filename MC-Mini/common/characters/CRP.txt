@@ -1,0 +1,10 @@
+characters = {
+	CRP_leader = {
+		name = CRP_leader
+		country_leader = {
+			ideology = despotism			# 2026-08-21修:角色ideology必须填子意识形态,父级neutrality非法(debug报错实锤)
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+}

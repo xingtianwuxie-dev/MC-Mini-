@@ -3,10 +3,10 @@ characters = {
                 name = XWY_FeralSlime #狂暴史莱姆
                 portraits = {
                         army = {
-                                large = "gfx/leaders/XWY/XWY_FeralSlime.dds"
+                                large = "gfx/leaders/XWY/XWY_FeralSlime.png"
                         }
                         civilian = {
-                                large = "gfx/leaders/XWY/XWY_FeralSlime.dds"
+                                large = "gfx/leaders/XWY/XWY_FeralSlime.png"
                         }
                 }
                 country_leader = {

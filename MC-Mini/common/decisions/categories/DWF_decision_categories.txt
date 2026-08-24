@@ -65,3 +65,19 @@ DWF_politics_category = {
 		has_power_balance = { id = DWF_coordination_liberation_bop }
 	}
 }
+
+# 矿物发掘(2026-08-22 XT定):「土地探勘」国策解锁;随军事线收复区域(组军阀全灭)扩展新州矿点
+# ⚠️西北六州只有两个州可发掘(XT定);基础2条+四区域各2条=10条
+DWF_mineral_prospecting = {
+	priority = 96
+	icon = GFX_decision_category_generic_prospect_for_resources
+	visible_when_empty = no
+
+	allowed = {
+		original_tag = DWF
+	}
+
+	visible = {
+		has_country_flag = DWF_mineral_prospecting_unlocked
+	}
+}

@@ -48,15 +48,15 @@ spriteTypes = {
 	#         ②sprite 同名覆盖（无前缀 GFX_xxx_medium）。两者 texturefile 都指向与原版同名的 dds
 	SpriteType = {
 		name = "GFX_armored_car1_medium"
-		texturefile = "gfx/interface/technologies/armored_car_equipment_1.dds"
+		texturefile = "gfx/interface/technologies/armored_car_equipment_1.png"
 	}
 	SpriteType = {
 		name = "GFX_armored_car2_medium"
-		texturefile = "gfx/interface/technologies/armored_car_equipment_2.dds"
+		texturefile = "gfx/interface/technologies/armored_car_equipment_2.png"
 	}
 	SpriteType = {
 		name = "GFX_armored_car3_medium"
-		texturefile = "gfx/interface/technologies/armored_car_equipment_3.dds"
+		texturefile = "gfx/interface/technologies/armored_car_equipment_3.png"
 	}
 	SpriteType = {
 		name = "GFX_motorized_equipment_0_medium"

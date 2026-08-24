@@ -3,10 +3,10 @@ characters = {
                 name = ZLG_AncientPiglin #远古猪灵
                 portraits = {
                         army = {
-                                large = "gfx/leaders/ZLG/ZLG_AncientPiglin.dds"
+                                large = "gfx/leaders/ZLG/ZLG_AncientPiglin.png"
                         }
                         civilian = {
-                                large = "gfx/leaders/ZLG/ZLG_AncientPiglin.dds"
+                                large = "gfx/leaders/ZLG/ZLG_AncientPiglin.png"
                         }
                 }
                 country_leader = {

@@ -3,10 +3,10 @@ characters = {
 		name = HIM_Zombie_Overseer
 		portraits = {
 			army = {
-				large = "gfx/leaders/HIM/HIM_Zombie_Overseer.dds"
+				large = "gfx/leaders/HIM/HIM_Zombie_Overseer.png"
 			}
 			civilian = {
-				large = "gfx/leaders/HIM/HIM_Zombie_Overseer.dds"
+				large = "gfx/leaders/HIM/HIM_Zombie_Overseer.png"
 			}
 		}
 		country_leader = {
@@ -105,4 +105,20 @@ characters = {
 			}
 		}
 	}
+
+	# 下界行政区总督(2026-08-22):魔族战败后帝国派驻,决议HJM_nether_administration扶上位
+	HJM_viceroy_him = {
+		name = HJM_viceroy_him
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchist
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+
 }

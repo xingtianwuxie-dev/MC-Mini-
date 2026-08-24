@@ -3,10 +3,10 @@ characters = {
 		name = MYR_Enderman_Commander
 		portraits = {
 			army = {
-				large = "gfx/leaders/HJM/portrait_MYR_Ender_Queen.dds"
+				large = "gfx/leaders/HJM/portrait_MYR_Ender_Queen.png"
 			}
 			civilian = {
-				large = "gfx/leaders/HJM/portrait_MYR_Ender_Queen.dds"
+				large = "gfx/leaders/HJM/portrait_MYR_Ender_Queen.png"
 			}
 		}
 		country_leader = {

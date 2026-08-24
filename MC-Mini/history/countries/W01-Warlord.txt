@@ -1,3 +1,7 @@
+# 2026-08-24 岩石之令军阀(顶替原W01华北/蓟军,2026-08-24 XT定:华北最合适,国名「岩石之令」)
+# 分裂前旧岩石之令五人是MC帝国元帅/将军(由HJM招募);内战爆发后在华北另立山头
+# ⚠️2026-08-24实测:引擎禁止同一角色分属两国→W01用独立角色名(W01_Soren等,非HJM_)
+# 索伦(Soren)任国家领导人兼陆军元帅,加布里埃尔/马格纳斯/埃勒加德/艾弗为将军
 capital = 608 # 蓟军
 
 set_research_slots = 2
@@ -19,4 +23,8 @@ set_popularities = {
 		libertarian_socialist = 5
 }
 
-recruit_character = W01_warlord
+recruit_character = W01_Soren
+recruit_character = W01_Gabriel
+recruit_character = W01_Magnus
+recruit_character = W01_Ellegaard
+recruit_character = W01_Ivor

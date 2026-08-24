@@ -3,10 +3,10 @@ characters = {
 		name = MDG_Ender_Dragon
 		portraits = {
 			army = {
-				large = "gfx/leaders/MDG/MDG_Ender_Dragon.dds"
+				large = "gfx/leaders/MDG/MDG_Ender_Dragon.png"
 			}
 			civilian = {
-				large = "gfx/leaders/MDG/MDG_Ender_Dragon.dds"
+				large = "gfx/leaders/MDG/MDG_Ender_Dragon.png"
 			}
 		}
 		country_leader = {

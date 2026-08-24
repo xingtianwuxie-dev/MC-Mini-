@@ -630,6 +630,7 @@ guiTypes = {
 
 	positionType = {
 		name = "focus_spacing"
+		# 2026-08-22 XT对比测试:本行=mod旧版x1.5放大(96x130*1.5);TFR版为 x=96 y=145,切换改position即可
 		position = { x = 144 y = 195 }
 	}
 
@@ -640,6 +641,7 @@ guiTypes = {
 	
 	positionType = {
 		name = "link_spacing"
+		# 2026-08-22 XT对比测试:mod旧版x1.5=24x24;TFR版16x16
 		position = { x = 24 y = 24 }
 	}
 	

@@ -40,54 +40,6 @@ ideas = {
 				war_support_factor = 0.05
 			}
 		}
-		# ===== 政治线隐藏支精神(2026-08-22,数值占位待XT调) =====
-		DWF_redstone_directorate = {
-			allowed = { original_tag = DWF }
-			removal_cost = -1
-			modifier = {
-				research_speed_factor = 0.05			# 红石统辖(接管期):算力反哺
-				production_speed_buildings_factor = 0.10
-				political_power_factor = -0.10			# 机器不需要人心,人心也不惯机器
-			}
-		}
-		DWF_redstone_ascendancy_spirit = {
-			allowed = { original_tag = DWF }
-			removal_cost = -1
-			modifier = {
-				research_speed_factor = 0.10			# 红石智能统辖体(终局)
-				production_speed_buildings_factor = 0.15
-				stability_factor = 0.10
-				consumer_goods_factor = -0.05
-				political_power_factor = -0.15
-			}
-		}
-		DWF_commune_spirit = {
-			allowed = { original_tag = DWF }
-			removal_cost = -1
-			modifier = {
-				war_support_factor = 0.10			# 公社大联合:人人都是兵
-				stability_factor = -0.05
-				political_power_factor = -0.05
-			}
-		}
-		DWF_liberation_army_spirit = {
-			allowed = { original_tag = DWF }
-			removal_cost = -1
-			modifier = {
-				army_attack_factor = 0.05			# 解放军整编
-				army_defence_factor = 0.05
-				experience_gain_army_factor = 0.10
-			}
-		}
-		DWF_community_destiny_spirit = {
-			allowed = { original_tag = DWF }
-			removal_cost = -1
-			modifier = {
-				war_support_factor = 0.15			# 人类命运共同体(终局)
-				army_attack_factor = 0.05
-				stability_factor = 0.05
-				political_power_factor = -0.05
-			}
-		}
-}
+		# 2026-08-22 XT定大拆删去:红石统辖/红石智能统辖体/公社大联合/解放军/人类命运共同体5精神(随红石线+共同体线删除)
+	}
 }

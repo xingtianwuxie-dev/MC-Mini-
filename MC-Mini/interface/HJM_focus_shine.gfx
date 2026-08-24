@@ -7,10 +7,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_HJM_MC_start_shine"
-		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_MC_start.dds"
+		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_MC_start.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_MC_start.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_MC_start.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -22,7 +22,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_MC_start.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_MC_start.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -38,10 +38,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_HJM_underground_riot_shine"
-		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_underground_riot.dds"
+		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_underground_riot.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_underground_riot.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_underground_riot.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -53,7 +53,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_underground_riot.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_underground_riot.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -69,10 +69,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_F099F7AC57E87FA5D11604599A9E7846_shine"
-		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+		texturefile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -84,7 +84,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/F099F7AC57E87FA5D11604599A9E7846.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -100,10 +100,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_HJM_troubles_are_coming_shine"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_troubles are coming.dds"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_troubles are coming.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_troubles are coming.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_troubles are coming.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -115,7 +115,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_troubles are coming.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_troubles are coming.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -131,10 +131,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_HJM_suspicious_shine"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_suspicious.dds"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_suspicious.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_suspicious.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_suspicious.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -146,7 +146,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_suspicious.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_suspicious.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -162,10 +162,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_HJM_come_again_shine"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_come_again.dds"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_come_again.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_come_again.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_come_again.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -177,7 +177,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_come_again.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_come_again.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -193,10 +193,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_HJM_Strengthen_village_defenses_shine"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_Strengthen_village_defenses.dds"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_Strengthen_village_defenses.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_Strengthen_village_defenses.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_Strengthen_village_defenses.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -208,7 +208,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_Strengthen_village_defenses.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_Strengthen_village_defenses.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -224,10 +224,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_HJM_iron_golem_shine"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_iron_golem.dds"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_iron_golem.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_iron_golem.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_iron_golem.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -239,7 +239,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_iron_golem.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_iron_golem.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -255,10 +255,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_HJM_redstone_research_shine"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_redstone_research.dds"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_redstone_research.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_redstone_research.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_redstone_research.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -270,7 +270,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_redstone_research.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_redstone_research.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -286,10 +286,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_HJM_redstone_cannon_shine"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_redstone_cannon.dds"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_redstone_cannon.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_redstone_cannon.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_redstone_cannon.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -301,7 +301,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_redstone_cannon.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_redstone_cannon.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -317,10 +317,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_HJM_chaunyuezhexieyue_shine"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_chaunyuezhexieyue.dds"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_chaunyuezhexieyue.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_chaunyuezhexieyue.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_chaunyuezhexieyue.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -332,7 +332,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_chaunyuezhexieyue.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_chaunyuezhexieyue.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -348,10 +348,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_HJM_liberate_village_shine"
-		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_liberate_village.dds"
+		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_liberate_village.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_liberate_village.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_liberate_village.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -363,7 +363,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_liberate_village.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_liberate_village.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -379,10 +379,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_HJM_player_general_shine"
-		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_player_general.dds"
+		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_player_general.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_player_general.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_player_general.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -394,7 +394,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_player_general.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_player_general.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -410,10 +410,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_HJM_village_general_shine"
-		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_village_general.dds"
+		texturefile = "gfx/editor/interface/focusIcon/focus_HJM_village_general.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_village_general.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_village_general.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -425,7 +425,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_village_general.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/focus_HJM_village_general.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -441,10 +441,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_HJM_group_offensive_shine"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_group_offensive.dds"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_group_offensive.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_group_offensive.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_group_offensive.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -456,7 +456,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_group_offensive.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_group_offensive.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -472,10 +472,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_HJM_liberate_nether_shine"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_liberate_nether.dds"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_liberate_nether.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_liberate_nether.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_liberate_nether.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -487,7 +487,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_liberate_nether.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_liberate_nether.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -503,10 +503,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_HJM_nether_strike_shine"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_nether_strike.dds"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_nether_strike.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_nether_strike.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_nether_strike.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -518,7 +518,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_nether_strike.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_nether_strike.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -534,10 +534,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_HJM_total_war_shine"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_total_war.dds"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_total_war.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_total_war.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_total_war.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -549,7 +549,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_total_war.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_total_war.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -565,10 +565,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_HJM_is_it_over_shine"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_is_it_over.dds"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_is_it_over.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_is_it_over.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_is_it_over.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -580,7 +580,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_is_it_over.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_is_it_over.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -596,10 +596,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_HJM_emperor_passes_shine"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_emperor_passes.dds"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_emperor_passes.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_emperor_passes.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_emperor_passes.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -611,7 +611,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_emperor_passes.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_emperor_passes.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -627,10 +627,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_HJM_regional_situation_summary_shine"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_regional_situation_summary.dds"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_regional_situation_summary.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_regional_situation_summary.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_regional_situation_summary.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -642,7 +642,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_regional_situation_summary.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_regional_situation_summary.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -658,10 +658,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_HJM_side_with_opposition_shine"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_side_with_opposition.dds"
+		texturefile = "gfx/editor/interface/focusIcon/HJM_side_with_opposition.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_side_with_opposition.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_side_with_opposition.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -673,7 +673,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_side_with_opposition.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_side_with_opposition.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no

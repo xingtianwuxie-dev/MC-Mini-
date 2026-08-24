@@ -83,14 +83,14 @@ spriteTypes = {
 	# --- 国策「多玩玩家联盟改组」图标（8-17 画好未接线）+ 流光 ---
 	SpriteType = {
 		name = "GFX_focus_HJM_duowan_alliance_reform"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_duowan_alliance_reform.dds"
+		texturefile = "gfx/editor/interface/focusIcon/hjm_duowan_alliance_reform.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_HJM_duowan_alliance_reform_shine"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_duowan_alliance_reform.dds"
+		texturefile = "gfx/editor/interface/focusIcon/hjm_duowan_alliance_reform.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_duowan_alliance_reform.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/hjm_duowan_alliance_reform.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -102,7 +102,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/editor/interface/focusIcon/HJM_duowan_alliance_reform.dds"
+			animationmaskfile = "gfx/editor/interface/focusIcon/hjm_duowan_alliance_reform.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -116,15 +116,15 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-	# --- 集团攻势民族精神图标（复用国策图标 HJM_group_offensive.dds，2026-08-19） ---
+	# --- 集团攻势民族精神图标（复用国策图标 hjm_group_offensive.png，2026-08-19） ---
 	SpriteType = {
 		name = "GFX_idea_HJM_group_offensive"
-		texturefile = "gfx/editor/interface/focusIcon/HJM_group_offensive.dds"
+		texturefile = "gfx/editor/interface/focusIcon/hjm_group_offensive.png"
 	}
 
 	# --- 装甲车2代装备图标重定向到 8-17 新图（旧定义指 armored_car_equipment_2.dds） ---
 	SpriteType = {
 		name = "GFX_armored_car2_medium"
-		texturefile = "gfx/interface/technologies/armored_car2.dds"
+		texturefile = "gfx/interface/technologies/armored_car2.png"
 	}
 }

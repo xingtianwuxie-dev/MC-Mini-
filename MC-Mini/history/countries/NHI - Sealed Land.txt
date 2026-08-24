@@ -1,0 +1,19 @@
+capital = 422 # 封印地(锡兰)
+
+set_research_slots = 2
+set_stability = 0.50
+set_war_support = 0.30
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	fascism = 70
+	neutrality = 30
+}
+
+# 2026-08-22:开局不存在;魔族战争后由HJM决议「下界行政区方案」释放(Herobrine任领袖)

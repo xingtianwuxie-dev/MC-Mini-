@@ -18,4 +18,5 @@ set_popularities = {
 		fascism = 7
 }
 
-recruit_character = NTE_Leader
+# 2026-08-24 XT定:丁磊(寡头/中立)任网易远洋开发团元首(独立角色NTE_DingLei,避免与HJM顾问版冲突)
+recruit_character = NTE_DingLei

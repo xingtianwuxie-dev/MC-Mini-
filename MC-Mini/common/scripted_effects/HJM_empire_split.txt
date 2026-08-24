@@ -13,7 +13,8 @@ HJM_warlord_divisions = {
 }
 
 HJM_empire_split = {
-	# === 多玩穿越者联邦 DWF(6州,首都617) ===
+	# === 多玩穿越者联邦 DWF(7州,首都617) ===
+	# 2026-08-23 XT定:DWF成立时加 732(帕米尔)
 	DWF = {
 		HJM_warlord_divisions = yes
 		transfer_state = 617
@@ -22,6 +23,7 @@ HJM_empire_split = {
 		transfer_state = 760
 		transfer_state = 759
 		transfer_state = 756
+		transfer_state = 732
 		set_capital = { state = 617 }
 		every_owned_state = { add_core_of = DWF }
 		every_controlled_state = {

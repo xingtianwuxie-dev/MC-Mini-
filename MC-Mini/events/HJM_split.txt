@@ -9,6 +9,11 @@ country_event = {
 	fire_only_once = yes
 	title = HJM_split.1.t
 	desc = HJM_split.1.desc
+	# 2026-08-22 XT定:分裂弹出瞬间奏响内战超事件「冠冕坠地」;统一检测也吃 HJM_empire_split_done 这面全局flag
+	immediate = {
+		set_global_flag = HJM_empire_split_done
+		set_country_flag = HJM_civilwar_superevent_start
+	}
 	option = {
 		name = HJM_split.1.a
 		HJM_empire_split = yes
@@ -29,6 +34,7 @@ country_event = {
 			air_ratio = 0
 		}
 		DWF = { change_tag_from = ROOT } # 玩家HJM→DWF
+		DWF = { set_country_flag = HJM_civilwar_superevent_start } # 换tag后在新tag上补flag,弹窗不丢
 	}
 	option = {
 		name = HJM_split.1.c
@@ -45,6 +51,7 @@ country_event = {
 			air_ratio = 0
 		}
 		NTE = { change_tag_from = ROOT }
+		NTE = { set_country_flag = HJM_civilwar_superevent_start } # 换tag后补flag,弹窗不丢
 	}
 	option = {
 		name = HJM_split.1.d
@@ -61,5 +68,6 @@ country_event = {
 			air_ratio = 0
 		}
 		MST = { change_tag_from = ROOT }
+		MST = { set_country_flag = HJM_civilwar_superevent_start } # 换tag后补flag,弹窗不丢
 	}
 }

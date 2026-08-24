@@ -493,10 +493,17 @@ HJM_pre_civil_war_category = {
 		}
 
 		is_good = no
+		selectable_mission = yes # 2026-08-22 XT定:抄魔族战争倒计时,玩家可手动点爆
 		days_mission_timeout = 200 # 2026-08-14 XT定:人皇逝世后200天引爆内战
 
 		cancel_trigger = {
 			has_country_flag = HJM_civil_war_countdown_cancelled
+		}
+
+		complete_effect = {
+			# 手动引爆(2026-08-22 XT定):不等200天,点了就进帝国分裂
+			set_country_flag = HJM_civil_war_countdown_expired
+			country_event = { id = HJM_split.1 }
 		}
 
 		timeout_effect = {
@@ -1225,6 +1232,51 @@ HJM_postwar_regency_category = {
 
 		ai_will_do = {
 			factor = 1
+		}
+	}
+
+	HJM_nether_administration = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 100
+		fire_only_once = yes
+
+		allowed = {
+			original_tag = HJM
+		}
+
+		visible = {
+			has_country_flag = HJM_nether_war_concluded
+			HIM = { country_exists = yes }
+			NOT = { has_country_flag = HJM_nether_admin_done }
+		}
+
+		available = {
+			HIM = { country_exists = yes }
+		}
+
+		complete_effect = {
+			# 2026-08-22 XT定:下界行政区方案——魔族战争结束的三种收尾之一
+			# 下界要塞改组为帝国附庸:改名+帝制+总督;锡兰割出建封印地镇Herobrine
+			HIM = {
+				set_cosmetic_tag = HIM_admin_region
+				set_politics = { ruling_party = feudalist last_election = "1936.1.1" election_frequency = 48 elections_allowed = no }
+				promote_character = { character = HJM_viceroy_him ideology = absolute_monarchist }
+				add_ideas = HJM_vassal_state
+			}
+			puppet = HIM
+			# 锡兰割让→封印地(2026-08-22修:州权转移用transfer_state,set_controller/set_owner是省scope在州scope无效;set_capital改1.19块形式)
+			transfer_state = 422
+			422 = {
+				add_core_of = NHI
+			}
+			release_puppet_on_controlled = NHI
+			NHI = {
+				set_capital = { state = 422 }
+				set_politics = { ruling_party = fascism last_election = "1936.1.1" election_frequency = 48 elections_allowed = no }
+				promote_character = { character = NHI_Herobrine ideology = fascism_ideology }
+			}
+			set_country_flag = HJM_nether_admin_done
+			add_political_power = 50
 		}
 	}
 }

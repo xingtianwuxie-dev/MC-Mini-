@@ -883,25 +883,13 @@ HJM_spawn_minor_states = {
 		}
 		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
 	}
-	W61 = {
-		HJM_warlord_divisions = yes
-		transfer_state = 732
-		set_capital = { state = 732 }
-		every_owned_state = { add_core_of = W61 }
-		every_controlled_state = {
-			limit = { is_core_of = W61 }
-			create_unit = {
-				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
-				owner = W61
-			}
-		}
-		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
 	}
-}
 
 # 2026-08-21 DWF决议地域分组(按首都州名核地理,由HJM_empire_split在spawn后调用)
 # 西北近邻(三十六国计划/白名单/问罪):陇西党项吐谷浑楼兰武威朔方五原云中洮州
 # 中亚(定远计划)/西藏(屋脊攻势)/东北(白山黑水攻势)
+# 华北(蓟冀州右北平常山济南广阳上谷)/华东(建康华亭吴郡庐江江淮会稽齐郡胶东)
+# 华南(夷洲桂州豫章珠崖长沙武陵新安州)/西南(巴郡益州蜀郡云南南诏越嶲播州牂牁)
 DWF_set_warlord_groups = {
 	W05 = { set_country_flag = DWF_warlord_group_nw }
 	W24 = { set_country_flag = DWF_warlord_group_nw }
@@ -922,12 +910,30 @@ DWF_set_warlord_groups = {
 	W58 = { set_country_flag = DWF_warlord_group_ca }
 	W59 = { set_country_flag = DWF_warlord_group_ca }
 	W60 = { set_country_flag = DWF_warlord_group_ca }
-	W61 = { set_country_flag = DWF_warlord_group_ca }
-	W21 = { set_country_flag = DWF_warlord_group_tibet }
+		W21 = { set_country_flag = DWF_warlord_group_tibet }
 	W22 = { set_country_flag = DWF_warlord_group_tibet }
 	W23 = { set_country_flag = DWF_warlord_group_tibet }
 	W32 = { set_country_flag = DWF_warlord_group_ne }
 	W33 = { set_country_flag = DWF_warlord_group_ne }
 	W34 = { set_country_flag = DWF_warlord_group_ne }
 	W35 = { set_country_flag = DWF_warlord_group_ne }
+	W01 = { set_country_flag = DWF_warlord_group_north }
+	W02 = { set_country_flag = DWF_warlord_group_north }
+	W03 = { set_country_flag = DWF_warlord_group_north }
+	W04 = { set_country_flag = DWF_warlord_group_north }
+	W06 = { set_country_flag = DWF_warlord_group_east }
+	W07 = { set_country_flag = DWF_warlord_group_east }
+	W08 = { set_country_flag = DWF_warlord_group_east }
+	W09 = { set_country_flag = DWF_warlord_group_east }
+	W10 = { set_country_flag = DWF_warlord_group_east }
+	W11 = { set_country_flag = DWF_warlord_group_south }
+	W12 = { set_country_flag = DWF_warlord_group_south }
+	W13 = { set_country_flag = DWF_warlord_group_south }
+	W14 = { set_country_flag = DWF_warlord_group_south }
+	W15 = { set_country_flag = DWF_warlord_group_south }
+	W16 = { set_country_flag = DWF_warlord_group_sw }
+	W17 = { set_country_flag = DWF_warlord_group_sw }
+	W18 = { set_country_flag = DWF_warlord_group_sw }
+	W19 = { set_country_flag = DWF_warlord_group_sw }
+	W20 = { set_country_flag = DWF_warlord_group_sw }
 }

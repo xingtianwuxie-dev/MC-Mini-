@@ -58,50 +58,108 @@ units = {
 		name = "尼泊尔骷髅第1师"
 		location = 4987 # 加德满都，尼泊尔
 		division_template = "凋零骷髅军团"
-		start_experience_factor = 0.4
-		start_equipment_factor = 0.9
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "尼泊尔亡灵步兵第1师"
 		location = 4987
 		division_template = "亡灵步兵师"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.85
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "尼泊尔亡灵步兵第2师"
 		location = 4386
 		division_template = "亡灵步兵师"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.85
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "尼泊尔亡灵步兵第3师"
 		location = 5310
 		division_template = "亡灵步兵师"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.85
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
 	}
 	# === 不丹方面军 → 云南前线 ===
 	division = {
 		name = "不丹亡灵步兵第1师"
 		location = 8010 # 不丹
 		division_template = "亡灵步兵师"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.85
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "不丹尸群第1师"
 		location = 8010
 		division_template = "尸群师"
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.8
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "不丹尸群第2师"
 		location = 12860
 		division_template = "尸群师"
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.8
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
 	}
+	# === 2026-08-22 XT定:魔族增兵8师(原7师守两条战线打不动帝国) ===
+	division = {
+		name = "德里凋零骷髅第1师"
+		location = 2032 # 德里,下界要塞首都
+		division_template = "凋零骷髅军团"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "德里凋零骷髅第2师"
+		location = 2032
+		division_template = "凋零骷髅军团"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "德里亡灵步兵第1师"
+		location = 2032
+		division_template = "亡灵步兵师"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "德里亡灵步兵第2师"
+		location = 2032
+		division_template = "亡灵步兵师"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "德里亡灵步兵第3师"
+		location = 2032
+		division_template = "亡灵步兵师"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "尼泊尔亡灵步兵第4师"
+		location = 4987
+		division_template = "亡灵步兵师"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "尼泊尔亡灵步兵第5师"
+		location = 5310
+		division_template = "亡灵步兵师"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "不丹亡灵步兵第2师"
+		location = 8010
+		division_template = "亡灵步兵师"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+
 }

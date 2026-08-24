@@ -158,8 +158,26 @@ recruit_character = HJM_Bedrock_Marshal
 recruit_character = HJM_Admiral_Drowned
 recruit_character = HJM_War_Minister
 recruit_character = HJM_Naval_Minister
-# 2026-08-21 XT定:籽岷已归多玩DWF(角色同一,开局由DWF-Warlord.txt招募领导多玩);HJM不可再招募,否则角色冲突报错
+# 2026-08-24 XT定:三党党首(籽岷/丁磊/菲尔)也多国recruit——分裂前都是帝国党首/顾问,HJM也有
+# 但三人只在各自党派国当元首(籽岷=DWF社民/丁磊=NTE中立寡头/菲尔=MST民主保守),HJM ruling=feudalist不匹配,不会抢Notch元首位
+# ⚠️同角色多国recruit是HOI4合法做法(原版张学良/陈济棠等先例),非引擎限制
 recruit_character = HJM_DingLei
+recruit_character = HJM_Zimin
+recruit_character = HJM_PhilSpencer
+# 2026-08-24 岩石之令(分裂前都是MC帝国可玩将军/元帅,见characters/HJM.txt)
+# 新岩石之令5人:内战后归HJM保皇(留在帝国)
+recruit_character = HJM_Jesse
+recruit_character = HJM_Olivia
+recruit_character = HJM_Axel
+recruit_character = HJM_Lukas
+recruit_character = HJM_Petra
+# 旧岩石之令5人:内战后独立成华北军阀「岩石之令」(索伦任元首,见W01-Warlord.txt)
+# ⚠️同角色多国recruit是HOI4合法做法(原版250例),非引擎限制
+recruit_character = HJM_Soren
+recruit_character = HJM_Gabriel
+recruit_character = HJM_Magnus
+recruit_character = HJM_Ellegaard
+recruit_character = HJM_Ivor
 
 add_ideas = {
 	Wulin

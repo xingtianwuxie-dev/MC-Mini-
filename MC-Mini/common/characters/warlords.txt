@@ -8,6 +8,111 @@ characters = {
 			expire = "1965.1.1"
 		}
 	}
+	# ===== 岩石之令·旧五人(2026-08-24 XT定:W01改名岩石之令,独立角色名不与HJM冲突) =====
+	# 出自《我的世界:故事模式》初代岩石之令;W01_角色名是独立实例,立绘/译名共享「索伦」等
+	# 索伦=国家元首兼陆军元帅;加百利/马格奈斯/埃勒加德/艾弗=将军
+	W01_Soren = {
+		name = W01_Soren
+		portraits = {
+			army = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		country_leader = {
+			ideology = imperial_militarism		# 2026-08-24修:必须是feudalist的子类型(父级报错实锤)
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		field_marshal = {
+			traits = { brilliant_strategist }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
+			legacy_id = -1
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	W01_Gabriel = {
+		name = W01_Gabriel
+		portraits = {
+			army = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		corps_commander = {
+			traits = { offensive_doctrine }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	W01_Magnus = {
+		name = W01_Magnus
+		portraits = {
+			army = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		corps_commander = {
+			traits = { offensive_doctrine }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	W01_Ellegaard = {
+		name = W01_Ellegaard
+		portraits = {
+			army = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		corps_commander = {
+			traits = { trait_engineer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	W01_Ivor = {
+		name = W01_Ivor
+		portraits = {
+			army = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		corps_commander = {
+			traits = { defensive_doctrine }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
 	W02_warlord = {
 		name = W02_warlord
 		country_leader = {
@@ -480,12 +585,4 @@ characters = {
 			expire = "1965.1.1"
 		}
 	}
-	W61_warlord = {
-		name = W61_warlord
-		country_leader = {
-			ideology = libertarian_socialist_ideology
-			traits = { }
-			expire = "1965.1.1"
-		}
 	}
-}

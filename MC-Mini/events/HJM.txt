@@ -700,7 +700,7 @@ country_event = {
         tag = HJM
         has_war_with = HIM
         has_idea = HJM_long_peace                # 还在无力期 = 还没觉醒
-        months_at_war > 12                       # 开战满一年（XT：打满一年才许觉醒）
+        check_variable = { var = HJM_demon_war_days value > 365 } # 开战满一年（XT：打满一年才许觉醒；1.19无months_at_war，改用变量计天）
         HIM = { num_occupied_states > 13 }       # 魔族占本土超一成（134州×10%≈13）
     }
 
@@ -1761,7 +1761,7 @@ country_event = {
     fire_only_once = yes
     trigger = {
         original_tag = HJM
-        exists = HIM
+        country_exists = HIM
         NOT = { has_war_with = HIM }
         NOT = { has_country_flag = HJM_record_13_war_started }
     }

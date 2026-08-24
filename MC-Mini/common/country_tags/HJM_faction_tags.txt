@@ -2,3 +2,6 @@
 DWF = "countries/DWF.txt"
 NTE = "countries/NTE.txt"
 MST = "countries/MST.txt"
+
+# 封印地(2026-08-22):魔族战争后锡兰割让建立,Herobrine封印之处,由决议释放
+NHI = "countries/NHI.txt"

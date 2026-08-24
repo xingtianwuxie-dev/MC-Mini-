@@ -1,0 +1,8 @@
+spriteTypes = {
+	# 2026-08-22: 超事件大图(烽烟既起,XT出图982x594)。正斜杠+legacy_lazy_load=no(首次弹出黑图坑)
+	spriteType = {
+		name = "GFX_HJM_war_superevent_bg"
+		texturefile = "gfx/super_events/HJM_war_superevent.png"
+		legacy_lazy_load = no
+	}
+}

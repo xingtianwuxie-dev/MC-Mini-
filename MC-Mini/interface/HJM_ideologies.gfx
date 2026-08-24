@@ -3,7 +3,7 @@ spriteTypes = {
 	# feudalist_group：保皇党（HJM 专属 group，不影响原版）
 	SpriteType = {
 		name = "GFX_ideology_feudalist_group"
-		texturefile = "gfx/interface/ideologies/feudalist_group.dds"
+		texturefile = "gfx/interface/ideologies/feudalist_group.png"
 	}
 	# fascism_group：覆盖原版法西斯图标（HIM 用，但会同时影响德国/日本/意大利等所有法西斯国家）
 	SpriteType = {

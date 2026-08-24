@@ -1,0 +1,21 @@
+characters = {
+	NHI_Herobrine = {
+		name = NHI_Herobrine
+		# 魔神Herobrine:封印地名义统治者,帝国最深的囚徒(2026-08-22)
+		portraits = {
+			army = {
+				large = "gfx/leaders/HIM/portrait_Herobrine.png"
+			}
+			civilian = {
+				large = "gfx/leaders/HIM/portrait_Herobrine.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = {
+				dictator
+			}
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -3,10 +3,10 @@ characters = {
                 name = GWG_BigZombie #大僵尸
                 portraits = {
                         army = {
-                                large = "gfx/leaders/leader_unknown.dds"
+                                large = "gfx/leaders/GWG/portrait_BigZombie.png"
                         }
                         civilian = {
-                                large = "gfx/leaders/leader_unknown.dds"
+                                large = "gfx/leaders/GWG/portrait_BigZombie.png"
                         }
                 }
                 country_leader = {

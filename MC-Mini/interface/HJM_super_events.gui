@@ -14,7 +14,7 @@ guiTypes = {
 
 		background = {
 			name = "Background"
-			quadTextureSprite = "GFX_tiled_window_1b_border"
+			quadTextureSprite = "GFX_HJM_war_superevent_bg" # 2026-08-22 换大图底(烽烟既起),其余三个窗仍是文本底待出图
 		}
 
 		instantTextBoxType = {
@@ -136,6 +136,147 @@ guiTypes = {
 			position = { x = 360 y = 492 }
 			quadTextureSprite = "GFX_button_261x34"
 			buttonText = "HJM_SUPEREVENT_CLOSE"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+	}
+
+	# 2026-08-22 内战爆发「冠冕坠地」/ 统一「尘埃落定」——结构与上两个一致
+	containerWindowType = {
+		name = "HJM_civilwar_superevent_window"
+		position = { x = 0 y = 0 }
+		size = { width = 982 height = 594 }
+		orientation = center
+		origo = center
+		moveable = yes
+		fade_time = 200
+		fade_type = linear
+		click_to_front = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_1b_border"
+		}
+
+		instantTextBoxType = {
+			name = "HJM_civilwar_superevent_overline"
+			position = { x = 48 y = 44 }
+			maxWidth = 886
+			maxHeight = 28
+			font = "hoi_18mbs"
+			text = "HJM_SUPEREVENT_CIVILWAR_OVERLINE"
+			format = centre
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "HJM_civilwar_superevent_title"
+			position = { x = 48 y = 92 }
+			maxWidth = 886
+			maxHeight = 86
+			font = "hoi_36header"
+			text = "HJM_SUPEREVENT_CIVILWAR_TITLE"
+			format = centre
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "HJM_civilwar_superevent_quote"
+			position = { x = 90 y = 202 }
+			maxWidth = 802
+			maxHeight = 96
+			font = "hoi_20bs"
+			text = "HJM_SUPEREVENT_CIVILWAR_QUOTE"
+			format = centre
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "HJM_civilwar_superevent_body"
+			position = { x = 92 y = 334 }
+			maxWidth = 798
+			maxHeight = 72
+			font = "hoi_18mbs"
+			text = "HJM_SUPEREVENT_CIVILWAR_BODY"
+			format = centre
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "HJM_civilwar_superevent_close"
+			position = { x = 360 y = 492 }
+			quadTextureSprite = "GFX_button_261x34"
+			buttonText = "HJM_SUPEREVENT_CIVILWAR_CLOSE"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+	}
+
+	containerWindowType = {
+		name = "HJM_unification_superevent_window"
+		position = { x = 0 y = 0 }
+		size = { width = 982 height = 594 }
+		orientation = center
+		origo = center
+		moveable = yes
+		fade_time = 200
+		fade_type = linear
+		click_to_front = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_1b_border"
+		}
+
+		instantTextBoxType = {
+			name = "HJM_unification_superevent_overline"
+			position = { x = 48 y = 44 }
+			maxWidth = 886
+			maxHeight = 28
+			font = "hoi_18mbs"
+			text = "HJM_SUPEREVENT_UNIFY_OVERLINE"
+			format = centre
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "HJM_unification_superevent_title"
+			position = { x = 48 y = 92 }
+			maxWidth = 886
+			maxHeight = 86
+			font = "hoi_36header"
+			text = "HJM_SUPEREVENT_UNIFY_TITLE"
+			format = centre
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "HJM_unification_superevent_quote"
+			position = { x = 90 y = 202 }
+			maxWidth = 802
+			maxHeight = 96
+			font = "hoi_20bs"
+			text = "HJM_SUPEREVENT_UNIFY_QUOTE"
+			format = centre
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "HJM_unification_superevent_body"
+			position = { x = 92 y = 334 }
+			maxWidth = 798
+			maxHeight = 72
+			font = "hoi_18mbs"
+			text = "HJM_SUPEREVENT_UNIFY_BODY"
+			format = centre
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "HJM_unification_superevent_close"
+			position = { x = 360 y = 492 }
+			quadTextureSprite = "GFX_button_261x34"
+			buttonText = "HJM_SUPEREVENT_UNIFY_CLOSE"
 			buttonFont = "hoi_16mbs"
 			clicksound = click_default
 		}

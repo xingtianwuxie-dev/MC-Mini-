@@ -146,7 +146,7 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.10			# 集团攻势：陆军组织度上限+10%
 				army_org_regain = 0.10			# 轮换休整：组织度恢复+10%
-				breakthrough = 0.10			# 集中突破：突破+10%
+				experience_gain_army_factor = 0.10	# 突破演练：陆军经验获取+10%（1.19 idea禁用breakthrough，2026-08-22改）
 				army_attack_factor = 0.05		# 集团冲锋：陆军攻击+5%
 			}
 		}
@@ -354,12 +354,13 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				army_org_factor = -0.15        # 组织 -15%（加强：觉醒前更虚弱）
-				army_attack_factor = -0.15     # 攻击 -15%（加强）
-				army_defence_factor = -0.10    # 防御 -10%（加强）
-				war_support_factor = -0.08     # 战支 -8%（加强）
-				stability_factor = -0.10       # 稳定 -10%（加强）
-				political_power_gain = -0.08       # 政治点 -8%（加强）
+				# 2026-08-22 XT定:全项翻倍
+				army_org_factor = -0.30        # 组织 -30%
+				army_attack_factor = -0.30     # 攻击 -30%
+				army_defence_factor = -0.20    # 防御 -20%
+				war_support_factor = -0.16     # 战支 -16%
+				stability_factor = -0.20       # 稳定 -20%
+				political_power_gain = -0.16       # 政治点 -16%
 			}
 		}
 
@@ -444,10 +445,11 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				army_attack_factor = 0.10
-				army_defence_factor = 0.10
-				army_org_factor = 0.10
-				war_support_factor = 0.15
+				# 2026-08-22 XT定:全项翻倍
+				army_attack_factor = 0.20
+				army_defence_factor = 0.20
+				army_org_factor = 0.20
+				war_support_factor = 0.30
 			}
 		}
 
@@ -512,7 +514,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				construction_speed = 0.30
+				production_speed_buildings_factor = 0.30
 			}
 		}
 

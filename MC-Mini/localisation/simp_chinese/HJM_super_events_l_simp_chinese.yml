@@ -8,3 +8,15 @@
    HJM_SUPEREVENT_REGENCY_QUOTE: "人皇能把天下聚成一拳；人皇既崩，每一根手指都会记起自己的方向。"
    HJM_SUPEREVENT_REGENCY_BODY: "Notch 逝世，旧臣拥立 Jeb，穿越者代表菲尔·斯宾塞以摄政之名入主议事厅。胜利的欢呼尚未散尽，帝国的裂缝已经开始发声。"
    HJM_SUPEREVENT_CLOSE: "执干戈以待"
+
+ # ===== 内战爆发/统一超事件(2026-08-22 XT定) =====
+ HJM_SUPEREVENT_CIVILWAR_OVERLINE: "MC帝国 - 帝国分裂"
+ HJM_SUPEREVENT_CIVILWAR_TITLE: "冠冕坠地"
+ HJM_SUPEREVENT_CIVILWAR_QUOTE: "王冠仍在时，人人俯首；冠冕坠地时，每一双手都想去捡。"
+ HJM_SUPEREVENT_CIVILWAR_BODY: "人皇逝世之后，延揽人心终究没能缝住裂缝。保皇党守住武汉的宫墙，多玩、网易、微软各据一方举旗——帝国一分为四，军阀割据遍地。古老帝国亲手打响了埋葬自己的最后一战。"
+ HJM_SUPEREVENT_CIVILWAR_CLOSE: "分道扬镳"
+ HJM_SUPEREVENT_UNIFY_OVERLINE: "MC帝国 - 天下归一"
+ HJM_SUPEREVENT_UNIFY_TITLE: "尘埃落定"
+ HJM_SUPEREVENT_UNIFY_QUOTE: "烽烟散尽之日，胜利者得到整个帝国——连同它全部的裂缝。"
+ HJM_SUPEREVENT_UNIFY_BODY: "内战结束了。四方旗号只剩一面，武汉的宫墙迎来新的主人。无论接下来站起来的会是什么，它都不再是那个古老帝国了。"
+ HJM_SUPEREVENT_UNIFY_CLOSE: "天下已定"

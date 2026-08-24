@@ -1,8 +1,7 @@
 # DWF 权力平衡：协调派 ⇄ 解放派（2026-08-22 XT定政治线主擂台）
-# 结构仿 TFR-APA：每边4段位(lean/aligned/dominant/total_control)+中位；
-# 极端段位(total_control)设flag=隐藏线门槛：协调极端→红石技官线，解放极端→共同体线
+# 结构仿 TFR-APA：每边4段位(lean/aligned/dominant/total_control)+中位
+# ⚠️2026-08-22 XT大拆：门槛国策与红石/共同体隐藏线已删；极端段位只留段位事件DWF.10/11+BOP增益(拉扯决议保留)
 # 图标复用原版通用件；BOP由 history/countries/DWF-Warlord.txt 的 set_power_balance 激活
-# 门槛国策(DWF_order_ultimatum/DWF_revolution_ultimatum)用 is_power_balance_in_range 卡极端段位
 
 DWF_coordination_liberation_bop = {
 	initial_value = 0
@@ -67,7 +66,7 @@ DWF_coordination_liberation_bop = {
 			on_deactivate = {
 			}
 		}
-		# 协调·绝对（极端）：红石技官线门槛
+		# 协调·绝对（极端）
 		range = {
 			id = DWF_coordination_total_control_range
 			min = -1
@@ -132,7 +131,7 @@ DWF_coordination_liberation_bop = {
 			on_deactivate = {
 			}
 		}
-		# 解放·绝对（极端）：共同体线门槛
+		# 解放·绝对（极端）
 		range = {
 			id = DWF_liberation_total_control_range
 			min = 0.85

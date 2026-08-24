@@ -18,4 +18,5 @@ set_popularities = {
 		neutrality = 8
 }
 
-recruit_character = MST_Leader
+# 2026-08-24 XT定:菲尔·斯宾塞(保守/民主)任微软技术共同体元首(独立角色MST_PhilSpencer,避免与HJM顾问版冲突)
+recruit_character = MST_PhilSpencer

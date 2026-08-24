@@ -113,3 +113,7 @@
  democratic_back_desc: "为微软商会的商业-政治路线背书，提升民主派支持度。"
  democratic_suppress: "打压微软商会"
  democratic_suppress_desc: "限制微软商会对摄政政府的影响，削弱民主派势力。"
+
+ # ===== 下界行政区方案(2026-08-22:魔族战争收尾之三件套) =====
+ HJM_nether_administration:0 "下界行政区方案"
+ HJM_nether_administration_desc:0 "战争结束了。恐惧魔王的王座被拆下来运回帝都展览,下界要塞改名「下界行政区」,由帝国总督代管。锡兰岛从魔族版图上割出,成为封印之地——Herobrine沉眠之处,由他本人名义统治,实际上无处可去。"

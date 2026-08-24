@@ -1,6 +1,6 @@
-# DWF 中央机关·重要职位任命事件(2026-08-21 XT定)
-# 机制:政治协商同盟会议完成后 country_event DWF.1(推举国家主席籽岷,独立事件,不链)
-#      多玩一大完成后 country_event DWF.2 → DWF.3 → DWF.4 → DWF.5(机关班子逐项任命,选完接下一项,仪式感)
+# DWF 中央机关·重要职位任命事件(2026-08-21 XT定;2026-08-22随政治主干拆改调整)
+# 机制:「政治协商同盟会议」(树根,原「多玩一大召开」改名)完成后
+#      country_event DWF.1(day1,推举国家主席籽岷) + DWF.2(day3) → DWF.3 → DWF.4 → DWF.5(机关班子逐项任命,选完接下一项,仪式感)
 # 中央政要=每次大会弹出(二大/三大再开时用新事件ID复用同套模板)
 # 角色:国家主席=籽岷(HJM_Zimin, ideology=ziminism) / 军委会=基岩元帅(HJM_Bedrock_Marshal)
 #      红石工程院=马库斯·红石(HJM_Marcus_Redstone) / 联络局=人选待XT定(事件已做,名字下轮补)
@@ -108,7 +108,7 @@ country_event = {
 	}
 }
 
-# ===== 政治线BOP段位+隐藏线事件(2026-08-22) =====
+# ===== 政治线BOP段位事件(2026-08-22;同日XT大拆删去DWF.12/13/14,随门槛对+红石线+共同体线删除) =====
 
 # DWF.10 协调·绝对段位(BOP极端on_activate,首次弹)
 country_event = {
@@ -138,51 +138,7 @@ country_event = {
 	}
 }
 
-# DWF.12 戈壁深处的低鸣(「秩序的极限」完成)
-country_event = {
-	id = DWF.12
-	title = DWF.12.t
-	desc = DWF.12.d
-	picture = GFX_report_event_generic
-	is_triggered_only = yes
-	option = {
-		name = DWF.12.a
-		add_political_power = 25
-	}
-}
-
-# DWF.13 公社代表大会(「革命的极限」完成)
-country_event = {
-	id = DWF.13
-	title = DWF.13.t
-	desc = DWF.13.d
-	picture = GFX_report_event_generic
-	is_triggered_only = yes
-	option = {
-		name = DWF.13.a
-		add_stability = -0.02
-		add_war_support = 0.03
-	}
-}
-
-# DWF.14 四姐妹上线(「四姐妹上线」国策完成,文风=轻盈跳脱)
-country_event = {
-	id = DWF.14
-	title = DWF.14.t
-	desc = DWF.14.d
-	picture = GFX_report_event_generic
-	is_triggered_only = yes
-	option = {
-		name = DWF.14.a
-		add_stability = 0.03
-	}
-	option = {
-		name = DWF.14.b
-		add_political_power = 25
-	}
-}
-
-# DWF.15 跳测事件(2026-08-22):控制台 event DWF.15 触发,不走正常流程;测完C选项可重置BOP
+# DWF.15 跳测事件(2026-08-22改:红石/共同体隐藏线已删,改为政治主干快跳):控制台 event DWF.15 触发,不走正常流程;C选项可重置BOP
 country_event = {
 	id = DWF.15
 	title = DWF.15.t
@@ -191,20 +147,88 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = DWF.15.a
-		# 红石线:BOP拉到协调极端+完成门槛策+直接开门(三保险,complete_national_focus是否带completion_reward未证实)
-		add_power_balance_value = { id = DWF_coordination_liberation_bop value = -1.0 tooltip_side = DWF_coordination_side }
-		complete_national_focus = { focus = DWF_order_ultimatum }
-		set_country_flag = DWF_redstone_path_open
+		# 完成「政治协商同盟会议」(completion_reward照发,人事链DWF.1/DWF.2先后弹出)
+		complete_national_focus = { focus = DWF_first_congress }
 	}
 	option = {
 		name = DWF.15.b
-		# 共同体线:镜像
-		add_power_balance_value = { id = DWF_coordination_liberation_bop value = 1.0 tooltip_side = DWF_liberation_side }
-		complete_national_focus = { focus = DWF_revolution_ultimatum }
-		set_country_flag = DWF_community_path_open
+		# 完成「开启内部检查」(前提未完成也能直接complete)
+		complete_national_focus = { focus = DWF_internal_inspection }
 	}
 	option = {
 		name = DWF.15.c
 		set_power_balance = { id = DWF_coordination_liberation_bop set_default = yes }
+	}
+}
+
+# ===== 开局介绍事件链(2026-08-23 XT定:TFR式翻页介绍,声明独占一页) =====
+# 运行方式:on_startup向开局可选真实国家弹 DWF.101(主菜单目录页),option当按钮互跳各页。
+# ⚠️引擎限制:country_event只能按TAG指定弹,无"弹给玩家"泛化写法;故按HJM/HIM/各魔族国/MAL定点排程。
+#     翻页靠不设 fire_only_once:子页"返回"option再弹主菜单,自由往返;最后"开始游戏"设global flag收尾。
+#     重载重跑on_startup:limit已挂 MC_mini_intro_shown_armed 防重复排程。
+country_event = {
+	id = DWF.101
+	is_triggered_only = yes
+	title = DWF.101.t
+	desc = DWF.101.desc
+	option = { # 署名与致谢页
+		name = DWF.101.a
+		country_event = { id = DWF.102 }
+	}
+	option = { # 各国处境定位
+		name = DWF.101.b
+		country_event = { id = DWF.104 }
+	}
+	option = { # 立场声明(独占一页)
+		name = DWF.101.c
+		country_event = { id = DWF.103 }
+	}
+	option = { # 开始游戏(整局只设一次global flag,收尾)
+		name = DWF.101.d
+		set_global_flag = MC_mini_intro_shown
+	}
+}
+
+# —— 署名与致谢页(可随时返回主菜单) ——
+country_event = {
+	id = DWF.102
+	is_triggered_only = yes
+	title = DWF.102.t
+	desc = DWF.102.desc
+	option = {
+		name = DWF.102.a
+		country_event = { id = DWF.101 }
+	}
+}
+
+# —— 作者立场声明页(独占一页,内容与DWF.100完全一致,2026-08-23 XT定) ——
+country_event = {
+	id = DWF.103
+	is_triggered_only = yes
+	title = DWF.103.t
+	desc = DWF.103.desc
+	option = {
+		name = DWF.103.a
+		country_event = { id = DWF.101 }
+	}
+	option = {
+		name = DWF.103.b
+		set_global_flag = MC_mini_intro_shown
+	}
+}
+
+# —— 各国处境定位页(统一版:动态国家名+通用定位文案) ——
+country_event = {
+	id = DWF.104
+	is_triggered_only = yes
+	title = DWF.104.t
+	desc = DWF.104.desc
+	option = {
+		name = DWF.104.a
+		country_event = { id = DWF.101 }
+	}
+	option = {
+		name = DWF.104.b
+		set_global_flag = MC_mini_intro_shown
 	}
 }

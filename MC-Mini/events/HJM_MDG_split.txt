@@ -8,6 +8,8 @@ country_event = {
 	trigger = {
 		tag = HJM
 		NOT = { has_global_flag = HJM_MDG_split_happened }
+		has_country_flag = HJM_record_13_war_started # 2026-08-23 XT定:必须由魔族战争(记录13战争)真正开战才允许MYR起义
+		has_war_with = HIM
 		MDG = { exists = yes }
 	}
 
@@ -15,15 +17,12 @@ country_event = {
 		set_global_flag = HJM_MDG_split_happened
 		news_event = { id = HJM_news.8 }
 
-		329 = { remove_core_of = MDG add_core_of = MYR }
 		516 = { remove_core_of = MDG add_core_of = MYR }
 		562 = { remove_core_of = MDG add_core_of = MYR }
 		563 = { remove_core_of = MDG add_core_of = MYR }
 		564 = { remove_core_of = MDG add_core_of = MYR }
 		565 = { remove_core_of = MDG add_core_of = MYR }
 		566 = { remove_core_of = MDG add_core_of = MYR }
-		567 = { remove_core_of = MDG add_core_of = MYR }
-		568 = { remove_core_of = MDG add_core_of = MYR }
 		569 = { remove_core_of = MDG add_core_of = MYR }
 		570 = { remove_core_of = MDG add_core_of = MYR }
 		571 = { remove_core_of = MDG add_core_of = MYR }
@@ -43,7 +42,6 @@ country_event = {
 		651 = { remove_core_of = MDG add_core_of = MYR }
 		652 = { remove_core_of = MDG add_core_of = MYR }
 		653 = { remove_core_of = MDG add_core_of = MYR }
-		654 = { remove_core_of = MDG add_core_of = MYR }
 		822 = { remove_core_of = MDG add_core_of = MYR }
 		824 = { remove_core_of = MDG add_core_of = MYR }
 		874 = { remove_core_of = MDG add_core_of = MYR }
@@ -53,15 +51,12 @@ country_event = {
 		878 = { remove_core_of = MDG add_core_of = MYR }
 
 		MYR = {
-			transfer_state = 329
 			transfer_state = 516
 			transfer_state = 562
 			transfer_state = 563
 			transfer_state = 564
 			transfer_state = 565
 			transfer_state = 566
-			transfer_state = 567
-			transfer_state = 568
 			transfer_state = 569
 			transfer_state = 570
 			transfer_state = 571
@@ -81,7 +76,6 @@ country_event = {
 			transfer_state = 651
 			transfer_state = 652
 			transfer_state = 653
-			transfer_state = 654
 			transfer_state = 822
 			transfer_state = 824
 			transfer_state = 874
@@ -121,6 +115,18 @@ country_event = {
 		}
 
 		MYR = {
+			# 2026-08-23 XT定:MYR起义由魔族战争触发,生成后必须加入魔族阵营(HIM_faction)参与魔族战争。
+			# 若HIM已建阵营(通常已随动员国策建立),MYR直接加入;若尚未建立,由MYR建阵营并拉HIM入盟,保证MYR始终在魔阵营作战。
+			if = {
+				limit = { HIM = { is_in_faction = yes } }
+				add_to_faction = HIM
+			}
+			else_if = {
+				limit = { NOT = { HIM = { is_in_faction = yes } } }
+				create_faction = "MYR_faction"
+				HIM = { add_to_faction = prev } # prev=MYR,把HIM拉进MYR刚建的MYR_faction;ROOT在此事件中是HJM,不能用
+			}
+
 			if = {
 				limit = { NOT = { has_war_with = HJM } }
 				declare_war_on = { target = HJM type = annex_everything }

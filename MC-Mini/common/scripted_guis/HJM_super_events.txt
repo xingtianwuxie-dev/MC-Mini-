@@ -32,4 +32,36 @@ scripted_gui = {
 			}
 		}
 	}
+
+	HJM_civilwar_superevent_gui = {
+		context_type = player_context
+		window_name = "HJM_civilwar_superevent_window"
+		# 2026-08-22 XT定:内战爆发超事件「冠冕坠地」。不检 tag=HJM——玩家可能已 change_tag 成 DWF/NTE/MST,谁拿flag谁看
+
+		visible = {
+			has_country_flag = HJM_civilwar_superevent_start
+		}
+
+		effects = {
+			HJM_civilwar_superevent_close_click = {
+				clr_country_flag = HJM_civilwar_superevent_start # Close the civil war super event after the player acknowledges it.
+			}
+		}
+	}
+
+	HJM_unification_superevent_gui = {
+		context_type = player_context
+		window_name = "HJM_unification_superevent_window"
+		# 2026-08-22 XT定:统一超事件「尘埃落定」。四方仅存其一时由 on_daily_HJM 点亮,幸存者(玩家)看到
+
+		visible = {
+			has_country_flag = HJM_unification_superevent_start
+		}
+
+		effects = {
+			HJM_unification_superevent_close_click = {
+				clr_country_flag = HJM_unification_superevent_start # Close the unification super event after the player acknowledges it.
+			}
+		}
+	}
 }

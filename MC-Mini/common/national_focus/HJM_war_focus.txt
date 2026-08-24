@@ -214,9 +214,7 @@ focus_tree = {
 		icon = GFX_HJM_is_it_over
 		continue_if_invalid = no
 		cancel_if_invalid = yes
-		prerequisite = {
-			focus = HJM_liberate_nether
-		}
+		# 2026-08-22 XT定:删前置国策条件,魔族战争一结束(flag到手)就能直接点
 		available = {
 			has_country_flag = HJM_nether_war_concluded
 		}

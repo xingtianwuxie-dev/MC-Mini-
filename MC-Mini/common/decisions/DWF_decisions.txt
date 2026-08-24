@@ -582,3 +582,605 @@ DWF_politics_category = {
 		ai_will_do = { factor = 1 }
 	}
 }
+
+####################################################################################
+# 四、矿物发掘(2026-08-22 XT定:「土地探勘」国策解锁;收复区域=组军阀全灭→该区域矿点决议可见)
+# ⚠️西北六州只有两个州可发掘(XT定);槽/资源数值为占位待XT调
+####################################################################################
+DWF_mineral_prospecting = {
+
+	# === 基础批:西北六州之二(XT定约束;开局自有地,土地探勘解锁即可见) ===
+	# 北庭(准噶尔盆地):油田
+	DWF_develop_beiting_oil = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+		}
+		available = {
+			owns_state = 618
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_beiting_oil_tt
+			618 = {
+				add_resource = { type = oil amount = 12 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 酒泉(镜铁山):铁矿
+	DWF_develop_jingtieshan_iron = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+		}
+		available = {
+			owns_state = 756
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_jingtieshan_iron_tt
+			756 = {
+				add_resource = { type = steel amount = 10 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	# === 西北组收复(整编西北→三十六国计划打完) ===
+	# 柴达木:油气田
+	DWF_develop_chaidamu_oil = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_nw } }
+		}
+		available = {
+			owns_state = 755
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_chaidamu_oil_tt
+			755 = {
+				add_resource = { type = oil amount = 10 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 河套(白云鄂博):铁矿
+	DWF_develop_baiyunebo_mine = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_nw } }
+		}
+		available = {
+			owns_state = 746
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_baiyunebo_mine_tt
+			746 = {
+				add_resource = { type = steel amount = 10 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 陇西(玉门老君庙):油田
+	DWF_develop_yumen_oil = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_nw } }
+		}
+		available = {
+			owns_state = 283
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_yumen_oil_tt
+			283 = {
+				add_resource = { type = oil amount = 10 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 武威(金川):镍矿(HOI4无镍,镍入合金钢→钢)
+	DWF_develop_jinchuan_nickel = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_nw } }
+		}
+		available = {
+			owns_state = 1044
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_jinchuan_nickel_tt
+			1044 = {
+				add_resource = { type = steel amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	# === 中亚组收复(远西战略→定远计划打完) ===
+	# 阿尔泰:钨矿
+	DWF_develop_altai_tungsten = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_ca } }
+		}
+		available = {
+			owns_state = 40
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_altai_tungsten_tt
+			40 = {
+				add_resource = { type = tungsten amount = 6 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 卡拉干达:矿带
+	DWF_develop_karaganda_steel = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_ca } }
+		}
+		available = {
+			owns_state = 881
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_karaganda_steel_tt
+			881 = {
+				add_resource = { type = steel amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 乌斯秋尔特(恩巴河):油田
+	DWF_develop_emba_oil = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_ca } }
+		}
+		available = {
+			owns_state = 587
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_emba_oil_tt
+			587 = {
+				add_resource = { type = oil amount = 10 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 阿克莫林斯克(杰兹卡兹甘):铜矿(HOI4无铜→钢)
+	DWF_develop_dhezkazgan_mine = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_ca } }
+		}
+		available = {
+			owns_state = 590
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_dhezkazgan_mine_tt
+			590 = {
+				add_resource = { type = steel amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	# === 西藏组收复(远西战略→屋脊攻势打完) ===
+	# 藏(罗布莎):铬矿
+	DWF_develop_luobusha_chromium = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_tibet } }
+		}
+		available = {
+			owns_state = 757
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_luobusha_chromium_tt
+			757 = {
+				add_resource = { type = chromium amount = 5 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 康区:矿脉
+	DWF_develop_kang_tungsten = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_tibet } }
+		}
+		available = {
+			owns_state = 601
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_kang_tungsten_tt
+			601 = {
+				add_resource = { type = tungsten amount = 5 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 那曲(伦坡拉盆地):油气(世界海拔最高油田)
+	DWF_develop_lunpola_oil = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_tibet } }
+		}
+		available = {
+			owns_state = 322
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_lunpola_oil_tt
+			322 = {
+				add_resource = { type = oil amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	# === 东北组收复(清洗右派→白山黑水攻势打完) ===
+	# 黑龙江(松嫩平原):油田
+	DWF_develop_songnen_oil = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_ne } }
+		}
+		available = {
+			owns_state = 561
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_songnen_oil_tt
+			561 = {
+				add_resource = { type = oil amount = 12 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 奴儿干(兴安岭):铁矿
+	DWF_develop_xinganling_iron = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_ne } }
+		}
+		available = {
+			owns_state = 560
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_xinganling_iron_tt
+			560 = {
+				add_resource = { type = steel amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 夫余(辽北·抚顺):油页岩
+	DWF_develop_fushun_shale = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_ne } }
+		}
+		available = {
+			owns_state = 715
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_fushun_shale_tt
+			715 = {
+				add_resource = { type = oil amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 勿吉(黑龙江·小兴安岭):铁矿
+	DWF_develop_xiao_xinganling_iron = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_ne } }
+		}
+		available = {
+			owns_state = 714
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_xiao_xinganling_iron_tt
+			714 = {
+				add_resource = { type = steel amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	# === 华北组收复(中原攻势打完) ===
+	# 冀州(开滦):煤铁联合
+	DWF_develop_kailuan_iron = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_north } }
+		}
+		available = {
+			owns_state = 609
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_kailuan_iron_tt
+			609 = {
+				add_resource = { type = steel amount = 12 }
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	# 常山(大同):煤矿(HOI4无煤→工业槽)
+	DWF_develop_datong_coal = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_north } }
+		}
+		available = {
+			owns_state = 614
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_datong_coal_tt
+			614 = {
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+	}
+	# 济南(中原油田):油
+	DWF_develop_zhongyuan_oil = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_north } }
+		}
+		available = {
+			owns_state = 1038
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_zhongyuan_oil_tt
+			1038 = {
+				add_resource = { type = oil amount = 10 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	# === 华东组收复(江南攻势打完) ===
+	# 庐江(马鞍山):铁矿
+	DWF_develop_maanshan_iron = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_east } }
+		}
+		available = {
+			owns_state = 606
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_maanshan_iron_tt
+			606 = {
+				add_resource = { type = steel amount = 12 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 齐郡(胜利油田):油
+	DWF_develop_shengli_oil = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_east } }
+		}
+		available = {
+			owns_state = 597
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_shengli_oil_tt
+			597 = {
+				add_resource = { type = oil amount = 12 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 吴郡(长兴煤铁):江南最大煤矿
+	DWF_develop_changxing_coal = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_east } }
+		}
+		available = {
+			owns_state = 1034
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_changxing_coal_tt
+			1034 = {
+				add_resource = { type = steel amount = 6 }
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	# === 华南组收复(南征攻势打完) ===
+	# 长沙(水口山):铅锌钨
+	DWF_develop_shuikoushan_tungsten = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_south } }
+		}
+		available = {
+			owns_state = 602
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_shuikoushan_tungsten_tt
+			602 = {
+				add_resource = { type = tungsten amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 豫章(德兴铜矿):亚洲最大露天铜矿
+	DWF_develop_dexing_copper = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_south } }
+		}
+		available = {
+			owns_state = 600
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_dexing_copper_tt
+			600 = {
+				add_resource = { type = steel amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 桂州(个旧):世界锡都
+	DWF_develop_gejiu_tin = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_south } }
+		}
+		available = {
+			owns_state = 599
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_gejiu_tin_tt
+			599 = {
+				add_resource = { type = chromium amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	# === 西南组收复(天府攻势打完) ===
+	# 益州(攀枝花):钒钛磁铁矿(中国最大)
+	DWF_develop_panzhihua_iron = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_sw } }
+		}
+		available = {
+			owns_state = 605
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_panzhihua_iron_tt
+			605 = {
+				add_resource = { type = steel amount = 14 }
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	# 巴郡(自贡):天然气井群
+	DWF_develop_zigong_gas = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_sw } }
+		}
+		available = {
+			owns_state = 1037
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_zigong_gas_tt
+			1037 = {
+				add_resource = { type = oil amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 越嶲(会理铜矿):川西铜带
+	DWF_develop_huili_copper = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_sw } }
+		}
+		available = {
+			owns_state = 751
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_huili_copper_tt
+			751 = {
+				add_resource = { type = steel amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+}

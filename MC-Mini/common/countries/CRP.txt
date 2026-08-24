@@ -1,0 +1,6 @@
+# 2026-08-24 神秘势力(原PRC改名CRP,避免与原版共产中国PRC撞tag)
+# 对应 country_tags/CRP.txt + history/countries/CRP - Mysterious.txt
+graphical_culture = asian_gfx
+graphical_culture_2d = asian_2d
+
+color = { 82 2 15 }

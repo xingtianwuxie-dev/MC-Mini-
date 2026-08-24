@@ -3,10 +3,10 @@ characters = {
                 name = LLL_LLLusioner #唤魔者
                 portraits = {
                         army = {
-                                large = "gfx/leaders/LLL/LLL_LLLusioner.dds"
+                                large = "gfx/leaders/LLL/LLL_LLLusioner.png"
                         }
                         civilian = {
-                                large = "gfx/leaders/LLL/LLL_LLLusioner.dds"
+                                large = "gfx/leaders/LLL/LLL_LLLusioner.png"
                         }
                 }
                 country_leader = {
