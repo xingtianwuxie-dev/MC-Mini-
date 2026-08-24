@@ -1,0 +1,23 @@
+# 2026-08-24 单州化拆分(从W51拆出)军阀 W93(卡拉干达)
+capital = 881 # 卡拉干达
+
+set_research_slots = 2
+set_stability = 0.50
+set_war_support = 0.50
+
+set_politics = {
+	ruling_party = libertarian_socialist
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	libertarian_socialist = 70
+	neutrality = 10
+	democratic = 8
+	fascism = 7
+	feudalist = 5
+}
+
+recruit_character = W93_warlord

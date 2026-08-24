@@ -1,0 +1,63 @@
+# MC-Mini 帝国分裂三国领袖 2026-08-14
+characters = {
+	DWF_Leader = {
+		name = DWF_Leader
+		country_leader = {
+			ideology = duowan_coordination			# 2026-08-21 XT定:开局执政=协调派
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	NTE_Leader = {
+		name = NTE_Leader
+		country_leader = {
+			ideology = oligarchism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	MST_Leader = {
+		name = MST_Leader
+		country_leader = {
+			ideology = conservatism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	# ===== 三党首独立元首角色(2026-08-24) =====
+	# ⚠️引擎实测:带country_leader的角色不能双国recruit(already assigned)
+	# 籽岷/丁磊/菲尔在HJM仅任顾问(HJM版去country_leader),在各自派系国任元首→用独立角色名
+	DWF_Zimin = {
+		name = DWF_Zimin
+		portraits = {
+			civilian = { large = "gfx/leaders/HJM/portrait_Zimin.png" }
+		}
+		country_leader = {
+			ideology = ziminism      # 籽岷主义(挂社民,匹配DWF ruling_party=social_democrat)
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+	NTE_DingLei = {
+		name = NTE_DingLei
+		portraits = {
+			civilian = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		country_leader = {
+			ideology = oligarchism   # 寡头(挂中立,匹配NTE ruling_party=neutrality)
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+	MST_PhilSpencer = {
+		name = MST_PhilSpencer
+		portraits = {
+			civilian = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		country_leader = {
+			ideology = conservatism  # 保守(挂民主,匹配MST ruling_party=democratic)
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+}

@@ -1,0 +1,8 @@
+# ============================================================
+add_namespace = stability
+add_namespace = strikes_event
+add_namespace = mutiny_event
+# MC-Mini 架空世界:原版事件/新闻移除(2026-08-24 XT定)
+# 本文件为空覆盖——原版 stability_events.txt 的全部事件在此mod中不存在
+# ============================================================
+

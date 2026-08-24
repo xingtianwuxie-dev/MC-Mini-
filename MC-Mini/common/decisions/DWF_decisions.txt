@@ -128,6 +128,8 @@ DWF_military_operations = {
 					}
 				}
 			}
+		
+			news_event = { id = DWF_news.8 }			# 宣战新闻
 		}
 	}
 
@@ -144,6 +146,7 @@ DWF_military_operations = {
 			add_war_support = 0.10
 			every_country = {
 				limit = {
+					has_country_flag = MC_former_imperial		# 2026-08-24 XT定:只打前帝国圈(收复统一),不打全世界
 					NOT = { tag = DWF }
 					NOT = { has_war_with = ROOT }
 					NOT = { is_in_faction_with = ROOT }
@@ -156,6 +159,8 @@ DWF_military_operations = {
 					}
 				}
 			}
+		
+			news_event = { id = DWF_news.9 }			# 宣战新闻
 		}
 	}
 }
@@ -172,7 +177,14 @@ DWF_diplomatic_absorption = {
 			has_country_flag = DWF_whitelist_plan_unlocked
 		}
 		target_trigger = {
-			has_country_flag = DWF_warlord_group_nw
+			# 2026-08-24 西线睦邻:中亚(ca)目标经flag解锁
+			OR = {
+				has_country_flag = DWF_warlord_group_nw
+				AND = {
+					has_country_flag = DWF_warlord_group_ca
+					ROOT = { has_country_flag = DWF_western_neighbors_pact }
+				}
+			}
 			is_in_faction = no
 			NOT = { has_war_with = ROOT }
 			NOT = { has_country_flag = DWF_whitelisted_by_dwf }
@@ -182,6 +194,7 @@ DWF_diplomatic_absorption = {
 			FROM = { set_country_flag = DWF_whitelisted_by_dwf }
 			add_to_faction = FROM
 			FROM = { add_stability = 0.05 }			# 入盟红利:稳定+5%
+			if = { limit = { has_country_flag = DWF_western_neighbors_pact } add_political_power = 5 }			# 睦邻返点(等效-20%)
 		}
 		ai_will_do = {
 			base = 30
@@ -195,7 +208,14 @@ DWF_diplomatic_absorption = {
 			has_country_flag = DWF_questioning_offensive_unlocked
 		}
 		target_trigger = {
-			has_country_flag = DWF_warlord_group_nw
+			# 2026-08-24 西线睦邻:中亚(ca)目标经flag解锁
+			OR = {
+				has_country_flag = DWF_warlord_group_nw
+				AND = {
+					has_country_flag = DWF_warlord_group_ca
+					ROOT = { has_country_flag = DWF_western_neighbors_pact }
+				}
+			}
 			is_in_faction = no
 			NOT = { has_war_with = ROOT }
 			NOT = { has_country_flag = DWF_forced_by_dwf }
@@ -207,6 +227,7 @@ DWF_diplomatic_absorption = {
 			add_to_faction = FROM
 			FROM = { add_war_support = 0.10 }			# 被胁迫者的觉悟
 			add_stability = -0.02
+			if = { limit = { has_country_flag = DWF_western_neighbors_pact } add_political_power = 10 }			# 睦邻返点(等效-20%)
 		}
 		ai_will_do = {
 			base = 10
@@ -531,8 +552,14 @@ DWF_politics_category = {
 		complete_effect = {
 			add_power_balance_value = {
 				id = DWF_coordination_liberation_bop
-				value = -0.1
+				value = 0.1
 				tooltip_side = DWF_coordination_side
+			}
+			random_list = {
+				25 = { country_event = { id = DWF_faction.51 } }
+				25 = { country_event = { id = DWF_faction.52 } }
+				25 = { country_event = { id = DWF_faction.53 } }
+				25 = { country_event = { id = DWF_faction.54 } }
 			}
 		}
 		ai_will_do = { factor = 1 }
@@ -551,8 +578,14 @@ DWF_politics_category = {
 		complete_effect = {
 			add_power_balance_value = {
 				id = DWF_coordination_liberation_bop
-				value = 0.1
+				value = -0.1
 				tooltip_side = DWF_liberation_side
+			}
+			random_list = {
+				25 = { country_event = { id = DWF_faction.51 } }
+				25 = { country_event = { id = DWF_faction.52 } }
+				25 = { country_event = { id = DWF_faction.53 } }
+				25 = { country_event = { id = DWF_faction.54 } }
 			}
 		}
 		ai_will_do = { factor = 1 }
@@ -577,6 +610,12 @@ DWF_politics_category = {
 			else_if = {
 				limit = { power_balance_value = { id = DWF_coordination_liberation_bop value < 0 } }
 				add_power_balance_value = { id = DWF_coordination_liberation_bop value = 0.1 }
+			}
+			random_list = {
+				25 = { country_event = { id = DWF_faction.51 } }
+				25 = { country_event = { id = DWF_faction.52 } }
+				25 = { country_event = { id = DWF_faction.53 } }
+				25 = { country_event = { id = DWF_faction.54 } }
 			}
 		}
 		ai_will_do = { factor = 1 }
@@ -1182,5 +1221,45 @@ DWF_mineral_prospecting = {
 				add_extra_state_shared_building_slots = 1
 			}
 		}
+	}
+}
+
+# ===== 一大筹备(2026-08-24 七线延展;纯剧情加成小料,不做完也能开一大) =====
+DWF_congress_category = {
+	DWF_congress_logistics = {
+		icon = GFX_decision_generic_political_action
+		cost = 25
+		fire_only_once = yes
+		allowed = { original_tag = DWF }
+		visible = { has_country_flag = DWF_congress_prep NOT = { has_country_flag = DWF_congress_logistics_done } }
+		complete_effect = {
+			set_country_flag = DWF_congress_logistics_done
+			add_stability = 0.02
+		}
+		ai_will_do = { factor = 5 }
+	}
+	DWF_congress_quotas = {
+		icon = GFX_decision_generic_political_action
+		cost = 50
+		fire_only_once = yes
+		allowed = { original_tag = DWF }
+		visible = { has_country_flag = DWF_congress_logistics_done NOT = { has_country_flag = DWF_congress_quotas_done } }
+		complete_effect = {
+			set_country_flag = DWF_congress_quotas_done
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+	DWF_congress_programme = {
+		icon = GFX_decision_generic_political_action
+		cost = 75
+		fire_only_once = yes
+		allowed = { original_tag = DWF }
+		visible = { has_country_flag = DWF_congress_quotas_done NOT = { has_country_flag = DWF_congress_programme_done } }
+		complete_effect = {
+			set_country_flag = DWF_congress_programme_done
+			add_stability = 0.03
+		}
+		ai_will_do = { factor = 5 }
 	}
 }

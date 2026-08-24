@@ -1,0 +1,98 @@
+# DWF 七线延展剧情事件 2026-08-24(七线延展到多玩一大)
+# 701-703 路线之争三版(BOP段位自动分流,A案) / 800 一大开幕 / 801 党魁选举(籽岷卸任四派竞魁)
+add_namespace = DWF_story
+
+country_event = {
+	id = DWF_story.701
+	is_triggered_only = yes
+	title = DWF_story.701.t
+	desc = DWF_story.701.desc
+	option = {
+		name = DWF_story.701.a
+		add_stability = 0.03
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = DWF_story.702
+	is_triggered_only = yes
+	title = DWF_story.702.t
+	desc = DWF_story.702.desc
+	option = {
+		name = DWF_story.702.a
+		add_war_support = 0.05
+		army_experience = 25
+	}
+}
+
+country_event = {
+	id = DWF_story.703
+	is_triggered_only = yes
+	title = DWF_story.703.t
+	desc = DWF_story.703.desc
+	option = {
+		name = DWF_story.703.a
+		add_political_power = 25
+		add_timed_idea = {
+			idea = DWF_silence_of_machine			# 机器陪你熬夜:限时科研+2%
+			days = 30
+		}
+	}
+}
+
+country_event = {
+	id = DWF_story.800
+	is_triggered_only = yes
+	title = DWF_story.800.t
+	desc = DWF_story.800.desc
+	option = {
+		name = DWF_story.800.a
+	}
+}
+
+country_event = {
+	id = DWF_story.801
+	is_triggered_only = yes
+	title = DWF_story.801.t
+	desc = DWF_story.801.desc
+	# 四派竞魁(set_country_leader三件套=1.19换党魁正法,TFR实证;籽岷替身统一卸任)
+	option = {
+		name = DWF_story.801.liberation
+		set_politics = { ruling_party = duowan_liberation }
+		set_country_leader_ideology = duowan_liberation
+		set_country_leader_name = { ideology = duowan_liberation name = DWF_leader_liberation }
+		set_country_leader_portrait = { ideology = duowan_liberation portrait = GFX_portrait_leader_generic }
+		retire_character = DWF_Zimin_duowan
+		add_ideas = DWF_liberation_caucus
+		add_war_support = 0.05
+	}
+	option = {
+		name = DWF_story.801.coordination
+		set_politics = { ruling_party = duowan_coordination }
+		set_country_leader_ideology = duowan_coordination
+		set_country_leader_name = { ideology = duowan_coordination name = DWF_leader_coordination }
+		set_country_leader_portrait = { ideology = duowan_coordination portrait = GFX_portrait_leader_generic }
+		retire_character = DWF_Zimin_duowan
+		add_ideas = DWF_coordination_caucus
+		add_stability = 0.05
+	}
+	option = {
+		name = DWF_story.801.redstone
+		set_politics = { ruling_party = duowanism }
+		set_country_leader_ideology = duowanism
+		set_country_leader_name = { ideology = duowanism name = DWF_Leishidong }
+		set_country_leader_portrait = { ideology = duowanism portrait = GFX_portrait_leader_generic }
+		retire_character = DWF_Zimin_duowan
+		add_ideas = DWF_redstone_caucus
+	}
+	option = {
+		name = DWF_story.801.collective
+		set_politics = { ruling_party = sandbox_collectivism }
+		set_country_leader_ideology = sandbox_collectivism
+		set_country_leader_name = { ideology = sandbox_collectivism name = DWF_leader_collective }
+		set_country_leader_portrait = { ideology = sandbox_collectivism portrait = GFX_portrait_leader_generic }
+		retire_character = DWF_Zimin_duowan
+		add_ideas = DWF_collective_caucus
+	}
+}

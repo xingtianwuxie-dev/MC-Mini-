@@ -1,0 +1,121 @@
+# MC-Mini 帝国分裂 2026-08-14(照TFR原理)
+# 1)HJM_warlord_divisions=塞模板effect 2)HJM_empire_split=塞模板+划地+加核心+每核心州造兵+宣战 3)调HJM_spawn_minor_states
+
+HJM_warlord_divisions = {
+	division_template = {
+		name = "Garrison"
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+		}
+	}
+}
+
+HJM_empire_split = {
+	# === 多玩穿越者联邦 DWF(7州,首都617) ===
+	# 2026-08-23 XT定:DWF成立时加 732(帕米尔)
+	DWF = {
+		HJM_warlord_divisions = yes
+		set_country_flag = MC_former_imperial
+		transfer_state = 617
+		transfer_state = 618
+		transfer_state = 619
+		transfer_state = 760
+		transfer_state = 759
+		transfer_state = 756
+		transfer_state = 732
+		set_capital = { state = 617 }
+		every_owned_state = { add_core_of = DWF }
+		every_controlled_state = {
+			limit = { is_core_of = DWF }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.2"
+				owner = DWF
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 3000 }
+		# 工业六策6「全面推进科技发展」：一年期科研精神「联盟科学院」（2026-08-19 XT定）
+		if = {
+			limit = { ROOT = { has_country_flag = HJM_dwf_science_legacy } }
+			add_timed_idea = {
+				idea = HJM_dwf_science_legacy
+				days = 365
+			}
+		}
+		# 工业六策科技同步给DWF（2026-08-19 XT定：HJM点了几级，DWF分裂时就拿到几级）
+		if = {
+			limit = { ROOT = { has_country_flag = HJM_dwf_tech_disp2 } }
+			set_technology = { dispersed_industry = 1 dispersed_industry2 = 1 }
+		}
+		if = {
+			limit = { ROOT = { has_country_flag = HJM_dwf_tech_conc2 } }
+			set_technology = { concentrated_industry = 1 concentrated_industry2 = 1 }
+		}
+		# 工业六策3「优先完成基础建设」：一年期建造精神「联盟工程局」（2026-08-19 XT定）
+		if = {
+			limit = { ROOT = { has_country_flag = HJM_dwf_construction_legacy } }
+			add_timed_idea = {
+				idea = HJM_dwf_construction_legacy
+				days = 365
+			}
+		}
+	}
+	# === 网易远洋开发团 NTE(9州,首都745) ===
+	NTE = {
+		HJM_warlord_divisions = yes
+		set_country_flag = MC_former_imperial
+		transfer_state = 745
+		transfer_state = 716
+		transfer_state = 328
+		transfer_state = 717
+		transfer_state = 408
+		transfer_state = 1028
+		transfer_state = 527
+		transfer_state = 525
+		transfer_state = 1029
+		set_capital = { state = 745 }
+		every_owned_state = { add_core_of = NTE }
+		every_controlled_state = {
+			limit = { is_core_of = NTE }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.2"
+				owner = NTE
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 4000 }
+	}
+	# === 微软技术共同体 MST(8州,首都592) ===
+	MST = {
+		HJM_warlord_divisions = yes
+		set_country_flag = MC_former_imperial
+		transfer_state = 326
+		transfer_state = 729
+		transfer_state = 592
+		transfer_state = 728
+		transfer_state = 1033
+		transfer_state = 593
+		transfer_state = 594
+		transfer_state = 595
+		set_capital = { state = 592 }
+		every_owned_state = { add_core_of = MST }
+		every_controlled_state = {
+			limit = { is_core_of = MST }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.2"
+				owner = MST
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 3500 }
+	}
+	# === 61小国中立生成(见HJM_spawn_minors.txt) ===
+	HJM_spawn_minor_states = yes
+	# === 军阀地域分组flag(西北/中亚/西藏/东北,供DWF宣战与吸纳决议用) ===
+	DWF_set_warlord_groups = yes
+	# === 保皇HJM保留8州(1036/620/607/615/1046/622/1032/744)不动;附庸独立待#16 ===
+	# 2026-08-24 标记前帝国圈国家(世界编辑计划=对全国宣战收复统一,XT定)
+	# 魔族五国(GWG/ZLG/XWY/LLL)+末地(MDG)不打此flag——走拉拢魔族线,不吃世界编辑计划宣战(XT 2026-08-24)
+	ROOT = { set_country_flag = MC_former_imperial }
+	MYR = { set_country_flag = MC_former_imperial }
+
+}

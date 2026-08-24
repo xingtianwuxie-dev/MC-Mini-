@@ -1,0 +1,234 @@
+# DWF 中央机关·重要职位任命事件(2026-08-21 XT定;2026-08-22随政治主干拆改调整)
+# 机制:「政治协商同盟会议」(树根,原「多玩一大召开」改名)完成后
+#      country_event DWF.1(day1,推举国家主席籽岷) + DWF.2(day3) → DWF.3 → DWF.4 → DWF.5(机关班子逐项任命,选完接下一项,仪式感)
+# 中央政要=每次大会弹出(二大/三大再开时用新事件ID复用同套模板)
+# 角色:国家主席=籽岷(HJM_Zimin, ideology=ziminism) / 军委会·红石工程院·联络局=人选待XT定
+#      (2026-08-24原拟的基岩元帅/马库斯红石已从HJM角色池删除,DWF侧要用需另建独立角色)
+# 检查机关=书笔社/营造社/红石派三家小党轮值(flag:DWF_inspector_*)
+# 控制台: event DWF.1
+# ⚠️1.19.2实测:fire_event已不存在(报Unknown effect-type),触发effect=country_event= {id=X days=N}(原版argentina.txt/AAT_Denmark.txt实证,2026-08-21)
+# ⚠️1.19语法:字符ideology必须子意识形态;country_event无隐藏选项时勿加hidden;选项效果照旧
+
+add_namespace = DWF
+
+country_event = {
+	id = DWF.1
+	is_triggered_only = yes
+	fire_only_once = yes
+	title = DWF.1.t
+	desc = DWF.1.desc
+	option = {
+		name = DWF.1.a
+		set_country_flag = DWF_chairman_zinmin
+		add_political_power = 25
+	}
+	option = {
+		name = DWF.1.b
+		set_country_flag = DWF_chairman_zinmin
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = DWF.2
+	is_triggered_only = yes
+	fire_only_once = yes
+	title = DWF.2.t
+	desc = DWF.2.desc
+	option = {
+		name = DWF.2.a
+		set_country_flag = DWF_inspector_shubi
+		country_event = { id = DWF.3 days = 1 }
+	}
+	option = {
+		name = DWF.2.b
+		set_country_flag = DWF_inspector_yingzao
+		country_event = { id = DWF.3 days = 1 }
+	}
+	option = {
+		name = DWF.2.c
+		set_country_flag = DWF_inspector_hongshi
+		country_event = { id = DWF.3 days = 1 }
+	}
+}
+
+country_event = {
+	id = DWF.3
+	is_triggered_only = yes
+	fire_only_once = yes
+	title = DWF.3.t
+	desc = DWF.3.desc
+	option = {
+		name = DWF.3.a
+		set_country_flag = DWF_military_commission_bedrock
+		add_political_power = 15
+		country_event = { id = DWF.4 days = 1 }
+	}
+	option = {
+		name = DWF.3.b
+		set_country_flag = DWF_military_commission_bedrock
+		army_experience = 5
+		country_event = { id = DWF.4 days = 1 }
+	}
+}
+
+country_event = {
+	id = DWF.4
+	is_triggered_only = yes
+	fire_only_once = yes
+	title = DWF.4.t
+	desc = DWF.4.desc
+	option = {
+		name = DWF.4.a
+		set_country_flag = DWF_tech_academy_marcus
+		country_event = { id = DWF.5 days = 1 }
+	}
+	option = {
+		name = DWF.4.b
+		set_country_flag = DWF_tech_academy_marcus
+		add_political_power = 10
+		country_event = { id = DWF.5 days = 1 }
+	}
+}
+
+country_event = {
+	id = DWF.5
+	is_triggered_only = yes
+	fire_only_once = yes
+	title = DWF.5.t
+	desc = DWF.5.desc
+	option = {
+		name = DWF.5.a
+		set_country_flag = DWF_contact_head_tbd
+		add_political_power = 5
+	}
+	option = {
+		name = DWF.5.b
+		set_country_flag = DWF_contact_head_tbd
+	}
+}
+
+# ===== 政治线BOP段位事件(2026-08-22;同日XT大拆删去DWF.12/13/14,随门槛对+红石线+共同体线删除) =====
+
+# DWF.10 协调·绝对段位(BOP极端on_activate,首次弹)
+country_event = {
+	id = DWF.10
+	title = DWF.10.t
+	desc = DWF.10.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = DWF.10.a
+		add_political_power = 25
+	}
+}
+
+# DWF.11 解放·绝对段位(BOP极端on_activate,首次弹)
+country_event = {
+	id = DWF.11
+	title = DWF.11.t
+	desc = DWF.11.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = DWF.11.a
+		add_war_support = 0.03
+	}
+}
+
+# DWF.15 跳测事件(2026-08-22改:红石/共同体隐藏线已删,改为政治主干快跳):控制台 event DWF.15 触发,不走正常流程;C选项可重置BOP
+country_event = {
+	id = DWF.15
+	title = DWF.15.t
+	desc = DWF.15.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	option = {
+		name = DWF.15.a
+		# 完成「政治协商同盟会议」(completion_reward照发,人事链DWF.1/DWF.2先后弹出)
+		complete_national_focus = { focus = DWF_first_congress }
+	}
+	option = {
+		name = DWF.15.b
+		# 完成「开启内部检查」(前提未完成也能直接complete)
+		complete_national_focus = { focus = DWF_internal_inspection }
+	}
+	option = {
+		name = DWF.15.c
+		set_power_balance = { id = DWF_coordination_liberation_bop set_default = yes }
+	}
+}
+
+# ===== 开局介绍事件链(2026-08-23 XT定:TFR式翻页介绍,声明独占一页) =====
+# 运行方式:on_startup向开局可选真实国家弹 DWF.101(主菜单目录页),option当按钮互跳各页。
+# ⚠️引擎限制:country_event只能按TAG指定弹,无"弹给玩家"泛化写法;故按HJM/HIM/各魔族国/MAL定点排程。
+#     翻页靠不设 fire_only_once:子页"返回"option再弹主菜单,自由往返;最后"开始游戏"设global flag收尾。
+#     重载重跑on_startup:limit已挂 MC_mini_intro_shown_armed 防重复排程。
+country_event = {
+	id = DWF.101
+	is_triggered_only = yes
+	title = DWF.101.t
+	desc = DWF.101.desc
+	option = { # 署名与致谢页
+		name = DWF.101.a
+		country_event = { id = DWF.102 }
+	}
+	option = { # 各国处境定位
+		name = DWF.101.b
+		country_event = { id = DWF.104 }
+	}
+	option = { # 立场声明(独占一页)
+		name = DWF.101.c
+		country_event = { id = DWF.103 }
+	}
+	option = { # 开始游戏(整局只设一次global flag,收尾)
+		name = DWF.101.d
+		set_global_flag = MC_mini_intro_shown
+	}
+}
+
+# —— 署名与致谢页(可随时返回主菜单) ——
+country_event = {
+	id = DWF.102
+	is_triggered_only = yes
+	title = DWF.102.t
+	desc = DWF.102.desc
+	option = {
+		name = DWF.102.a
+		country_event = { id = DWF.101 }
+	}
+}
+
+# —— 作者立场声明页(独占一页,内容与DWF.100完全一致,2026-08-23 XT定) ——
+country_event = {
+	id = DWF.103
+	is_triggered_only = yes
+	title = DWF.103.t
+	desc = DWF.103.desc
+	option = {
+		name = DWF.103.a
+		country_event = { id = DWF.101 }
+	}
+	option = {
+		name = DWF.103.b
+		set_global_flag = MC_mini_intro_shown
+	}
+}
+
+# —— 各国处境定位页(统一版:动态国家名+通用定位文案) ——
+country_event = {
+	id = DWF.104
+	is_triggered_only = yes
+	title = DWF.104.t
+	desc = DWF.104.desc
+	option = {
+		name = DWF.104.a
+		country_event = { id = DWF.101 }
+	}
+	option = {
+		name = DWF.104.b
+		set_global_flag = MC_mini_intro_shown
+	}
+}

@@ -1,0 +1,4 @@
+graphical_culture = eastern_european_gfx
+graphical_culture_2d = eastern_european_2d
+# W98 warlord color
+color = { 253 29 193 }

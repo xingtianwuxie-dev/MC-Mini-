@@ -20,6 +20,7 @@ set_popularities = {
 
 # 2026-08-24 XT定:籽岷任DWF元首(独立角色DWF_Zimin,避免与HJM顾问版冲突)
 recruit_character = DWF_Zimin			# 2026-08-21 XT定:开局籽岷领导多玩(籽岷主义)
+recruit_character = DWF_Zimin_duowan			# 2026-08-24 XT定:一大前多玩党魁也是籽岷(替身角色)
 
 # 2026-08-22 政治线主擂台:协调⇄解放权力平衡(DWF建国即激活;极端段位开隐藏线门槛)
 set_power_balance = {

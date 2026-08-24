@@ -1,0 +1,56 @@
+# 内战三阶段排程 2026-08-24 XT定: 分裂后180天阶段1, 每365天升级
+# 由 HJM_empire_split 尾部排程 phase.1; HJM_debug「结束内战」清flag后可重开
+add_namespace = HJM_civilwar_phase
+
+country_event = {
+	id = HJM_civilwar_phase.1
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = HJM_empire_split_done
+		NOT = { has_global_flag = HJM_civilwar_phase1_done }
+	}
+	immediate = {
+		set_global_flag = HJM_civilwar_phase1_done
+		HJM_civilwar_phase1_wars = yes
+		ROOT = { country_event = { id = HJM_civilwar_phase.2 days = 365 } } # 一年后升级
+	}
+	option = {
+		name = HJM_civilwar_phase.default
+	}
+}
+
+country_event = {
+	id = HJM_civilwar_phase.2
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = HJM_empire_split_done
+		NOT = { has_global_flag = HJM_civilwar_phase2_done }
+	}
+	immediate = {
+		set_global_flag = HJM_civilwar_phase2_done
+		HJM_civilwar_phase2_wars = yes
+		ROOT = { country_event = { id = HJM_civilwar_phase.3 days = 365 } } # 一年后升级
+	}
+	option = {
+		name = HJM_civilwar_phase.default
+	}
+}
+
+country_event = {
+	id = HJM_civilwar_phase.3
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = HJM_empire_split_done
+		NOT = { has_global_flag = HJM_civilwar_phase3_done }
+	}
+	immediate = {
+		set_global_flag = HJM_civilwar_phase3_done
+		HJM_civilwar_phase3_wars = yes
+			}
+	option = {
+		name = HJM_civilwar_phase.default
+	}
+}

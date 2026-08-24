@@ -1,0 +1,330 @@
+# DWF 四派事件链 2026-08-24(照TFR-APA模式;BOP:解放=左负值/协调=右正值)
+# SetA .1~.6 段位拉扯(BOP段位on_activate,选项撬动±0.05/0.1) SetB .11~.43 一大后四派执政风味(801党魁链)
+# SetC .51~.54 拉扯决议叙事池(可重复) SetD .61~.62 闭幕补遗(802尾链)
+add_namespace = DWF_faction
+
+country_event = {
+	id = DWF_faction.1
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.1.t
+	desc = DWF_faction.1.desc
+	option = {
+		name = DWF_faction.1.a
+		add_power_balance_value = { id = DWF_coordination_liberation_bop value = 0.05 tooltip_side = DWF_coordination_side }
+		add_stability = 0.02
+	}
+	option = {
+		name = DWF_faction.1.b
+		add_power_balance_value = { id = DWF_coordination_liberation_bop value = -0.05 tooltip_side = DWF_liberation_side }
+		add_war_support = 0.02
+	}
+}
+
+country_event = {
+	id = DWF_faction.2
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.2.t
+	desc = DWF_faction.2.desc
+	option = {
+		name = DWF_faction.2.a
+		add_power_balance_value = { id = DWF_coordination_liberation_bop value = 0.05 tooltip_side = DWF_coordination_side }
+		add_political_power = 25
+	}
+	option = {
+		name = DWF_faction.2.b
+		add_power_balance_value = { id = DWF_coordination_liberation_bop value = -0.05 tooltip_side = DWF_liberation_side }
+		army_experience = 10
+	}
+}
+
+country_event = {
+	id = DWF_faction.3
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.3.t
+	desc = DWF_faction.3.desc
+	option = {
+		name = DWF_faction.3.a
+		add_power_balance_value = { id = DWF_coordination_liberation_bop value = -0.1 tooltip_side = DWF_liberation_side }
+		army_experience = 25
+	}
+	option = {
+		name = DWF_faction.3.b
+		add_power_balance_value = { id = DWF_coordination_liberation_bop value = 0.1 tooltip_side = DWF_coordination_side }
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = DWF_faction.4
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.4.t
+	desc = DWF_faction.4.desc
+	option = {
+		name = DWF_faction.4.a
+		add_power_balance_value = { id = DWF_coordination_liberation_bop value = 0.1 tooltip_side = DWF_coordination_side }
+		add_political_power = 50
+	}
+	option = {
+		name = DWF_faction.4.b
+		add_power_balance_value = { id = DWF_coordination_liberation_bop value = -0.1 tooltip_side = DWF_liberation_side }
+		add_stability = -0.02
+	}
+}
+
+country_event = {
+	id = DWF_faction.5
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.5.t
+	desc = DWF_faction.5.desc
+	option = {
+		name = DWF_faction.5.a
+		add_power_balance_value = { id = DWF_coordination_liberation_bop value = -0.1 tooltip_side = DWF_liberation_side }
+		add_war_support = 0.03
+	}
+	option = {
+		name = DWF_faction.5.b
+		add_power_balance_value = { id = DWF_coordination_liberation_bop value = 0.1 tooltip_side = DWF_coordination_side }
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = DWF_faction.6
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.6.t
+	desc = DWF_faction.6.desc
+	option = {
+		name = DWF_faction.6.a
+		add_power_balance_value = { id = DWF_coordination_liberation_bop value = 0.1 tooltip_side = DWF_coordination_side }
+		add_stability = 0.05
+		add_political_power = 25
+	}
+	option = {
+		name = DWF_faction.6.b
+		add_power_balance_value = { id = DWF_coordination_liberation_bop value = -0.1 tooltip_side = DWF_liberation_side }
+		add_war_support = 0.03
+	}
+}
+
+country_event = {
+	id = DWF_faction.11
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.11.t
+	desc = DWF_faction.11.desc
+	option = {
+		name = DWF_faction.11.a
+		army_experience = 25
+	}
+}
+
+country_event = {
+	id = DWF_faction.12
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.12.t
+	desc = DWF_faction.12.desc
+	option = {
+		name = DWF_faction.12.a
+		add_war_support = 0.03
+	}
+}
+
+country_event = {
+	id = DWF_faction.13
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.13.t
+	desc = DWF_faction.13.desc
+	option = {
+		name = DWF_faction.13.a
+		add_political_power = 50
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = DWF_faction.21
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.21.t
+	desc = DWF_faction.21.desc
+	option = {
+		name = DWF_faction.21.a
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = DWF_faction.22
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.22.t
+	desc = DWF_faction.22.desc
+	option = {
+		name = DWF_faction.22.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = DWF_faction.23
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.23.t
+	desc = DWF_faction.23.desc
+	option = {
+		name = DWF_faction.23.a
+		add_political_power = 25
+		add_stability = 0.01
+	}
+}
+
+country_event = {
+	id = DWF_faction.31
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.31.t
+	desc = DWF_faction.31.desc
+	option = {
+		name = DWF_faction.31.a
+		add_political_power = 15
+	}
+}
+
+country_event = {
+	id = DWF_faction.32
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.32.t
+	desc = DWF_faction.32.desc
+	option = {
+		name = DWF_faction.32.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = DWF_faction.33
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.33.t
+	desc = DWF_faction.33.desc
+	option = {
+		name = DWF_faction.33.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = DWF_faction.41
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.41.t
+	desc = DWF_faction.41.desc
+	option = {
+		name = DWF_faction.41.a
+		add_political_power = 75
+		add_stability = -0.02
+	}
+}
+
+country_event = {
+	id = DWF_faction.42
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.42.t
+	desc = DWF_faction.42.desc
+	option = {
+		name = DWF_faction.42.a
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = DWF_faction.43
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.43.t
+	desc = DWF_faction.43.desc
+	option = {
+		name = DWF_faction.43.a
+		add_political_power = 50
+		add_stability = 0.01
+	}
+}
+
+country_event = {
+	id = DWF_faction.51
+	is_triggered_only = yes
+	title = DWF_faction.51.t
+	desc = DWF_faction.51.desc
+	option = {
+		name = DWF_faction.51.a
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = DWF_faction.52
+	is_triggered_only = yes
+	title = DWF_faction.52.t
+	desc = DWF_faction.52.desc
+	option = {
+		name = DWF_faction.52.a
+		add_stability = 0.01
+	}
+}
+
+country_event = {
+	id = DWF_faction.53
+	is_triggered_only = yes
+	title = DWF_faction.53.t
+	desc = DWF_faction.53.desc
+	option = {
+		name = DWF_faction.53.a
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = DWF_faction.54
+	is_triggered_only = yes
+	title = DWF_faction.54.t
+	desc = DWF_faction.54.desc
+	option = {
+		name = DWF_faction.54.a
+		add_political_power = 15
+	}
+}
+
+country_event = {
+	id = DWF_faction.61
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.61.t
+	desc = DWF_faction.61.desc
+	option = {
+		name = DWF_faction.61.a
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = DWF_faction.62
+	fire_only_once = yes
+	is_triggered_only = yes
+	title = DWF_faction.62.t
+	desc = DWF_faction.62.desc
+	option = {
+		name = DWF_faction.62.a
+		add_stability = 0.01
+	}
+}
+

@@ -1,0 +1,333 @@
+# DWF 七线延展剧情事件 2026-08-24(七线延展到多玩一大)
+# 701-703 路线之争三版(BOP段位自动分流,A案) / 800 一大开幕 / 801 党魁选举(籽岷卸任四派竞魁)
+add_namespace = DWF_story
+
+country_event = {
+	id = DWF_story.701
+	is_triggered_only = yes
+	title = DWF_story.701.t
+	desc = DWF_story.701.desc
+	option = {
+		name = DWF_story.701.a
+		add_stability = 0.03
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = DWF_story.702
+	is_triggered_only = yes
+	title = DWF_story.702.t
+	desc = DWF_story.702.desc
+	option = {
+		name = DWF_story.702.a
+		add_war_support = 0.05
+		army_experience = 25
+	}
+}
+
+country_event = {
+	id = DWF_story.703
+	is_triggered_only = yes
+	title = DWF_story.703.t
+	desc = DWF_story.703.desc
+	option = {
+		name = DWF_story.703.a
+		add_political_power = 25
+		add_timed_idea = {
+			idea = DWF_silence_of_machine			# 机器陪你熬夜:限时科研+2%
+			days = 30
+		}
+	}
+}
+
+country_event = {
+	id = DWF_story.800
+	is_triggered_only = yes
+	title = DWF_story.800.t
+	desc = DWF_story.800.desc
+	immediate = {
+		set_country_flag = DWF_congress_superevent_start		# 一大超事件全屏
+		news_event = { id = DWF_news.1 }						# 开幕新闻(全球)
+	}
+	option = {
+		name = DWF_story.800.a
+	}
+}
+
+country_event = {
+	id = DWF_story.801
+	is_triggered_only = yes
+	title = DWF_story.801.t
+	desc = DWF_story.801.desc
+	# 四派竞魁(set_country_leader三件套=1.19换党魁正法,TFR实证;籽岷替身统一卸任)
+	option = {
+		name = DWF_story.801.liberation
+		set_politics = { ruling_party = duowan_liberation }
+		set_country_leader_ideology = duowan_liberation
+		set_country_leader_name = { ideology = duowan_liberation name = DWF_leader_liberation }
+		set_country_leader_portrait = { ideology = duowan_liberation portrait = GFX_portrait_leader_generic }
+		retire_character = DWF_Zimin_duowan
+		add_ideas = DWF_liberation_caucus
+		news_event = { id = DWF_news.2 }
+		country_event = { id = DWF_story.802 days = 7 }			# 上任第一天(通用版)
+		country_event = { id = DWF_faction.11 days = 14 }			# 解放派执政风味
+		country_event = { id = DWF_faction.12 days = 30 }			# 解放派执政风味
+		country_event = { id = DWF_faction.13 days = 60 }			# 解放派执政风味
+		add_war_support = 0.05
+	}
+	option = {
+		name = DWF_story.801.coordination
+		set_politics = { ruling_party = duowan_coordination }
+		set_country_leader_ideology = duowan_coordination
+		set_country_leader_name = { ideology = duowan_coordination name = DWF_leader_coordination }
+		set_country_leader_portrait = { ideology = duowan_coordination portrait = GFX_portrait_leader_generic }
+		retire_character = DWF_Zimin_duowan
+		add_ideas = DWF_coordination_caucus
+		news_event = { id = DWF_news.3 }
+		country_event = { id = DWF_story.802 days = 7 }			# 上任第一天(通用版)
+		country_event = { id = DWF_faction.21 days = 14 }			# 协调派执政风味
+		country_event = { id = DWF_faction.22 days = 30 }			# 协调派执政风味
+		country_event = { id = DWF_faction.23 days = 60 }			# 协调派执政风味
+		add_stability = 0.05
+	}
+	option = {
+		name = DWF_story.801.redstone
+		set_politics = { ruling_party = duowanism }
+		set_country_leader_ideology = duowanism
+		set_country_leader_name = { ideology = duowanism name = DWF_Leishidong }
+		set_country_leader_portrait = { ideology = duowanism portrait = GFX_portrait_leader_generic }
+		retire_character = DWF_Zimin_duowan
+		add_ideas = DWF_redstone_caucus
+		news_event = { id = DWF_news.4 }
+		country_event = { id = DWF_story.802 days = 7 }			# 上任第一天(通用版)
+		country_event = { id = DWF_faction.31 days = 14 }			# 红石派执政风味
+		country_event = { id = DWF_faction.32 days = 30 }			# 红石派执政风味
+		country_event = { id = DWF_faction.33 days = 60 }			# 红石派执政风味
+	}
+	option = {
+		name = DWF_story.801.collective
+		set_politics = { ruling_party = sandbox_collectivism }
+		set_country_leader_ideology = sandbox_collectivism
+		set_country_leader_name = { ideology = sandbox_collectivism name = DWF_leader_collective }
+		set_country_leader_portrait = { ideology = sandbox_collectivism portrait = GFX_portrait_leader_generic }
+		retire_character = DWF_Zimin_duowan
+		add_ideas = DWF_collective_caucus
+		news_event = { id = DWF_news.5 }
+		country_event = { id = DWF_story.802 days = 7 }			# 上任第一天(通用版)
+		country_event = { id = DWF_faction.41 days = 14 }			# 共同体派执政风味
+		country_event = { id = DWF_faction.42 days = 30 }			# 共同体派执政风味
+		country_event = { id = DWF_faction.43 days = 60 }			# 共同体派执政风味
+	}
+}
+
+# ==== 2026-08-24 剧情事件链(每国策一事件,编号分段=线归属) ====
+
+country_event = {
+	id = DWF_story.101
+	is_triggered_only = yes
+	title = DWF_story.101.t
+	desc = DWF_story.101.desc
+	option = {
+		name = DWF_story.101.a
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = DWF_story.102
+	is_triggered_only = yes
+	title = DWF_story.102.t
+	desc = DWF_story.102.desc
+	option = {
+		name = DWF_story.102.a
+		add_war_support = 0.02
+	}
+}
+
+country_event = {
+	id = DWF_story.201
+	is_triggered_only = yes
+	title = DWF_story.201.t
+	desc = DWF_story.201.desc
+	option = {
+		name = DWF_story.201.a
+		add_stability = 0.03
+add_political_power = -25
+	}
+	option = {
+		name = DWF_story.201.b
+		add_stability = -0.02
+add_political_power = 25
+	}
+}
+
+country_event = {
+	id = DWF_story.202
+	is_triggered_only = yes
+	title = DWF_story.202.t
+	desc = DWF_story.202.desc
+	option = {
+		name = DWF_story.202.a
+		add_war_support = 0.01
+add_stability = -0.01
+	}
+	option = {
+		name = DWF_story.202.b
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = DWF_story.203
+	is_triggered_only = yes
+	title = DWF_story.203.t
+	desc = DWF_story.203.desc
+	option = {
+		name = DWF_story.203.a
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = DWF_story.301
+	is_triggered_only = yes
+	title = DWF_story.301.t
+	desc = DWF_story.301.desc
+	option = {
+		name = DWF_story.301.a
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = DWF_story.302
+	is_triggered_only = yes
+	title = DWF_story.302.t
+	desc = DWF_story.302.desc
+	option = {
+		name = DWF_story.302.a
+	}
+}
+
+country_event = {
+	id = DWF_story.401
+	is_triggered_only = yes
+	title = DWF_story.401.t
+	desc = DWF_story.401.desc
+	option = {
+		name = DWF_story.401.a
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = DWF_story.402
+	is_triggered_only = yes
+	title = DWF_story.402.t
+	desc = DWF_story.402.desc
+	option = {
+		name = DWF_story.402.a
+		add_war_support = 0.02
+	}
+}
+
+country_event = {
+	id = DWF_story.403
+	is_triggered_only = yes
+	title = DWF_story.403.t
+	desc = DWF_story.403.desc
+	option = {
+		name = DWF_story.403.a
+	}
+}
+
+country_event = {
+	id = DWF_story.404
+	is_triggered_only = yes
+	title = DWF_story.404.t
+	desc = DWF_story.404.desc
+	option = {
+		name = DWF_story.404.a
+		army_experience = 10
+	}
+}
+
+country_event = {
+	id = DWF_story.501
+	is_triggered_only = yes
+	title = DWF_story.501.t
+	desc = DWF_story.501.desc
+	option = {
+		name = DWF_story.501.a
+		army_experience = 15
+	}
+}
+
+country_event = {
+	id = DWF_story.502
+	is_triggered_only = yes
+	title = DWF_story.502.t
+	desc = DWF_story.502.desc
+	option = {
+		name = DWF_story.502.a
+		army_experience = 10
+	}
+}
+
+country_event = {
+	id = DWF_story.503
+	is_triggered_only = yes
+	title = DWF_story.503.t
+	desc = DWF_story.503.desc
+	option = {
+		name = DWF_story.503.a
+		add_political_power = 15
+	}
+}
+
+country_event = {
+	id = DWF_story.601
+	is_triggered_only = yes
+	title = DWF_story.601.t
+	desc = DWF_story.601.desc
+	option = {
+		name = DWF_story.601.a
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = DWF_story.602
+	is_triggered_only = yes
+	title = DWF_story.602.t
+	desc = DWF_story.602.desc
+	option = {
+		name = DWF_story.602.a
+		add_stability = 0.01
+	}
+}
+
+country_event = {
+	id = DWF_story.704
+	is_triggered_only = yes
+	title = DWF_story.704.t
+	desc = DWF_story.704.desc
+	option = {
+		name = DWF_story.704.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = DWF_story.802
+	is_triggered_only = yes
+	title = DWF_story.802.t
+	desc = DWF_story.802.desc
+	option = {
+		name = DWF_story.802.a
+		add_political_power = 25
+		country_event = { id = DWF_faction.61 days = 15 }
+		country_event = { id = DWF_faction.62 days = 30 }
+	}
+}

@@ -17,6 +17,7 @@ HJM_empire_split = {
 	# 2026-08-23 XT定:DWF成立时加 732(帕米尔)
 	DWF = {
 		HJM_warlord_divisions = yes
+		set_country_flag = MC_former_imperial
 		transfer_state = 617
 		transfer_state = 618
 		transfer_state = 619
@@ -59,14 +60,11 @@ HJM_empire_split = {
 				days = 365
 			}
 		}
-		declare_war_on = {
-			target = HJM
-			type = civil_war
-		}
 	}
 	# === 网易远洋开发团 NTE(9州,首都745) ===
 	NTE = {
 		HJM_warlord_divisions = yes
+		set_country_flag = MC_former_imperial
 		transfer_state = 745
 		transfer_state = 716
 		transfer_state = 328
@@ -86,14 +84,11 @@ HJM_empire_split = {
 			}
 		}
 		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 4000 }
-		declare_war_on = {
-			target = HJM
-			type = civil_war
-		}
 	}
 	# === 微软技术共同体 MST(8州,首都592) ===
 	MST = {
 		HJM_warlord_divisions = yes
+		set_country_flag = MC_former_imperial
 		transfer_state = 326
 		transfer_state = 729
 		transfer_state = 592
@@ -112,14 +107,18 @@ HJM_empire_split = {
 			}
 		}
 		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 3500 }
-		declare_war_on = {
-			target = HJM
-			type = civil_war
-		}
 	}
 	# === 61小国中立生成(见HJM_spawn_minors.txt) ===
 	HJM_spawn_minor_states = yes
 	# === 军阀地域分组flag(西北/中亚/西藏/东北,供DWF宣战与吸纳决议用) ===
 	DWF_set_warlord_groups = yes
 	# === 保皇HJM保留8州(1036/620/607/615/1046/622/1032/744)不动;附庸独立待#16 ===
+	# 2026-08-24 标记前帝国圈国家(世界编辑计划=对全国宣战收复统一,XT定)
+	# 魔族五国(GWG/ZLG/XWY/LLL)+末地(MDG)不打此flag——走拉拢魔族线,不吃世界编辑计划宣战(XT 2026-08-24)
+	ROOT = { set_country_flag = MC_former_imperial }
+	MYR = { set_country_flag = MC_former_imperial }
+
+	# 2026-08-24 内战三阶段混战排程: 分裂后半年进阶段1, 每年升级(XT定)
+	ROOT = { country_event = { id = HJM_civilwar_phase.1 days = 180 } }
+
 }

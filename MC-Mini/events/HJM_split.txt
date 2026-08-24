@@ -12,6 +12,7 @@ country_event = {
 	# 2026-08-22 XT定:分裂弹出瞬间奏响内战超事件「冠冕坠地」;统一检测也吃 HJM_empire_split_done 这面全局flag
 	immediate = {
 		set_global_flag = HJM_empire_split_done
+		news_event = { id = HJM_news.20 }			# 帝国分裂(全球)
 		set_country_flag = HJM_civilwar_superevent_start
 	}
 	option = {

@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ HJM_debug.1.t:0 "时期控制面板"
+ HJM_debug.1.desc:0 "调试面板：一键把控游戏时期，节约测试时间。\n每个按钮执行后面板自动重弹，可连续操作；「收起面板」关闭。\n注意：\n· 内战选边(多玩/网易/微软)不走本面板，请用控制台 event HJM_split.1 弹四选一\n· 「结束内战」会吞并全部前帝国圈国家——若你正扮演 DWF/NTE/MST 或某军阀，你会被吞并切观察者\n· 想重新走完整剧情线，建议白和魔族战争后再「结束内战」回到统一状态"
+ HJM_debug.1.tree1:0 "国策树 → 第一棵·经营期"
+ HJM_debug.1.tree2:0 "国策树 → 第二棵·内战前"
+ HJM_debug.1.tree3:0 "国策树 → 第三棵·战争期"
+ HJM_debug.1.demon_on:0 "开启魔族战争（HIM宣战）"
+ HJM_debug.1.demon_off:0 "结束魔族战争（白和）"
+ HJM_debug.1.civil_on:0 "开启内战（帝国分裂·保皇线）"
+ HJM_debug.1.civil_off:0 "结束内战（天下归一·吞并全部）"
+ HJM_debug.1.close:0 "收起面板"

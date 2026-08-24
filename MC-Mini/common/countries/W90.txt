@@ -1,0 +1,4 @@
+graphical_culture = eastern_european_gfx
+graphical_culture_2d = eastern_european_2d
+# W90 warlord color
+color = { 21 53 185 }

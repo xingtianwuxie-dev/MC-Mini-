@@ -35,5 +35,9 @@ spriteTypes = {
 		name = "GFX_idea_HJM_illager_activity_high"
 		texturefile = "gfx/interface/ideas/HJM_illager_activity_high.png"
 	}
+	SpriteType = {
+		name = "GFX_idea_HJM_group_offensive_momentum"
+		texturefile = "gfx/interface/ideas/HJM_group_offensive_momentum.png"
+	}
 
 }

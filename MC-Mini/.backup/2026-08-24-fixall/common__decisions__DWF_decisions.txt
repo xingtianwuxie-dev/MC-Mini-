@@ -1,0 +1,1263 @@
+# DWF 决议(2026-08-21)——照TFR东协/太约竞争东南亚模式改造
+# 机制记要:①宣战决议=军事线国策开权限,玩家选拉栓时机 ②军阀吸纳=白名单(平等入盟)/问罪(胁迫附庸)
+# ③拉拢魔族=仅魔族五国+末地(军阀不走此路!),影响力var 0~1,六成入「志愿者计划」阵营
+# ⚠️MST微软版拉拢阈值=四成(2026-08-21 XT定),写MST外交线时改
+# 2026-08-21 debug实测修错:exists=TAG→country_exists;add_world_tension效果1.19已不存在(exe无此串),问罪攻势的外交代价改走稳定度
+
+####################################################################################
+# 一、军事行动(宣战决议,国策解锁)
+####################################################################################
+DWF_military_operations = {
+
+	# 整编西北内陆地区解锁——宣战西北近邻军阀(西域三十六国梗)
+	DWF_thirty_six_kingdoms = {
+		icon = GFX_decision_generic_army
+		visible = {
+			has_country_flag = DWF_northwest_consolidated
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			custom_effect_tooltip = DWF_thirty_six_kingdoms_tt
+			every_country = {
+				limit = {
+					has_country_flag = DWF_warlord_group_nw
+					NOT = { has_war_with = ROOT }
+					NOT = { is_in_faction_with = ROOT }
+				}
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+
+	# 远西战略解锁之一——宣战中亚军阀(班超定远西域)
+	DWF_dingyuan_plan = {
+		icon = GFX_decision_generic_police_action
+		visible = {
+			has_country_flag = DWF_far_west_strategy_unlocked
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			custom_effect_tooltip = DWF_dingyuan_plan_tt
+			every_country = {
+				limit = {
+					has_country_flag = DWF_warlord_group_ca
+					NOT = { has_war_with = ROOT }
+					NOT = { is_in_faction_with = ROOT }
+				}
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+
+	# 远西战略解锁之二——宣战西藏军阀(世界屋脊)
+	DWF_roof_offensive = {
+		icon = GFX_decision_generic_police_action
+		visible = {
+			has_country_flag = DWF_far_west_strategy_unlocked
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			custom_effect_tooltip = DWF_roof_offensive_tt
+			every_country = {
+				limit = {
+					has_country_flag = DWF_warlord_group_tibet
+					NOT = { has_war_with = ROOT }
+					NOT = { is_in_faction_with = ROOT }
+				}
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+
+	# 清洗右派敌人解锁——宣战东北军阀+网易NTE(白山黑水=东北古称)
+	DWF_baishan_heishui_offensive = {
+		icon = GFX_decision_generic_ignite_civil_war
+		visible = {
+			has_country_flag = DWF_purge_rightists_unlocked
+		}
+		fire_only_once = yes
+		cost = 75
+		complete_effect = {
+			custom_effect_tooltip = DWF_baishan_heishui_offensive_tt
+			every_country = {
+				limit = {
+					has_country_flag = DWF_warlord_group_ne
+					NOT = { has_war_with = ROOT }
+					NOT = { is_in_faction_with = ROOT }
+				}
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+			# 网易NTE本尊
+			if = {
+				limit = { country_exists = NTE }
+				NTE = {
+					if = {
+						limit = {
+							NOT = { has_war_with = ROOT }
+							NOT = { is_in_faction_with = ROOT }
+						}
+						ROOT = {
+							declare_war_on = {
+								target = PREV
+								type = annex_everything
+							}
+						}
+					}
+				}
+			}
+		
+			news_event = { id = DWF_news.8 }			# 宣战新闻}
+	}
+
+	# 再造MC解锁——向全部国家宣战(WorldEdit梗:重写整个地图)
+	DWF_world_edit_program = {
+		icon = GFX_decision_generic_ignite_civil_war
+		visible = {
+			has_country_flag = DWF_rebuild_mc_unlocked
+		}
+		fire_only_once = yes
+		cost = 100
+		complete_effect = {
+			custom_effect_tooltip = DWF_world_edit_program_tt
+			add_war_support = 0.10
+			every_country = {
+				limit = {
+					has_country_flag = MC_former_imperial		# 2026-08-24 XT定:只打前帝国圈(收复统一),不打全世界
+					NOT = { tag = DWF }
+					NOT = { has_war_with = ROOT }
+					NOT = { is_in_faction_with = ROOT }
+					NOT = { is_puppet_of = ROOT }
+				}
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		
+			news_event = { id = DWF_news.9 }			# 宣战新闻}
+	}
+}
+
+####################################################################################
+# 二、外交吸纳(targeted决议:目标=西北近邻军阀)
+####################################################################################
+DWF_diplomatic_absorption = {
+
+	# 团结一切力量解锁——和平吸纳:平等加入阵营(MC服务器白名单梗)
+	DWF_whitelist_plan = {
+		icon = GFX_decision_generic_political_discourse
+		visible = {
+			has_country_flag = DWF_whitelist_plan_unlocked
+		}
+		target_trigger = {
+			# 2026-08-24 西线睦邻:中亚(ca)目标经flag解锁
+			OR = {
+				has_country_flag = DWF_warlord_group_nw
+				AND = {
+					has_country_flag = DWF_warlord_group_ca
+					ROOT = { has_country_flag = DWF_western_neighbors_pact }
+				}
+			}
+			is_in_faction = no
+			NOT = { has_war_with = ROOT }
+			NOT = { has_country_flag = DWF_whitelisted_by_dwf }
+		}
+		cost = 25
+		complete_effect = {
+			FROM = { set_country_flag = DWF_whitelisted_by_dwf }
+			add_to_faction = FROM
+			FROM = { add_stability = 0.05 }			# 入盟红利:稳定+5%
+			if = { limit = { has_country_flag = DWF_western_neighbors_pact } add_political_power = 5 }			# 睦邻返点(等效-20%)
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	# 不做无用的牺牲解锁——武力胁迫:城下之盟,附庸入盟
+	DWF_questioning_offensive = {
+		icon = GFX_decision_generic_police_action
+		visible = {
+			has_country_flag = DWF_questioning_offensive_unlocked
+		}
+		target_trigger = {
+			# 2026-08-24 西线睦邻:中亚(ca)目标经flag解锁
+			OR = {
+				has_country_flag = DWF_warlord_group_nw
+				AND = {
+					has_country_flag = DWF_warlord_group_ca
+					ROOT = { has_country_flag = DWF_western_neighbors_pact }
+				}
+			}
+			is_in_faction = no
+			NOT = { has_war_with = ROOT }
+			NOT = { has_country_flag = DWF_forced_by_dwf }
+		}
+		cost = 50
+		complete_effect = {
+			FROM = { set_country_flag = DWF_forced_by_dwf }
+			FROM = { puppet = ROOT }
+			add_to_faction = FROM
+			FROM = { add_war_support = 0.10 }			# 被胁迫者的觉悟
+			add_stability = -0.02
+			if = { limit = { has_country_flag = DWF_western_neighbors_pact } add_political_power = 10 }			# 睦邻返点(等效-20%)
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+}
+
+####################################################################################
+# 三、拉拢魔族(仅魔族五国+末地;仿TFR东协影响力竞争)
+# global.DWF_influence_<TAG>_var 0~1;每次拉拢+5%,冷却30天;六成可邀入「志愿者计划」
+####################################################################################
+DWF_demon_court = {
+
+	# === 下界要塞 HIM ===
+	DWF_court_HIM = {
+		icon = GFX_decision_generic_political_discourse
+		visible = {
+			has_country_flag = DWF_court_demons_unlocked
+			country_exists = HIM
+			HIM = { is_in_faction = no }
+		}
+		cost = 20
+		days_remove = 30
+		days_re_enable = 35
+		complete_effect = {
+			custom_effect_tooltip = DWF_court_HIM_tt
+			add_to_variable = {
+				var = global.DWF_influence_HIM_var
+				value = 0.05
+			}
+			clamp_variable = {
+				var = global.DWF_influence_HIM_var
+				min = 0
+				max = 1
+			}
+			HIM = { add_stability = 0.01 }			# 示好小礼
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+	DWF_invite_HIM = {
+		icon = GFX_decision_generic_political_discourse
+		visible = {
+			has_country_flag = DWF_court_demons_unlocked
+			country_exists = HIM
+			HIM = { is_in_faction = no }
+		}
+		available = {
+			check_variable = { global.DWF_influence_HIM_var > 0.6 }			# XT定六成(MST版四成)
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			add_to_faction = HIM
+			HIM = { set_country_flag = DWF_volunteer_program_member }
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	# === 洞穴聚落 GWG ===
+	DWF_court_GWG = {
+		icon = GFX_decision_generic_political_discourse
+		visible = {
+			has_country_flag = DWF_court_demons_unlocked
+			country_exists = GWG
+			GWG = { is_in_faction = no }
+		}
+		cost = 20
+		days_remove = 30
+		days_re_enable = 35
+		complete_effect = {
+			custom_effect_tooltip = DWF_court_GWG_tt
+			add_to_variable = {
+				var = global.DWF_influence_GWG_var
+				value = 0.05
+			}
+			clamp_variable = {
+				var = global.DWF_influence_GWG_var
+				min = 0
+				max = 1
+			}
+			GWG = { add_stability = 0.01 }
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+	DWF_invite_GWG = {
+		icon = GFX_decision_generic_political_discourse
+		visible = {
+			has_country_flag = DWF_court_demons_unlocked
+			country_exists = GWG
+			GWG = { is_in_faction = no }
+		}
+		available = {
+			check_variable = { global.DWF_influence_GWG_var > 0.6 }
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			add_to_faction = GWG
+			GWG = { set_country_flag = DWF_volunteer_program_member }
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	# === 猪灵堡垒 ZLG ===
+	DWF_court_ZLG = {
+		icon = GFX_decision_generic_political_discourse
+		visible = {
+			has_country_flag = DWF_court_demons_unlocked
+			country_exists = ZLG
+			ZLG = { is_in_faction = no }
+		}
+		cost = 20
+		days_remove = 30
+		days_re_enable = 35
+		complete_effect = {
+			custom_effect_tooltip = DWF_court_ZLG_tt
+			add_to_variable = {
+				var = global.DWF_influence_ZLG_var
+				value = 0.05
+			}
+			clamp_variable = {
+				var = global.DWF_influence_ZLG_var
+				min = 0
+				max = 1
+			}
+			ZLG = { add_stability = 0.01 }
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+	DWF_invite_ZLG = {
+		icon = GFX_decision_generic_political_discourse
+		visible = {
+			has_country_flag = DWF_court_demons_unlocked
+			country_exists = ZLG
+			ZLG = { is_in_faction = no }
+		}
+		available = {
+			check_variable = { global.DWF_influence_ZLG_var > 0.6 }
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			add_to_faction = ZLG
+			ZLG = { set_country_flag = DWF_volunteer_program_member }
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	# === 玄武岩城邦 XWY ===
+	DWF_court_XWY = {
+		icon = GFX_decision_generic_political_discourse
+		visible = {
+			has_country_flag = DWF_court_demons_unlocked
+			country_exists = XWY
+			XWY = { is_in_faction = no }
+		}
+		cost = 20
+		days_remove = 30
+		days_re_enable = 35
+		complete_effect = {
+			custom_effect_tooltip = DWF_court_XWY_tt
+			add_to_variable = {
+				var = global.DWF_influence_XWY_var
+				value = 0.05
+			}
+			clamp_variable = {
+				var = global.DWF_influence_XWY_var
+				min = 0
+				max = 1
+			}
+			XWY = { add_stability = 0.01 }
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+	DWF_invite_XWY = {
+		icon = GFX_decision_generic_political_discourse
+		visible = {
+			has_country_flag = DWF_court_demons_unlocked
+			country_exists = XWY
+			XWY = { is_in_faction = no }
+		}
+		available = {
+			check_variable = { global.DWF_influence_XWY_var > 0.6 }
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			add_to_faction = XWY
+			XWY = { set_country_flag = DWF_volunteer_program_member }
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	# === 林地府邸 LLL ===
+	DWF_court_LLL = {
+		icon = GFX_decision_generic_political_discourse
+		visible = {
+			has_country_flag = DWF_court_demons_unlocked
+			country_exists = LLL
+			LLL = { is_in_faction = no }
+		}
+		cost = 20
+		days_remove = 30
+		days_re_enable = 35
+		complete_effect = {
+			custom_effect_tooltip = DWF_court_LLL_tt
+			add_to_variable = {
+				var = global.DWF_influence_LLL_var
+				value = 0.05
+			}
+			clamp_variable = {
+				var = global.DWF_influence_LLL_var
+				min = 0
+				max = 1
+			}
+			LLL = { add_stability = 0.01 }
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+	DWF_invite_LLL = {
+		icon = GFX_decision_generic_political_discourse
+		visible = {
+			has_country_flag = DWF_court_demons_unlocked
+			country_exists = LLL
+			LLL = { is_in_faction = no }
+		}
+		available = {
+			check_variable = { global.DWF_influence_LLL_var > 0.6 }
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			add_to_faction = LLL
+			LLL = { set_country_flag = DWF_volunteer_program_member }
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	# === 魔帝国·末影王庭 MDG(末地) ===
+	DWF_court_MDG = {
+		icon = GFX_decision_generic_political_discourse
+		visible = {
+			has_country_flag = DWF_court_demons_unlocked
+			country_exists = MDG
+			MDG = { is_in_faction = no }
+		}
+		cost = 20
+		days_remove = 30
+		days_re_enable = 35
+		complete_effect = {
+			custom_effect_tooltip = DWF_court_MDG_tt
+			add_to_variable = {
+				var = global.DWF_influence_MDG_var
+				value = 0.05
+			}
+			clamp_variable = {
+				var = global.DWF_influence_MDG_var
+				min = 0
+				max = 1
+			}
+			MDG = { add_stability = 0.01 }
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+	DWF_invite_MDG = {
+		icon = GFX_decision_generic_political_discourse
+		visible = {
+			has_country_flag = DWF_court_demons_unlocked
+			country_exists = MDG
+			MDG = { is_in_faction = no }
+		}
+		available = {
+			check_variable = { global.DWF_influence_MDG_var > 0.6 }
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			add_to_faction = MDG
+			MDG = { set_country_flag = DWF_volunteer_program_member }
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+}
+
+# ===== 政治斗争类:BOP拉扯(2026-08-22;BOP定义 common/bop/DWF_bop.txt) =====
+DWF_politics_category = {
+	DWF_coordination_lobbying = {
+		icon = GFX_decision_category_generic_political_discourse
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 30
+		allowed = { original_tag = DWF }
+		visible = { has_power_balance = { id = DWF_coordination_liberation_bop } }
+		available = {
+			has_power_balance = { id = DWF_coordination_liberation_bop }
+			NOT = { is_power_balance_in_range = { id = DWF_coordination_liberation_bop range = DWF_coordination_total_control_range } }
+		}
+		complete_effect = {
+			add_power_balance_value = {
+				id = DWF_coordination_liberation_bop
+				value = 0.1
+				tooltip_side = DWF_coordination_side
+			}
+			random_list = {
+				25 = { country_event = { id = DWF_faction.51 } }
+				25 = { country_event = { id = DWF_faction.52 } }
+				25 = { country_event = { id = DWF_faction.53 } }
+				25 = { country_event = { id = DWF_faction.54 } }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	DWF_liberation_lobbying = {
+		icon = GFX_decision_category_generic_crisis
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 30
+		allowed = { original_tag = DWF }
+		visible = { has_power_balance = { id = DWF_coordination_liberation_bop } }
+		available = {
+			has_power_balance = { id = DWF_coordination_liberation_bop }
+			NOT = { is_power_balance_in_range = { id = DWF_coordination_liberation_bop range = DWF_liberation_total_control_range } }
+		}
+		complete_effect = {
+			add_power_balance_value = {
+				id = DWF_coordination_liberation_bop
+				value = -0.1
+				tooltip_side = DWF_liberation_side
+			}
+			random_list = {
+				25 = { country_event = { id = DWF_faction.51 } }
+				25 = { country_event = { id = DWF_faction.52 } }
+				25 = { country_event = { id = DWF_faction.53 } }
+				25 = { country_event = { id = DWF_faction.54 } }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	DWF_cross_compromise = {
+		icon = GFX_decision_category_generic_propaganda
+		cost = 75
+		fire_only_once = no
+		days_re_enable = 45
+		allowed = { original_tag = DWF }
+		visible = { has_power_balance = { id = DWF_coordination_liberation_bop } }
+		available = {
+			has_power_balance = { id = DWF_coordination_liberation_bop }
+			NOT = { is_power_balance_in_range = { id = DWF_coordination_liberation_bop range = DWF_balance_center_range } }
+		}
+		complete_effect = {
+			# 向中位拉回0.1(方向按当前偏移自动)
+			if = {
+				limit = { power_balance_value = { id = DWF_coordination_liberation_bop value > 0 } }
+				add_power_balance_value = { id = DWF_coordination_liberation_bop value = -0.1 }
+			}
+			else_if = {
+				limit = { power_balance_value = { id = DWF_coordination_liberation_bop value < 0 } }
+				add_power_balance_value = { id = DWF_coordination_liberation_bop value = 0.1 }
+			}
+			random_list = {
+				25 = { country_event = { id = DWF_faction.51 } }
+				25 = { country_event = { id = DWF_faction.52 } }
+				25 = { country_event = { id = DWF_faction.53 } }
+				25 = { country_event = { id = DWF_faction.54 } }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+}
+
+####################################################################################
+# 四、矿物发掘(2026-08-22 XT定:「土地探勘」国策解锁;收复区域=组军阀全灭→该区域矿点决议可见)
+# ⚠️西北六州只有两个州可发掘(XT定);槽/资源数值为占位待XT调
+####################################################################################
+DWF_mineral_prospecting = {
+
+	# === 基础批:西北六州之二(XT定约束;开局自有地,土地探勘解锁即可见) ===
+	# 北庭(准噶尔盆地):油田
+	DWF_develop_beiting_oil = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+		}
+		available = {
+			owns_state = 618
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_beiting_oil_tt
+			618 = {
+				add_resource = { type = oil amount = 12 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 酒泉(镜铁山):铁矿
+	DWF_develop_jingtieshan_iron = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+		}
+		available = {
+			owns_state = 756
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_jingtieshan_iron_tt
+			756 = {
+				add_resource = { type = steel amount = 10 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	# === 西北组收复(整编西北→三十六国计划打完) ===
+	# 柴达木:油气田
+	DWF_develop_chaidamu_oil = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_nw } }
+		}
+		available = {
+			owns_state = 755
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_chaidamu_oil_tt
+			755 = {
+				add_resource = { type = oil amount = 10 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 河套(白云鄂博):铁矿
+	DWF_develop_baiyunebo_mine = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_nw } }
+		}
+		available = {
+			owns_state = 746
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_baiyunebo_mine_tt
+			746 = {
+				add_resource = { type = steel amount = 10 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 陇西(玉门老君庙):油田
+	DWF_develop_yumen_oil = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_nw } }
+		}
+		available = {
+			owns_state = 283
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_yumen_oil_tt
+			283 = {
+				add_resource = { type = oil amount = 10 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 武威(金川):镍矿(HOI4无镍,镍入合金钢→钢)
+	DWF_develop_jinchuan_nickel = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_nw } }
+		}
+		available = {
+			owns_state = 1044
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_jinchuan_nickel_tt
+			1044 = {
+				add_resource = { type = steel amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	# === 中亚组收复(远西战略→定远计划打完) ===
+	# 阿尔泰:钨矿
+	DWF_develop_altai_tungsten = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_ca } }
+		}
+		available = {
+			owns_state = 40
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_altai_tungsten_tt
+			40 = {
+				add_resource = { type = tungsten amount = 6 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 卡拉干达:矿带
+	DWF_develop_karaganda_steel = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_ca } }
+		}
+		available = {
+			owns_state = 881
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_karaganda_steel_tt
+			881 = {
+				add_resource = { type = steel amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 乌斯秋尔特(恩巴河):油田
+	DWF_develop_emba_oil = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_ca } }
+		}
+		available = {
+			owns_state = 587
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_emba_oil_tt
+			587 = {
+				add_resource = { type = oil amount = 10 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 阿克莫林斯克(杰兹卡兹甘):铜矿(HOI4无铜→钢)
+	DWF_develop_dhezkazgan_mine = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_ca } }
+		}
+		available = {
+			owns_state = 590
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_dhezkazgan_mine_tt
+			590 = {
+				add_resource = { type = steel amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	# === 西藏组收复(远西战略→屋脊攻势打完) ===
+	# 藏(罗布莎):铬矿
+	DWF_develop_luobusha_chromium = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_tibet } }
+		}
+		available = {
+			owns_state = 757
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_luobusha_chromium_tt
+			757 = {
+				add_resource = { type = chromium amount = 5 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 康区:矿脉
+	DWF_develop_kang_tungsten = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_tibet } }
+		}
+		available = {
+			owns_state = 601
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_kang_tungsten_tt
+			601 = {
+				add_resource = { type = tungsten amount = 5 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 那曲(伦坡拉盆地):油气(世界海拔最高油田)
+	DWF_develop_lunpola_oil = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_tibet } }
+		}
+		available = {
+			owns_state = 322
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_lunpola_oil_tt
+			322 = {
+				add_resource = { type = oil amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	# === 东北组收复(清洗右派→白山黑水攻势打完) ===
+	# 黑龙江(松嫩平原):油田
+	DWF_develop_songnen_oil = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_ne } }
+		}
+		available = {
+			owns_state = 561
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_songnen_oil_tt
+			561 = {
+				add_resource = { type = oil amount = 12 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 奴儿干(兴安岭):铁矿
+	DWF_develop_xinganling_iron = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_ne } }
+		}
+		available = {
+			owns_state = 560
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_xinganling_iron_tt
+			560 = {
+				add_resource = { type = steel amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 夫余(辽北·抚顺):油页岩
+	DWF_develop_fushun_shale = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_ne } }
+		}
+		available = {
+			owns_state = 715
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_fushun_shale_tt
+			715 = {
+				add_resource = { type = oil amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 勿吉(黑龙江·小兴安岭):铁矿
+	DWF_develop_xiao_xinganling_iron = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_ne } }
+		}
+		available = {
+			owns_state = 714
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_xiao_xinganling_iron_tt
+			714 = {
+				add_resource = { type = steel amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	# === 华北组收复(中原攻势打完) ===
+	# 冀州(开滦):煤铁联合
+	DWF_develop_kailuan_iron = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_north } }
+		}
+		available = {
+			owns_state = 609
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_kailuan_iron_tt
+			609 = {
+				add_resource = { type = steel amount = 12 }
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	# 常山(大同):煤矿(HOI4无煤→工业槽)
+	DWF_develop_datong_coal = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_north } }
+		}
+		available = {
+			owns_state = 614
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_datong_coal_tt
+			614 = {
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+	}
+	# 济南(中原油田):油
+	DWF_develop_zhongyuan_oil = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_north } }
+		}
+		available = {
+			owns_state = 1038
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_zhongyuan_oil_tt
+			1038 = {
+				add_resource = { type = oil amount = 10 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	# === 华东组收复(江南攻势打完) ===
+	# 庐江(马鞍山):铁矿
+	DWF_develop_maanshan_iron = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_east } }
+		}
+		available = {
+			owns_state = 606
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_maanshan_iron_tt
+			606 = {
+				add_resource = { type = steel amount = 12 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 齐郡(胜利油田):油
+	DWF_develop_shengli_oil = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_east } }
+		}
+		available = {
+			owns_state = 597
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_shengli_oil_tt
+			597 = {
+				add_resource = { type = oil amount = 12 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 吴郡(长兴煤铁):江南最大煤矿
+	DWF_develop_changxing_coal = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_east } }
+		}
+		available = {
+			owns_state = 1034
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_changxing_coal_tt
+			1034 = {
+				add_resource = { type = steel amount = 6 }
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	# === 华南组收复(南征攻势打完) ===
+	# 长沙(水口山):铅锌钨
+	DWF_develop_shuikoushan_tungsten = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_south } }
+		}
+		available = {
+			owns_state = 602
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_shuikoushan_tungsten_tt
+			602 = {
+				add_resource = { type = tungsten amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 豫章(德兴铜矿):亚洲最大露天铜矿
+	DWF_develop_dexing_copper = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_south } }
+		}
+		available = {
+			owns_state = 600
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_dexing_copper_tt
+			600 = {
+				add_resource = { type = steel amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 桂州(个旧):世界锡都
+	DWF_develop_gejiu_tin = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_south } }
+		}
+		available = {
+			owns_state = 599
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_gejiu_tin_tt
+			599 = {
+				add_resource = { type = chromium amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	# === 西南组收复(天府攻势打完) ===
+	# 益州(攀枝花):钒钛磁铁矿(中国最大)
+	DWF_develop_panzhihua_iron = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_sw } }
+		}
+		available = {
+			owns_state = 605
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_panzhihua_iron_tt
+			605 = {
+				add_resource = { type = steel amount = 14 }
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	# 巴郡(自贡):天然气井群
+	DWF_develop_zigong_gas = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_sw } }
+		}
+		available = {
+			owns_state = 1037
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_zigong_gas_tt
+			1037 = {
+				add_resource = { type = oil amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	# 越嶲(会理铜矿):川西铜带
+	DWF_develop_huili_copper = {
+		icon = GFX_decision_generic_industry
+		visible = {
+			has_country_flag = DWF_mineral_prospecting_unlocked
+			NOT = { any_country = { has_country_flag = DWF_warlord_group_sw } }
+		}
+		available = {
+			owns_state = 751
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			custom_effect_tooltip = DWF_develop_huili_copper_tt
+			751 = {
+				add_resource = { type = steel amount = 8 }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+}
+
+# ===== 一大筹备(2026-08-24 七线延展;纯剧情加成小料,不做完也能开一大) =====
+DWF_congress_category = {
+	DWF_congress_logistics = {
+		icon = GFX_decision_generic_political_action
+		cost = 25
+		fire_only_once = yes
+		allowed = { original_tag = DWF }
+		visible = { has_country_flag = DWF_congress_prep NOT = { has_country_flag = DWF_congress_logistics_done } }
+		complete_effect = {
+			set_country_flag = DWF_congress_logistics_done
+			add_stability = 0.02
+		}
+		ai_will_do = { factor = 5 }
+	}
+	DWF_congress_quotas = {
+		icon = GFX_decision_generic_political_action
+		cost = 50
+		fire_only_once = yes
+		allowed = { original_tag = DWF }
+		visible = { has_country_flag = DWF_congress_logistics_done NOT = { has_country_flag = DWF_congress_quotas_done } }
+		complete_effect = {
+			set_country_flag = DWF_congress_quotas_done
+			add_political_power = 50
+		}
+		ai_will_do = { factor = 5 }
+	}
+	DWF_congress_programme = {
+		icon = GFX_decision_generic_political_action
+		cost = 75
+		fire_only_once = yes
+		allowed = { original_tag = DWF }
+		visible = { has_country_flag = DWF_congress_quotas_done NOT = { has_country_flag = DWF_congress_programme_done } }
+		complete_effect = {
+			set_country_flag = DWF_congress_programme_done
+			add_stability = 0.03
+		}
+		ai_will_do = { factor = 5 }
+	}
+}

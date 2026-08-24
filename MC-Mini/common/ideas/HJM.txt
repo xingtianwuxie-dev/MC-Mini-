@@ -135,7 +135,7 @@ ideas = {
 		}
 
 		HJM_group_offensive_momentum = {
-			picture = HJM_group_offensive
+			picture = HJM_group_offensive_momentum
 
 			allowed = {
 				always = no

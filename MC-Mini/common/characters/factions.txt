@@ -38,6 +38,19 @@ characters = {
 			expire = "1965.1.1.1"
 		}
 	}
+	# 2026-08-24 XT定:一大之前多玩党(duowanism)党魁一直是籽岷
+	# 引擎一人一党魁->同头像同译名替身;一大后换人(雷石东1.0/四姐妹,待XT定)
+	DWF_Zimin_duowan = {
+		name = DWF_Zimin_duowan
+		portraits = {
+			civilian = { large = "gfx/leaders/HJM/portrait_Zimin.png" }
+		}
+		country_leader = {
+			ideology = duowanism      # 多玩主义(挂自由社)
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
 	NTE_DingLei = {
 		name = NTE_DingLei
 		portraits = {
@@ -60,4 +73,43 @@ characters = {
 			expire = "1965.1.1.1"
 		}
 	}
+	# ===== DWF 一大党魁候选(2026-08-24 XT定:一大后籽岷卸任,四派竞魁;红石派已定雷石东,其余占位) =====
+	DWF_Leishidong = {
+		name = DWF_Leishidong
+		# 雷石东1.0:红岩零号机后继机体,红石派党魁(已定;红岩本人始终只是政治顾问)
+		# ⚠️机器头像待XT(与红岩零号机同系列)
+		country_leader = {
+			ideology = duowanism
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+	DWF_leader_liberation = {
+		name = DWF_leader_liberation
+		# ⚠️占位:解放派党魁,人名头像待XT
+		country_leader = {
+			ideology = duowan_liberation
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+	DWF_leader_coordination = {
+		name = DWF_leader_coordination
+		# ⚠️占位:协调派党魁,人名头像待XT
+		country_leader = {
+			ideology = duowan_coordination
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+	DWF_leader_collective = {
+		name = DWF_leader_collective
+		# ⚠️占位:共同体派党魁,人名头像待XT(1984大洋国方向)
+		country_leader = {
+			ideology = sandbox_collectivism
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+
 }

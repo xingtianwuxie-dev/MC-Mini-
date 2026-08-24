@@ -1,0 +1,4 @@
+graphical_culture = eastern_european_gfx
+graphical_culture_2d = eastern_european_2d
+# W81 warlord color
+color = { 16 16 80 }

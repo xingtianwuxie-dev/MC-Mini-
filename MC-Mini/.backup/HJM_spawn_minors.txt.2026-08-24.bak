@@ -1,0 +1,939 @@
+# MC-Mini 61小国 spawn 2026-08-14(照TFR原理)
+# 每国:塞模板(HJM_warlord_divisions在HJM_empire_split.txt定义)+划地+加核心+每核心州造1师+装备;不宣战中立待收服
+HJM_spawn_minor_states = {
+	W01 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 608
+		transfer_state = 609
+		set_capital = { state = 608 }
+		every_owned_state = { add_core_of = W01 }
+		every_controlled_state = {
+			limit = { is_core_of = W01 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W01
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W02 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 610
+		transfer_state = 614
+		set_capital = { state = 610 }
+		every_owned_state = { add_core_of = W02 }
+		every_controlled_state = {
+			limit = { is_core_of = W02 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W02
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W03 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 1038
+		set_capital = { state = 1038 }
+		every_owned_state = { add_core_of = W03 }
+		every_controlled_state = {
+			limit = { is_core_of = W03 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W03
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W04 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 1039
+		transfer_state = 611
+		set_capital = { state = 1039 }
+		every_owned_state = { add_core_of = W04 }
+		every_controlled_state = {
+			limit = { is_core_of = W04 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W04
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W05 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 283
+		set_capital = { state = 283 }
+		every_owned_state = { add_core_of = W05 }
+		every_controlled_state = {
+			limit = { is_core_of = W05 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W05
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W06 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 1035
+		transfer_state = 613
+		set_capital = { state = 1035 }
+		every_owned_state = { add_core_of = W06 }
+		every_controlled_state = {
+			limit = { is_core_of = W06 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W06
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W07 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 1034
+		transfer_state = 606
+		set_capital = { state = 1034 }
+		every_owned_state = { add_core_of = W07 }
+		every_controlled_state = {
+			limit = { is_core_of = W07 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W07
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W08 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 598
+		set_capital = { state = 598 }
+		every_owned_state = { add_core_of = W08 }
+		every_controlled_state = {
+			limit = { is_core_of = W08 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W08
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W09 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 596
+		set_capital = { state = 596 }
+		every_owned_state = { add_core_of = W09 }
+		every_controlled_state = {
+			limit = { is_core_of = W09 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W09
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W10 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 597
+		transfer_state = 743
+		set_capital = { state = 597 }
+		every_owned_state = { add_core_of = W10 }
+		every_controlled_state = {
+			limit = { is_core_of = W10 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W10
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W11 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 524
+		set_capital = { state = 524 }
+		every_owned_state = { add_core_of = W11 }
+		every_controlled_state = {
+			limit = { is_core_of = W11 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W11
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W12 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 599
+		transfer_state = 600
+		set_capital = { state = 599 }
+		every_owned_state = { add_core_of = W12 }
+		every_controlled_state = {
+			limit = { is_core_of = W12 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W12
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W13 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 591
+		set_capital = { state = 591 }
+		every_owned_state = { add_core_of = W13 }
+		every_controlled_state = {
+			limit = { is_core_of = W13 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W13
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W14 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 602
+		transfer_state = 750
+		set_capital = { state = 602 }
+		every_owned_state = { add_core_of = W14 }
+		every_controlled_state = {
+			limit = { is_core_of = W14 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W14
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W15 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 749
+		set_capital = { state = 749 }
+		every_owned_state = { add_core_of = W15 }
+		every_controlled_state = {
+			limit = { is_core_of = W15 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W15
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W16 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 1037
+		transfer_state = 605
+		set_capital = { state = 1037 }
+		every_owned_state = { add_core_of = W16 }
+		every_controlled_state = {
+			limit = { is_core_of = W16 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W16
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W17 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 1041
+		set_capital = { state = 1041 }
+		every_owned_state = { add_core_of = W17 }
+		every_controlled_state = {
+			limit = { is_core_of = W17 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W17
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W18 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 325
+		transfer_state = 747
+		set_capital = { state = 325 }
+		every_owned_state = { add_core_of = W18 }
+		every_controlled_state = {
+			limit = { is_core_of = W18 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W18
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W19 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 751
+		transfer_state = 748
+		set_capital = { state = 751 }
+		every_owned_state = { add_core_of = W19 }
+		every_controlled_state = {
+			limit = { is_core_of = W19 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W19
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W20 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 603
+		set_capital = { state = 603 }
+		every_owned_state = { add_core_of = W20 }
+		every_controlled_state = {
+			limit = { is_core_of = W20 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W20
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W21 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 322
+		transfer_state = 601
+		set_capital = { state = 322 }
+		every_owned_state = { add_core_of = W21 }
+		every_controlled_state = {
+			limit = { is_core_of = W21 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W21
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W22 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 757
+		transfer_state = 752
+		set_capital = { state = 757 }
+		every_owned_state = { add_core_of = W22 }
+		every_controlled_state = {
+			limit = { is_core_of = W22 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W22
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W23 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 758
+		set_capital = { state = 758 }
+		every_owned_state = { add_core_of = W23 }
+		every_controlled_state = {
+			limit = { is_core_of = W23 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W23
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W24 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 754
+		transfer_state = 755
+		set_capital = { state = 754 }
+		every_owned_state = { add_core_of = W24 }
+		every_controlled_state = {
+			limit = { is_core_of = W24 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W24
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W25 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 604
+		set_capital = { state = 604 }
+		every_owned_state = { add_core_of = W25 }
+		every_controlled_state = {
+			limit = { is_core_of = W25 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W25
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W26 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 287
+		transfer_state = 1042
+		set_capital = { state = 287 }
+		every_owned_state = { add_core_of = W26 }
+		every_controlled_state = {
+			limit = { is_core_of = W26 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W26
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W27 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 1044
+		transfer_state = 1045
+		set_capital = { state = 1044 }
+		every_owned_state = { add_core_of = W27 }
+		every_controlled_state = {
+			limit = { is_core_of = W27 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W27
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W28 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 616
+		transfer_state = 746
+		set_capital = { state = 616 }
+		every_owned_state = { add_core_of = W28 }
+		every_controlled_state = {
+			limit = { is_core_of = W28 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W28
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W29 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 1043
+		transfer_state = 1040
+		set_capital = { state = 1043 }
+		every_owned_state = { add_core_of = W29 }
+		every_controlled_state = {
+			limit = { is_core_of = W29 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W29
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W30 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 621
+		transfer_state = 612
+		set_capital = { state = 621 }
+		every_owned_state = { add_core_of = W30 }
+		every_controlled_state = {
+			limit = { is_core_of = W30 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W30
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W31 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 753
+		set_capital = { state = 753 }
+		every_owned_state = { add_core_of = W31 }
+		every_controlled_state = {
+			limit = { is_core_of = W31 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W31
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W32 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 761
+		set_capital = { state = 761 }
+		every_owned_state = { add_core_of = W32 }
+		every_controlled_state = {
+			limit = { is_core_of = W32 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W32
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W33 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 560
+		transfer_state = 561
+		set_capital = { state = 560 }
+		every_owned_state = { add_core_of = W33 }
+		every_controlled_state = {
+			limit = { is_core_of = W33 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W33
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W34 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 657
+		transfer_state = 714
+		set_capital = { state = 657 }
+		every_owned_state = { add_core_of = W34 }
+		every_controlled_state = {
+			limit = { is_core_of = W34 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W34
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W35 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 715
+		transfer_state = 409
+		set_capital = { state = 715 }
+		every_owned_state = { add_core_of = W35 }
+		every_controlled_state = {
+			limit = { is_core_of = W35 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W35
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W36 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 282
+		transfer_state = 531
+		set_capital = { state = 282 }
+		every_owned_state = { add_core_of = W36 }
+		every_controlled_state = {
+			limit = { is_core_of = W36 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W36
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W37 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 532
+		transfer_state = 528
+		set_capital = { state = 532 }
+		every_owned_state = { add_core_of = W37 }
+		every_controlled_state = {
+			limit = { is_core_of = W37 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W37
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W38 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 529
+		transfer_state = 530
+		set_capital = { state = 529 }
+		every_owned_state = { add_core_of = W38 }
+		every_controlled_state = {
+			limit = { is_core_of = W38 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W38
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W39 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 534
+		transfer_state = 535
+		set_capital = { state = 534 }
+		every_owned_state = { add_core_of = W39 }
+		every_controlled_state = {
+			limit = { is_core_of = W39 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W39
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W40 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 533
+		transfer_state = 536
+		set_capital = { state = 533 }
+		every_owned_state = { add_core_of = W40 }
+		every_controlled_state = {
+			limit = { is_core_of = W40 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W40
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W41 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 1018
+		transfer_state = 1019
+		set_capital = { state = 1018 }
+		every_owned_state = { add_core_of = W41 }
+		every_controlled_state = {
+			limit = { is_core_of = W41 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W41
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W42 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 1020
+		transfer_state = 537
+		set_capital = { state = 1020 }
+		every_owned_state = { add_core_of = W42 }
+		every_controlled_state = {
+			limit = { is_core_of = W42 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W42
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W43 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 655
+		set_capital = { state = 655 }
+		every_owned_state = { add_core_of = W43 }
+		every_controlled_state = {
+			limit = { is_core_of = W43 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W43
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W44 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 1030
+		transfer_state = 1031
+		set_capital = { state = 1030 }
+		every_owned_state = { add_core_of = W44 }
+		every_controlled_state = {
+			limit = { is_core_of = W44 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W44
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W45 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 526
+		set_capital = { state = 526 }
+		every_owned_state = { add_core_of = W45 }
+		every_controlled_state = {
+			limit = { is_core_of = W45 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W45
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W46 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 555
+		set_capital = { state = 555 }
+		every_owned_state = { add_core_of = W46 }
+		every_controlled_state = {
+			limit = { is_core_of = W46 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W46
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W47 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 645
+		transfer_state = 646
+		set_capital = { state = 645 }
+		every_owned_state = { add_core_of = W47 }
+		every_controlled_state = {
+			limit = { is_core_of = W47 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W47
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W48 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 647
+		set_capital = { state = 647 }
+		every_owned_state = { add_core_of = W48 }
+		every_controlled_state = {
+			limit = { is_core_of = W48 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W48
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W49 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 648
+		transfer_state = 633
+		set_capital = { state = 648 }
+		every_owned_state = { add_core_of = W49 }
+		every_controlled_state = {
+			limit = { is_core_of = W49 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W49
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W50 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 684
+		set_capital = { state = 684 }
+		every_owned_state = { add_core_of = W50 }
+		every_controlled_state = {
+			limit = { is_core_of = W50 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W50
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W51 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 40
+		transfer_state = 881
+		set_capital = { state = 40 }
+		every_owned_state = { add_core_of = W51 }
+		every_controlled_state = {
+			limit = { is_core_of = W51 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W51
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W52 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 882
+		transfer_state = 590
+		set_capital = { state = 882 }
+		every_owned_state = { add_core_of = W52 }
+		every_controlled_state = {
+			limit = { is_core_of = W52 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W52
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W53 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 583
+		transfer_state = 589
+		set_capital = { state = 583 }
+		every_owned_state = { add_core_of = W53 }
+		every_controlled_state = {
+			limit = { is_core_of = W53 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W53
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W54 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 587
+		transfer_state = 588
+		set_capital = { state = 587 }
+		every_owned_state = { add_core_of = W54 }
+		every_controlled_state = {
+			limit = { is_core_of = W54 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W54
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W55 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 402
+		transfer_state = 403
+		set_capital = { state = 402 }
+		every_owned_state = { add_core_of = W55 }
+		every_controlled_state = {
+			limit = { is_core_of = W55 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W55
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W56 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 404
+		transfer_state = 405
+		set_capital = { state = 404 }
+		every_owned_state = { add_core_of = W56 }
+		every_controlled_state = {
+			limit = { is_core_of = W56 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W56
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W57 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 585
+		transfer_state = 586
+		set_capital = { state = 585 }
+		every_owned_state = { add_core_of = W57 }
+		every_controlled_state = {
+			limit = { is_core_of = W57 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W57
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W58 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 584
+		transfer_state = 832
+		set_capital = { state = 584 }
+		every_owned_state = { add_core_of = W58 }
+		every_controlled_state = {
+			limit = { is_core_of = W58 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W58
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W59 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 830
+		transfer_state = 831
+		set_capital = { state = 830 }
+		every_owned_state = { add_core_of = W59 }
+		every_controlled_state = {
+			limit = { is_core_of = W59 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W59
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	W60 = {
+		HJM_warlord_divisions = yes
+		transfer_state = 823
+		transfer_state = 742
+		set_capital = { state = 823 }
+		every_owned_state = { add_core_of = W60 }
+		every_controlled_state = {
+			limit = { is_core_of = W60 }
+			create_unit = {
+				division = "division_template = \"Garrison\" start_experience_factor = 0.1"
+				owner = W60
+			}
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 }
+	}
+	}
+
+# 2026-08-21 DWF决议地域分组(按首都州名核地理,由HJM_empire_split在spawn后调用)
+# 西北近邻(三十六国计划/白名单/问罪):陇西党项吐谷浑楼兰武威朔方五原云中洮州
+# 中亚(定远计划)/西藏(屋脊攻势)/东北(白山黑水攻势)
+# 华北(蓟冀州右北平常山济南广阳上谷)/华东(建康华亭吴郡庐江江淮会稽齐郡胶东)
+# 华南(夷洲桂州豫章珠崖长沙武陵新安州)/西南(巴郡益州蜀郡云南南诏越嶲播州牂牁)
+DWF_set_warlord_groups = {
+	W05 = { set_country_flag = DWF_warlord_group_nw }
+	W24 = { set_country_flag = DWF_warlord_group_nw }
+	W25 = { set_country_flag = DWF_warlord_group_nw }
+	W26 = { set_country_flag = DWF_warlord_group_nw }
+	W27 = { set_country_flag = DWF_warlord_group_nw }
+	W28 = { set_country_flag = DWF_warlord_group_nw }
+	W29 = { set_country_flag = DWF_warlord_group_nw }
+	W30 = { set_country_flag = DWF_warlord_group_nw }
+	W31 = { set_country_flag = DWF_warlord_group_nw }
+	W51 = { set_country_flag = DWF_warlord_group_ca }
+	W52 = { set_country_flag = DWF_warlord_group_ca }
+	W53 = { set_country_flag = DWF_warlord_group_ca }
+	W54 = { set_country_flag = DWF_warlord_group_ca }
+	W55 = { set_country_flag = DWF_warlord_group_ca }
+	W56 = { set_country_flag = DWF_warlord_group_ca }
+	W57 = { set_country_flag = DWF_warlord_group_ca }
+	W58 = { set_country_flag = DWF_warlord_group_ca }
+	W59 = { set_country_flag = DWF_warlord_group_ca }
+	W60 = { set_country_flag = DWF_warlord_group_ca }
+		W21 = { set_country_flag = DWF_warlord_group_tibet }
+	W22 = { set_country_flag = DWF_warlord_group_tibet }
+	W23 = { set_country_flag = DWF_warlord_group_tibet }
+	W32 = { set_country_flag = DWF_warlord_group_ne }
+	W33 = { set_country_flag = DWF_warlord_group_ne }
+	W34 = { set_country_flag = DWF_warlord_group_ne }
+	W35 = { set_country_flag = DWF_warlord_group_ne }
+	W01 = { set_country_flag = DWF_warlord_group_north }
+	W02 = { set_country_flag = DWF_warlord_group_north }
+	W03 = { set_country_flag = DWF_warlord_group_north }
+	W04 = { set_country_flag = DWF_warlord_group_north }
+	W06 = { set_country_flag = DWF_warlord_group_east }
+	W07 = { set_country_flag = DWF_warlord_group_east }
+	W08 = { set_country_flag = DWF_warlord_group_east }
+	W09 = { set_country_flag = DWF_warlord_group_east }
+	W10 = { set_country_flag = DWF_warlord_group_east }
+	W11 = { set_country_flag = DWF_warlord_group_south }
+	W12 = { set_country_flag = DWF_warlord_group_south }
+	W13 = { set_country_flag = DWF_warlord_group_south }
+	W14 = { set_country_flag = DWF_warlord_group_south }
+	W15 = { set_country_flag = DWF_warlord_group_south }
+	W16 = { set_country_flag = DWF_warlord_group_sw }
+	W17 = { set_country_flag = DWF_warlord_group_sw }
+	W18 = { set_country_flag = DWF_warlord_group_sw }
+	W19 = { set_country_flag = DWF_warlord_group_sw }
+	W20 = { set_country_flag = DWF_warlord_group_sw }
+}

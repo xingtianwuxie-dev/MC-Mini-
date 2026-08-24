@@ -149,13 +149,7 @@ set_popularities = {
 recruit_character = HJM_wutu
 recruit_character = HJM_Notch
 recruit_character = HJM_Heiling
-recruit_character = HJM_Steve_Builder
-recruit_character = HJM_Alex_Crafter
-recruit_character = HJM_Marcus_Redstone
-recruit_character = HJM_Daniel_Oakshield
 recruit_character = HJM_Jeb
-recruit_character = HJM_Bedrock_Marshal
-recruit_character = HJM_Admiral_Drowned
 recruit_character = HJM_War_Minister
 recruit_character = HJM_Naval_Minister
 # 2026-08-24 XT定:三党党首(籽岷/丁磊/菲尔)也多国recruit——分裂前都是帝国党首/顾问,HJM也有

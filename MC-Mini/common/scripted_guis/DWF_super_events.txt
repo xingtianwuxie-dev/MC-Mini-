@@ -1,0 +1,18 @@
+# DWF 超事件 2026-08-24:一大开幕全屏弹窗(仿HJM超事件模板,零素材)
+scripted_gui = {
+	DWF_congress_superevent_gui = {
+		context_type = player_context
+		window_name = "DWF_congress_superevent_window"
+
+		visible = {
+			tag = DWF
+			has_country_flag = DWF_congress_superevent_start
+		}
+
+		effects = {
+			DWF_congress_superevent_close_click = {
+				clr_country_flag = DWF_congress_superevent_start		# 关闭一大开幕超事件
+			}
+		}
+	}
+}

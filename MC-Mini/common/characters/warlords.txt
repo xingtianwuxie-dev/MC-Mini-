@@ -585,4 +585,383 @@ characters = {
 			expire = "1965.1.1"
 		}
 	}
+	
+# ===== 2026-08-24 单州化拆分+漏网州补充(W61-X07), ideology继承被拆国/照邻区 =====
+	W61_warlord = {
+		name = W61_warlord
+		country_leader = {
+			ideology = imperial_militarism
+			traits = { }
+			expire = "1965.1.1"
+		}
 	}
+	W62_warlord = {
+		name = W62_warlord
+		country_leader = {
+			ideology = imperial_villager_council
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W63_warlord = {
+		name = W63_warlord
+		country_leader = {
+			ideology = imperial_villager_council
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W64_warlord = {
+		name = W64_warlord
+		country_leader = {
+			ideology = conservatism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W65_warlord = {
+		name = W65_warlord
+		country_leader = {
+			ideology = liberalism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W66_warlord = {
+		name = W66_warlord
+		country_leader = {
+			ideology = conservatism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W67_warlord = {
+		name = W67_warlord
+		country_leader = {
+			ideology = conservatism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W68_warlord = {
+		name = W68_warlord
+		country_leader = {
+			ideology = imperial_villager_council
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W69_warlord = {
+		name = W69_warlord
+		country_leader = {
+			ideology = conservatism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W70_warlord = {
+		name = W70_warlord
+		country_leader = {
+			ideology = conservatism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W71_warlord = {
+		name = W71_warlord
+		country_leader = {
+			ideology = liberalism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W72_warlord = {
+		name = W72_warlord
+		country_leader = {
+			ideology = liberalism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W73_warlord = {
+		name = W73_warlord
+		country_leader = {
+			ideology = conservatism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W74_warlord = {
+		name = W74_warlord
+		country_leader = {
+			ideology = conservatism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W75_warlord = {
+		name = W75_warlord
+		country_leader = {
+			ideology = duowanism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W76_warlord = {
+		name = W76_warlord
+		country_leader = {
+			ideology = libertarian_socialist_ideology
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W77_warlord = {
+		name = W77_warlord
+		country_leader = {
+			ideology = duowanism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W78_warlord = {
+		name = W78_warlord
+		country_leader = {
+			ideology = libertarian_socialist_ideology
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W79_warlord = {
+		name = W79_warlord
+		country_leader = {
+			ideology = duowanism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W80_warlord = {
+		name = W80_warlord
+		country_leader = {
+			ideology = oligarchism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W81_warlord = {
+		name = W81_warlord
+		country_leader = {
+			ideology = despotism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W82_warlord = {
+		name = W82_warlord
+		country_leader = {
+			ideology = oligarchism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W83_warlord = {
+		name = W83_warlord
+		country_leader = {
+			ideology = despotism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W84_warlord = {
+		name = W84_warlord
+		country_leader = {
+			ideology = oligarchism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W85_warlord = {
+		name = W85_warlord
+		country_leader = {
+			ideology = despotism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W86_warlord = {
+		name = W86_warlord
+		country_leader = {
+			ideology = oligarchism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W87_warlord = {
+		name = W87_warlord
+		country_leader = {
+			ideology = despotism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W88_warlord = {
+		name = W88_warlord
+		country_leader = {
+			ideology = oligarchism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W89_warlord = {
+		name = W89_warlord
+		country_leader = {
+			ideology = despotism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W90_warlord = {
+		name = W90_warlord
+		country_leader = {
+			ideology = despotism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W91_warlord = {
+		name = W91_warlord
+		country_leader = {
+			ideology = oligarchism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W92_warlord = {
+		name = W92_warlord
+		country_leader = {
+			ideology = oligarchism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W93_warlord = {
+		name = W93_warlord
+		country_leader = {
+			ideology = libertarian_socialist_ideology
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W94_warlord = {
+		name = W94_warlord
+		country_leader = {
+			ideology = duowanism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W95_warlord = {
+		name = W95_warlord
+		country_leader = {
+			ideology = libertarian_socialist_ideology
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W96_warlord = {
+		name = W96_warlord
+		country_leader = {
+			ideology = duowanism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W97_warlord = {
+		name = W97_warlord
+		country_leader = {
+			ideology = libertarian_socialist_ideology
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W98_warlord = {
+		name = W98_warlord
+		country_leader = {
+			ideology = duowanism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	W99_warlord = {
+		name = W99_warlord
+		country_leader = {
+			ideology = libertarian_socialist_ideology
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	X01_warlord = {
+		name = X01_warlord
+		country_leader = {
+			ideology = duowanism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	X02_warlord = {
+		name = X02_warlord
+		country_leader = {
+			ideology = libertarian_socialist_ideology
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	X03_warlord = {
+		name = X03_warlord
+		country_leader = {
+			ideology = duowanism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	X04_warlord = {
+		name = X04_warlord
+		country_leader = {
+			ideology = duowanism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	X05_warlord = {
+		name = X05_warlord
+		country_leader = {
+			ideology = libertarian_socialist_ideology
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	X06_warlord = {
+		name = X06_warlord
+		country_leader = {
+			ideology = liberalism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	X07_warlord = {
+		name = X07_warlord
+		country_leader = {
+			ideology = conservatism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+	X08_warlord = {
+		name = X08_warlord
+		country_leader = {
+			ideology = duowanism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+
+}

@@ -1,0 +1,73 @@
+# MC-Mini 帝国分裂触发事件 2026-08-14
+# 控制台: event HJM_split.1 ; 倒计时到期也触发(HJM_civil_war_countdown timeout_effect)
+
+add_namespace = HJM_split
+
+country_event = {
+	id = HJM_split.1
+	is_triggered_only = yes
+	fire_only_once = yes
+	title = HJM_split.1.t
+	desc = HJM_split.1.desc
+	# 2026-08-22 XT定:分裂弹出瞬间奏响内战超事件「冠冕坠地」;统一检测也吃 HJM_empire_split_done 这面全局flag
+	immediate = {
+		set_global_flag = HJM_empire_split_done
+		set_country_flag = HJM_civilwar_superevent_start
+	}
+	option = {
+		name = HJM_split.1.a
+		HJM_empire_split = yes
+	}
+	# 派系路线：玩家在内战前国策里选过的阵营，内战爆发时切成对应tag（2026-08-19 duowan定；2026-08-20 补齐网易/微软=仿TFR usa.105全阵营选边，APA↔多玩）
+	option = {
+		name = HJM_split.1.b
+		trigger = {
+			has_country_flag = HJM_chose_duowan_route
+			is_ai = no
+		}
+		HJM_empire_split = yes
+		transfer_units_fraction = {
+			target = DWF
+			stockpile_ratio = 0.1667 # 装备+燃料 1/6
+			army_ratio = 0 # 军队不转，DWF用当地6个Garrison师
+			navy_ratio = 0
+			air_ratio = 0
+		}
+		DWF = { change_tag_from = ROOT } # 玩家HJM→DWF
+		DWF = { set_country_flag = HJM_civilwar_superevent_start } # 换tag后在新tag上补flag,弹窗不丢
+	}
+	option = {
+		name = HJM_split.1.c
+		trigger = {
+			has_country_flag = HJM_chose_netease_route
+			is_ai = no
+		}
+		HJM_empire_split = yes
+		transfer_units_fraction = {
+			target = NTE
+			stockpile_ratio = 0.1667
+			army_ratio = 0 # NTE用分裂脚本塞的当地Garrison师
+			navy_ratio = 0
+			air_ratio = 0
+		}
+		NTE = { change_tag_from = ROOT }
+		NTE = { set_country_flag = HJM_civilwar_superevent_start } # 换tag后补flag,弹窗不丢
+	}
+	option = {
+		name = HJM_split.1.d
+		trigger = {
+			has_country_flag = HJM_chose_microsoft_route
+			is_ai = no
+		}
+		HJM_empire_split = yes
+		transfer_units_fraction = {
+			target = MST
+			stockpile_ratio = 0.1667
+			army_ratio = 0
+			navy_ratio = 0
+			air_ratio = 0
+		}
+		MST = { change_tag_from = ROOT }
+		MST = { set_country_flag = HJM_civilwar_superevent_start } # 换tag后补flag,弹窗不丢
+	}
+}

@@ -1,0 +1,4 @@
+graphical_culture = eastern_european_gfx
+graphical_culture_2d = eastern_european_2d
+# W72 warlord color
+color = { 11 235 231 }

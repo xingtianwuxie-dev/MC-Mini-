@@ -1,0 +1,28 @@
+capital = 617 # 多玩穿越者联邦
+
+set_research_slots = 3
+set_stability = 0.60
+set_war_support = 0.60
+
+set_politics = {
+	ruling_party = social_democrat			# 2026-08-21 XT定:开局籽岷执政(籽岷主义,挂社民)
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+		social_democrat = 65			# 籽岷主义(开局执政,协调派底色)
+		communism = 15			# 解放派(在野竞争)
+		libertarian_socialist = 12			# 红石技官派(小派系底色)
+		neutrality = 8
+}
+
+# 2026-08-24 XT定:籽岷任DWF元首(独立角色DWF_Zimin,避免与HJM顾问版冲突)
+recruit_character = DWF_Zimin			# 2026-08-21 XT定:开局籽岷领导多玩(籽岷主义)
+
+# 2026-08-22 政治线主擂台:协调⇄解放权力平衡(DWF建国即激活;极端段位开隐藏线门槛)
+set_power_balance = {
+	id = DWF_coordination_liberation_bop
+	set_default = yes
+}

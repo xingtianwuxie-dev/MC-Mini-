@@ -41,5 +41,115 @@ ideas = {
 			}
 		}
 		# 2026-08-22 XT定大拆删去:红石统辖/红石智能统辖体/公社大联合/解放军/人类命运共同体5精神(随红石线+共同体线删除)
+		# ===== 2026-08-24 七线延展到多玩一大 =====
+		DWF_congress_spirit = {
+			allowed = { original_tag = DWF }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.02
+				war_support_factor = 0.02
+				political_power_factor = 0.05
+			}
+		}
+		DWF_liberation_caucus = {
+			allowed = { original_tag = DWF }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				army_attack_factor = 0.03
+			}
+		}
+		DWF_coordination_caucus = {
+			allowed = { original_tag = DWF }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.10
+			}
+		}
+		DWF_redstone_caucus = {
+			allowed = { original_tag = DWF }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		DWF_collective_caucus = {
+			allowed = { original_tag = DWF }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.03
+				drift_defence_factor = 0.10			# 大洋国雏形:思想防御先于一切
+			}
+		}
+		DWF_great_rear_spirit = {
+			allowed = { original_tag = DWF }
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+			}
+		}
+		DWF_frontier_bank_spirit = {
+			allowed = { original_tag = DWF }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+		DWF_unified_purchase_spirit = {
+			allowed = { original_tag = DWF }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		DWF_redstone_array_spirit = {
+			allowed = { original_tag = DWF }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.03
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		DWF_new_army_spirit = {
+			allowed = { original_tag = DWF }
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.05
+				army_attack_factor = 0.03
+			}
+		}
+		DWF_enchanted_arms_spirit = {
+			allowed = { original_tag = DWF }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.03			# 锋利III上了刺刀
+			}
+		}
+		DWF_automated_arsenal_spirit = {
+			allowed = { original_tag = DWF }
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+		DWF_industrialization_drive = {
+			allowed = { original_tag = DWF }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		DWF_silence_of_machine = {
+			allowed = { original_tag = DWF }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.02
+			}
+		}
+
 	}
 }

@@ -115,125 +115,13 @@ characters = {
 			}
 		}
 	}
-	HJM_Steve_Builder = {
-		name = HJM_Steve_Builder
-		portraits = {
-			army = {
-				large = "gfx/leaders/leader_unknown.dds"
-			}
-		}
-		corps_commander = {
-			traits = { organizer logistics_wizard }
-			skill = 2
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 2
-			visible = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-		}
-	}
-	HJM_Alex_Crafter = {
-		name = HJM_Alex_Crafter
-		portraits = {
-			army = {
-				large = "gfx/leaders/leader_unknown.dds"
-			}
-		}
-		corps_commander = {
-			traits = { infantry_officer trait_engineer }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 2
-			visible = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-		}
-	}
-	HJM_Marcus_Redstone = {
-		name = HJM_Marcus_Redstone
-		portraits = {
-			army = {
-				large = "gfx/leaders/leader_unknown.dds"
-			}
-		}
-		corps_commander = {
-			traits = { brilliant_strategist trait_cautious }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 3
-			logistics_skill = 1
-			visible = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-		}
-	}
-	HJM_Daniel_Oakshield = {
-		name = HJM_Daniel_Oakshield
-		portraits = {
-			army = {
-				large = "gfx/leaders/leader_unknown.dds"
-			}
-		}
-		corps_commander = {
-			traits = { defensive_doctrine urban_assault_specialist }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 1
-			visible = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-		}
-	}
-	# 2026-08-05 四军事职位角色（陆军元帅/海军元帅/陆军部长/海军部长）
-	HJM_Bedrock_Marshal = {
-		name = HJM_Bedrock_Marshal
-		portraits = {
-			army = { large = "gfx/leaders/leader_unknown.dds" }
-		}
-		field_marshal = {
-			traits = { defensive_doctrine infantry_officer }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 4
-			planning_skill = 3
-			logistics_skill = 3
-			visible = {
-				has_government = feudalist
-			}
-		}
-	}
 
-	HJM_Admiral_Drowned = {
-		name = HJM_Admiral_Drowned
-		portraits = {
-			army = { large = "gfx/leaders/leader_unknown.dds" }
-		}
-		navy_leader = {
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			maneuvering_skill = 3
-			coordination_skill = 2
-			visible = {
-				has_government = feudalist
-			}
-		}
-	}
+
+
+
+
+
+
 
 	HJM_War_Minister = {
 		name = HJM_War_Minister
@@ -311,11 +199,18 @@ characters = {
 	DWF_Hongyan = {
 		name = DWF_Hongyan
 		# 红岩零号机:戈壁巨型电路的初号机体,雷石东1.0的前身(红石线叙事核心)
+		# 2026-08-24 XT定:红岩始终不是国家领导人,只是一个政治顾问
 		# ⚠️头像待XT:定了机器头像后补 portraits 块
-		country_leader = {
-			ideology = duowanism      # 红石主义(挂自由社;recruit后自动立党魁,上台即显示红石主义)
-			traits = { }
-			expire = "1965.1.1.1"
+		advisor = {
+			slot = political_advisor
+			idea_token = hongyan_zero
+			cost = 150
+			allowed = { original_tag = DWF }
+			available = { has_country_flag = DWF_hongyan_awake }
+			modifier = {
+				research_speed_factor = 0.05			# 红石阵列算力
+				production_speed_buildings_factor = 0.05			# 施工优化
+			}
 		}
 	}
 
@@ -328,11 +223,11 @@ characters = {
 		}
 		field_marshal = {
 			traits = { brilliant_strategist }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 3
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
 			planning_skill = 3
-			logistics_skill = 3
+			logistics_skill = 2
 			visible = {
 				NOT = {
 					has_government = fascism
@@ -347,11 +242,11 @@ characters = {
 		}
 		corps_commander = {
 			traits = { trait_engineer }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 3
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
 			visible = {
 				NOT = {
 					has_government = fascism
@@ -366,10 +261,10 @@ characters = {
 		}
 		corps_commander = {
 			traits = { offensive_doctrine }
-			skill = 2
-			attack_skill = 3
+			skill = 1
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 2
+			planning_skill = 1
 			logistics_skill = 1
 			visible = {
 				NOT = {
@@ -385,11 +280,11 @@ characters = {
 		}
 		corps_commander = {
 			traits = { defensive_doctrine }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 2
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
 			visible = {
 				NOT = {
 					has_government = fascism
@@ -404,11 +299,11 @@ characters = {
 		}
 		corps_commander = {
 			traits = { infantry_officer }
-			skill = 2
-			attack_skill = 3
-			defense_skill = 2
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
 			planning_skill = 1
-			logistics_skill = 2
+			logistics_skill = 1
 			visible = {
 				NOT = {
 					has_government = fascism
@@ -431,10 +326,10 @@ characters = {
 		# HJM版索伦:纯陆军元帅(无country_leader,元首位留给W01)
 		field_marshal = {
 			traits = { brilliant_strategist }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 4
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 3
 			logistics_skill = 2
 			visible = {
 				NOT = {
@@ -450,10 +345,10 @@ characters = {
 		}
 		corps_commander = {
 			traits = { offensive_doctrine }
-			skill = 2
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 2
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
 			logistics_skill = 1
 			visible = {
 				NOT = {
@@ -469,10 +364,10 @@ characters = {
 		}
 		corps_commander = {
 			traits = { offensive_doctrine }
-			skill = 2
-			attack_skill = 3
+			skill = 1
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 2
+			planning_skill = 1
 			logistics_skill = 1
 			visible = {
 				NOT = {
@@ -488,11 +383,11 @@ characters = {
 		}
 		corps_commander = {
 			traits = { trait_engineer }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 3
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
 			visible = {
 				NOT = {
 					has_government = fascism
@@ -507,11 +402,11 @@ characters = {
 		}
 		corps_commander = {
 			traits = { defensive_doctrine }
-			skill = 2
+			skill = 1
 			attack_skill = 1
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
 			visible = {
 				NOT = {
 					has_government = fascism

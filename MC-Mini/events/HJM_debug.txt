@@ -1,0 +1,103 @@
+# HJM 时期控制面板 2026-08-24 XT定:节约测试时间,一键把控游戏时期
+# 控制台: event HJM_debug.1
+# 每个功能按钮执行后面板自动重弹,可连续操作;"收起面板"关闭
+# 想走内战选边(多玩/网易/微软)请另外用 console event HJM_split.1 弹四选一
+# 1.19语法: load_focus_tree块形式 / country_event(非fire_country_event) / 转地用every_owned_state+transfer_state(无annex)
+add_namespace = HJM_debug
+
+country_event = {
+	id = HJM_debug.1
+	is_triggered_only = yes
+	title = HJM_debug.1.t
+	desc = HJM_debug.1.desc
+
+	# ---- 换国策树 ----
+	option = {
+		name = HJM_debug.1.tree1
+		HJM = { load_focus_tree = { tree = HJM_focus keep_completed = yes } }
+		country_event = { id = HJM_debug.1 }
+	}
+	option = {
+		name = HJM_debug.1.tree2
+		HJM = { load_focus_tree = { tree = HJM_pre_civil_war_focus keep_completed = yes } }
+		country_event = { id = HJM_debug.1 }
+	}
+	option = {
+		name = HJM_debug.1.tree3
+		HJM = { load_focus_tree = { tree = HJM_war_focus keep_completed = yes } }
+		country_event = { id = HJM_debug.1 }
+	}
+
+	# ---- 魔族战争 ----
+	option = {
+		name = HJM_debug.1.demon_on
+		trigger = {
+			country_exists = HIM
+			HJM = { NOT = { has_war_with = HIM } }
+		}
+		# 魔族不宣而战:宣战后 on_war_relation_added 自动接管(切战争树/挂南线危局/发宣战新闻/触发MDG分裂)
+		HJM = {
+			HIM = {
+				declare_war_on = {
+					target = HJM
+					type = annex_everything
+				}
+			}
+		}
+		country_event = { id = HJM_debug.1 }
+	}
+	option = {
+		name = HJM_debug.1.demon_off
+		trigger = {
+			HJM = { has_war_with = HIM }
+		}
+		# 白和收场:on_war_closed 会自动完成 is_it_over → 剧情照常推进
+		HJM = { white_peace = HIM }
+		country_event = { id = HJM_debug.1 }
+	}
+
+	# ---- 内战 ----
+	option = {
+		name = HJM_debug.1.civil_on
+		trigger = {
+			NOT = { has_global_flag = HJM_empire_split_done }
+		}
+		# 复刻 HJM_split.1 的 immediate(全局分裂flag+冠冕坠地超事件flag)+保皇线直接分裂
+		HJM = {
+			set_global_flag = HJM_empire_split_done
+			set_country_flag = HJM_civilwar_superevent_start
+			HJM_empire_split = yes
+		}
+		country_event = { id = HJM_debug.1 }
+	}
+	option = {
+		name = HJM_debug.1.civil_off
+		trigger = {
+			has_global_flag = HJM_empire_split_done
+		}
+		# 天下归一:全部前帝国圈军阀的领土转给HJM(仿焚天计划转地写法,无annex effect);
+		# 魔族五国/末地/六附庸除外;清分裂全局flag+内战三阶段flag(可重开)
+		HJM = {
+			every_country = {
+				limit = {
+					has_country_flag = MC_former_imperial
+					NOT = { tag = HJM }
+					NOT = { tag = MYR }
+				}
+				every_owned_state = {
+					HJM = { transfer_state = PREV }
+				}
+			}
+			clr_global_flag = HJM_empire_split_done
+			clr_global_flag = HJM_civilwar_phase1_done
+			clr_global_flag = HJM_civilwar_phase2_done
+			clr_global_flag = HJM_civilwar_phase3_done
+		}
+		country_event = { id = HJM_debug.1 }
+	}
+
+	# ---- 收起 ----
+	option = {
+		name = HJM_debug.1.close
+	}
+}

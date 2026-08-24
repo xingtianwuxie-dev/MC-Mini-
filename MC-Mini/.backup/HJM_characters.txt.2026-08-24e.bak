@@ -1,0 +1,522 @@
+characters = {
+	HJM_Notch = {
+		name = HJM_Notch
+		portraits={
+			army={
+				large="gfx/leaders/HJM/portrait_Notch_sword.png"
+			}
+			civilian={
+				large ="gfx/leaders/HJM/portrait_Notch.png"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchist
+			traits = { 
+				rende
+			 }
+			expire = "1965.1.1.1"
+		}
+		field_marshal = { 
+			traits = { old_guard politically_connected }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				has_government = feudalist
+			}
+		}
+	}
+
+	# 2026-08-24 三党首拆分:XM(籽岷/丁磊/菲尔)在HJM仅任政治顾问(非元首)
+	# ⚠️引擎实测:带country_leader的角色不能双国recruit(already assigned)
+	# HJM版去掉country_leader(元首位归派系国独立角色),HJM只留advisor顾问
+	HJM_Zimin = {
+		name = HJM_Zimin
+		portraits = {
+			civilian = { large = "gfx/leaders/HJM/portrait_Zimin.png" }
+		}
+		advisor = {
+			slot = political_advisor
+			available = { has_completed_focus = HJM_player_pact }
+			modifier = {
+				monthly_population = 0.05    # 任命为顾问时生效
+				libertarian_socialist_drift = 0.02      # 籽岷 → 推多玩党支持
+			}
+		}
+
+	}
+	HJM_DingLei = {
+		name = HJM_DingLei
+		portraits = {
+			civilian = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		advisor = {
+			slot = political_advisor
+			available = { has_completed_focus = HJM_player_pact }
+			modifier = {
+				political_power_gain = 0.05
+				neutrality_drift = 0.02          # 丁磊 → 推网易党支持
+			}
+		}
+
+
+	}
+	HJM_PhilSpencer = {
+		name = HJM_PhilSpencer
+		portraits = {
+			civilian = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		advisor = {
+			slot = political_advisor
+			available = { has_completed_focus = HJM_player_pact }
+			modifier = {
+				research_speed_factor = 0.03
+				democratic_drift = 0.02          # 菲尔 → 推微软党支持
+			}
+		}
+
+
+	}
+
+	HJM_Jeb = {
+		name = HJM_Jeb
+		portraits = {
+			civilian = { large = "gfx/leaders/HJM/portrait_Jeb.png" }
+		}
+		country_leader = {
+			ideology = jeb_supremacism          # 保皇党：Jeb至尊主义
+			traits = {
+				regent				# 摄政王：Mojang 保皇党领袖，Notch 身后的掌舵者
+			}
+			expire = "1965.1.1.1"
+		}
+	}
+
+	HJM_Heiling = {
+		name = HJM_Heiling
+		portraits = {
+			army = {
+				large = "gfx/leaders/HJM/portrait_Heiling_sword.png"
+			}
+		}
+		corps_commander = {
+			traits = { defensive_doctrine infantry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	HJM_Steve_Builder = {
+		name = HJM_Steve_Builder
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		corps_commander = {
+			traits = { organizer logistics_wizard }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	HJM_Alex_Crafter = {
+		name = HJM_Alex_Crafter
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer trait_engineer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	HJM_Marcus_Redstone = {
+		name = HJM_Marcus_Redstone
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		corps_commander = {
+			traits = { brilliant_strategist trait_cautious }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	HJM_Daniel_Oakshield = {
+		name = HJM_Daniel_Oakshield
+		portraits = {
+			army = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		corps_commander = {
+			traits = { defensive_doctrine urban_assault_specialist }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	# 2026-08-05 四军事职位角色（陆军元帅/海军元帅/陆军部长/海军部长）
+	HJM_Bedrock_Marshal = {
+		name = HJM_Bedrock_Marshal
+		portraits = {
+			army = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		field_marshal = {
+			traits = { defensive_doctrine infantry_officer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			visible = {
+				has_government = feudalist
+			}
+		}
+	}
+
+	HJM_Admiral_Drowned = {
+		name = HJM_Admiral_Drowned
+		portraits = {
+			army = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+			visible = {
+				has_government = feudalist
+			}
+		}
+	}
+
+	HJM_War_Minister = {
+		name = HJM_War_Minister
+		portraits = {
+			civilian = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = war_minister
+			cost = 150
+			allowed = { original_tag = HJM }
+			available = { has_government = feudalist }
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				experience_gain_army = 0.05
+			}
+		}
+	}
+
+	HJM_Naval_Minister = {
+		name = HJM_Naval_Minister
+		portraits = {
+			civilian = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = naval_minister
+			cost = 150
+			allowed = { original_tag = HJM }
+			available = { has_government = feudalist }
+			modifier = {
+				experience_gain_navy = 0.10
+				research_speed_factor = 0.03
+			}
+		}
+	}
+
+	HJM_wutu = {
+		name = HJM_wutu
+		portraits = {
+			army={
+				large="gfx/leaders/HJM/portrait_wutu_sword.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = wutu
+			cost = 80
+			allowed = {
+				original_tag = HJM
+			}
+			available = {
+
+			}
+			traits = {
+				zhongjian
+			}
+		}
+		corps_commander = {
+			traits = { brilliant_strategist  infantry_officer  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	# ===== DWF 红石技官线领袖(2026-08-22) =====
+	DWF_Hongyan = {
+		name = DWF_Hongyan
+		# 红岩零号机:戈壁巨型电路的初号机体,雷石东1.0的前身(红石线叙事核心)
+		# ⚠️头像待XT:定了机器头像后补 portraits 块
+		country_leader = {
+			ideology = duowanism      # 红石主义(挂自由社;recruit后自动立党魁,上台即显示红石主义)
+			traits = { }
+			expire = "1965.1.1.1"
+		}
+	}
+
+	# ===== 新岩石之令(2026-08-24 XT定:MC帝国可玩将军,内战后归HJM保皇) =====
+	# 出自《我的世界:故事模式》新岩石之令,帝国时期为HJM将军;内战分裂后留在HJM保皇政权继续效力
+	HJM_Jesse = {
+		name = HJM_Jesse
+		portraits = {
+			army = { large = "gfx/leaders/HJM/portrait_Jesse.png" }
+		}
+		field_marshal = {
+			traits = { brilliant_strategist }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	HJM_Olivia = {
+		name = HJM_Olivia
+		portraits = {
+			army = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		corps_commander = {
+			traits = { trait_engineer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	HJM_Axel = {
+		name = HJM_Axel
+		portraits = {
+			army = { large = "gfx/leaders/HJM/portrait_Axel.png" }
+		}
+		corps_commander = {
+			traits = { offensive_doctrine }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	HJM_Lukas = {
+		name = HJM_Lukas
+		portraits = {
+			army = { large = "gfx/leaders/HJM/portrait_Lukas.png" }
+		}
+		corps_commander = {
+			traits = { defensive_doctrine }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	HJM_Petra = {
+		name = HJM_Petra
+		portraits = {
+			army = { large = "gfx/leaders/HJM/portrait_Petra.png" }
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+
+	# ===== 旧岩石之令(2026-08-24 XT定) =====
+	# 出自《我的世界:故事模式》初代岩石之令。分裂前=MC帝国(HJM)元帅/将军
+	# ⚠️2026-08-24实测:引擎禁止同一角色分属两国(带country_leader的被第二国recruit必报already assigned)
+	# 原版唯一解法instance双实例,但allowed只能用全局DLC条件(不认tag=国名)→无法做「分裂前HJM有/分裂后没有」时间线切换
+	# XT定方案1:W01改国名「岩石之令」+旧五人用W01_独立角色名(W01_Soren等,共享索伦立绘+译名)
+	# HJM这5个角色保持普通写法,分裂后HJM仍有(通过visible = has_government != feudalist 隐藏)
+	HJM_Soren = {
+		name = HJM_Soren
+		portraits = {
+			army = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		# HJM版索伦:纯陆军元帅(无country_leader,元首位留给W01)
+		field_marshal = {
+			traits = { brilliant_strategist }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	HJM_Gabriel = {
+		name = HJM_Gabriel
+		portraits = {
+			army = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		corps_commander = {
+			traits = { offensive_doctrine }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	HJM_Magnus = {
+		name = HJM_Magnus
+		portraits = {
+			army = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		corps_commander = {
+			traits = { offensive_doctrine }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	HJM_Ellegaard = {
+		name = HJM_Ellegaard
+		portraits = {
+			army = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		corps_commander = {
+			traits = { trait_engineer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	HJM_Ivor = {
+		name = HJM_Ivor
+		portraits = {
+			army = { large = "gfx/leaders/leader_unknown.dds" }
+		}
+		corps_commander = {
+			traits = { defensive_doctrine }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+}

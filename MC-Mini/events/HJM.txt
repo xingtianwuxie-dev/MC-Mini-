@@ -1,4 +1,4 @@
-﻿add_namespace = HJM
+add_namespace = HJM
 add_namespace = HJM_news
 
 country_event = {
@@ -1779,3 +1779,66 @@ country_event = {
         name = HJM.57.a
     }
 }
+
+# ==== 2026-08-24 新闻补批:分裂线+内战线(此前全无新闻) ====
+
+news_event = {
+	id = HJM_news.9
+	title = HJM_news.9.t
+	desc = HJM_news.9.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = HJM_news.9.a
+	}
+}
+
+news_event = {
+	id = HJM_news.20
+	title = HJM_news.20.t
+	desc = HJM_news.20.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = HJM_news.20.a
+	}
+}
+
+news_event = {
+	id = HJM_news.21
+	title = HJM_news.21.t
+	desc = HJM_news.21.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = HJM_news.21.a
+	}
+}
+
+news_event = {
+	id = HJM_news.22
+	title = HJM_news.22.t
+	desc = HJM_news.22.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = HJM_news.22.a
+	}
+}
+
+news_event = {
+	id = HJM_news.23
+	title = HJM_news.23.t
+	desc = HJM_news.23.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = HJM_news.23.a
+	}
+}
+

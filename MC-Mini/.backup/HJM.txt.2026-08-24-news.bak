@@ -1,0 +1,1781 @@
+﻿add_namespace = HJM
+add_namespace = HJM_news
+
+country_event = {
+    id = HJM.1
+    title = HJM.1.t
+    desc = HJM.1.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.1.a
+        set_country_flag = HJM_God_Save_The_Queen
+    }
+}
+
+country_event = {
+    id = HJM.2
+    title = HJM.2.t
+    desc = HJM.2.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.2.a
+        add_war_support = 0.03
+        add_stability = -0.02
+    }
+    option = {
+        name = HJM.2.b
+        add_stability = 0.03
+        add_political_power = -15
+    }
+}
+
+country_event = {
+    id = HJM.3
+    title = HJM.3.t
+    desc = HJM.3.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.3.a
+        if = {
+          limit = { 
+            is_ai = no 
+            }
+          scoped_play_song = "Destiny"     # 立刻播命运
+        }
+        add_stability = -0.05
+        country_event = {
+            id = HJM.19
+            days = 10
+        }
+    }
+    option = {
+        name = HJM.3.b
+        add_stability = 0.05
+        country_event = {
+            id = HJM.19
+            days = 20
+        }
+    }
+}
+
+country_event = {
+    id = HJM.19
+    title = HJM.19.t
+    desc = HJM.19.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.19.a
+        add_political_power = -25
+        country_event = {
+            id = HJM.20
+            days = 15
+        }
+    }
+}
+
+country_event = {
+    id = HJM.20
+    title = HJM.20.t
+    desc = HJM.20.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.20.a
+        add_war_support = 0.03
+        country_event = {
+            id = HJM.21
+            days = 20
+        }
+    }
+}
+
+country_event = {
+    id = HJM.21
+    title = HJM.21.t
+    desc = HJM.21.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.21.a
+        army_experience = 5
+        if = {
+            limit = {
+                NOT = { has_completed_focus = HJM_illager_spy }
+            }
+            add_political_power = 25
+        }
+    }
+}
+
+country_event = {
+    id = HJM.4
+    title = HJM.4.t
+    desc = HJM.4.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.4.a
+        army_experience = 10
+    }
+    option = {
+        name = HJM.4.b
+        add_political_power = 20
+    }
+}
+
+country_event = {
+    id = HJM.5
+    title = HJM.5.t
+    desc = HJM.5.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.5.a
+        set_country_flag = HJM_record_13_played
+        if = {
+            limit = {
+                NOT = { has_active_mission = HJM_record_13_war_countdown }
+                NOT = { has_country_flag = HJM_record_13_war_activated }
+            }
+            set_country_flag = HJM_record_13_war_activated
+            activate_mission = HJM_record_13_war_countdown
+        }
+    }
+}
+
+country_event = {
+    id = HJM.6
+    title = HJM.6.t
+    desc = HJM.6.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.6.a
+        add_political_power = 15
+    }
+}
+
+country_event = {
+    id = HJM.7
+    title = HJM.7.t
+    desc = HJM.7.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.7.a
+        add_war_support = 0.03
+    }
+}
+
+country_event = {
+    id = HJM.8
+    title = HJM.8.t
+    desc = HJM.8.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.8.a
+        army_experience = 15
+    }
+    option = {
+        name = HJM.8.b
+        add_stability = 0.03
+    }
+}
+
+country_event = {
+    id = HJM.9
+    title = HJM.9.t
+    desc = HJM.9.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.9.a
+        army_experience = 10
+    }
+}
+
+country_event = {
+    id = HJM.10
+    title = HJM.10.t
+    desc = HJM.10.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.10.a
+        add_command_power = 10 # Reward the frontline purge with command capacity instead of killing Notch early.
+        army_experience = 10 # Represent the army learning from the purge and reorganization.
+        add_war_support = 0.03 # The public sees the army purge as renewed wartime discipline.
+    }
+}
+
+# HJM.11（演说）已移除（随 dignity_blade 国策一并删除，2026-08-06）
+
+country_event = {
+    id = HJM.12
+    title = HJM.12.t
+    desc = HJM.12.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.12.a
+        add_war_support = 0.05
+        add_manpower = 5000
+    }
+}
+
+country_event = {
+    id = HJM.13
+    title = HJM.13.t
+    desc = HJM.13.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.13.a
+        add_political_power = 20
+    }
+}
+
+country_event = {
+    id = HJM.14
+    title = HJM.14.t
+    desc = HJM.14.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.14.a
+		325 = {
+			add_building_construction = { type = bunker province = 1319 level = 1 instant_build = yes }
+			add_building_construction = { type = bunker province = 4501 level = 1 instant_build = yes }
+			add_building_construction = { type = bunker province = 12262 level = 1 instant_build = yes }
+			add_building_construction = { type = bunker province = 5072 level = 1 instant_build = yes }
+		}
+		594 = {
+			add_building_construction = { type = bunker province = 7137 level = 1 instant_build = yes }
+			add_building_construction = { type = bunker province = 10459 level = 1 instant_build = yes }
+		}
+		601 = {
+			add_building_construction = { type = bunker province = 10856 level = 1 instant_build = yes }
+		}
+		747 = {
+			add_building_construction = { type = bunker province = 7965 level = 1 instant_build = yes }
+		}
+		757 = {
+			add_building_construction = { type = bunker province = 5033 level = 1 instant_build = yes }
+		}
+		1033 = {
+			add_building_construction = { type = bunker province = 10004 level = 1 instant_build = yes }
+		}
+    }
+}
+
+country_event = {
+    id = HJM.15
+    title = HJM.15.t
+    desc = HJM.15.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.15.a
+        add_equipment_to_stockpile = {
+            type = infantry_equipment_1
+            amount = 10000
+            producer = HJM
+        }
+        1036 = {
+            create_unit = {
+                division = "name = \"第1铁傀儡装甲师\" division_template = \"铁傀儡装甲师\" start_experience_factor = 0.8 start_equipment_factor = 1 start_manpower_factor = 1"
+                owner = HJM
+            }
+        }
+    }
+}
+
+country_event = {
+    id = HJM.16
+    title = HJM.16.t
+    desc = HJM.16.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.16.a
+        add_political_power = 15
+    }
+}
+
+country_event = {
+    id = HJM.17
+    title = HJM.17.t
+    desc = HJM.17.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.17.a
+        army_experience = 10
+    }
+}
+
+country_event = {
+    id = HJM.18
+    title = HJM.18.t
+    desc = HJM.18.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+    }
+
+    option = {
+        name = HJM.18.a
+        add_political_power = 15
+    }
+}
+
+# ==================== World news events ====================
+# HJM_news.* are major news events. Use them only for world-facing turning points.
+
+news_event = {
+    id = HJM_news.1
+    title = HJM_news.1.t
+    desc = HJM_news.1.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = HJM_news.1.a
+    }
+}
+
+news_event = {
+    id = HJM_news.2
+    title = HJM_news.2.t
+    desc = HJM_news.2.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = HJM_news.2.a
+    }
+}
+
+news_event = {
+    id = HJM_news.3
+    title = HJM_news.3.t
+    desc = HJM_news.3.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = HJM_news.3.a
+    }
+}
+
+news_event = {
+    id = HJM_news.4
+    title = HJM_news.4.t
+    desc = HJM_news.4.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = HJM_news.4.a
+    }
+}
+
+news_event = {
+    id = HJM_news.5
+    title = HJM_news.5.t
+    desc = HJM_news.5.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = HJM_news.5.a
+    }
+}
+
+news_event = {
+    id = HJM_news.6
+    title = HJM_news.6.t
+    desc = HJM_news.6.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = HJM_news.6.a
+    }
+}
+
+news_event = {
+    id = HJM_news.7
+    title = HJM_news.7.t
+    desc = HJM_news.7.d
+    picture = GFX_report_event_chinese_officers
+
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = HJM_news.7.a
+    }
+}
+
+news_event = {
+	id = HJM_news.8
+	title = HJM_news.8.t
+	desc = HJM_news.8.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.8.a
+	}
+}
+
+# HJM_news.9（武汉会议召开）已移除（随 wuhan_conference 国策删除，2026-08-06）
+
+news_event = {
+	id = HJM_news.10
+	title = HJM_news.10.t
+	desc = HJM_news.10.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.10.a
+	}
+}
+
+news_event = {
+	id = HJM_news.11
+	title = HJM_news.11.t
+	desc = HJM_news.11.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.11.a
+	}
+}
+
+news_event = {
+	id = HJM_news.12
+	title = HJM_news.12.t
+	desc = HJM_news.12.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.12.a
+	}
+}
+
+news_event = {
+	id = HJM_news.13
+	title = HJM_news.13.t
+	desc = HJM_news.13.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.13.a
+	}
+}
+
+news_event = {
+	id = HJM_news.14
+	title = HJM_news.14.t
+	desc = HJM_news.14.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.14.a
+	}
+}
+
+news_event = {
+	id = HJM_news.15
+	title = HJM_news.15.t
+	desc = HJM_news.15.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.15.a
+	}
+}
+
+news_event = {
+	id = HJM_news.16
+	title = HJM_news.16.t
+	desc = HJM_news.16.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.16.a
+	}
+}
+
+news_event = {
+	id = HJM_news.17
+	title = HJM_news.17.t
+	desc = HJM_news.17.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.17.a
+	}
+}
+
+news_event = {
+	id = HJM_news.18
+	title = HJM_news.18.t
+	desc = HJM_news.18.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.18.a
+	}
+}
+
+news_event = {
+	id = HJM_news.19
+	title = HJM_news.19.t
+	desc = HJM_news.19.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = HJM_news.19.a
+	}
+}
+
+country_event = {
+    id = HJM.30
+    title = HJM.30.t
+    desc = HJM.30.d
+    picture = GFX_report_event_generic
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = HJM
+        has_war_with = HIM
+        has_idea = HJM_long_peace                # 还在无力期 = 还没觉醒
+        check_variable = { var = HJM_demon_war_days value > 365 } # 开战满一年（XT：打满一年才许觉醒；1.19无months_at_war，改用变量计天）
+        HIM = { num_occupied_states > 13 }       # 魔族占本土超一成（134州×10%≈13）
+    }
+
+    mean_time_to_happen = {
+        days = 10                                # 条件已极严（满一年+沦陷一成），满足后约10天即触发
+    }
+
+    immediate = {
+        remove_ideas = HJM_long_peace            # 移除无力
+        add_ideas = HJM_sleeping_lion            # 觉醒
+    }
+
+    option = {
+        name = HJM.30.a
+        news_event = { id = HJM_news.6 }
+    }
+}
+
+country_event = {
+    id = HJM.31
+    title = HJM.31.t
+    desc = HJM.31.d
+    picture = GFX_report_event_generic
+    fire_only_once = yes
+
+    trigger = {
+        has_war = yes
+        OR = {
+            AND = { original_tag = HJM NOT = { controls_state = 1036 } }   # 武汉
+            AND = { original_tag = HIM NOT = { controls_state = 439 } }    # 德里
+            AND = { original_tag = XWY NOT = { controls_state = 427 } }    # 海得拉巴
+            AND = { original_tag = LLL NOT = { controls_state = 640 } }    # 曼德勒
+            AND = { original_tag = GWG NOT = { controls_state = 1076 } }   # 曼谷
+            AND = { original_tag = ZLG NOT = { controls_state = 440 } }    # 拉合尔
+            AND = { original_tag = MDG NOT = { controls_state = 330 } }    # 蒙古
+            AND = { original_tag = MYR NOT = { controls_state = 574 } }    # 雅库茨克
+        }
+    }
+
+    mean_time_to_happen = { days = 1 }          # 丢首都第二天必触发
+
+    # 2026-08-01：取消丢首都强制投降。所有国家回到原版 BASE_SURRENDER_LIMIT=0.8（丢八成VP才投）。
+    # immediate 原挂 capital_lost_surrender(surrender_limit=-0.99 秒投)，已移除。事件壳保留避免引用报错。
+
+    option = {
+        name = HJM.31.a
+    }
+}
+
+country_event = {
+    id = HJM.32
+    title = HJM.32.t
+    desc = HJM.32.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = { has_character = HJM_Notch }
+            retire_character = HJM_Notch # Remove Notch only in the intended succession event.
+        }
+        set_country_flag = HJM_regency_superevent_start # Show the regency super event when Notch dies.
+        # 摄政王换成 Jeb：保皇党继续执政，Jeb(absolute_monarchist)升任摄政王领袖
+        promote_character = { character = HJM_Jeb ideology = absolute_monarchist }
+        set_politics = {
+            ruling_party = feudalist          # 保皇党继续执政（Jeb 摄政，非微软夺权）
+            election_frequency = 48
+            elections_allowed = no
+        }
+    }
+
+    option = {
+        name = HJM.32.a
+		news_event = { id = HJM_news.17 }
+    }
+}
+
+country_event = {
+    id = HJM.33
+    hidden = yes
+    is_triggered_only = yes
+
+    immediate = {
+        set_country_flag = MC_start_done        # 事件 set flag（触发 allow_branch 刷新）
+    }
+
+    option = {
+        name = HJM.33.a
+    }
+}
+
+country_event = {
+    id = HJM.34
+    title = HJM.34.t
+    desc = HJM.34.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = HJM.34.a                              # 施舍雨露（和平线）
+        complete_national_focus = HJM_grace_realm           # 解锁恩及天下
+    }
+    option = {
+        name = HJM.34.b                              # 投射雷霆（毁灭线）
+        complete_national_focus = HJM_blood_debt           # 解锁血债血偿
+    }
+}
+
+country_event = {
+    id = HJM.35
+    title = HJM.35.t
+    desc = HJM.35.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = HJM.35.a
+        news_event = { id = HJM_news.18 } # Publish the end-of-war news item.
+    }
+}
+
+country_event = {
+    id = HJM.36
+    title = HJM.36.t
+    desc = HJM.36.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    option = {
+        name = HJM.36.a
+        news_event = { id = HJM_news.19 } # Publish the regency audit news item.
+        country_event = { id = HJM.37 days = 7 } # Start the ordinary regency follow-up chain.
+    }
+}
+
+# ==================== Ordinary regency story events ====================
+# These are deliberately country events, not major news. They show daily postwar governance.
+
+country_event = {
+    id = HJM.37
+    title = HJM.37.t
+    desc = HJM.37.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        has_country_flag = HJM_regional_situation_summarized
+    }
+
+    option = {
+        name = HJM.37.a
+        add_political_power = -25 # Spend regency authority on urgent village relief.
+        add_stability = 0.03 # Relief calms the border villages.
+        country_event = { id = HJM.38 days = 14 } # Continue the ordinary regency chain.
+    }
+    option = {
+        name = HJM.37.b
+        add_political_power = 25 # Keep resources under central control for now.
+        add_stability = -0.02 # Delayed relief deepens local resentment.
+        country_event = { id = HJM.38 days = 14 } # Continue the ordinary regency chain.
+    }
+}
+
+country_event = {
+    id = HJM.38
+    title = HJM.38.t
+    desc = HJM.38.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        has_country_flag = HJM_regional_situation_summarized
+    }
+
+    option = {
+        name = HJM.38.a
+        add_political_power = -35 # Ratify a limited workshop charter for the travelers.
+        add_tech_bonus = {
+            name = HJM_traveler_workshop_bonus
+            bonus = 0.5
+            uses = 1
+            category = industry
+        } # Traveler workshops grant one practical industry research boost.
+        country_event = { id = HJM.39 days = 18 } # Continue the ordinary regency chain.
+    }
+    option = {
+        name = HJM.38.b
+        add_political_power = 20 # The regency keeps the workshops under tighter review.
+        add_stability = -0.02 # Travelers and front officers dislike the delay.
+        country_event = { id = HJM.39 days = 18 } # Continue the ordinary regency chain.
+    }
+}
+
+country_event = {
+    id = HJM.39
+    title = HJM.39.t
+    desc = HJM.39.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        has_country_flag = HJM_regional_situation_summarized
+    }
+
+    option = {
+        name = HJM.39.a
+        add_political_power = 30 # Accept delayed tribute in exchange for written compliance.
+        add_stability = 0.01 # The vassals breathe, and the ledger stays open.
+        country_event = { id = HJM.40 days = 21 } # Continue the ordinary regency chain.
+    }
+    option = {
+        name = HJM.39.b
+        add_political_power = -20 # Dispatch inspectors and soldiers to enforce tribute.
+        add_war_support = 0.02 # Hardliners praise the regency's firmness.
+        add_stability = -0.02 # Vassal regions resent the pressure.
+        country_event = { id = HJM.40 days = 21 } # Continue the ordinary regency chain.
+    }
+}
+
+country_event = {
+    id = HJM.40
+    title = HJM.40.t
+    desc = HJM.40.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        has_country_flag = HJM_regional_situation_summarized
+    }
+
+    option = {
+        name = HJM.40.a
+        add_political_power = -25 # Fund a careful court ceremony around the old crown.
+        add_stability = 0.03 # The old guard accepts the regency for now.
+        set_country_flag = HJM_regency_daily_chain_done # Mark the first ordinary regency chain complete.
+    }
+    option = {
+        name = HJM.40.b
+        add_political_power = 25 # Keep the regency focused on administration instead of ritual.
+        add_stability = -0.02 # Old courtiers read the decision as contempt.
+        set_country_flag = HJM_regency_daily_chain_done # Mark the first ordinary regency chain complete.
+    }
+}
+
+# ==================== Servant-state settlement reaction events ====================
+# These country events show internal reactions after each wartime vassal or punishment focus.
+
+country_event = {
+    id = HJM.41
+    title = HJM.41.t
+    desc = HJM.41.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_skyfire_reaction_seen }
+    }
+
+    option = {
+        name = HJM.41.a
+        add_political_power = 30 # The court gains authority by proving imperial threats are real.
+        add_war_support = 0.03 # Hardliners and frontier officers rally around the terror policy.
+        add_stability = -0.02 # Clerks, villages, and allied courts quietly fear what the empire has become.
+        if = {
+            limit = { GWG = { exists = yes } }
+            GWG = {
+                add_stability = -0.01 # The receiving administration struggles to govern land made into ashes.
+            }
+        }
+        set_country_flag = HJM_skyfire_reaction_seen # Prevent this reaction from being shown twice.
+    }
+}
+
+country_event = {
+    id = HJM.42
+    title = HJM.42.t
+    desc = HJM.42.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_no_mercy_reaction_seen }
+    }
+
+    option = {
+        name = HJM.42.a
+        add_political_power = 25 # The regency converts the northern purge into court discipline.
+        add_war_support = 0.02 # The army reads the punishment as proof that betrayal is unforgivable.
+        add_stability = -0.01 # The End frontier grows quieter, but less trusting.
+        if = {
+            limit = { MDG = { exists = yes } }
+            MDG = {
+                add_stability = -0.01 # The End state inherits frightened territory and uneasy subjects.
+            }
+        }
+        set_country_flag = HJM_no_mercy_reaction_seen # Prevent this reaction from being shown twice.
+    }
+}
+
+country_event = {
+    id = HJM.43
+    title = HJM.43.t
+    desc = HJM.43.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_homeland_reaction_seen }
+    }
+
+    option = {
+        name = HJM.43.a
+        add_political_power = -20 # The empire spends officials, seals, and grain to make leniency visible.
+        add_stability = 0.02 # A measured settlement reassures border villages and moderate courtiers.
+        if = {
+            limit = { GWG = { exists = yes } }
+            GWG = {
+                add_political_power = 20 # The new vassal administration receives room to organize itself.
+                add_stability = 0.03 # Preserved offices make the cave lands easier to pacify.
+            }
+        }
+        set_country_flag = HJM_homeland_reaction_seen # Prevent this reaction from being shown twice.
+    }
+}
+
+country_event = {
+    id = HJM.44
+    title = HJM.44.t
+    desc = HJM.44.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_golden_reaction_seen }
+    }
+
+    option = {
+        name = HJM.44.a
+        add_political_power = -15 # Maintaining a bargain with the piglins costs court attention and gold permits.
+        add_stability = 0.01 # A bloodless settlement slightly calms merchants and frontier officers.
+        if = {
+            limit = { ZLG = { exists = yes } }
+            ZLG = {
+                add_political_power = 30 # The piglin vassal uses the agreement to rebuild its local authority.
+                add_stability = 0.02 # Gold-backed surrender prevents an immediate occupation panic.
+            }
+        }
+        set_country_flag = HJM_golden_reaction_seen # Prevent this reaction from being shown twice.
+    }
+}
+
+country_event = {
+    id = HJM.45
+    title = HJM.45.t
+    desc = HJM.45.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_magma_reaction_seen }
+    }
+
+    option = {
+        name = HJM.45.a
+        add_political_power = -25 # The court spends authority to protect captured workshops from plunder.
+        add_tech_bonus = {
+            name = HJM_magma_workshop_audit
+            bonus = 0.3
+            uses = 1
+            category = electronics
+        } # Basalt engineers provide one limited research boost after registration.
+        if = {
+            limit = { XWY = { exists = yes } }
+            XWY = {
+                add_stability = 0.02 # Preserving the furnaces gives the basalt vassal a reason to cooperate.
+            }
+        }
+        set_country_flag = HJM_magma_reaction_seen # Prevent this reaction from being shown twice.
+    }
+}
+
+country_event = {
+    id = HJM.46
+    title = HJM.46.t
+    desc = HJM.46.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_ash_reaction_seen }
+    }
+
+    option = {
+        name = HJM.46.a
+        add_war_support = 0.03 # Revenge rhetoric keeps the army and border militias mobilized.
+        add_political_power = 20 # Fear of imperial punishment strengthens the central decree.
+        add_stability = -0.03 # Punitive rule creates unease inside the wider imperial bureaucracy.
+        if = {
+            limit = { GWG = { exists = yes } }
+            GWG = {
+                add_stability = -0.04 # The punished vassal is quiet, but quiet through fear.
+            }
+        }
+        set_country_flag = HJM_ash_reaction_seen # Prevent this reaction from being shown twice.
+    }
+}
+
+country_event = {
+    id = HJM.47
+    title = HJM.47.t
+    desc = HJM.47.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_bloody_reaction_seen }
+    }
+
+    option = {
+        name = HJM.47.a
+        army_experience = 10 # Officers codify the assault and occupation lessons from the fortress gate.
+        add_war_support = 0.03 # The blood price satisfies revenge factions for the moment.
+        add_stability = -0.02 # Merchants and quartermasters fear the cost of ruling through terror.
+        if = {
+            limit = { ZLG = { exists = yes } }
+            ZLG = {
+                add_stability = -0.03 # The piglin vassal obeys, but the oath is born in blood.
+            }
+        }
+        set_country_flag = HJM_bloody_reaction_seen # Prevent this reaction from being shown twice.
+    }
+}
+
+country_event = {
+    id = HJM.48
+    title = HJM.48.t
+    desc = HJM.48.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_beneath_magma_reaction_seen }
+    }
+
+    option = {
+        name = HJM.48.a
+        air_experience = 8 # Engineers study the blast, smoke, and vertical assault reports.
+        add_war_support = 0.02 # The punishment convinces hardliners that the empire still has fire.
+        add_stability = -0.03 # Destroying useful industry unsettles planners who must rebuild afterward.
+        if = {
+            limit = { XWY = { exists = yes } }
+            XWY = {
+                add_stability = -0.04 # The basalt vassal begins its new existence amid ruins.
+            }
+        }
+        set_country_flag = HJM_beneath_magma_reaction_seen # Prevent this reaction from being shown twice.
+    }
+}
+
+country_event = {
+    id = HJM.49
+    title = HJM.49.t
+    desc = HJM.49.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        has_country_flag = HJM_him_legacy_unlocked
+        NOT = { has_country_flag = HJM_him_legacy_report_seen }
+    }
+
+    option = {
+        name = HJM.49.a
+        add_political_power = -25 # Open the first regency office for demon-war legacy cases.
+        add_stability = -0.01 # The report reminds the realm that victory did not erase every danger.
+        set_country_flag = HJM_him_legacy_report_seen # Prevent the first legacy report from repeating.
+    }
+}
+
+
+
+# ============ 灾厄村民猖獗度：自动升级（链式事件） ============AI写的！！！！！
+# 每 60 天触发一次，按 低→中→高 升一级；到"高"封顶并停止重排。
+# 用 country_event 的 days=60 自我重排
+country_event = {
+    id = HJM.illager_tick
+    hidden = yes                    # 内部机制事件，不弹窗
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        has_country_flag = HJM_illager_activity_unlocked
+    }
+
+    # immediate 在事件触发瞬间执行
+    immediate = {
+        if = {
+            limit = { 
+                has_idea = HJM_illager_activity_low 
+            }
+            remove_ideas = HJM_illager_activity_low
+            add_ideas = HJM_illager_activity_medium
+        }
+        else_if = {
+            limit = { 
+                has_idea = HJM_illager_activity_medium 
+            }
+            remove_ideas = HJM_illager_activity_medium
+            add_ideas = HJM_illager_activity_high
+        }
+        # 已是 high：封顶
+    }
+
+    option = {
+        name = HJM.illager_tick.a
+        # 只要还没到"高"，就排下一次升级（60 天后）
+        if = {
+            limit = { 
+                has_country_flag = HJM_illager_activity_unlocked   # 新增：开关被关就不重排
+                NOT = { 
+                    has_idea = HJM_illager_activity_high 
+                } 
+            }
+            country_event = { 
+                id = HJM.illager_tick  days = 60 
+            }
+        }
+    }
+}
+
+# ============ 灾厄村民猖獗度：终止事件 ============ 依旧AI写的！！！
+# HJM 与 HIM 开战后由 on_war_relation_added 触发。
+# 关闭整个系统：清 flag（决议分类+清剿决议隐藏）、移除三个等级民族精神；
+# 升级事件 HJM.illager_tick 因失去 flag 而不再重排，自动停摆。
+country_event = {
+    id = HJM.illager_purge
+    title = HJM.illager_purge.t
+    desc = HJM.illager_purge.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    # immediate：触发瞬间执行，不依赖玩家点选项，最保险
+    immediate = {
+        # ① 关掉总开关 → 清剿决议 visible=false、分类隐藏
+        clr_country_flag = HJM_illager_activity_unlocked
+        # ② 移除民族精神（三个都 remove，remove 不存在的 idea 无副作用）
+        remove_ideas = HJM_illager_activity_low
+        remove_ideas = HJM_illager_activity_medium
+        remove_ideas = HJM_illager_activity_high
+    }
+
+    option = {
+        name = HJM.illager_purge.a
+        # 严厉打击的正面反馈（可自行调整）
+        add_stability = 0.05
+        add_war_support = 0.05
+    }
+}
+
+# ==================== 战后处置兜底（2026-08-01）====================
+# 战争结束后若玩家没点处置国策，自动检查每个未处置的仆从国，弹二选一事件补处置。
+# 防重复：trigger 查对应 _disposed flag（国策完成时设）；事件 option 执行后也设 flag。
+
+# ==================== 人皇逝世连锁负面事件（2026-08-01）====================
+# 人皇逝世后延迟弹三个事件，分别扣基建/工厂/军心，强化"帝国崩坏前夜"氛围。
+
+# HJM.60 边境乱报（扣稳定+基建）
+country_event = {
+    id = HJM.60
+    title = HJM.60.t
+    desc = HJM.60.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_border_chaos_reported }
+    }
+
+    immediate = {
+        set_country_flag = HJM_border_chaos_reported
+        add_stability = -0.05
+    }
+
+    option = {
+        name = HJM.60.a
+        add_political_power = -30
+    }
+}
+
+# HJM.61 工坊停工（扣工厂产出）
+country_event = {
+    id = HJM.61
+    title = HJM.61.t
+    desc = HJM.61.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_workshop_stalled_reported }
+    }
+
+    immediate = {
+        set_country_flag = HJM_workshop_stalled_reported
+    }
+
+    option = {
+        name = HJM.61.a
+        # 随机本土省份拆1座民工厂（工坊停工）
+        random_owned_controlled_state = {
+            limit = {
+                is_core_of = HJM
+            }
+            set_building_level = { type = industrial_complex level = 0 }
+        }
+        add_stability = -0.03
+    }
+}
+
+# HJM.62 军心涣散（扣战支+陆军经验）
+country_event = {
+    id = HJM.62
+    title = HJM.62.t
+    desc = HJM.62.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_army_morale_reported }
+    }
+
+    immediate = {
+        set_country_flag = HJM_army_morale_reported
+        add_war_support = -0.05
+    }
+
+    option = {
+        name = HJM.62.a
+        army_experience = -10
+    }
+}
+
+# HJM.56 人皇逝世自动触发（hidden，打赢后60天由 HJM_is_it_over 延迟触发）
+# 自动完成 HJM_emperor_passes 国策（=执行全部人皇逝世效果：移除睡狮/加危机精神/启动内战倒计时/弹HJM.32摄政）
+country_event = {
+    id = HJM.56
+    is_triggered_only = yes
+    hidden = yes
+
+    immediate = {
+        # 仅当国策还没完成时才执行（防重复）
+        if = {
+            limit = {
+                NOT = { has_completed_focus = HJM_emperor_passes }
+            }
+            complete_national_focus = HJM_emperor_passes
+        }
+    }
+
+    option = {
+        name = HJM.56.a
+    }
+}
+
+# 2026-08-05 BOP 权力平衡区间事件：进入"帝国绝对主导"时触发（保皇旧臣振奋）
+country_event = {
+    id = HJM.70
+    title = HJM.70.t
+    desc = HJM.70.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_empire_dominant_seen }
+    }
+
+    immediate = {
+        set_country_flag = HJM_empire_dominant_seen
+        add_stability = 0.05
+        add_political_power = 50
+    }
+
+    option = {
+        name = HJM.70.a
+    }
+}
+
+# 2026-08-05 BOP 权力平衡区间事件：进入"穿越者主导"时触发（穿越者掌权）
+country_event = {
+    id = HJM.71
+    title = HJM.71.t
+    desc = HJM.71.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_traveler_dominant_seen }
+    }
+
+    immediate = {
+        set_country_flag = HJM_traveler_dominant_seen
+        add_stability = -0.03
+        add_political_power = 50
+    }
+
+    option = {
+        name = HJM.71.a
+    }
+}
+
+# HJM.50 路由事件（hidden，由 on_war_closed / HJM_is_it_over 延迟触发）
+country_event = {
+    id = HJM.50
+    is_triggered_only = yes
+    hidden = yes
+
+    immediate = {
+        # GWG 未被温和(homeland)也未被复仇(ash)处置，且仍存在 → 弹 HJM.51
+        if = {
+            limit = {
+                NOT = { has_country_flag = HJM_homeland_disposed }
+                NOT = { has_country_flag = HJM_ash_disposed }
+                GWG = { exists = yes }
+            }
+            country_event = { id = HJM.51 days = 1 }
+        }
+        # ZLG 未处置 → HJM.52
+        if = {
+            limit = {
+                NOT = { has_country_flag = HJM_golden_disposed }
+                NOT = { has_country_flag = HJM_bloody_disposed }
+                ZLG = { exists = yes }
+            }
+            country_event = { id = HJM.52 days = 2 }
+        }
+        # XWY 未处置 → HJM.53
+        if = {
+            limit = {
+                NOT = { has_country_flag = HJM_magma_disposed }
+                NOT = { has_country_flag = HJM_beneath_disposed }
+                XWY = { exists = yes }
+            }
+            country_event = { id = HJM.53 days = 3 }
+        }
+        # LLL 未被毁灭线(skyfire)处置 → HJM.54
+        if = {
+            limit = {
+                NOT = { has_country_flag = HJM_skyfire_disposed }
+                LLL = { exists = yes }
+                GWG = { exists = yes }
+            }
+            country_event = { id = HJM.54 days = 4 }
+        }
+        # MYR 未被毁灭线(no_mercy)处置 → HJM.55
+        if = {
+            limit = {
+                NOT = { has_country_flag = HJM_no_mercy_disposed }
+                MYR = { exists = yes }
+                MDG = { exists = yes }
+            }
+            country_event = { id = HJM.55 days = 5 }
+        }
+    }
+
+    option = {
+        name = HJM.50.a
+    }
+}
+
+# HJM.51 GWG 兜底二选一：温和附庸 / 复仇附庸
+country_event = {
+    id = HJM.51
+    title = HJM.51.t
+    desc = HJM.51.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_homeland_disposed }
+        NOT = { has_country_flag = HJM_ash_disposed }
+        GWG = { exists = yes }
+    }
+
+    option = {
+        name = HJM.51.a				# 温和：故土新归（附庸+总督+藩属，人口-20%）
+        news_event = { id = HJM_news.11 }
+        GWG = {
+            set_cosmetic_tag = GWG_vassal
+            set_politics = { ruling_party = feudalist last_election = "1936.1.1" election_frequency = 48 elections_allowed = no }
+            promote_character = { character = HJM_viceroy_gwg ideology = absolute_monarchist }
+            add_ideas = HJM_vassal_state
+            every_owned_state = {
+                set_variable = { name = pop_kill value = manpower }
+                multiply_variable = { name = pop_kill value = -0.2 }
+                add_manpower = pop_kill
+            }
+        }
+        puppet = GWG
+        add_stability = 0.05
+        add_political_power = 50
+        set_country_flag = HJM_homeland_disposed
+    }
+    option = {
+        name = HJM.51.b				# 复仇：烬化政策（附庸+禁军事化+毁厂，人口-70%）
+        news_event = { id = HJM_news.14 }
+        GWG = {
+            set_cosmetic_tag = GWG_vassal
+            set_politics = { ruling_party = feudalist last_election = "1936.1.1" election_frequency = 48 elections_allowed = no }
+            promote_character = { character = HJM_viceroy_gwg ideology = absolute_monarchist }
+            add_ideas = HJM_vassal_state
+            add_ideas = HJM_demilitarized
+            every_owned_state = {
+                set_variable = { name = pop_kill value = manpower }
+                multiply_variable = { name = pop_kill value = -0.7 }
+                add_manpower = pop_kill
+                set_building_level = { type = industrial_complex level = 0 }
+            }
+        }
+        puppet = GWG
+        add_war_support = 0.05
+        set_country_flag = HJM_ash_disposed
+    }
+}
+
+# HJM.52 ZLG 兜底二选一：黄金攻势温和 / 城门血海复仇
+country_event = {
+    id = HJM.52
+    title = HJM.52.t
+    desc = HJM.52.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_golden_disposed }
+        NOT = { has_country_flag = HJM_bloody_disposed }
+        ZLG = { exists = yes }
+    }
+
+    option = {
+        name = HJM.52.a				# 温和：黄金攻势（附庸+总督，人口-20%）
+        news_event = { id = HJM_news.12 }
+        ZLG = {
+            set_cosmetic_tag = ZLG_vassal
+            set_politics = { ruling_party = feudalist last_election = "1936.1.1" election_frequency = 48 elections_allowed = no }
+            promote_character = { character = HJM_viceroy_zlg ideology = absolute_monarchist }
+            add_ideas = HJM_vassal_state
+            every_owned_state = {
+                set_variable = { name = pop_kill value = manpower }
+                multiply_variable = { name = pop_kill value = -0.2 }
+                add_manpower = pop_kill
+            }
+        }
+        puppet = ZLG
+        add_political_power = 75
+        set_country_flag = HJM_golden_disposed
+    }
+    option = {
+        name = HJM.52.b				# 复仇：城门血海（附庸+禁军事化+毁军工，人口-70%）
+        news_event = { id = HJM_news.15 }
+        ZLG = {
+            set_cosmetic_tag = ZLG_vassal
+            set_politics = { ruling_party = feudalist last_election = "1936.1.1" election_frequency = 48 elections_allowed = no }
+            promote_character = { character = HJM_viceroy_zlg ideology = absolute_monarchist }
+            add_ideas = HJM_vassal_state
+            add_ideas = HJM_demilitarized
+            every_owned_state = {
+                set_variable = { name = pop_kill value = manpower }
+                multiply_variable = { name = pop_kill value = -0.7 }
+                add_manpower = pop_kill
+                set_building_level = { type = arms_factory level = 0 }
+            }
+        }
+        puppet = ZLG
+        army_experience = 15
+        add_war_support = 0.08
+        set_country_flag = HJM_bloody_disposed
+    }
+}
+
+# HJM.53 XWY 兜底二选一：岩浆之臣温和 / 岩浆之下复仇
+country_event = {
+    id = HJM.53
+    title = HJM.53.t
+    desc = HJM.53.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_magma_disposed }
+        NOT = { has_country_flag = HJM_beneath_disposed }
+        XWY = { exists = yes }
+    }
+
+    option = {
+        name = HJM.53.a				# 温和：岩浆之臣（附庸+总督，人口-20%）
+        news_event = { id = HJM_news.13 }
+        XWY = {
+            set_cosmetic_tag = XWY_vassal
+            set_politics = { ruling_party = feudalist last_election = "1936.1.1" election_frequency = 48 elections_allowed = no }
+            promote_character = { character = HJM_viceroy_xwy ideology = absolute_monarchist }
+            add_ideas = HJM_vassal_state
+            every_owned_state = {
+                set_variable = { name = pop_kill value = manpower }
+                multiply_variable = { name = pop_kill value = -0.2 }
+                add_manpower = pop_kill
+            }
+        }
+        puppet = XWY
+        add_tech_bonus = { name = HJM_magma_tech_bonus bonus = 0.5 uses = 1 category = electronics }
+        army_experience = 10
+        set_country_flag = HJM_magma_disposed
+    }
+    option = {
+        name = HJM.53.b				# 复仇：岩浆之下（附庸+禁军事化+毁基建，人口-70%）
+        news_event = { id = HJM_news.16 }
+        XWY = {
+            set_cosmetic_tag = XWY_vassal
+            set_politics = { ruling_party = feudalist last_election = "1936.1.1" election_frequency = 48 elections_allowed = no }
+            promote_character = { character = HJM_viceroy_xwy ideology = absolute_monarchist }
+            add_ideas = HJM_vassal_state
+            add_ideas = HJM_demilitarized
+            every_owned_state = {
+                set_variable = { name = pop_kill value = manpower }
+                multiply_variable = { name = pop_kill value = -0.7 }
+                add_manpower = pop_kill
+                set_building_level = { type = infrastructure level = 0 }
+            }
+        }
+        puppet = XWY
+        air_experience = 10
+        add_war_support = 0.05
+        set_country_flag = HJM_beneath_disposed
+    }
+}
+
+# HJM.54 LLL 兜底二选一：焚天毁灭(转地给GWG) / 收为藩属(附庸)
+country_event = {
+    id = HJM.54
+    title = HJM.54.t
+    desc = HJM.54.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_skyfire_disposed }
+        LLL = { exists = yes }
+        GWG = { exists = yes }
+    }
+
+    option = {
+        name = HJM.54.a				# 毁灭：焚天计划（LLL灭国转地给GWG，人口-95%）
+        news_event = { id = HJM_news.7 }
+        LLL = {
+            every_owned_state = {
+                limit = { is_controlled_by = HJM }
+                set_variable = { name = pop_kill value = manpower }
+                multiply_variable = { name = pop_kill value = -0.95 }
+                add_manpower = pop_kill
+                GWG = { transfer_state = PREV }
+            }
+        }
+        add_named_threat = { threat = 5 name = HJM_skyfire_threat }
+        add_war_support = 0.1
+        add_stability = -0.03
+        set_country_flag = HJM_skyfire_disposed
+    }
+    option = {
+        name = HJM.54.b				# 宽大：收 LLL 为藩属（附庸，人口-20%）
+        LLL = {
+            add_ideas = HJM_vassal_state
+            every_owned_state = {
+                set_variable = { name = pop_kill value = manpower }
+                multiply_variable = { name = pop_kill value = -0.2 }
+                add_manpower = pop_kill
+            }
+        }
+        puppet = LLL
+        add_political_power = 50
+        set_country_flag = HJM_skyfire_disposed
+    }
+}
+
+# HJM.55 MYR 兜底二选一：绝不姑息毁灭(转地给MDG) / 收为藩属(附庸)
+country_event = {
+    id = HJM.55
+    title = HJM.55.t
+    desc = HJM.55.d
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+
+    trigger = {
+        tag = HJM
+        NOT = { has_country_flag = HJM_no_mercy_disposed }
+        MYR = { exists = yes }
+        MDG = { exists = yes }
+    }
+
+    option = {
+        name = HJM.55.a				# 毁灭：绝不姑息（MYR灭国转地给MDG，人口-95%）
+        news_event = { id = HJM_news.10 }
+        MYR = {
+            every_owned_state = {
+                limit = { is_controlled_by = HJM }
+                set_variable = { name = pop_kill value = manpower }
+                multiply_variable = { name = pop_kill value = -0.95 }
+                add_manpower = pop_kill
+                MDG = { transfer_state = PREV }
+            }
+        }
+        add_stability = 0.05
+        add_war_support = 0.08
+        set_country_flag = HJM_no_mercy_disposed
+    }
+    option = {
+        name = HJM.55.b				# 宽大：收 MYR 为藩属（附庸，人口-20%）
+        MYR = {
+            add_ideas = HJM_vassal_state
+            every_owned_state = {
+                set_variable = { name = pop_kill value = manpower }
+                multiply_variable = { name = pop_kill value = -0.2 }
+                add_manpower = pop_kill
+            }
+        }
+        puppet = MYR
+        add_political_power = 50
+        set_country_flag = HJM_no_mercy_disposed
+    }
+}
+
+# HJM.57 魔族战争保底（hidden）：1937-09-01 战争仍未爆发 → HIM 强制宣战
+# 由 on_startup 排程（609天后）；届时若已开战/HIM已亡，条件不满足事件自然作废
+country_event = {
+    id = HJM.57
+    hidden = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+    trigger = {
+        original_tag = HJM
+        country_exists = HIM
+        NOT = { has_war_with = HIM }
+        NOT = { has_country_flag = HJM_record_13_war_started }
+    }
+    immediate = {
+        # 魔族不宣而战：宣战后 on_war_relation_added 自动接管
+        # （切战争国策树/挂南线危局/发宣战新闻/触发MDG分裂），此处无需重复
+        HIM = {
+            declare_war_on = {
+                target = HJM
+                type = annex_everything
+            }
+        }
+    }
+    option = {
+        name = HJM.57.a
+    }
+}

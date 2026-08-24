@@ -1,0 +1,72 @@
+# DWF 一大开幕超事件窗口 2026-08-24(仿HJM_super_events.gui结构,零素材)
+guiTypes = {
+	containerWindowType = {
+		name = "DWF_congress_superevent_window"
+		position = { x = 0 y = 0 }
+		size = { width = 982 height = 594 }
+		orientation = center
+		origo = center
+		moveable = yes
+		fade_time = 200
+		fade_type = linear
+		click_to_front = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_1b_border"
+		}
+
+		instantTextBoxType = {
+			name = "DWF_congress_superevent_overline"
+			position = { x = 48 y = 44 }
+			maxWidth = 886
+			maxHeight = 28
+			font = "hoi_18mbs"
+			text = "DWF_SUPEREVENT_CONGRESS_OVERLINE"
+			format = centre
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "DWF_congress_superevent_title"
+			position = { x = 48 y = 92 }
+			maxWidth = 886
+			maxHeight = 86
+			font = "hoi_36header"
+			text = "DWF_SUPEREVENT_CONGRESS_TITLE"
+			format = centre
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "DWF_congress_superevent_quote"
+			position = { x = 90 y = 202 }
+			maxWidth = 802
+			maxHeight = 96
+			font = "hoi_20bs"
+			text = "DWF_SUPEREVENT_CONGRESS_QUOTE"
+			format = centre
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "DWF_congress_superevent_body"
+			position = { x = 92 y = 334 }
+			maxWidth = 798
+			maxHeight = 72
+			font = "hoi_18mbs"
+			text = "DWF_SUPEREVENT_CONGRESS_BODY"
+			format = centre
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "DWF_congress_superevent_close"
+			position = { x = 360 y = 492 }
+			quadTextureSprite = "GFX_button_261x34"
+			buttonText = "DWF_SUPEREVENT_CONGRESS_CLOSE"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_default
+		}
+	}
+}

@@ -226,10 +226,7 @@ focus_tree = {
 				category = electronics
 			}
 			# 2026-08-14 独立MC科技树：研究红石基础
-			set_technology = {
-				HJM_redstone_basic = 1
-				popup = no
-			}
+			# 2026-08-24 删 set_technology HJM_redstone_basic（科技已删，残留引用报 invalid database object）
 			country_event = {
 				id = HJM.16
 			}
@@ -258,10 +255,7 @@ focus_tree = {
 				category = artillery
 			}
 			# 2026-08-14 独立MC科技树：进阶红石电路
-			set_technology = {
-				HJM_redstone_circuitry = 1
-				popup = no
-			}
+			# 2026-08-24 删 set_technology HJM_redstone_circuitry（科技已删，残留引用报 invalid database object）
 			country_event = {
 				id = HJM.17
 			}

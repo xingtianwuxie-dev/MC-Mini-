@@ -123,8 +123,9 @@ spriteTypes = {
 	}
 
 	# --- 装甲车2代装备图标重定向到 8-17 新图（旧定义指 armored_car_equipment_2.dds） ---
+	# 2026-08-25: png改dds(科技图标sprite不认png,实测回落原版) 167宽补1px透明到168
 	SpriteType = {
 		name = "GFX_armored_car2_medium"
-		texturefile = "gfx/interface/technologies/armored_car2.png"
+		texturefile = "gfx/interface/technologies/armored_car2.dds"
 	}
 }

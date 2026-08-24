@@ -1,0 +1,336 @@
+capital = 1036 # 武汉
+
+oob = "HJM_1936"
+
+set_research_slots = 3
+set_stability = 0.6
+set_war_support = 0.7
+
+# 三军初始经验已移除（开局不再给三军150经验，用户要求）
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 3
+	infantry_weapons1 = 2
+	tech_recon = 1
+	tech_support = 2		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+}
+
+set_grand_doctrine = mass_assault
+set_grand_doctrine = new_fleet_in_being
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "By Blood Alone"
+		}
+	}
+	set_technology = {
+		early_fighter = 1
+		fighter1 = 1
+		early_bomber = 1
+		strategic_bomber1 = 1
+		naval_bomber1 = 1
+	}
+}
+# BBA 机体科技（为下面的飞机预设提供可造底盘+模块，2026-08-08）
+# iw_*_airframe 解锁 _0 机体；early_bombs 解锁弹舱；aa_lmg 解锁机枪/自卫炮塔；engines_1 解锁引擎
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	set_technology = {
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		early_bombs = 1
+		aa_lmg = 1
+		engines_1 = 1
+	}
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		mtg_transport = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		# 2026-08-08 为舰船预设补的模块科技：火控系统0 + 深水炸弹
+		# （电池/副炮已被 basic_battery 覆盖，AA 已被 gw_artillery 覆盖，引擎/船体装甲已被 early 船体覆盖）
+		electronic_mechanical_engineering = 1
+		basic_depth_charges = 1
+	}
+}
+
+#初始陆军装备
+add_equipment_to_stockpile = { 
+	type = infantry_equipment_0  
+	amount = 15000 
+}   # 步枪
+  add_equipment_to_stockpile = { 
+	type = support_equipment      
+	amount = 3000  
+}  # 支援装备
+  add_equipment_to_stockpile = { 
+	type = motorized_equipment_1              
+	amount = 2000  
+}   # 卡车
+
+# 初始空军装备
+add_equipment_to_stockpile = {
+	type = CAS_equipment_1
+	amount = 48
+}
+add_equipment_to_stockpile = {
+	type = strat_bomber_equipment_1
+	amount = 36
+}
+set_politics = {
+	ruling_party = feudalist
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	feudalist = 70
+	neutrality = 8
+	conservative = 5
+	democratic = 6
+	social_liberal = 8
+	fascism = 3
+}
+
+recruit_character = HJM_wutu
+recruit_character = HJM_Notch
+recruit_character = HJM_Heiling
+recruit_character = HJM_Steve_Builder
+recruit_character = HJM_Alex_Crafter
+recruit_character = HJM_Marcus_Redstone
+recruit_character = HJM_Daniel_Oakshield
+recruit_character = HJM_Jeb
+recruit_character = HJM_Bedrock_Marshal
+recruit_character = HJM_Admiral_Drowned
+recruit_character = HJM_War_Minister
+recruit_character = HJM_Naval_Minister
+# 2026-08-24 XT定:三党党首(籽岷/丁磊/菲尔)也多国recruit——分裂前都是帝国党首/顾问,HJM也有
+# 但三人只在各自党派国当元首(籽岷=DWF社民/丁磊=NTE中立寡头/菲尔=MST民主保守),HJM ruling=feudalist不匹配,不会抢Notch元首位
+# ⚠️同角色多国recruit是HOI4合法做法(原版张学良/陈济棠等先例),非引擎限制
+recruit_character = HJM_DingLei
+recruit_character = HJM_Zimin
+recruit_character = HJM_PhilSpencer
+# 2026-08-24 岩石之令(分裂前都是MC帝国可玩将军/元帅,见characters/HJM.txt)
+# 新岩石之令5人:内战后归HJM保皇(留在帝国)
+recruit_character = HJM_Jesse
+recruit_character = HJM_Olivia
+recruit_character = HJM_Axel
+recruit_character = HJM_Lukas
+recruit_character = HJM_Petra
+# 旧岩石之令5人:内战后独立成华北军阀「岩石之令」(索伦任元首,见W01-Warlord.txt)
+# ⚠️同角色多国recruit是HOI4合法做法(原版250例),非引擎限制
+recruit_character = HJM_Soren
+recruit_character = HJM_Gabriel
+recruit_character = HJM_Magnus
+recruit_character = HJM_Ellegaard
+recruit_character = HJM_Ivor
+
+add_ideas = {
+	Wulin
+	liuxue
+	tongmeng
+	bingyuanqiangzheng
+	HJM_long_peace
+}
+
+puppet = MDG
+
+#########################
+## 海陆空装备预设（模块组合抄日本/德国原版，2026-08-08）
+## 仅在对应 DLC 下生效；无 DLC 自动回退到上面的传统科技
+#########################
+
+# ===== 坦克（No Step Back）=====
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "方块Ⅰ式机枪坦克"
+		type = light_tank_chassis_1
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+			special_type_slot_3 = empty
+			special_type_slot_4 = empty
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 0
+			tank_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "方块Ⅱ式轻型坦克"
+		type = light_tank_chassis_1
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+			special_type_slot_3 = empty
+			special_type_slot_4 = empty
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+}
+
+# ===== 飞机（By Blood Alone）=====
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "幻翼战斗机"
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "烈焰俯冲机"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = small_bomb_bay
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = lmg_defense_turret
+		}
+	}
+	create_equipment_variant = {
+		name = "凋零轰炸机"
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = lmg_defense_turret
+		}
+	}
+}
+
+# ===== 舰船（Man the Guns）=====
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	create_equipment_variant = {
+		name = "三叉戟级驱逐舰"
+		type = ship_hull_light_1
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	create_equipment_variant = {
+		name = "潮汐级巡洋舰"
+		type = ship_hull_cruiser_1
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "守卫者级潜艇"
+		type = ship_hull_submarine_1
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "末影龙级战列舰"
+		type = ship_hull_heavy_1
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = ship_anti_air_1
+			mid_1_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = ship_heavy_battery_1
+		}
+	}
+}

@@ -33,3 +33,9 @@
  NHI_democratic_DEF:0 "封印地"
  NHI_communism:0 "封印地"
  NHI_communism_DEF:0 "封印地"
+ DWF_Zimin_duowan:0 "籽岷"
+# ==== 2026-08-24 一大党魁候选(红石派已定,其余占位待XT) ====
+ DWF_Leishidong:0 "雷石东1.0"
+ DWF_leader_liberation:0 "解放派党魁（占位）"
+ DWF_leader_coordination:0 "协调派党魁（占位）"
+ DWF_leader_collective:0 "共同体派党魁（占位）"
